@@ -674,8 +674,8 @@
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>FinAlgoritmo
 </code></pre></div></td></tr></table></div>
 <p>Podem usar qualsevol altre nom per a les accions (en compte d'escribir, leer, etc...)</p>
-<p>Però ací s'han usat eixos noms perquè és la sintaxi que usa l'aplicació <em>Pseint</em> (pseudo intèrpret d'algorismes), on podrem executar els algorismes (per si volguérem comprovar-ne el resultat)</p>
-<p><a href="https://pseint.sourceforge.net">PSeInt</a></p>
+<p>Però ací s'han usat eixos noms perquè és la sintaxi que usa l'aplicació <em>Pseint</em> (pseudo intèrpret d'algorismes), on podrem executar els algorismes (per si volguérem comprovar-ne el resultat).</p>
+<p><a href="https://pseint.sourceforge.net">PSEINT</a></p>
 <p><strong>ORDINOGRAMA (DIAGRAMA DE FLUX):</strong></p>
 <p><center><img alt="Exemple d'ordinograma" src="../img/ordinograma.png" /></center></p>
 <p>Amb <em>PSeInt</em> podem construir fàcilment este ordinograma a base d'anar posant eixes "caixetes". També podrem executar-lo.</p>
@@ -692,40 +692,40 @@
 <h2 id="elements-dun-algorisme">Elements d'un algorisme</h2>
 <p>Els elements d'un algorisme són un conjunt d'instruccions, de diferents tipus:</p>
 <ul>
-<li><strong>Instruccions d'entrada i d'eixida</strong>: per a interaccionar amb l'usuari (introduir dades al programa o que este mostre resultats).</li>
+<li><strong>Instruccions d'entrada i d'eixida</strong>: per a interaccionar amb l'usuari (introduir dades al programa o que aquest mostre resultats).</li>
 <li><strong>Instruccions d'assignació</strong>: per a decidir si s'executen un conjunt d'instruccions o unes altres.</li>
 <li><strong>Instruccions de repetició</strong>: per a repetir un conjunt d'instruccions.</li>
 </ul>
-<p>Anem a vore en detall en què consisteix cadscuna d'estes instruccions.</p>
+<p>Anem a vore en detall en què consisteix cadascuna d'aquestes instruccions.</p>
 <h3 id="instruccions-dentrada-i-deixida">Instruccions d'entrada i d'eixida</h3>
-<p>Servixen perquè el programa instercanvie informació amb un medi extern (generalment teclat i pantalla).</p>
+<p>Servixen perquè el programa intercanvie informació amb un medi extern (generalment teclat i pantalla).</p>
 <ul>
 <li><strong>Entrada (o lectura)</strong>: es demana un valor per teclat (o pel ratolí, o des d'un fitxer o base de dades) per a guardar-lo en una variable (generalment).</li>
 <li><strong>Eixida (o escriptura)</strong>: es mostra una dada (una constant o el valor d'una variable o el resultat d'una expressió) per pantalla (o per impressora o la deixarà en un fitxer o base de dades...).</li>
 </ul>
 <p>Per a vore un exemple d'instruccions d'entrada i d'eixida, veiem com podria ser un algorisme que demane per teclat el radi d'una circumferència i mostre l'àrea corresponent.</p>
 <p><center><img alt="Exemple entrada/eixida" src="../img/entradaEixidaExemple.png" /></center></p>
-<p>Per iniciar-se en la programació, moltes vegades convé fer ús dels <strong>ordinogrames</strong> (sobretot quan vejam bifurcacions complexes, etc). Per tant, recomane l'aplicació del <em>PSeInt</em> per tal de comprovar si l'algorisme funciona.</p>
-<p>Ara bé, si volem fer l'algorisme en <strong>pseudocodi</strong>, quasi que és millor fer-ho ja en un llenguatge de programació que s'use (no té sentit aprendre la sintaxi del <em>PSeInt</em>).</p>
+<p>Per iniciar-se en la programació, moltes vegades convé fer ús dels <strong>ordinogrames</strong> (sobretot quan vejam bifurcacions complexes, etc). Per tant, recomanem l'aplicació del <em>PSeInt</em> per tal de comprovar si l'algorisme funciona.</p>
+<p>Ara bé, si volem fer l'algorisme en <strong>pseudocodi</strong>, quasi que és millor fer-ho ja en un llenguatge de programació que s'utilitze (no té sentit aprendre la sintaxi del <em>PSeInt</em>).</p>
 <p>Per tant, anirem veient els distints elements en ordinograma i en <em>Python</em>.</p>
 <p>Veiem com podria ser la implementació en <em>Python</em> d'este algorisme que hem vist:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Dis-me el radi: &quot;</span><span class="p">)</span>  <span class="o">//</span> <span class="n">Mostra</span> <span class="n">la</span> <span class="n">pantalla</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    <span class="n">radi</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> <span class="o">//</span> <span class="n">Llig</span> <span class="n">text</span><span class="p">,</span> <span class="n">els</span> <span class="n">converteix</span> <span class="n">a</span> <span class="n">enter</span> <span class="n">i</span> <span class="n">el</span> <span class="n">guarda</span> <span class="n">en</span> <span class="n">la</span> <span class="n">variable</span> <span class="s1">&#39;radi&#39;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Àrea: &quot;</span><span class="p">,</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">radi</span> <span class="o">*</span> <span class="n">radi</span><span class="p">)</span> <span class="o">//</span> <span class="n">Mostra</span> <span class="n">el</span> <span class="n">text</span> <span class="s2">&quot;Area&quot;</span> <span class="n">i</span> <span class="n">el</span> <span class="n">resultat</span> <span class="k">del</span> <span class="n">càlcul</span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Dis-me el radi: &quot;</span><span class="p">)</span>  <span class="o">//</span> <span class="n">Mostra</span> <span class="n">la</span> <span class="n">pantalla</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">radi</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span> <span class="o">//</span> <span class="n">Llig</span> <span class="n">text</span><span class="p">,</span> <span class="n">els</span> <span class="n">converteix</span> <span class="n">a</span> <span class="n">enter</span> <span class="n">i</span> <span class="n">el</span> <span class="n">guarda</span> <span class="n">en</span> <span class="n">la</span> <span class="n">variable</span> <span class="s1">&#39;radi&#39;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Àrea: &quot;</span><span class="p">,</span> <span class="mf">3.14</span> <span class="o">*</span> <span class="n">radi</span> <span class="o">*</span> <span class="n">radi</span><span class="p">)</span> <span class="o">//</span> <span class="n">Mostra</span> <span class="n">el</span> <span class="n">text</span> <span class="s2">&quot;Area&quot;</span> <span class="n">i</span> <span class="n">el</span> <span class="n">resultat</span> <span class="k">del</span> <span class="n">càlcul</span>
 </code></pre></div></td></tr></table></div>
 <p>Una altra forma:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>    <span class="kn">import</span> <span class="nn">math</span> <span class="o">//</span> <span class="n">Importem</span> <span class="n">la</span> <span class="n">llibreria</span> <span class="n">per</span> <span class="n">a</span> <span class="n">usar</span> <span class="n">un</span> <span class="n">valor</span> <span class="n">de</span> <span class="n">pi</span> <span class="n">més</span> <span class="n">aproximat</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>    <span class="n">radi</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me el radi: &quot;</span><span class="p">))</span>   <span class="o">//</span> <span class="n">Mostra</span> <span class="n">text</span><span class="p">,</span> <span class="n">llig</span> <span class="n">valor</span> <span class="n">per</span> <span class="n">teclat</span><span class="p">,</span> <span class="n">el</span> <span class="n">converteix</span> <span class="n">a</span> <span class="n">enter</span> <span class="n">i</span> <span class="n">el</span> <span class="n">guarda</span> <span class="n">en</span> <span class="s1">&#39;radi&#39;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Àrea: &quot;</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radi</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>    <span class="o">//</span> <span class="n">Mostra</span> <span class="n">el</span> <span class="n">resultat</span><span class="o">.</span> <span class="n">En</span> <span class="n">Python</span> <span class="n">la</span> <span class="n">potència</span> <span class="n">es</span> <span class="n">fa</span> <span class="n">amb</span> <span class="o">**</span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">math</span> <span class="o">//</span> <span class="n">Importem</span> <span class="n">la</span> <span class="n">llibreria</span> <span class="n">per</span> <span class="n">a</span> <span class="n">usar</span> <span class="n">un</span> <span class="n">valor</span> <span class="n">de</span> <span class="n">pi</span> <span class="n">més</span> <span class="n">aproximat</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">radi</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me el radi: &quot;</span><span class="p">))</span>   <span class="o">//</span> <span class="n">Mostra</span> <span class="n">text</span><span class="p">,</span> <span class="n">llig</span> <span class="n">valor</span> <span class="n">per</span> <span class="n">teclat</span><span class="p">,</span> <span class="n">el</span> <span class="n">converteix</span> <span class="n">a</span> <span class="n">enter</span> <span class="n">i</span> <span class="n">el</span> <span class="n">guarda</span> <span class="n">en</span> <span class="s1">&#39;radi&#39;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Àrea: &quot;</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radi</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>    <span class="o">//</span> <span class="n">Mostra</span> <span class="n">el</span> <span class="n">resultat</span><span class="o">.</span> <span class="n">En</span> <span class="n">Python</span> <span class="n">la</span> <span class="n">potència</span> <span class="n">es</span> <span class="n">fa</span> <span class="n">amb</span> <span class="o">**</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <ul>
-<li>Per fer un ordinograma i poder-lo provar podem usar PSeInt:<ul>
+<li>Per fer un ordinograma i poder-lo provar podem usar <em>PSeInt</em>:<ul>
 <li><a href="https://pseint.sourceforge.net">PSEINT</a></li>
 </ul>
 </li>
@@ -740,18 +740,18 @@
 </div>
 <details class="question">
 <summary>Exercici 1. Instruccions d'entrada i d'eixida</summary>
-<p>Demana 2 números per teclat i mostra la seua suma, resta, multipliació i dividisió. Fes-ho de dues maneres: ordinograma (PSeInt) i en Python (OnlineGDB).</p>
+<p>Demana 2 números per teclat i mostra la seua suma, resta, multipliació i dividisió. Fes-ho de dues maneres: ordinograma (<em>PSeInt</em>) i en <em>Python</em> (OnlineGDB).</p>
 </details>
 <h3 id="instruccions-dassignacio">Instruccions d'assignació</h3>
 <p>Una assignació consisteix en guardar un valor en una variable.</p>
 <p><center><img alt="Exemples d'assignació" src="../img/assignacio.png" /></center></p>
-<p>En la primera instrucció de l'exemple anterior, està posant el valor 5 dins de la variable <em>nota1</em>. En la segona instrucció posa un 7 en la variable <em>nota2</em>. I en la tercera, suma les dos variables, les divideix entre 2 i el resultat el posa dins la variable <em>notaMitja</em>.</p>
-<p>És a dir, una assignació consta de 2 parts separades per un operador d'assignació. Sol emprar-se l'operador "=" (en PSeInt és una fletxa cap a l'esquerra: "&lt;-"):</p>
+<p>En la primera instrucció de l'exemple anterior, està posant el valor 5 dins de la variable <em>nota1</em>. En la segona instrucció posa un 7 en la variable <em>nota2</em>. I en la tercera, suma les dos variables, les divideix entre 2 i el resultat el posa dins de la variable <em>notaMitja</em>.</p>
+<p>És a dir, una assignació consta de 2 parts separades per un operador d'assignació. Sol emprar-se l'operador "=" (en <em>PSeInt</em> és una fletxa cap a l'esquerra: "&lt;-"):</p>
 <p><center><img alt="Assignació" src="../img/assignacio2.png" /></center></p>
 <p>Cal tindre en compte que les assignacions NO són equacions matemàtiques.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
-<p>x = x + 1 no t'e sentit com a equació però sí com a instrucció en un algorisme. És el que anomenem un <strong><em>increment de la variable</em></strong>. En eixa instrucció se li assigna a la variable numèrica <em>x</em> un valor que correspon al valor que tenia abans eixa variable més una unitat.</p>
+<p><code>x = x + 1</code> no t'e sentit com a equació però sí com a instrucció en un algorisme. És el que anomenem un <strong><em>increment de la variable</em></strong>. En eixa instrucció se li assigna a la variable numèrica <em>x</em> un valor que correspon al valor que tenia abans eixa variable més una unitat.</p>
 </div>
 <details class="question">
 <summary>Exercici 2. Instruccions d'assignació</summary>
