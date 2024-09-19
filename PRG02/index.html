@@ -465,6 +465,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#instruccions-de-bifurcacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruccions de bifurcació
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instruccions de bifurcació">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruccions-de-bifurcacio-multiple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruccions de bifurcació múltiple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -591,6 +615,30 @@
       Instruccions d'assignació
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instruccions-de-bifurcacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruccions de bifurcació
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instruccions de bifurcació">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instruccions-de-bifurcacio-multiple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instruccions de bifurcació múltiple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -770,6 +818,110 @@
 <li>Calcula el sou brut (import que paga l'empresa), l'import retingut (import que s'emporta hisenda) i el sou net (import que s'emporta el treballador).</li>
 <li>Mostra per pantalla el nom del treballador i les dades calculades abans.</li>
 </ul>
+</details>
+<h3 id="instruccions-de-bifurcacio">Instruccions de bifurcació</h3>
+<p>Les instruccions de bifurcació (o selecció) serveixen per a quan volem executar un conjunt d'ordres <strong>només</strong> si es compleix alguna condició determinada.</p>
+<p><center><img alt="Bifurcació doble" src="../img/bifurcacioDoble.png" /></center></p>
+<p>En l'ordinograma podem no posar res en alguna de les 2 branques. En <em>Python</em> és opcional la part del <em>else</em>:</p>
+<p><center><img alt="Bifurcació simple" src="../img/bifurcacioSimple.png" /></center></p>
+<p>També podem posar instruccions de bifurcació dins d'altres. És a dir: una estructura <em>if</em> dins d'un altre <em>if</em>, o dins d'un altre <em>else</em>.</p>
+<details class="success">
+<summary>Exercici 3. Instruccions de bifurcació -- RESOLT</summary>
+<p>Fes un programa en <em>Python</em> que calcule l'àrea d'un rectangle o que mostre un missatge d'error si algun costat no és positiu.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Llarg: &quot;</span><span class="p">))</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ample: &quot;</span><span class="p">))</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">b</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">):</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Costats incorrectes&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="n">area</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;L&#39;àrea de </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> i </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> és </span><span class="si">{</span><span class="n">area</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># Hem fet ús dels &quot;f-strings&quot;. Ho veurem més avant.</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="success">
+<summary>Exercici 4. Instruccions de bifurcació -- RESOLT</summary>
+<p>Fes un algorisme que llisca 2 números i que mostre quin és el major; o bé, si és el cas, que diga que són iguals. Fixa't que hi ha un <em>if-else</em> dins d'un <em>else</em>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">n1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me un número: &quot;</span><span class="p">))</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">n2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me&#39;n un altre: &quot;</span><span class="p">))</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="k">if</span> <span class="p">(</span><span class="n">n1</span> <span class="o">&gt;</span> <span class="n">n2</span><span class="p">):</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El major és el </span><span class="si">{</span><span class="n">n1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">n2</span> <span class="o">&gt;</span> <span class="n">n1</span><span class="p">):</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El major és el </span><span class="si">{</span><span class="n">n2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Són iguals&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 5</summary>
+<p>Fes un programa en <em>Python</em> per a llegir un número de teclat i dir si és parell. No s'ha de dir res en cas contrari.</p>
+</details>
+<details class="question">
+<summary>Exercici 6</summary>
+<p>Demanar un número i dir si és parell o imparell.</p>
+</details>
+<details class="question">
+<summary>Exercici 7</summary>
+<p>Donats dos números, calcular quin és el més gran.</p>
+</details>
+<details class="question">
+<summary>Exercici 8</summary>
+<p>Donats 3 números, calcular quin és el més gran.</p>
+</details>
+<details class="question">
+<summary>Exercici 9</summary>
+<p>Donats 3 números, calcular quin és el més gran i el més menut.</p>
+</details>
+<details class="question">
+<summary>Exercici 10</summary>
+<p>Donats 3 números, calcular quins són els dos més menuts.</p>
+</details>
+<details class="question">
+<summary>Exercici 11</summary>
+<p>Donats 3 números, comprova si poden correspondre a les mesures dels costats d'un triangle.</p>
+<p><strong>PISTA</strong>: La suma dels dos més menuts ha de ser major que el gran.</p>
+</details>
+<details class="question">
+<summary>Exercici 12</summary>
+<p>Transformar una nota numèrica a la forma: Molt deficient, Insuficient, Suficient, Bé, Notable, Excel·lent. També cal mostrar error si la nota és negativa o &gt;10.</p>
+</details>
+<details class="question">
+<summary>Exercici 13</summary>
+<p>Llegir dos números de teclat i una lletra, que serà el codi d'operació (Suma, Resta, Multiplicació o Divisió). Caldrà mostrar el resultat de l'operació demanada. Si no s'ha introduït un codi d'operació correcte, cal mostrar un error.</p>
+</details>
+<h4 id="instruccions-de-bifurcacio-multiple">Instruccions de bifurcació múltiple</h4>
+<p>En la bifurcació doble, el programa executava un bloc d'instruccions d'entre 2 possibles, depenents del vaor d'una condició. Amb una instrucció de bifurcació múltiple, el programa executarà un bloc d'entre molts possibles, depenent del valor d'una variable (o expressió) entrea (o de tipus caràcter).</p>
+<p><center><img alt="Bifurcació múltiple" src="../img/bifurcaci%C3%B3M%C3%BAltiple.png" /></center></p>
+<p>A l'exemple, si el valor <em>numEstacio</em> és 1, s'executarà la instrucció (o conjunt d'instruccions) corresponent. Si fóra 2, les instruccions del 2, etc. I si no fóra ni 1, ni 2, ni 3 , ni 4, s'executaria el bloc d'instruccions de l'apartat <em>De Otro Modo</em>.</p>
+<p>Ara bé: la bifurcació múltiple de <em>Python</em> no té eixa estructura. En compte de triar el bloc d'instruccions a executar segons el valor d'una sola variable (o expressió), en <em>Python</em> cada bloc d'instruccions té la seua condició per a poder executar-se.</p>
+<p><em>Java</em> sí que té una estructura semblant a la del <em>PSeInt</em> (anomenada <strong><em>switch</em></strong>) però ja la veurem més endavant. Veiem ara com implementar la bifurcació múltiple en <em>Python</em>.</p>
+<p>En <em>Python</em> s'utilitza l'estructura <strong><em>if-elif-else</em></strong>, que és com si tinguérem dins d'un <em>else</em> una estructura <em>if-else</em>. I dins d'eixe <em>else</em>, una altra estructura <em>if-else</em>, etc.</p>
+<p><center><img alt="Bifurcació múltiple en Python" src="../img/bifurcaci%C3%B3MultiplePython.png" /></center></p>
+<p>Fixeu-vos que:</p>
+<ul>
+<li>Un <em>elif</em> ve a ser la contracció de <em>else:if</em>, amb l'avantatge que no has d'anar sagnant cap a la dreta en cada condició (i no ocupa tantes línies).</li>
+<li>Es esta estructura de <em>Pyhton</em> anirà per un camñi o per altre depenent de les <strong>diverses condicions</strong> que li anem posant. És a dir: es podrien posar condicions diferents en cada <em>elif</em>. Mentre que en el <em>según</em> del <em>PSeInt</em>, anirà per un camñi o per altre depenent dels valors d'una sola variable o expressió.</li>
+</ul>
+<details class="question">
+<summary>Exercici 14. Instruccions de bifurcació múltiple</summary>
+<p>Fes u nprograma en <em>Python</em> usant <em>elif</em> per a llegir de teclat un número de l'1 al 7 i mostrar el nom corresponent del dia de la setmana (dilluns, dimarts...):</p>
 </details>
 
 
