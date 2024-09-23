@@ -1051,13 +1051,6 @@
 <li><a href="https://pseint.sourceforge.net">PSEINT</a></li>
 </ul>
 </li>
-<li>Per a programar online en <em>Python</em>:<ul>
-<li><a href="https://www.onlinegdb.com">ONLINEGDB</a><ul>
-<li>Es tracta d'un intèroret online, on només hem de seleccionar el llenguatge <em>Python3</em>, escriure codi i polsar <em>RUN</em>. I, si volem guardar els programes, ens hem d'enregistrar.</li>
-</ul>
-</li>
-</ul>
-</li>
 <li>Per a programar en local en <em>Python</em>:<ul>
 <li><a href="https://thonny.org/">THONNY</a><ul>
 <li>Es tracta d'un IDE molt senzill per a programar en <em>Python</em>. Ve integrat amb ell el propi <em>Python</em> i amb una única instal·lació podem començar a crear els nostres primers programes. <strong>Recomanat!</strong></li>
@@ -1087,7 +1080,7 @@
 <summary>Exercici 2. Instruccions d'assignació</summary>
 <p>Fes l'algorisme amb un ordinograma o amb <em>Python</em> per a calcular el sou d'un treballador:</p>
 <ul>
-<li>Demana per teclat el nom del treballador, la quantitat de hores que ha treballa i el preu per hora que paga l'empresa.</li>
+<li>Demana per teclat el nom del treballador, la quantitat d'hores que ha treballat i el preu per hora que paga l'empresa.</li>
 <li>Cal tenir en compte que la retenció aplicada és del 15%.</li>
 <li>Calcula el sou brut (import que paga l'empresa), l'import retingut (import que s'emporta hisenda) i el sou net (import que s'emporta el treballador).</li>
 <li>Mostra per pantalla el nom del treballador i les dades calculades abans.</li>
@@ -1450,7 +1443,7 @@
 </details>
 <details class="question">
 <summary>Exercici 32. Acumuladors de productes</summary>
-<p>Mostra el producte de tots el números imparells entre l'1 i el 40.</p>
+<p>Mostra el producte de tots els números imparells entre l'1 i el 40.</p>
 </details>
 <details class="question">
 <summary>Exercici 33</summary>
@@ -1471,7 +1464,7 @@
 </details>
 <h2 id="alguns-algorismes-basics">Alguns algorismes bàsics</h2>
 <h3 id="obtindre-el-major-duna-llista-de-numeros">Obtindre el major d'una llista de números</h3>
-<p>Imaginem que (sense cap ordinador), vull anar preguntant l'edat de tot l'alumnat per a poder saber l'edat màxima. Com ho faria? No he de recordar l'edat de tots, sinó que només necessite saber en cada moment l'edat de l'alumne actal i l'edat màxima obtinguda fins eixe moment (que hauré d'anar canviant-la o no).</p>
+<p>Imaginem que (sense cap ordinador), vull anar preguntant l'edat de tot l'alumnat per a poder saber l'edat màxima. Com ho faria? No he de recordar l'edat de tots, sinó que només necessite saber en cada moment l'edat de l'alumne actual i l'edat màxima obtinguda fins eixe moment (que hauré d'anar canviant o no).</p>
 <p>Per tant, necessite 2 variables: <em>edat</em> (per a guardar l'edat de l'alumne "actual") i <em>maxima</em> (per a guardar l'edat màxima fins a eixe moment). L'algorisme seria:</p>
 <div class="admonition example">
 <p class="admonition-title">Algorisme</p>
@@ -1500,10 +1493,10 @@
 <a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Edat màxima:&quot;</span><span class="p">,</span> <span class="n">maxima</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 </div>
-<p>Ara bé: i si no foren edats? És a dir: imaginem que volem calcular el número màxim d'una llista de números però que també podrien ser negatius. Fins i tot, tots els números podrien ser negatius. En eixe cas no ens serviria inicialitzar el valor de la variable maxima a 0, sinó que hauríem d'assignar-li un valor que siga més xicotet que tots els que puguen estar en la llista.</p>
+<p>Ara bé: i si no foren edats? És a dir: imaginem que volem calcular el número màxim d'una llista de números però que també podrien ser negatius. Fins i tot, tots els números podrien ser negatius. En eixe cas no ens serviria inicialitzar el valor de la variable <em>maxima</em> a 0, sinó que hauríem d'assignar-li un valor que siga més xicotet que tots els que puguen estar en la llista.</p>
 <p>En eixe cas tenim 2 opcions per a trobar el valor inicial de la variable <em>maxima</em>:</p>
 <ol>
-<li>El valor mñes xicotet que admet eixe tipus de dades en eixe llenguatge. Per exemple, el menor enter en <em>Java</em> seria <em>Integer.MIN_VALUE</em>. Ara bé: <em>Python</em> o té límit en la grandària dels enters.</li>
+<li>El valor més xicotet que admet eixe tipus de dades en eixe llenguatge. Per exemple, el menor enter en <em>Java</em> seria <em>Integer.MIN_VALUE</em>. Compte! <em>Python</em> no té límit en la grandària dels enters.</li>
 <li>El primer valor de la llista de números.</li>
 </ol>
 <p>Per tant, si volem obtindre el màxima de 100 valors usant l'opció (2), al principi de l'algorisme direm que el màxim és el primer d'eixos valors. Després llegirem en un bucle els altres 99 números i, com abans, anirem canviant, si cal, el valor màxim:</p>
