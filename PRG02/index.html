@@ -555,6 +555,63 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#acumuladors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acumuladors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Acumuladors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acumuladors-de-productes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acumuladors de productes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interruptors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interruptors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alguns-algorismes-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alguns algorismes bàsics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alguns algorismes bàsics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtindre-el-major-duna-llista-de-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtindre el major d'una llista de números
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -769,6 +826,63 @@
   <a href="#comptadors" class="md-nav__link">
     <span class="md-ellipsis">
       Comptadors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acumuladors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acumuladors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Acumuladors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#acumuladors-de-productes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acumuladors de productes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interruptors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interruptors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alguns-algorismes-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alguns algorismes bàsics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alguns algorismes bàsics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#obtindre-el-major-duna-llista-de-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obtindre el major d'una llista de números
     </span>
   </a>
   
@@ -1232,6 +1346,169 @@
 <li>Increment</li>
 </ol>
 </details>
+<h3 id="acumuladors">Acumuladors</h3>
+<p>Un acumulador és una variable destinada a acumular diferents quantitats.</p>
+<p>Un acumulador és com un comptador però en compte de sumar 1, sumarem diferents quantitats (no volem <em>comptar</em> sinó <em>acumular</em> quantitats).</p>
+<p><center><img alt="Acumulador" src="../img/acumulador.png" /></center></p>
+<div class="admonition example">
+<p class="admonition-title">Exemple d'acumulador</p>
+<p>Volem acumular l'import d'una factura:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">q</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quantitat: &quot;</span><span class="p">))</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="hll"><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#(1)!</span>
+</span><a id="__codelineno-9-4" name="__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="k">while</span> <span class="p">(</span><span class="n">q</span><span class="o">!=</span><span class="mi">0</span><span class="p">):</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>    <span class="n">p</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Preu: &quot;</span><span class="p">))</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="hll">    <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="p">(</span><span class="n">q</span><span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="c1">#(2)!</span>
+</span><a id="__codelineno-9-8" name="__codelineno-9-8"></a>    <span class="n">q</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Quantitat: &quot;</span><span class="p">))</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total:&quot;</span><span class="p">,</span> <span class="n">total</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>inicialització de l'acumulador</li>
+<li>Increment</li>
+</ol>
+</div>
+<details class="question">
+<summary>Exercici 26. Ús d'acumuladors</summary>
+<p>Demana quantitats fins que s'introduïsca la quantitat 0. Cadrà mostrar la suma de totes les quantitats.</p>
+</details>
+<details class="question">
+<summary>Exercici 27</summary>
+<p>Demana les notes dels 23 alumnes de la classe. Mostra la nota mitjana.</p>
+</details>
+<details class="question">
+<summary>Exercici 28</summary>
+<p>Mostra els números naturals que hi ha entre dos números introduïts per teclat i calcula la suma dels parells i la dels imparells. Per últim, mostra els dos totals.</p>
+</details>
+<details class="question">
+<summary>Exercici 29</summary>
+<p>Introdueix 2 valors A i B (A &lt; B). Incrementa A de 2 en 2 i decrementa B de 3 en 3 fins que A &gt; B.</p>
+</details>
+<details class="question">
+<summary>Exercici 30</summary>
+<p>Demana 2 números per teclat i mostra la multiplicació dels dos... però sense usar l'perador de la multiplicació (*). És a dir: hauràs de sumar un dels dos números tantes vegades com diu l'altre número.</p>
+</details>
+<h4 id="acumuladors-de-productes">Acumuladors de productes</h4>
+<p>Generalment, la quantitat va <strong>sumant-se</strong> a l'acumulador, però també podria <strong>multiplicar-se</strong>. Cal tindre en compte això per a iniciar l'acumulador:</p>
+<ul>
+<li>Si volem <strong>sumar</strong> quantitats, el <code>valor_inicial</code> sol ser <strong>0</strong>.</li>
+<li>Si volem <strong>multiplicar</strong> quanitats, el <code>valor_inicial</code> sol ser <strong>1</strong>.</li>
+</ul>
+<details class="success">
+<summary>Exercici 31 RESOLT</summary>
+<p>Donats 2 números (base i exp) calcula la potència (base<sup>exp</sup>). Se suposa que la potència no és un operador ni cap funció predefinida.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span>
+<span class="normal"><a href="#__codelineno-10-8">8</a></span>
+<span class="normal"><a href="#__codelineno-10-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">base</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Base: &quot;</span><span class="p">))</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">expo</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Exponent: &quot;</span><span class="p">))</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="hll"><span class="n">pot</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#(1)!</span>
+</span><a id="__codelineno-10-5" name="__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">expo</span><span class="p">):</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="hll">    <span class="n">pot</span> <span class="o">=</span> <span class="n">pot</span> <span class="o">*</span> <span class="n">base</span> <span class="c1">#(2)!</span>
+</span><a id="__codelineno-10-8" name="__codelineno-10-8"></a>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Potència:&quot;</span><span class="p">,</span> <span class="n">pot</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Si inicialitzàrem a 0, el producte sempre donaria 0.</li>
+<li>Acumulem el producte</li>
+</ol>
+</details>
+<details class="question">
+<summary>Exercici 32. Acumuladors de productes</summary>
+<p>Mostra el producte de tots el números imparells entre l'1 i el 40.</p>
+</details>
+<details class="question">
+<summary>Exercici 33</summary>
+<p>Mostra la suma, el producte i la mitjana dels 100 primers números naturals.</p>
+</details>
+<details class="question">
+<summary>Exercici 34</summary>
+<p>Calcula el factorial d'un número introduït per teclat.</p>
+</details>
+<h3 id="interruptors">Interruptors</h3>
+<p>Els <em>interruptors</em> (també coneguts com <em>indicadors</em>, <em>banderes</em> o <em>flags</em>) són variables destinades a indicar si en alguna de les iteracions d'un bucle <strong>ha passat o no</strong> una cosa determinada.</p>
+<p>Estes variables seran de tipus <strong>lògic</strong> (booleà) ja que només guardaran 2 possibles valors: ha passat alguna cosa (vertader) o no (fals). En <em>Python</em>, estos valors són <em>True</em> i <em>False</em> (en <em>PSeInt</em> són <em>Verdadero</em> i <em>Falso</em>). Ja vorem que en <em>Java</em> són <em>true</em> i <em>false</em> (en minúscula).</p>
+<p><center><img alt="Interruptors" src="../img/interruptors.png" /></center></p>
+<p>Però si un llenguatge no admetera el tipus booleà (com el llenguatge C), podríem usar una variable de tipus enter (per exemple usant els valors 0 i 1) o de tipus caràcter (per exemple emprant els valors "V" i "F", o bé, "S" i "N", etc).</p>
+<details class="question">
+<summary>Exercici 35. Ús d'interruptors</summary>
+<p>Demana un número per teclat i digues si és un número primer o no. Un número és primer si només té 2 divisors (per ell mateix i per 1, clar).</p>
+</details>
+<h2 id="alguns-algorismes-basics">Alguns algorismes bàsics</h2>
+<h3 id="obtindre-el-major-duna-llista-de-numeros">Obtindre el major d'una llista de números</h3>
+<p>Imaginem que (sense cap ordinador), vull anar preguntant l'edat de tot l'alumnat per a poder saber l'edat màxima. Com ho faria? No he de recordar l'edat de tots, sinó que només necessite saber en cada moment l'edat de l'alumne actal i l'edat màxima obtinguda fins eixe moment (que hauré d'anar canviant-la o no).</p>
+<p>Per tant, necessite 2 variables: <em>edat</em> (per a guardar l'edat de l'alumne "actual") i <em>maxima</em> (per a guardar l'edat màxima fins a eixe moment). L'algorisme seria:</p>
+<div class="admonition example">
+<p class="admonition-title">Algorisme</p>
+<ul>
+<li>Inicialitzar <em>maxima</em> a un valor molt xicotet. En el cas de les edats ens serviria el 0, ja que cap alumne pot tindre menys de 0 anys.</li>
+<li>Per cada alumne del bucle faria:<ul>
+<li>Demanar l'edat de l'alumne (la guarde sempre a la variable <em>edat</em>).</li>
+<li>Si eixa edat és major que la que tinc en <em>maxima</em>, canvie el valor de <em>maxima</em> a eixa edat.</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span>
+<span class="normal"><a href="#__codelineno-11-7">7</a></span>
+<span class="normal"><a href="#__codelineno-11-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">maxima</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">24</span><span class="p">):</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>    <span class="n">edat</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Edat: &quot;</span><span class="p">))</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">edat</span> <span class="o">&gt;</span> <span class="n">maxima</span><span class="p">):</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>        <span class="n">maxima</span> <span class="o">=</span> <span class="n">edat</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Edat màxima:&quot;</span><span class="p">,</span> <span class="n">maxima</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Ara bé: i si no foren edats? És a dir: imaginem que volem calcular el número màxim d'una llista de números però que també podrien ser negatius. Fins i tot, tots els números podrien ser negatius. En eixe cas no ens serviria inicialitzar el valor de la variable maxima a 0, sinó que hauríem d'assignar-li un valor que siga més xicotet que tots els que puguen estar en la llista.</p>
+<p>En eixe cas tenim 2 opcions per a trobar el valor inicial de la variable <em>maxima</em>:</p>
+<ol>
+<li>El valor mñes xicotet que admet eixe tipus de dades en eixe llenguatge. Per exemple, el menor enter en <em>Java</em> seria <em>Integer.MIN_VALUE</em>. Ara bé: <em>Python</em> o té límit en la grandària dels enters.</li>
+<li>El primer valor de la llista de números.</li>
+</ol>
+<p>Per tant, si volem obtindre el màxima de 100 valors usant l'opció (2), al principi de l'algorisme direm que el màxim és el primer d'eixos valors. Després llegirem en un bucle els altres 99 números i, com abans, anirem canviant, si cal, el valor màxim:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span>
+<span class="normal"><a href="#__codelineno-12-7">7</a></span>
+<span class="normal"><a href="#__codelineno-12-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="hll"><span class="nb">max</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Núm: &quot;</span><span class="p">))</span>
+</span><a id="__codelineno-12-2" name="__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="hll"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">99</span><span class="p">):</span>
+</span><a id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Núm: &quot;</span><span class="p">))</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">num</span> <span class="o">&gt;</span> <span class="nb">max</span><span class="p">):</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>        <span class="nb">max</span> <span class="o">=</span> <span class="n">num</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Màxim:&quot;</span><span class="p">,</span> <span class="nb">max</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Exercici 36. Càlcul del major</summary>
+<p>Llig uns quants números (fins que posem 0). Mostra el major i el menor.</p>
+</details>
 
 
 
@@ -1394,6 +1671,10 @@
     
     
       <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
