@@ -626,6 +626,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercicis
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -908,6 +917,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercicis
+    </span>
+  </a>
   
 </li>
       
@@ -1545,6 +1563,178 @@
 </code></pre></div></td></tr></table></div>
 <p><strong>NOTA</strong>: recorda que l'operador <code>%</code> calcula el <em>residu de la divisió entera</em>, tant en <em>PSeInt</em>, <em>Python</em> i <em>Java</em> (encara que <em>PSeInt</em> tabé admet l'operador <em>mod</em>).</p>
 </div>
+<details class="question">
+<summary>Exercici 36. Bucles niuats</summary>
+<p>Dibuixa un quadrat de caràcters <code>x</code>, de grandària <code>n</code> (demanada per teclat). Per exemple, si <code>n</code> és 4, cal dibuixar:</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>x   x   x   x
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>x   x   x   x
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>x   x   x   x
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>x   x   x   x
+</code></pre></div></td></tr></table></div>
+<strong>NOTA</strong>: per a escriure sense que faça després un salt de línia:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 36.2</summary>
+<p>Dibuixa un triangle de caràcters <code>x</code> d'altura <code>n</code> (demanada per teclat). Per exemple, si <code>n</code> és 4:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a>x
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>x   x
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>x   x   x
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>x   x   x   x
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 36.3</summary>
+<p>Dibuixa un triangle de <code>x</code> d'altura <code>n</code> (demanada per teclat). Per exemple, si <code>n</code> és 4:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>x   x   x   x
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>x   x   x
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>x   x
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>x
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 36.4</summary>
+<p>Dibuixa un triangle de <code>x</code> de grandària <code>alt</code> per <code>ample</code> (dades demanades per teclat). Per exemple, si és 4 d'alt per 7 d'ample, dibuixarem:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a>x   x   x   x   x   x   x
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a>x   x   x   x   x   x   x
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>x   x   x   x   x   x   x
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a>x   x   x   x   x   x   x
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 36.5</summary>
+<p>Igual que el 36.4, però ara el triangle ha d'estar buit:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>x   x   x   x   x   x   x
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a>x                       x
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a>x                       x
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>x   x   x   x   x   x   x
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 37</summary>
+<p>Mostra les taules de multiplicar del 2 al 9.</p>
+<p><strong>PISTA</strong>: ja havoes fet, amb un bucle, una taula de multiplicar. Ara es tracta de posar eixe trós de codi dins d'un altre bucle, ja que volem <em>motes</em> taules.</p>
+</details>
+<details class="question">
+<summary>Exercici 37.1</summary>
+<p>Demana un número per teclat (n) i mostra per pantalla les següents línies:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>1 = 1
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>1 + 2 = 3
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a>1 + 2 + 3 = 6
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>...
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>fins a les n línies
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 37.2</summary>
+<p>Mostra els primers 15 números primers. Els resultat ha de ser:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>Nombres primers:
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47
+</code></pre></div></td></tr></table></div>
+<p><strong>NOTA</strong>: L'1 no és primer, per definició.</p>
+</details>
+<h2 id="exercicis">Exercicis</h2>
+<details class="question">
+<summary>Exercici 38</summary>
+<p>En un pàrquing es paga 2€ l'hora completa. I per als minuts restants, es paga 4 cèntims per minut, però no pot excedir el preu d'una hora. Calcula què li toca pagar a un conductor per un determinat temps, donat en minuts.</p>
+<p><strong>NOTA</strong>: es poden eliminar els decimals amb la funció <code>trunc</code>.</p>
+</details>
+<details class="question">
+<summary>Exercici 39</summary>
+<p>Donat un temps en segons, calcula els segons que falten per a convertir-se en minuts sencers. Per exemple, per a un temps de 70 segons, en faltarien 50.</p>
+</details>
+<details class="question">
+<summary>Exercici 40</summary>
+<p>Donat un temps en minuts, calcula els dies, hores i minuts que li corresponen.</p>
+</details>
+<details class="question">
+<summary>Exercici 41</summary>
+<p>Pregunta quina és l'arrel quadrada de 225 fins que siga encertat.</p>
+</details>
+<details class="question">
+<summary>Exercici 42</summary>
+<p>Càlcul del sou d'un treballador. Pregunta quantes hores ha treballat (a partir de les 40 hores es consideraran extres). Pregunta quin és el preu de l'hora normal (el preu de l'hora extra és un 50% més del preu de l'hora normal). Que cobra el treballador?</p>
+</details>
+<details class="question">
+<summary>Exercici 43</summary>
+<p>Modifica l'exercici de les hores extres per a obtindre la suma dels salaris de tots els treballadors. Tots la mateixa tarifa. Acabarà quan posem 0 hores treballades.</p>
+</details>
+<details class="question">
+<summary>Exercici 44</summary>
+<p>Demana <code>N</code> notes d'un estudiant i calcula:</p>
+<ul>
+<li>Quantes notes té suspeses.</li>
+<li>Quantes aprovades.</li>
+<li>La mitjana de les notes.</li>
+<li>La mitjana de les notes aprovades i la mitjana de les suspeses.</li>
+</ul>
+</details>
+<details class="question">
+<summary>Exercici 45</summary>
+<p>Escriu un algorisme que calcule el total d'una factura d'un article determinat del qual s'adquirixen <code>N</code> unitats a un preu <code>P</code>. L'IVA és el 21%. Si l'import a pagar (amb IVA) és superior a 300€, s'aplicarà un descompte del 5%.</p>
+</details>
+<details class="question">
+<summary>Exercici 46</summary>
+<p>Modifica l'exercici de la factura per a demanar moltes voltes el preu i la quantitat de diferents articles. Si les unitats introduïdes són 0, vol dir que no es demanaran més articles. El possible descompte, s'aplicarà al final de la factura.</p>
+</details>
+<details class="question">
+<summary>Exercici 47</summary>
+<p>Algorisme que vaja demanant lletres des de teclat i que pare quan es trobe amb una vocal. Cal escriure esta vocal.</p>
+</details>
+<details class="question">
+<summary>Exercici 48</summary>
+<p>Mostra els números entre 100 i 200 que són múltiples de 3 però que no son múltiples de 2.</p>
+</details>
+<details class="question">
+<summary>Exercici 49</summary>
+<p>Mostra tots els divisors d'un número donat, Utilitzant l'operador <code>mod</code>.</p>
+</details>
+<details class="question">
+<summary>Exercici 50</summary>
+<p>Demana per teclat la quantitat del números que vol introduir l'usuari. A continuació, llig de teclat eixa quantitat de números i digues de cadascun si és parell i positiu al mateix temps.</p>
+</details>
+<details class="question">
+<summary>Exercici 51</summary>
+<p>Imprimix la taula de multiplicar d'un número introduït per teclat.</p>
+</details>
+<details class="question">
+<summary>Exercici 52</summary>
+<p>Dir si un número de 3 xifres és o no d'Armstrong (si és igual a la suma dels seus dígits al cub, per exemple: 153 = 1³ + 5³ + 3³). Si no ho és, torna-ho a intentar per a més números.</p>
+</details>
+<details class="question">
+<summary>Exercici 53</summary>
+<p>Algorisme que mostre tots els números d'Armstrong de l'a al 1000.</p>
+</details>
+<details class="question">
+<summary>Exercici 54</summary>
+<p>Comprova si un número donat és perfecte.</p>
+<p><strong>NOTA</strong>: es diu que un número és perfecte si és igual a la suma dels seus divisors excepte ell mateix.</p>
+</details>
+<details class="question">
+<summary>Exercici 55</summary>
+<p>Mostra els números primers menors de 100.</p>
+</details>
 
 
 
