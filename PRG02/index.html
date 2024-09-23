@@ -612,6 +612,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#bucles-niuats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bucles niuats
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -883,6 +892,15 @@
   <a href="#obtindre-el-major-duna-llista-de-numeros" class="md-nav__link">
     <span class="md-ellipsis">
       Obtindre el major d'una llista de números
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bucles-niuats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bucles niuats
     </span>
   </a>
   
@@ -1509,6 +1527,31 @@
 <summary>Exercici 36. Càlcul del major</summary>
 <p>Llig uns quants números (fins que posem 0). Mostra el major i el menor.</p>
 </details>
+<h3 id="bucles-niuats">Bucles niuats</h3>
+<p>Podem posar un bucle (o més) dins d'un altre.</p>
+<p>Per exemple, si volem obtindre de teclat un número imparell, cal un bucle per a demanar contínuament el número fins que siga imparell. Però si volem demanar <strong>4</strong> números imparells, haurem de posar el bucle anterior dins d'un altre bucle:</p>
+<div class="admonition example">
+<p class="admonition-title">Bucles niuats</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span>
+<span class="normal"><a href="#__codelineno-13-6">6</a></span>
+<span class="normal"><a href="#__codelineno-13-7">7</a></span>
+<span class="normal"><a href="#__codelineno-13-8">8</a></span>
+<span class="normal"><a href="#__codelineno-13-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="hll"><span class="k">for</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+</span><a id="__codelineno-13-2" name="__codelineno-13-2"></a>    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Núm. imparell:&quot;</span><span class="p">))</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="hll">    <span class="k">while</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span><a id="__codelineno-13-5" name="__codelineno-13-5"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No és imparell. Torna&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a>        <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;num imparell: &quot;</span><span class="p">))</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El </span><span class="si">{</span><span class="n">num</span><span class="si">}</span><span class="s2"> és imparell&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ja tenim </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> imparells&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>NOTA</strong>: recorda que l'operador <code>%</code> calcula el <em>residu de la divisió entera</em>, tant en <em>PSeInt</em>, <em>Python</em> i <em>Java</em> (encara que <em>PSeInt</em> tabé admet l'operador <em>mod</em>).</p>
+</div>
 
 
 
