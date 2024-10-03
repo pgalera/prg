@@ -685,6 +685,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#altres-operadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altres operadors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Altres operadors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-sizeof" class="md-nav__link">
+    <span class="md-ellipsis">
+      El sizeof
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -997,6 +1021,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#altres-operadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altres operadors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Altres operadors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-sizeof" class="md-nav__link">
+    <span class="md-ellipsis">
+      El sizeof
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1018,7 +1066,7 @@
 
 
 <h1 id="ud3-introduccio-a-python">UD3. Introducció a Python</h1>
-<p>En aquest tema veurem una introducció al llenguatge de programació Python. Ara bé: com que més endavant es vorà el llenguatge Java, conforme anem veient coses de Python, anirem dient ja les diferències en Java. Estes diferències solen ser iguals en Java i C.</p>
+<p>Al tema anterior, per començar a vore els principis de la programació estructurada hem vist algorismes en ordinograma i la seua implementació en Python. En este tema aprofundirem un poc més en Python pel que fa als operadors i expressions, així com a l'entrada i eixida de dades. A més, com que més endavant es vorà el llenguatge Java, conforme anem veient coses en Python, anirem dient ja les diferències en java. Estes diferències solen ser iguals en Java i en C.</p>
 <h2 id="caracteristiques-basiques-de-python">Característiques bàsiques de Python</h2>
 <p>Python és un llenguatge creat a finals dels 80 per <em>Guido Van Rossum</em>, i deu el seu nom a l'afició pel grup còmic britànic <em>Monty Python</em>.</p>
 <p>És un llenguatge de programació <strong>interpretat</strong>, de <strong>tipificació dinàmica</strong> i <strong>multi plataforma</strong>. És de propòsit general, fins i tot per a la creació de <em>scripts</em>.</p>
@@ -1911,6 +1959,31 @@ Només mostrarà el text si el valor de x és negatiu.</p>
 <a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="n">b</span> <span class="o">//=</span> <span class="mi">2</span>         <span class="c1"># a =       b =</span>
 </code></pre></div></td></tr></table></div>
 </details>
+<h3 id="altres-operadors">Altres operadors</h3>
+<h4 id="el-sizeof">El <em>sizeof</em></h4>
+<p>La quantitat de <em>bytes</em> que s'utilitza per a guardar una dada depén del tipus de dades, així com del llenguatge de programació, la varsió del compilador i del tipus de processador que s'utilitze (32 o 64 bits).</p>
+<p>Per tant, perquè el nostre programa puga ser portable, de vegades és necessari saber quants <em>bytes</em> ocupen les variables amb les quals treballarem. Per aixó alguns llenguatges tenen una funció per a tal fi:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">En Python: sys.getsizeof()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span>
+<span class="normal"><a href="#__codelineno-30-4">4</a></span>
+<span class="normal"><a href="#__codelineno-30-5">5</a></span>
+<span class="normal"><a href="#__codelineno-30-6">6</a></span>
+<span class="normal"><a href="#__codelineno-30-7">7</a></span>
+<span class="normal"><a href="#__codelineno-30-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="kn">import</span> <span class="nn">sys</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;10&quot;</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="s2">&quot;bytes&quot;</span><span class="p">)</span>            <span class="c1"># 28 bytes (1)</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="s2">&quot;bytes&quot;</span><span class="p">)</span>         <span class="c1"># 51 bytes (2)</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span> <span class="s2">&quot;bytes&quot;</span><span class="p">)</span>         <span class="c1"># 28 bytes</span>
+<a id="__codelineno-30-7" name="__codelineno-30-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="s2">&quot;Hola, Pep&quot;</span><span class="p">),</span> <span class="s2">&quot;bytes&quot;</span><span class="p">)</span>  <span class="c1"># 58 bytes</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">getsizeof</span><span class="p">(</span><span class="mf">1234.56789</span><span class="p">),</span> <span class="s2">&quot;bytes&quot;</span><span class="p">)</span>   <span class="c1"># 24 bytes (3)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Qualsevol enter ocupa 28 bytes</li>
+<li>Quantitat de caracters + 49</li>
+<li>Un float ocupa 24 bytes</li>
+</ol>
 
 
 
