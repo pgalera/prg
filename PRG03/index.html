@@ -714,6 +714,63 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expressions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-tipus-de-les-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      El tipus de les expressions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El tipus de les expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promocio-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promoció interna
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promocio-per-assignacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promoció per assignació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promocio-forcada-casting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promoció forçada (càsting)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1035,6 +1092,63 @@
   <a href="#el-sizeof" class="md-nav__link">
     <span class="md-ellipsis">
       El sizeof
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expressions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-tipus-de-les-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      El tipus de les expressions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="El tipus de les expressions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#promocio-interna" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promoció interna
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promocio-per-assignacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promoció per assignació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promocio-forcada-casting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promoció forçada (càsting)
     </span>
   </a>
   
@@ -1984,6 +2098,76 @@ Només mostrarà el text si el valor de x és negatiu.</p>
 <li>Quantitat de caracters + 49</li>
 <li>Un float ocupa 24 bytes</li>
 </ol>
+<h2 id="expressions">Expressions</h2>
+<p>Ja hem vist les dades i els operadors. Amb ells podem formar expressions.</p>
+<p>Una expressió és una combinació de dades (operands) i operadors (seguint certes regles de construcció) i que poden estar agrupats per parèntesi per a indicar l'ordre de càlcul.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemples d'expressions</p>
+<ul>
+<li>base * altura / 2</li>
+<li>(-b + sqrt(b<em><em>2 - 4</em>a</em>c))/2</li>
+<li>1000</li>
+<li>edat &gt;= 0 and edat &lt;= 100</li>
+<li>cognoms</li>
+<li>"Sr." + nom + " " + cognoms</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Llocs on pot aparéixer una expressió</p>
+<ul>
+<li><strong>En una assignació:</strong><ul>
+<li>area = <mark>base * altura / 2</mark></li>
+<li>total += <mark>preu * quantitat</mark></li>
+</ul>
+</li>
+<li><strong>En els paràmetres d'una funció:</strong><ul>
+<li>sqrt(<mark>b ** 2 - 4 * a * c</mark>)</li>
+<li>print(<mark>"Sr." + nom + " " + cognoms</mark>)</li>
+</ul>
+</li>
+<li><strong>En una condició:</strong><ul>
+<li>if(<mark>edat &lt; 0</mark>):</li>
+<li>while (<mark>nota &lt; 0 or nota &gt; 10</mark>)</li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="el-tipus-de-les-expressions">El tipus de les expressions</h3>
+<p>Igual que una variable (o una constant) és d'un tipus determinat, una expressió també té el seu tipus.</p>
+<p>Per exemple, tenim les variables enteres <code>a</code> i <code>b</code> i la variable <em>float</em> <code>x</code>.</p>
+<ul>
+<li>És lògic pensar que <code>a * b</code> també serà entera, i també <code>a + b</code>, etc</li>
+</ul>
+<p>Ara bé:</p>
+<ul>
+<li>De quin tipus serà una expressió amb operands de diferents tipus: <code>a * x</code>?</li>
+<li>De quin tipus serà <code>a / b</code>? Enter (sense decimals) o <em>float</em> (amb decimals)?</li>
+</ul>
+<p>En eixos casos cada llenguatge de programació fa una conversió de tipus o <em>promoció</em>. Hi ha diferents formes de <em>promoció</em>:</p>
+<h4 id="promocio-interna">Promoció interna</h4>
+<p>Si en una expressió hi ha dades amb decimals i sense, <strong>el resultat també tindrà decimals</strong>.</p>
+<p>Per tant, si tenim <code>4 + 2.3</code> el resultat serà <code>6.3</code> (<em>float</em>), no <code>6</code> (<em>int</em>).</p>
+<p>Esta norma serveix per a tots els llenguatges. Però C i Java tenen més tipus per a representar els números. En estos llenguatges, si una expressió té diferents tipus, <strong>l'expressió serà del tipus que ocupa més bytes</strong> (però si l'expressió té números decimals, l'expressió serà d'un tipus amb decimals).</p>
+<p><center><img alt="Promoció interna" src="../img/ud3/promoInterna.png" /></center></p>
+<h4 id="promocio-per-assignacio">Promoció per assignació</h4>
+<p>Esta conversió la fa el compilador quan s'intenta assignar a una variable una expressió de diferent tipus.</p>
+<p><center><img alt="Promoció per assignació" src="../img/ud3/promocioAssignacio.png" /></center></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python: la variable passarà a ser del tipus de l'expressió</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">preu</span> <span class="o">=</span> <span class="mi">3</span>    <span class="c1"># Ara preu és int (i el seu valor és 3)</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="n">preu</span> <span class="o">=</span> <span class="mf">4.6</span>  <span class="c1"># Ara preu és float (i el seu valor és 4.6)</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C, Java: el tipus de la variable no canvia. És l'expressió la que canvia al tipus de la variable perquè es faça l'assignació</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span>
+<span class="normal"><a href="#__codelineno-32-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">preu</span><span class="p">;</span><span class="w">   </span><span class="c1">// Ara (i en tot el programa) preu serà int</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="n">preu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">   </span><span class="c1">// preu ara val 3</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="n">preu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.6</span><span class="p">;</span><span class="w"> </span><span class="c1">// preu ara val 4 i continua sent int (en Python seria 4.6) (1)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>En este cas diem que s'ha fet una promoció per assignació: el <em>float</em> 4.6 ha "promocionat" a l'<em>int</em> 4.</li>
+</ol>
+<h4 id="promocio-forcada-casting">Promoció forçada (<em>càsting</em>)</h4>
+<p>El programador pot indicar que una expressió canvie a un tipus en concret. Eixa conversió es diu <em>càsting</em> o <em>promoció forçada</em>.</p>
+<p><center><img alt="Càsting" src="../img/ud3/casting.png" /></center></p>
 
 
 
