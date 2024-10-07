@@ -771,6 +771,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#precedencia-i-associativitat-doperadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precedència i associativitat d'operadors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eixida-de-dades-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eixida de dades: print
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Eixida de dades: print">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-senzill-de-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple senzill de print
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altres-parametres-del-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altres paràmetres del print
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usant-el-print-amb-format-us-de-f-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usant el print amb format (ús de f-strings)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1156,6 +1207,57 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#precedencia-i-associativitat-doperadors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Precedència i associativitat d'operadors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eixida-de-dades-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eixida de dades: print
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Eixida de dades: print">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemple-senzill-de-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemple senzill de print
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altres-parametres-del-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altres paràmetres del print
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usant-el-print-amb-format-us-de-f-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usant el print amb format (ús de f-strings)
+    </span>
+  </a>
   
 </li>
         
@@ -2168,6 +2270,299 @@ Només mostrarà el text si el valor de x és negatiu.</p>
 <h4 id="promocio-forcada-casting">Promoció forçada (<em>càsting</em>)</h4>
 <p>El programador pot indicar que una expressió canvie a un tipus en concret. Eixa conversió es diu <em>càsting</em> o <em>promoció forçada</em>.</p>
 <p><center><img alt="Càsting" src="../img/ud3/casting.png" /></center></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple d'us en Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span>
+<span class="normal"><a href="#__codelineno-33-3">3</a></span>
+<span class="normal"><a href="#__codelineno-33-4">4</a></span>
+<span class="normal"><a href="#__codelineno-33-5">5</a></span>
+<span class="normal"><a href="#__codelineno-33-6">6</a></span>
+<span class="normal"><a href="#__codelineno-33-7">7</a></span>
+<span class="normal"><a href="#__codelineno-33-8">8</a></span>
+<span class="normal"><a href="#__codelineno-33-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="n">x</span> <span class="o">=</span> <span class="mf">4.6</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">*</span> <span class="mi">2</span>  <span class="c1"># int(4.6) * 2 --&gt; 4 * 2    --&gt; 8 --&gt; n valdrà 8</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># int(4.6 * 2) --&gt; int(9.2) --&gt; 9 --&gt; n valdrà 9</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="n">euros</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">euros</span> <span class="o">*</span> <span class="mf">166.386</span><span class="p">))</span> <span class="c1"># Mostrarà 1663 (sense deimals)</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="n">tel</span> <span class="o">=</span> <span class="mi">962829995</span> <span class="c1"># tel és un enter i val 962829995. Podriem sumar-li números, etc.</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9"></a><span class="n">tel</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">tel</span><span class="p">)</span>  <span class="c1"># tel ara és una cadena i val &quot;962829995&quot;. Podriem concatenar...</span>
+</code></pre></div></td></tr></table></div>
+<p>Els tipus possibles en Python són: <em>int</em>, <em>float</em>, <em>str</em> i <em>bool</em>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple d'ús en C i Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-34-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-34-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-34-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-34-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-34-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-34-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-34-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.6</span><span class="p">;</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span><span class="w">     </span><span class="c1">// (4*2)        --&gt; n valdrà 8</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="kt">int</span><span class="p">)(</span><span class="n">x</span><span class="o">*</span><span class="mi">2</span><span class="p">));</span><span class="w">   </span><span class="c1">// (int)(9.2)   --&gt; n valdrà 9</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8"></a><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.6</span><span class="p">;</span>
+<a id="__codelineno-34-9" name="__codelineno-34-9"></a><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)(</span><span class="n">n</span><span class="o">/</span><span class="n">m</span><span class="p">);</span><span class="w">   </span><span class="c1">// (float)3         --&gt; x valdrà 3.0</span>
+<a id="__codelineno-34-10" name="__codelineno-34-10"></a><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">n</span><span class="o">/</span><span class="n">m</span><span class="p">;</span><span class="w">     </span><span class="c1">// (float)(10)/3    --&gt; 10.0/3  --&gt; x valdrà 3.333...</span>
+</code></pre></div></td></tr></table></div>
+<p>En este últim cas veiem que el càsting és útil per si volem fer una divisió d'emters però amb decimals en C i Java.</p>
+<h2 id="precedencia-i-associativitat-doperadors">Precedència i associativitat d'operadors</h2>
+<p>Ací tenim una relació dels operadors ordenats per <strong>procedència</strong> de major a menor. En cas d'igualtat de precedència de divers operadors en una expressió, l'<strong>associativitat</strong> ens diu per on es comença a avaluar (d'esquerra a dreta o de dreta a esquerra).</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>CATEGORÍA DE L'OPERADOR</strong></th>
+<th style="text-align: center;"><strong>OPERADORS PYTHON</strong></th>
+<th style="text-align: center;"><strong>OPERADORS JAVA</strong></th>
+<th style="text-align: center;"><strong>ASSOCIATIVITAT</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Parèntesi, vectors</td>
+<td style="text-align: center;">( )  [ ]</td>
+<td style="text-align: center;">( )  [ ]</td>
+<td style="text-align: center;">ESQUERRA</td>
+</tr>
+<tr>
+<td style="text-align: center;">Operadors unaris</td>
+<td style="text-align: center;">+ -</td>
+<td style="text-align: center;">++ -- + -</td>
+<td style="text-align: center;">DRETA</td>
+</tr>
+<tr>
+<td style="text-align: center;">Potència</td>
+<td style="text-align: center;">**</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">DRETA</td>
+</tr>
+<tr>
+<td style="text-align: center;">Multiplicació, divisió i residu</td>
+<td style="text-align: center;">* / // %</td>
+<td style="text-align: center;">* / %</td>
+<td style="text-align: center;">ESQUERRA</td>
+</tr>
+<tr>
+<td style="text-align: center;">Suma i resta</td>
+<td style="text-align: center;">+ -</td>
+<td style="text-align: center;">+ -</td>
+<td style="text-align: center;">ESQUERRA</td>
+</tr>
+<tr>
+<td style="text-align: center;">Operadors relacionals</td>
+<td style="text-align: center;">&lt; &lt;= &gt; &gt;= == != &lt;&gt;</td>
+<td style="text-align: center;">&lt; &lt;= &gt; &gt;= == !=</td>
+<td style="text-align: center;">ESQUERRA</td>
+</tr>
+<tr>
+<td style="text-align: center;">'No' lògic</td>
+<td style="text-align: center;">not</td>
+<td style="text-align: center;">!</td>
+<td style="text-align: center;">ESQUERRA</td>
+</tr>
+<tr>
+<td style="text-align: center;">'i' lògic</td>
+<td style="text-align: center;">and</td>
+<td style="text-align: center;">&amp;&amp;</td>
+<td style="text-align: center;">ESQUERRA</td>
+</tr>
+<tr>
+<td style="text-align: center;">'o' lògic</td>
+<td style="text-align: center;">or</td>
+<td style="text-align: center;">||</td>
+<td style="text-align: center;">ESQUERRA</td>
+</tr>
+<tr>
+<td style="text-align: center;">Operador condicional</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">?:</td>
+<td style="text-align: center;">DRETA</td>
+</tr>
+<tr>
+<td style="text-align: center;">Assignacions</td>
+<td style="text-align: center;">= += -= <em>= </em>*= /= //= %=</td>
+<td style="text-align: center;">= += -= *= /= %=</td>
+<td style="text-align: center;">DRETA</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>No cal saber-se tot això de memòria. Simplement hem de saber que, per a avaluar les expressions, hi ha unes regles per vore què s'avalua primer. Davant del dubte, farem ús dels <strong>parèntesis</strong> per a indicar quines operacions volem que es facen primer.</p>
+<details class="question">
+<summary>Exercici 5. Expressions i tipus</summary>
+<p>Suposem que tenim estes variables en un programa en Python:</p>
+<ul>
+<li><code>a = 12</code></li>
+<li><code>x = 2.5</code></li>
+<li><code>y = 0.6</code></li>
+</ul>
+<p>Indica de quin és el valor de cadascuna de les següents expressions:</p>
+<ul>
+<li><code>a + x</code></li>
+<li><code>x + y</code></li>
+<li><code>int(x) + y</code></li>
+<li><code>int(x) + int(y)</code></li>
+<li><code>int(x + y)</code></li>
+<li><code>a / 4</code></li>
+<li><code>a // 4</code></li>
+<li><code>a % 4</code></li>
+<li><code>a + x * 2</code></li>
+<li><code>a / a - 2</code></li>
+<li><code>a ** 2 + 1</code></li>
+<li><code>a &lt; x or y &lt; x</code></li>
+<li><code>not(a &lt; x)</code></li>
+<li><code>(a &gt;= x) and (y &lt;= a)</code></li>
+</ul>
+</details>
+<h2 id="eixida-de-dades-print">Eixida de dades: <em>print</em></h2>
+<p>Les instruccions d'entrada i eixida permeten la construcció de programes interactius. És a dir, amb elles podrem mostrar dades en pantalla i introduir dades per teclat.</p>
+<p>En Python:</p>
+<ul>
+<li>Eixida de dades: <em>print</em></li>
+<li>Entrada de dades: <em>input</em></li>
+</ul>
+<h3 id="exemple-senzill-de-print">Exemple senzill de <em>print</em></h3>
+<p>Esta funció mostra per pantalla allò que se li passa com a paràmetre. Ja ha aparegut anteriorment. Anem a detallar el seu funcionament.</p>
+<p>Veiem estos exemples:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
+<span class="normal"><a href="#__codelineno-35-2">2</a></span>
+<span class="normal"><a href="#__codelineno-35-3">3</a></span>
+<span class="normal"><a href="#__codelineno-35-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">nom</span> <span class="o">=</span> <span class="s2">&quot;Pep&quot;</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="n">cognoms</span><span class="o">=</span> <span class="s2">&quot;Garcia&quot;</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola,&quot;</span><span class="p">,</span> <span class="n">nom</span><span class="p">,</span> <span class="n">cognoms</span><span class="p">)</span>    <span class="c1"># Mostra: Hola, Pep Garcia</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola,&quot;</span> <span class="o">+</span> <span class="n">nom</span> <span class="o">+</span> <span class="n">cognoms</span><span class="p">)</span>  <span class="c1"># Mostra: Hola,PepGarcia</span>
+</code></pre></div></td></tr></table></div>
+<p>Com podem vore:</p>
+<ul>
+<li><em>print</em> pot rebre una o més dades com a arguments (separats per comes).</li>
+<li>Si els arguments són textos han d'anar entre cometes (simples o dobles).</li>
+<li>Es mostren els textos separats per 1 espai. Al final es posa un salt de línia.</li>
+<li>Les cadenes de text poden concatenar-se amb l'operador '+' però no posa espais entre elles. I no podem concatenar un text amb un número. Donaria error.</li>
+</ul>
+<h3 id="altres-parametres-del-print">Altres paràmetres del <em>print</em></h3>
+<p><center><code>print(objecte/s, sep=separador, end=finalitzador, file=fitxer)</code></center></p>
+<ul>
+<li><strong>objecte/s</strong> --&gt; textos, números, variables o expressions que volem mostrar (separats er comes).</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
+<span class="normal"><a href="#__codelineno-36-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">dies</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;En&quot;</span><span class="p">,</span> <span class="n">dies</span><span class="p">,</span> <span class="s2">&quot;dies hi ha&quot;</span><span class="p">,</span> <span class="n">dies</span><span class="o">*</span><span class="mi">24</span><span class="p">,</span> <span class="s2">&quot;hores&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><center><img alt="Print amb objectes" src="../img/ud3/printObjectes.png" /></center></p>
+<ul>
+<li><strong>sep=separador</strong> --&gt; Ací indicarem amb una cadena de caràcters com volem que apareguen separats els objectes que mostrem. Si no posem res, el separador és un espai en blanc.</li>
+</ul>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span>
+<span class="normal"><a href="#__codelineno-37-2">2</a></span>
+<span class="normal"><a href="#__codelineno-37-3">3</a></span>
+<span class="normal"><a href="#__codelineno-37-4">4</a></span>
+<span class="normal"><a href="#__codelineno-37-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LÍNIA&quot;</span><span class="p">,</span> <span class="s2">&quot;ARTÍCLE &quot;</span><span class="p">,</span> <span class="s2">&quot;QUANT.&quot;</span><span class="p">,</span> <span class="s2">&quot;PREU&quot;</span><span class="p">,</span> <span class="s2">&quot;IMPORT&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------- --------------- ------- ------- ------&quot;</span><span class="p">)</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Tomaques&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">3</span><span class="o">*</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a><span class="nb">print</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;Peres   &quot;</span><span class="p">,</span> <span class="mf">12.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">12</span><span class="o">*</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="nb">print</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;Plàtans &quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<center><img alt="Print amb separador" src="../img/ud3/printSep.png" /></center></p>
+<ul>
+<li><strong>end=finalitzador</strong> --&gt; Cadena que es mostrarà al final del text. Si no posem res, el finalitzador és el fi de línia (caràcter '\n').</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<span class="normal"><a href="#__codelineno-38-2">2</a></span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span> <span class="c1">#(1)!</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="c1"># Amb eixe end aconseguim que print NO faça intro sinó espai.</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="nb">print</span><span class="p">()</span> <span class="c1"># En acabar fem un print() per a fer un únic intro al final.</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Bucle on <strong>n</strong> va d'1 a 4 (ja ho veurem)</li>
+</ol>
+<p><center><img alt="Print amb end" src="../img/ud3/printEnd.png" /></center></p>
+<ul>
+<li><strong>file=fitxer</strong> --&gt; Si no volem que es mostre per pantalla sinó a un fitxer.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
+<span class="normal"><a href="#__codelineno-39-2">2</a></span>
+<span class="normal"><a href="#__codelineno-39-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="n">fitxer</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;nomFitxer.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">)</span>   <span class="c1">#(1)!</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola, Pep&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">fitxer</span><span class="p">)</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="n">fitxer</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1">#(2)!</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>El mode "a" afig el text al final del fitxer. El mode "w" reescriu el fitxer.</li>
+<li>Fins que no es "tanca" el fitxer, no s'escriu el <em>buffer</em> en ell.</li>
+</ol>
+<h3 id="usant-el-print-amb-format-us-de-f-strings">Usant el <em>print</em> amb format (ús de <em>f-strings</em>)</h3>
+<p>Suposem que volem mostrar els articles comprats, en forma de taula:</p>
+<p><center><img alt="Taula d'articles" src="../img/ud3/taulaProductes.png" /></center></p>
+<p>Què passaria si cada part de cada línia la separem amb un tabulador?</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-40-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-40-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-40-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-40-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-40-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-40-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-40-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-40-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-40-10">10</a></span>
+<span class="normal"><a href="#__codelineno-40-11">11</a></span>
+<span class="normal"><a href="#__codelineno-40-12">12</a></span>
+<span class="normal"><a href="#__codelineno-40-13">13</a></span>
+<span class="normal"><a href="#__codelineno-40-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LIN&quot;</span><span class="p">,</span> <span class="s2">&quot;ARTICLE            &quot;</span><span class="p">,</span> <span class="s2">&quot;KILOS&quot;</span><span class="p">,</span> <span class="s2">&quot;PREU/KG&quot;</span><span class="p">,</span> <span class="s2">&quot;IMPORT&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">,</span> <span class="s2">&quot;-------------------&quot;</span><span class="p">,</span> <span class="s2">&quot;-----&quot;</span><span class="p">,</span> <span class="s2">&quot;-------&quot;</span><span class="p">,</span> <span class="s2">&quot;------&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3"></a>
+<a id="__codelineno-40-4" name="__codelineno-40-4"></a><span class="n">linia</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-40-5" name="__codelineno-40-5"></a><span class="n">article</span> <span class="o">=</span> <span class="s2">&quot;Tomaques del Mareny&quot;</span>
+<a id="__codelineno-40-6" name="__codelineno-40-6"></a><span class="n">quantitat</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-40-7" name="__codelineno-40-7"></a><span class="n">preu</span> <span class="o">=</span> <span class="mf">2.5</span>
+<a id="__codelineno-40-8" name="__codelineno-40-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">linia</span><span class="p">,</span> <span class="n">article</span><span class="p">,</span> <span class="n">quantitat</span><span class="p">,</span> <span class="n">preu</span><span class="p">,</span> <span class="n">quantitat</span><span class="o">*</span><span class="n">preu</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-40-9" name="__codelineno-40-9"></a>
+<a id="__codelineno-40-10" name="__codelineno-40-10"></a><span class="n">linia</span> <span class="o">=</span> <span class="mi">2</span>
+<a id="__codelineno-40-11" name="__codelineno-40-11"></a><span class="n">article</span> <span class="o">=</span> <span class="s2">&quot;Safrà iraní&quot;</span>
+<a id="__codelineno-40-12" name="__codelineno-40-12"></a><span class="n">quantitat</span> <span class="o">=</span> <span class="mf">0.0004</span>
+<a id="__codelineno-40-13" name="__codelineno-40-13"></a><span class="n">preu</span> <span class="o">=</span> <span class="mf">4266.67</span>
+<a id="__codelineno-40-14" name="__codelineno-40-14"></a><span class="nb">print</span><span class="p">(</span><span class="n">linia</span><span class="p">,</span> <span class="n">article</span><span class="p">,</span> <span class="n">quantitat</span><span class="p">,</span> <span class="n">preu</span><span class="p">,</span> <span class="n">quantitat</span><span class="o">*</span><span class="n">preu</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Segons les dades que tinguen les variables, podria ser que ens desquadrara tot:</p>
+<p><center><img alt="Taula desquadrada" src="../img/ud3/taulaProductes2.png" /></center></p>
+<p>Això és degut a que els noms dels articles són de distinta llargària i els números no sempre tenen els mateixos decimals, etc.</p>
+<p>Per a evitar això (a partir de la versió 3.6 de Python) tenim els <em>f-strings</em>, és a dir: "cadenes amb format", on podrem especificar el format que tindrà cada variable que posem en la cadena. Recordem que volíem que l'aspecte fora este:</p>
+<p><center><img alt="Taula ben formatada" src="../img/ud3/taulaFormatada.png" /></center></p>
+<p>Per tant, li haurem de dir que en cada línia d'articles:</p>
+<ul>
+<li>El número de línia ocupe 3 posicions</li>
+<li>El nom de l'article ocupe 20 posicions</li>
+<li>Els kilos ocupen 7 posicions (4 d'elles que siguen decimals)</li>
+<li>El preu que ocupe 7 posicions (2 d'elles que siguen decimals)</li>
+<li>L'import que ocupe 6 posicions (2 d'elles decimals)</li>
+</ul>
+<p>I la forma de fer-ho amb el <em>f-string</em> és així:</p>
+<p><center><code>print(f"{linia:3} {article:20} {quantitat:7.4f} {preu:7.2f} {quantitat*preu:6.2f}")</code></center></p>
+<p>És a dir, abans de la cadena es posa una <em>f</em> (o <em>F</em>), i cada variable o expressió es posa dins les claus i especificant el format després dels dos punts. Exemples:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span>
+<span class="normal"><a href="#__codelineno-41-2">2</a></span>
+<span class="normal"><a href="#__codelineno-41-3">3</a></span>
+<span class="normal"><a href="#__codelineno-41-4">4</a></span>
+<span class="normal"><a href="#__codelineno-41-5">5</a></span>
+<span class="normal"><a href="#__codelineno-41-6">6</a></span>
+<span class="normal"><a href="#__codelineno-41-7">7</a></span>
+<span class="normal"><a href="#__codelineno-41-8">8</a></span>
+<span class="normal"><a href="#__codelineno-41-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="n">nom</span> <span class="o">=</span> <span class="s2">&quot;Pep&quot;</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="n">edat</span> <span class="o">=</span> <span class="mi">30</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3"></a><span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265359</span>
+<a id="__codelineno-41-4" name="__codelineno-41-4"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El meu nom és </span><span class="si">{</span><span class="n">nom</span><span class="si">}</span><span class="s2"> i tinc </span><span class="si">{</span><span class="n">edat</span><span class="si">}</span><span class="s2"> anys&quot;</span><span class="p">)</span>
+<a id="__codelineno-41-5" name="__codelineno-41-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tinc </span><span class="si">{</span><span class="n">edat</span><span class="si">:</span><span class="s2">&lt;10</span><span class="si">}</span><span class="s2"> anys&quot;</span><span class="p">)</span>  <span class="c1"># Posa el número a l&#39;esquerra dins de 10 caràcters</span>
+<a id="__codelineno-41-6" name="__codelineno-41-6"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tinc </span><span class="si">{</span><span class="n">edat</span><span class="si">:</span><span class="s2">&gt;10</span><span class="si">}</span><span class="s2"> anys&quot;</span><span class="p">)</span>  <span class="c1"># Posa el número a la dreta dins de 10 caràcters</span>
+<a id="__codelineno-41-7" name="__codelineno-41-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tinc </span><span class="si">{</span><span class="n">edat</span><span class="si">:</span><span class="s2">^10</span><span class="si">}</span><span class="s2"> anys&quot;</span><span class="p">)</span>  <span class="c1"># Posa el número centrat dins de 10 caràcters</span>
+<a id="__codelineno-41-8" name="__codelineno-41-8"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pi és </span><span class="si">{</span><span class="n">pi</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> aprox&quot;</span><span class="p">)</span>  <span class="c1"># Mostra 2 decimals</span>
+<a id="__codelineno-41-9" name="__codelineno-41-9"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Pi és </span><span class="si">{</span><span class="n">pi</span><span class="si">:</span><span class="s2">10.2f</span><span class="si">}</span><span class="s2"> aprox&quot;</span><span class="p">)</span>    <span class="c1"># Mostra 2 decimals, a la dreta dins de 10 car.</span>
+</code></pre></div></td></tr></table></div>
+<p>El resultat seria:</p>
+<p><center><img alt="Formatant Strings: f-strings" src="../img/ud3/fStrings.png" /></center></p>
+<p>Observem que emprem <code>&lt;</code>, <code>&gt;</code> i <code>^</code> per a posar el valor a l'esquerra, dreta o centrat. I per als <em>float</em> indiquem també quants decimals volem (i li posem una <code>f</code>).</p>
 
 
 
