@@ -822,6 +822,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#entrada-de-dades-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada de dades: input
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrada de dades: input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrada-de-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada de text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrada-de-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada de números
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diverses-entrades-en-un-mateix-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diverses entrades en un mateix input
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercicis
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1263,6 +1314,57 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-de-dades-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada de dades: input
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entrada de dades: input">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrada-de-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada de text
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entrada-de-numeros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada de números
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diverses-entrades-en-un-mateix-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diverses entrades en un mateix input
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercicis
+    </span>
+  </a>
   
 </li>
       
@@ -2563,6 +2665,207 @@ Només mostrarà el text si el valor de x és negatiu.</p>
 <p>El resultat seria:</p>
 <p><center><img alt="Formatant Strings: f-strings" src="../img/ud3/fStrings.png" /></center></p>
 <p>Observem que emprem <code>&lt;</code>, <code>&gt;</code> i <code>^</code> per a posar el valor a l'esquerra, dreta o centrat. I per als <em>float</em> indiquem també quants decimals volem (i li posem una <code>f</code>).</p>
+<p>Realment els <em>f-strings</em> no tenen res a vore amb el <em>print</em>, sinó que serveix per a crear una cadena amb dades amb el format que volem. Per exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
+<span class="normal"><a href="#__codelineno-42-2">2</a></span>
+<span class="normal"><a href="#__codelineno-42-3">3</a></span>
+<span class="normal"><a href="#__codelineno-42-4">4</a></span>
+<span class="normal"><a href="#__codelineno-42-5">5</a></span>
+<span class="normal"><a href="#__codelineno-42-6">6</a></span>
+<span class="normal"><a href="#__codelineno-42-7">7</a></span>
+<span class="normal"><a href="#__codelineno-42-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="n">base</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Base: &quot;</span><span class="p">))</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2"></a><span class="n">altura</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Altura: &quot;</span><span class="p">))</span>
+<a id="__codelineno-42-3" name="__codelineno-42-3"></a>
+<a id="__codelineno-42-4" name="__codelineno-42-4"></a><span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="n">base</span> <span class="o">*</span> <span class="n">altura</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-42-5" name="__codelineno-42-5"></a>
+<a id="__codelineno-42-6" name="__codelineno-42-6"></a><span class="hll"><span class="n">missatge</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;L&#39;àrea del triangle de base </span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2"> i altura </span><span class="si">{</span><span class="n">altura</span><span class="si">}</span><span class="s2"> és </span><span class="si">{</span><span class="n">area</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span>
+</span><a id="__codelineno-42-7" name="__codelineno-42-7"></a>
+<a id="__codelineno-42-8" name="__codelineno-42-8"></a><span class="nb">print</span><span class="p">(</span><span class="n">missatge</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>A més, Python disposa de moltes <strong>operacions que podem fer en una cadena</strong>: passar-la a minúscules, a majúscules, obtindre una subcadena... I algunes de les operacions són alineació a dreta, esquerra, centrat.</p>
+<p>En <em>VSCode</em> (i altre IDEs), si posem el punt al costat d'una variable (o constant) de tipus <em>str</em>, vorem les operacions que podem fer amb ella:</p>
+<p><center><img alt="Ajuda del VSCode" src="../img/ud3/ajudaVSCode.png" /></center></p>
+<p>Per tant, podem fer altres coses en les cadenes sense usar els <em>f-strings</em>. Ací tenim uns exemples:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
+<span class="normal"><a href="#__codelineno-43-2">2</a></span>
+<span class="normal"><a href="#__codelineno-43-3">3</a></span>
+<span class="normal"><a href="#__codelineno-43-4">4</a></span>
+<span class="normal"><a href="#__codelineno-43-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="n">nom</span> <span class="o">=</span> <span class="s2">&quot;Pep&quot;</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">,</span> <span class="n">nom</span><span class="o">.</span><span class="n">upper</span><span class="p">(),</span> <span class="s2">&quot;com va?&quot;</span><span class="p">)</span>           <span class="c1"># Hola PEP com va?</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">,</span> <span class="n">nom</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">),</span> <span class="s2">&quot;com va?&quot;</span><span class="p">)</span>    <span class="c1"># Hola Pep_______ com va?</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">,</span> <span class="n">nom</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">),</span> <span class="s2">&quot;com va?&quot;</span><span class="p">)</span>   <span class="c1"># Hola ___Pep____ com va?</span>
+<a id="__codelineno-43-5" name="__codelineno-43-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">,</span> <span class="n">nom</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;_&#39;</span><span class="p">),</span> <span class="s2">&quot;com va?&quot;</span><span class="p">)</span>    <span class="c1"># Hola _______Pep com va? (1)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>En compte d'eixe '_' podem posar qualsevol caràcter, com per exemple un espai.</li>
+</ol>
+<h2 id="entrada-de-dades-input">Entrada de dades: <em>input</em></h2>
+<p>Serveix per a que un programa puga demanar dades per teclat. Serà un poc diferent segons els tipus de dades que volem introduir.</p>
+<p>Vegem-ho amb exemples:</p>
+<h3 id="entrada-de-text">Entrada de text</h3>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span>
+<span class="normal"><a href="#__codelineno-44-2">2</a></span>
+<span class="normal"><a href="#__codelineno-44-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Com et diuen?&quot;</span><span class="p">)</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2"></a><span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span> <span class="c1">#(1)!</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola, &quot;</span> <span class="o">+</span> <span class="n">nom</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Ací l'execució espera que li posem per teclat un valor i polsem "INTRO". El valor introduït es guardarà a la variable <em>nom</em>.</li>
+</ol>
+<p><center><img alt="Ús de input" src="../img/ud3/input.png" /></center></p>
+<p>Ara bé, l'<em>input</em> de Python també permet indicar el que estem demanant, sense haver de fer abans el <em>print</em>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
+<span class="normal"><a href="#__codelineno-45-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a><span class="n">nom</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Com et diuen?&quot;</span><span class="p">)</span> <span class="c1">#(1)!</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola, &quot;</span> <span class="o">+</span> <span class="n">nom</span> <span class="o">+</span> <span class="s2">&quot;!&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Ací mostrarà el text, i farà l'<em>input</em> normal.</li>
+</ol>
+<p><center><img alt="Ús de input 2" src="../img/ud3/input2.png" /></center></p>
+<h3 id="entrada-de-numeros">Entrada de números</h3>
+<p>El problema és si, en compte de demanar un text per teclat, volem demanar un número, ja que l'agafarà com a text i no podrem fer operacions aritmètiques amb ell:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span>
+<span class="normal"><a href="#__codelineno-46-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a><span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me un número: &quot;</span><span class="p">)</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El següent número és el &quot;</span><span class="p">,</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># ERROR!</span>
+</code></pre></div></td></tr></table></div>
+<p>Això provoca l'error:</p>
+<p><center><code>TypeError: can only concatenate str (not "int") to str</code></center></p>
+<p>Això és degut  a que <em>input</em> sempre retorna un <em>str</em>. Per això, en l'expressió <em>num + 1</em> intenta concatenar en compte de sumar. I dona error perquè no es poden concatenar números sinó textos.</p>
+<p>Per tant, si volem tractar-lo com a enter caldrà fer un <em>càsting</em> (conversió de tipus):</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span>
+<span class="normal"><a href="#__codelineno-47-2">2</a></span>
+<span class="normal"><a href="#__codelineno-47-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="n">num</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me un número: &quot;</span><span class="p">)</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2"></a><span class="hll"><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+</span><a id="__codelineno-47-3" name="__codelineno-47-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El següent número és el &quot;</span><span class="p">,</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><center><img alt="Casting" src="../img/ud3/casting2.png" /></center></p>
+<p>O bé es podria fer l'<em>input</em> i el <em>càsting</em> en la mateixa instrucció:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span>
+<span class="normal"><a href="#__codelineno-48-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1"></a><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me un número: &quot;</span><span class="p">))</span>  <span class="c1">#(1)!</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El següent número és el &quot;</span><span class="p">,</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Es fa <em>càsting</em> sobre l'entrada de dades</li>
+</ol>
+<p>En compte d'<em>int</em> també es pot fer casting a <em>float</em>, si fora el cas.</p>
+<h3 id="diverses-entrades-en-un-mateix-input">Diverses entrades en un mateix <em>input</em></h3>
+<p>En un <em>input</em> podem demanar diverses dades separades per un espai en blanc (o pel caràcter que volem). Ara bé: això no té res a vore amb l'<em>input</em>, sinó amb el mètode <strong><em>split</em></strong> del tipus de dades <em>str</em>. Veiem uns exemples:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span>
+<span class="normal"><a href="#__codelineno-49-2">2</a></span>
+<span class="normal"><a href="#__codelineno-49-3">3</a></span>
+<span class="normal"><a href="#__codelineno-49-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a><span class="n">horaCompleta</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me quina hora és (en format h:m:s): &quot;</span><span class="p">)</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2"></a><span class="n">hores</span><span class="p">,</span> <span class="n">minuts</span><span class="p">,</span> <span class="n">segons</span> <span class="o">=</span> <span class="n">horaCompleta</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;:&quot;</span><span class="p">)</span> <span class="c1">#(1)!</span>
+<a id="__codelineno-49-3" name="__codelineno-49-3"></a>
+<a id="__codelineno-49-4" name="__codelineno-49-4"></a><span class="n">pes</span><span class="p">,</span> <span class="n">altura</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me el pes i altura (seprats per blanc): &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Fem 3 assignacions alhora. <em>split</em> separa una cadena en una llista de cadenes.</li>
+</ol>
+<p><center><img alt="Assignacions amb split" src="../img/ud3/split.png" /></center></p>
+<p>Veiem que quan fem <em>split</em>, en l'assignació cal posar tantes variables com dades s'espera que s'introduïsquen. Si no, donarà error.</p>
+<p>Cal tindre en compte que després caldria fer els càstings corresponents a <em>int</em> o <em>float</em> de cada variable.</p>
+<details class="question">
+<summary>Exercici 6. Entrada i eixida de dades</summary>
+<p>Fes un programa que pregunte quants anys té algú i que mostre per pantalla la quantitat d'anys que falten per a la majoria d'edat i per a jubilar-se.</p>
+</details>
+<details class="question">
+<summary>Exercici 7</summary>
+<p>Programa que pregunte per la base i l'altura d'un triangle i mostre per pantalla l'àrea d'eixe triangle</p>
+</details>
+<details class="question">
+<summary>Exercici 8</summary>
+<p>Demana per teclat les dades de 2 llibres: títol, autor i preu (permet decimals). Després cal mostrar les dades en forma de taula: 30 caràcters per al títol, 20 per a l'autor i 10 per al preu (incloent 2 decimals i alineat a la dreta)</p>
+</details>
+<details class="question">
+<summary>Exercici 9</summary>
+<p>Demana per teclat només un valor: una data (per exemple 6/9/2024). Després escriu eixa data però amb el format: "6 del 9 de 2024".</p>
+</details>
+<h2 id="exercicis">Exercicis</h2>
+<details class="question">
+<summary>Exercici 10</summary>
+<p>Escriu el resultat de les següents expressions:</p>
+<ul>
+<li><code>5 / 2 + 17 % 3</code></li>
+<li><code>3 * 6 / 2 + 18 / 3 * 2</code></li>
+<li><code>42 * 2 / 3 / (5 + 2)</code></li>
+<li><code>((5 + 3) / 2 * 3) / 2 - int(28.7) // 4 + 29 % 3 * 4</code></li>
+<li><code>3 &lt;= 4</code></li>
+<li><code>45 &lt;= 7 or not (5 &gt;= 7)</code></li>
+<li><code>(8 * 2 &lt; 5 or 7 + 2 &gt; 9) and 8 - 5 &lt; 18</code></li>
+<li><code>(2 * 7 &gt; 5 or 7 / 2 == 3) and (7 &gt; 25 or not True) and True</code></li>
+<li><code>35 &gt; 47 and 9 == 9 or 35 != 3 + 2 and 3 &gt;= 3</code></li>
+<li><code>9 == 15 or 8 != 5 and 7 == 4</code></li>
+<li><code>8 &gt; 8 or 7 == 7 and not(5 &lt; 5)</code></li>
+<li><code>4 + 2 &lt; 8 and 24 + 1 == 25 or True</code></li>
+</ul>
+</details>
+<details class="question">
+<summary>Exercici 11</summary>
+<p>Escriu una expressió on s'especifique que una variable numèrica de nom <strong><em>quant</em></strong> siga menor o igual que 500 i múltiple de 5 però distinta de 100.</p>
+</details>
+<details class="question">
+<summary>Exercici 12</summary>
+<p>Troba els errors en el següent programa que calcula l'àrea d'un cercle a partir del radi. Després copia'l amb les correccions i executa'l.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1">1</a></span>
+<span class="normal"><a href="#__codelineno-50-2">2</a></span>
+<span class="normal"><a href="#__codelineno-50-3">3</a></span>
+<span class="normal"><a href="#__codelineno-50-4">4</a></span>
+<span class="normal"><a href="#__codelineno-50-5">5</a></span>
+<span class="normal"><a href="#__codelineno-50-6">6</a></span>
+<span class="normal"><a href="#__codelineno-50-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a>print(&quot;pi=&quot;, pi)
+<a id="__codelineno-50-2" name="__codelineno-50-2"></a>pi = 3,14
+<a id="__codelineno-50-3" name="__codelineno-50-3"></a>print(Programa de càlcul de l&#39;àrea d&#39;un cercle)
+<a id="__codelineno-50-4" name="__codelineno-50-4"></a>radi = input(&#39;Dis-me el radi&#39;);
+<a id="__codelineno-50-5" name="__codelineno-50-5"></a>&#39;&#39;&#39;Calcular i imprimir l&#39;area
+<a id="__codelineno-50-6" name="__codelineno-50-6"></a>area = PI * radio**2;
+<a id="__codelineno-50-7" name="__codelineno-50-7"></a>print(&#39;\n\nL&#39;àrea del cercle és: {aera:5.2}\n&#39;);
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 13</summary>
+<p>Sense executar el programa, digues què mostrarà per pantalla:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1">1</a></span>
+<span class="normal"><a href="#__codelineno-51-2">2</a></span>
+<span class="normal"><a href="#__codelineno-51-3">3</a></span>
+<span class="normal"><a href="#__codelineno-51-4">4</a></span>
+<span class="normal"><a href="#__codelineno-51-5">5</a></span>
+<span class="normal"><a href="#__codelineno-51-6">6</a></span>
+<span class="normal"><a href="#__codelineno-51-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1"></a><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2"></a><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+<a id="__codelineno-51-3" name="__codelineno-51-3"></a><span class="n">c</span> <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span>
+<a id="__codelineno-51-4" name="__codelineno-51-4"></a><span class="n">d</span> <span class="o">=</span> <span class="n">a</span><span class="o">&lt;</span><span class="n">b</span> <span class="ow">and</span> <span class="n">b</span><span class="o">&lt;</span><span class="n">c</span>
+<a id="__codelineno-51-5" name="__codelineno-51-5"></a><span class="n">a</span> <span class="o">+=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<a id="__codelineno-51-6" name="__codelineno-51-6"></a><span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">a</span><span class="o">//</span><span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-51-7" name="__codelineno-51-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 14</summary>
+<p>Contesta les següents qüestions tipus test:</p>
+<ol>
+<li>Els tipus primitius en Python són:<ul>
+<li>bool, char, short, int, long, float, double</li>
+<li>int, float, boo, str</li>
+<li>caràcters, variables i constants</li>
+</ul>
+</li>
+<li>Es defineix <code>a = 5</code>, <code>b = 2</code> i <code>c = 0</code>. Quin serà el valor de <code>c</code> després d'esta instrucció: <code>c = a &gt; b</code><ul>
+<li>3</li>
+<li>2</li>
+<li>True</li>
+<li>False</li>
+<li>Error</li>
+</ul>
+</li>
+<li>Quin és el valor d'esta expressió: <code>10 / int(4.5)</code><ul>
+<li>2</li>
+<li>2.5</li>
+<li>3</li>
+<li>Altra cosa</li>
+</ul>
+</li>
+</ol>
+</details>
 
 
 
