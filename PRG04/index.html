@@ -557,6 +557,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Bucles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bucles-condicionals-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bucles condicionals: while
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bucles-incondicionals-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bucles incondicionals: for
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -700,6 +724,30 @@
       Bucles
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Bucles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bucles-condicionals-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bucles condicionals: while
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bucles-incondicionals-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bucles incondicionals: for
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1010,7 +1058,91 @@
 </ul>
 </details>
 <h2 id="bucles">Bucles</h2>
-<p><em>...Pròximament</em></p>
+<p>A voltes necessitarem que un conjunt d'instruccions s'executen diverses vegades. Quantes vegades? Potser se sàpiga a priori o potser no. Per tant, tindrem dos tipus de bucles:</p>
+<ul>
+<li><strong>Bucles condicionals</strong>: es repetirà mentre es complisca una condició.</li>
+<li><strong>Bucles incondicionals</strong>: es repetirà un nombre determinat de vegades.</li>
+</ul>
+<h3 id="bucles-condicionals-while">Bucles condicionals: <em>while</em></h3>
+<p>Suposem que volem mostrar l'arrel quadrada d'un número introduït per teclat:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kn">import</span> <span class="nn">math</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me un número: &quot;</span><span class="p">))</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;arrel quadrada de </span><span class="si">%d</span><span class="s2"> és </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">num</span><span class="p">)))</span>
+</code></pre></div></td></tr></table></div>
+<p>Funcionarà bé a no ser que introduïm un número negatiu (ja que l'arrel quadrada d'un número negatiu no té solució real): <em>ValueError: math domain error</em></p>
+<p>Podríem solucionar-ho amb un <em>if</em>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span>
+<span class="normal"><a href="#__codelineno-15-7">7</a></span>
+<span class="normal"><a href="#__codelineno-15-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kn">import</span> <span class="nn">math</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me un número: &quot;</span><span class="p">))</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No es pot calcular l&#39;arrel quadrada d&#39;un número negatiu&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me un número: &quot;</span><span class="p">))</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;arrel quadrada de </span><span class="si">%d</span><span class="s2"> és </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">num</span><span class="p">)))</span>
+</code></pre></div></td></tr></table></div>
+<p>Funcionarà bé si en el segon intent donem un número possitiu. Però i si tornem a donar un número negatiu en el segon intent? Quants <em>ifs</em> hauríem de posar? No ho sabem. Per tant, voldrem repetir el fet de demanar un número <strong>MENTRE</strong> el número introduït siga incorrecte:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span>
+<span class="normal"><a href="#__codelineno-16-6">6</a></span>
+<span class="normal"><a href="#__codelineno-16-7">7</a></span>
+<span class="normal"><a href="#__codelineno-16-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kn">import</span> <span class="nn">math</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="n">Dis</span><span class="o">-</span><span class="n">me</span> <span class="n">un</span> <span class="n">número</span><span class="p">:</span> <span class="s2">&quot;))</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="k">while</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No es pot calcular l&#39;arrel quadrada d&#39;un número negatiu&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>    <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me un número: &quot;</span><span class="p">))</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;arrel quadrada de </span><span class="si">%d</span><span class="s2"> és </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">num</span><span class="p">)))</span>
+</code></pre></div></td></tr></table></div>
+<p>És a dir, <strong>mentre</strong> es complisca la <strong>condició</strong> de si el valor <em>num</em> és negatiu, s'executaran les instruccions de dins del bucle (les sagnades) i es tornarà a comprovar si <em>num</em> és negatiu. Quan ja no siga negatiu, eixirà del bucle i el programa continuarà fent les instruccions de fora del bucle.</p>
+<p>A la vista d'este exemple veiem que:</p>
+<ul>
+<li>Usarem un bucle condicional <em>while</em> quan el programador <strong>no sap quantes</strong> vegades s'ahurà de repetir un conjunt d'instruccions.</li>
+<li>La variable (o variables) de la condició hauran de tindre <strong>un valor abans</strong> d'entrar al bucle.</li>
+<li>Dins del bucle ha d'haver alguna instrucció que permeta <strong>canviar el valor</strong> d'eixa variable (o variables) de la condició.</li>
+</ul>
+<p>Sintaxi del <em>while</em> en Python:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span>
+<span class="normal"><a href="#__codelineno-17-6">6</a></span>
+<span class="normal"><a href="#__codelineno-17-7">7</a></span>
+<span class="normal"><a href="#__codelineno-17-8">8</a></span>
+<span class="normal"><a href="#__codelineno-17-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">inicialització</span> <span class="n">de</span> <span class="n">variables</span> <span class="n">de</span> <span class="n">la</span> <span class="n">condició</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="k">while</span> <span class="n">condició</span><span class="p">:</span> <span class="c1"># &lt;--</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>    <span class="n">acció_1</span>     <span class="c1">#    ^</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>    <span class="n">acció_2</span>     <span class="c1">#    |</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>    <span class="o">...</span>         <span class="c1">#    |</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>    <span class="n">acció_N</span>     <span class="c1"># --&gt;</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="n">accions</span> <span class="n">fora</span> <span class="n">de</span> <span class="n">bucle</span>
+</code></pre></div></td></tr></table></div>
+<p>És a dir: quan el flux del programa arriba al <em>while</em>, es comprova si la condició s'avalua a <em>True</em> o a <em>False</em>.</p>
+<ul>
+<li>Si és <em>True</em> s'executaran les accions 1 a N i el flux tornarà al <em>while</em>.</li>
+<li>Si és <em>False</em> el flux eixirà del bucle i s'executaran les accions de fora.</li>
+</ul>
+<details class="question">
+<summary>Exercici 8: Bucles condicionals</summary>
+<p>Fes un programa per controlar la temperatura d'un lloc que, <strong>repetidament</strong>, mostre un menú amb 4 opcions (Demanar temperatura / Pujar 1 grau / Baixar un grau / Eixir), que demane per teclat una opció i l'execute. Cada vegada que s'augmente o es disminuïsca, també es mostrarà la nova temperatura. Després del bucle es mostrarà quantes vegades s'ha canviat la temperatura.</p>
+</details>
+<h3 id="bucles-incondicionals-for">Bucles incondicionals: <em>for</em></h3>
+<p><em>Pròximament...</em></p>
 
 
 
