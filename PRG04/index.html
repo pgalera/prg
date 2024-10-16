@@ -593,6 +593,30 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#alteracio-de-bucles-break-i-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alteració de bucles: break i continue
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alteració de bucles: break i continue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-de-lelse-de-bucles-amb-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ús de l'else de bucles amb break
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -766,6 +790,30 @@
   <a href="#bucle-for-en-python" class="md-nav__link">
     <span class="md-ellipsis">
       Bucle for en Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alteracio-de-bucles-break-i-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alteració de bucles: break i continue
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alteració de bucles: break i continue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#us-de-lelse-de-bucles-amb-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ús de l'else de bucles amb break
     </span>
   </a>
   
@@ -1387,6 +1435,186 @@
 <li>Amb un <em>while</em> recorrent els números des de l'1 fins n</li>
 <li>Amb un <em>while</em> recorrent els números des d'n fins a 1</li>
 </ul>
+</details>
+<h3 id="alteracio-de-bucles-break-i-continue">Alteració de bucles: <em>break</em> i <em>continue</em></h3>
+<p>Dins del bucle (tan <em>while</em> com <em>for</em>), podem fer que, si ocorre alguna determinada condició, alterar el funcionament normal del bucle. Això es pot fer amb les sentències <em>break</em> i <em>continue</em>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-33-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-33-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-33-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-33-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-33-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-33-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-33-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-33-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-33-10">10</a></span>
+<span class="normal"><a href="#__codelineno-33-11">11</a></span>
+<span class="normal"><a href="#__codelineno-33-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="o">...</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="c1"># Inici del bucle -----------------------</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a>    <span class="o">...</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a>    <span class="k">if</span> <span class="o">...</span> <span class="p">:</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a>        <span class="k">continue</span> <span class="c1">#(1)!</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a>    <span class="o">...</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a>    <span class="k">if</span> <span class="o">...</span> <span class="p">:</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9"></a>        <span class="k">break</span> <span class="c1">#(2)!</span>
+<a id="__codelineno-33-10" name="__codelineno-33-10"></a>    <span class="o">...</span>
+<a id="__codelineno-33-11" name="__codelineno-33-11"></a><span class="c1"># fi del bucle --------------------------</span>
+<a id="__codelineno-33-12" name="__codelineno-33-12"></a><span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Si passa perl <em>continue</em>, el flux de control seguirà a l'inici del bucle. Si la <em>i</em> valia 7, ara valdrà 8.</li>
+<li>Si passa pel <em>break</em>, el flux de control seguirà a la següent instrucció de fora del bucle.</li>
+</ol>
+<p>És a dir:</p>
+<ul>
+<li><strong><em>break</em></strong> interromp l'execució del bucle i seguim per la instrucció següent de fora del bucle.</li>
+<li><strong><em>continue</em></strong> fa que el programa comence altra iteració, encara que no s'haja acabat l'actual. Per tant, les línies que hi ha dins d'un bucle a continuació del <em>continue</em> no s'executen en eixa iteració. Si el bucle és un <em>for</em>, anirem a l'increment e la variable comptadora o al següent element de la llista. Si és un <em>while</em>, es torna a comprovar la condició per a entrar altra vegada al bucle.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>En cas de tindre estes instruccions dins de bucles niuats, nomñes afecten al bucle on estan firectament. Per exemple: si tenim un <em>break</em> en un bucle (pare) i este està dins d'un altre bucle (iaio), eixiríem del bucle pare però no del iaio.</p>
+</div>
+<details class="success">
+<summary>Exercici 17 RESOLT. Bucles amb <em>break</em> i <em>continue</em></summary>
+<p>Programa en Python que demane les notes dels alumnes (números enters i positius entre 0 i 10) i que després mostre quantes notes s'han introduït i la nota mitjana. Per a parar d'introduir notes caldrà posar la nota 11, que no es tindrà en compte per als càlculs.</p>
+<p><strong>NOTA</strong>: El programa es podria fer sense <em>break</em> ni <em>continue</em>, però ho farem així per a vore el seu funcionament.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-34-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-34-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-34-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-34-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-34-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-34-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-34-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-34-10">10</a></span>
+<span class="normal"><a href="#__codelineno-34-11">11</a></span>
+<span class="normal"><a href="#__codelineno-34-12">12</a></span>
+<span class="normal"><a href="#__codelineno-34-13">13</a></span>
+<span class="normal"><a href="#__codelineno-34-14">14</a></span>
+<span class="normal"><a href="#__codelineno-34-15">15</a></span>
+<span class="normal"><a href="#__codelineno-34-16">16</a></span>
+<span class="normal"><a href="#__codelineno-34-17">17</a></span>
+<span class="normal"><a href="#__codelineno-34-18">18</a></span>
+<span class="normal"><a href="#__codelineno-34-19">19</a></span>
+<span class="normal"><a href="#__codelineno-34-20">20</a></span>
+<span class="normal"><a href="#__codelineno-34-21">21</a></span>
+<span class="normal"><a href="#__codelineno-34-22">22</a></span>
+<span class="normal"><a href="#__codelineno-34-23">23</a></span>
+<span class="normal"><a href="#__codelineno-34-24">24</a></span>
+<span class="normal"><a href="#__codelineno-34-25">25</a></span>
+<span class="normal"><a href="#__codelineno-34-26">26</a></span>
+<span class="normal"><a href="#__codelineno-34-27">27</a></span>
+<span class="normal"><a href="#__codelineno-34-28">28</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="c1"># Inicialització de comptador i acumulador</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="n">notes</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="n">suma</span> <span class="o">=</span> <span class="mi">0</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="c1"># Demanar dades i fer càlculs</span>
+<a id="__codelineno-34-5" name="__codelineno-34-5"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span> <span class="c1">#(1)!</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6"></a>    <span class="c1"># Introducció de la nota per teclat</span>
+<a id="__codelineno-34-7" name="__codelineno-34-7"></a>    <span class="n">nota</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Dis-me una nota (11 per a ixir): &quot;</span><span class="p">)</span>
+<a id="__codelineno-34-8" name="__codelineno-34-8"></a>    <span class="c1"># Comprovacions de nota OK</span>
+<a id="__codelineno-34-9" name="__codelineno-34-9"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">nota</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">():</span> <span class="c1">#(2)!</span>
+<a id="__codelineno-34-10" name="__codelineno-34-10"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Han de ser números enters positius. Torna a provar&quot;</span><span class="p">)</span>
+<a id="__codelineno-34-11" name="__codelineno-34-11"></a>        <span class="k">continue</span> <span class="c1">#(3)!</span>
+<a id="__codelineno-34-12" name="__codelineno-34-12"></a>    <span class="n">nota</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nota</span><span class="p">)</span>
+<a id="__codelineno-34-13" name="__codelineno-34-13"></a>    <span class="k">if</span> <span class="n">nota</span> <span class="o">&gt;</span> <span class="mi">11</span><span class="p">:</span>
+<a id="__codelineno-34-14" name="__codelineno-34-14"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La nota màxima és 10. Torna a provar&quot;</span><span class="p">)</span>
+<a id="__codelineno-34-15" name="__codelineno-34-15"></a>        <span class="k">continue</span> <span class="c1">#(4)!</span>
+<a id="__codelineno-34-16" name="__codelineno-34-16"></a>    <span class="c1"># Si volem acabar</span>
+<a id="__codelineno-34-17" name="__codelineno-34-17"></a>    <span class="k">if</span> <span class="n">nota</span> <span class="o">==</span> <span class="mi">11</span><span class="p">:</span>
+<a id="__codelineno-34-18" name="__codelineno-34-18"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ja no et demane més notes. Vaig a eixir del bucle.&quot;</span><span class="p">)</span>
+<a id="__codelineno-34-19" name="__codelineno-34-19"></a>        <span class="k">break</span> <span class="c1">#(5)!</span>
+<a id="__codelineno-34-20" name="__codelineno-34-20"></a>    <span class="c1"># Si tot ha anat bé, farem els càlculs</span>
+<a id="__codelineno-34-21" name="__codelineno-34-21"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nota introduïda ok:&quot;</span><span class="p">,</span> <span class="n">nota</span><span class="p">)</span>
+<a id="__codelineno-34-22" name="__codelineno-34-22"></a>    <span class="n">notes</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-34-23" name="__codelineno-34-23"></a>    <span class="n">suma</span> <span class="o">+=</span> <span class="n">nota</span>
+<a id="__codelineno-34-24" name="__codelineno-34-24"></a><span class="c1"># Fi del bucle</span>
+<a id="__codelineno-34-25" name="__codelineno-34-25"></a>
+<a id="__codelineno-34-26" name="__codelineno-34-26"></a><span class="c1"># Mostrem els resultats</span>
+<a id="__codelineno-34-27" name="__codelineno-34-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">notes</span><span class="p">,</span> <span class="s2">&quot;notes introduïdes.&quot;</span><span class="p">)</span>
+<a id="__codelineno-34-28" name="__codelineno-34-28"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nota mitja:&quot;</span><span class="p">,</span> <span class="n">suma</span><span class="o">/</span><span class="n">notes</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Amb el <em>while True</em> aconseguim fer un bucle "infinit". Només podrem eixir si fem un <em>break</em> dins.</li>
+<li><em>isnumeric</em> és <em>True</em> si tots els caràcters són dígits.</li>
+<li>Si passa per ací, torna altra vegada <strong>a l'inici del bucle</strong>.</li>
+<li>Si passa per ací, torna altra vegada <strong>a l'inici del bucle</strong>.</li>
+<li>Si passa per ací, eixim ja <strong>fora del bucle</strong>.</li>
+</ol>
+</details>
+<details class="question">
+<summary>Exercici 18. Bucles amb <em>break</em> i <em>continue</em></summary>
+<p>Programa que demane 10 números (positius i/o negatius) i mostre la mitjana només dels positius. Fes-ho a l'estil de l'exercici resolt anterior, per a fer ús del <em>continue</em>.</p>
+</details>
+<h4 id="us-de-lelse-de-bucles-amb-break">Ús de l'<em>else</em> de bucles amb <em>break</em></h4>
+<p>Ja hem vist que l'<em>else</em> s'utilitza en sentències <em>if</em>. Però Python (no C i Java) permet posar-lo després d'un bucle en el qual s'haja fet algún <em>break</em>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-35-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-35-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-35-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-35-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-35-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-35-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-35-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-35-10">10</a></span>
+<span class="normal"><a href="#__codelineno-35-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="o">...</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="c1"># Inici del bucle ---------------------</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="k">while</span> <span class="o">...</span> <span class="p">:</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a>    <span class="o">...</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a>    <span class="k">if</span> <span class="o">...</span> <span class="p">:</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a>        <span class="k">break</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a>    <span class="o">...</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a><span class="c1"># fi del bucle ------------------------</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a><span class="k">else</span><span class="p">:</span> <span class="c1"># Este else és del bucle, no de l&#39;if</span>
+<a id="__codelineno-35-10" name="__codelineno-35-10"></a>    <span class="o">...</span> <span class="c1"># S&#39;executaran estes accions si NO hem passat pel break.</span>
+<a id="__codelineno-35-11" name="__codelineno-35-11"></a><span class="o">...</span>
+</code></pre></div></td></tr></table></div>
+<p>La part de l'<em>else</em> s'executarà només quan el bucle ha acabat de manera <em>normal</em>:</p>
+<ul>
+<li>En un <em>while</em> quan ha acabat el bucle perquè no es complia la condició.</li>
+<li>En un <em>for</em> quan ha acabat el bucle perquè ja s'han recorregut els elements de la llista.</li>
+</ul>
+<details class="success">
+<summary>Exercici 19 RESOLT. Bucles amb <em>break</em> i <em>else</em></summary>
+<p>Programa en Python que ens diga si ha trobat o no algun múltiple d'un número determinat en un cert rang de números.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-36-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-36-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-36-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-36-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-36-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-36-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-36-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-36-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-36-10">10</a></span>
+<span class="normal"><a href="#__codelineno-36-11">11</a></span>
+<span class="normal"><a href="#__codelineno-36-12">12</a></span>
+<span class="normal"><a href="#__codelineno-36-13">13</a></span>
+<span class="normal"><a href="#__codelineno-36-14">14</a></span>
+<span class="normal"><a href="#__codelineno-36-15">15</a></span>
+<span class="normal"><a href="#__codelineno-36-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">inici</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Des de quin número vols buscar múltiples? &quot;</span><span class="p">))</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="n">limit</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Fins quin número vols buscar múltiples? &quot;</span><span class="p">))</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="n">divisor</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;De quin número vols búscar múltiples? &quot;</span><span class="p">))</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">inici</span><span class="p">,</span> <span class="n">limit</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7"></a>    <span class="k">if</span><span class="p">(</span><span class="n">i</span> <span class="o">%</span> <span class="n">divisor</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;En el rang sí que hi ha almenys 1 múltiple de&quot;</span><span class="p">,</span> <span class="n">divisor</span><span class="p">)</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9"></a>        <span class="k">break</span> <span class="c1">#(2)!</span>
+<a id="__codelineno-36-10" name="__codelineno-36-10"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Encara no he trobat múltiple de&quot;</span><span class="p">,</span> <span class="n">divisor</span><span class="p">)</span>
+<a id="__codelineno-36-12" name="__codelineno-36-12"></a>
+<a id="__codelineno-36-13" name="__codelineno-36-13"></a><span class="k">else</span><span class="p">:</span> <span class="c1"># else del bucle (1)</span>
+<a id="__codelineno-36-14" name="__codelineno-36-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;En tot el rang no hi ha cap múltiple de&quot;</span><span class="p">,</span> <span class="n">divisor</span><span class="p">)</span>
+<a id="__codelineno-36-15" name="__codelineno-36-15"></a>
+<a id="__codelineno-36-16" name="__codelineno-36-16"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fi del programa&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Si el bucle acaba de forma <em>normal</em>, sí que s'executarà l'<em>else</em> de fora del bucle.</li>
+<li>Si el bucle acaba per un <em>break</em>, no s'executarà l'<em>else</em> de fora del bucle.</li>
+</ol>
 </details>
 
 
