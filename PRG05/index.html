@@ -1520,7 +1520,22 @@
 <p>Anem a vore cadascun d'eixos elements.</p>
 <h3 id="la-jvm-maquina-virtual-java">La JVM (Màquina Virtual Java)</h3>
 <p>Java és un llenguatge <strong>interpretat</strong> però necessita una <strong>compilació</strong> prèvia.</p>
-<p><center><img alt="Estructura Java" src="../img/ud5/estructuraJava.png" /></center></p>
+<p><center>
+<pre class="mermaid"><code>graph TD
+    A["Codi font (.java)"] --&gt;|"Compilació (javac)"| B["Bytecode (.class)"]
+    B --&gt; PC1
+    B --&gt; PC2
+    B --&gt; PC3
+    subgraph PC1
+    JVM1 --- Exec1[Codi Màquina 1]
+    end
+    subgraph PC2
+    JVM2 --&gt; Exec2[Codi Màquina 2]
+    end
+    subgraph PC3
+    JVM3 --&gt; Exec3[Codi Màquina 3]
+    end</code></pre>
+</center></p>
 <p>Una volta <strong>compilat</strong> el programa, es crea un fitxer que guarda el que s'anomena <em>bytecodes</em> o <em>j_codes</em> (pseudocodi pràcticament al nivell de codi màquina). Per a executar-lo cal un <strong>intèrpret</strong>: la JVM (<em>Java Virtual Machine</em>) o <strong>Màquina Virtual de Java</strong>.</p>
 <p>D'esta forma, és possible compilar el programa en Linux i executar-lo en altra amb Windows usant la màquina virtual Java per a eixa versio de Windows. Esta JVM s'encarrega de llegir els <em>bytecodes</em> i traduir-los a instruccions executables directament en un determinat microprocessador, de forma eficient. Esta idea de màquina virtual fa que els programes siguen <strong>independents de la plataforma</strong> (Hw + SO) en la qual vaja a executar-se.</p>
 <p>Encara que s'haja d'interpretar, <strong>la velocitatd'execució no és lenta</strong> ja que la interpretació es fa pràcticament al nivell de codi màquina. Per exemple, és molt més ràpid que un llenguatge interpretat com Visual Basic, encara que és més lent que si està escrit en un llenguatge compilat com C++.</p>
@@ -1528,7 +1543,7 @@
 <p>Les <strong>JVM</strong> també s'anomenen <strong>JRE</strong> (Java Runtime Environment: Entorn en temps d'execució de Java).</p>
 <h3 id="el-jdk-java-development-kit">El JDK (Java Development Kit)</h3>
 <p>L'eina bàsica per a començar a desenvolupar aplicacions en Java és el JDK (Java Development Kit) o Kit de Desenvolupament de Java (També anomenant <em>plataforma</em>).</p>
-<p><center><img align="right" alt="Estructura fitxers projecte Java" src="../img/ud5/estructuraJava2.png" /></center></p>
+<p><center><img align="right" alt="Estructura fitxers projecte Java" src="../img/ud5/directoriJava.png" /></center></p>
 <p>Entre altres coses, el JDK conté:</p>
 <ul>
 <li>El compilador --&gt; javac.exe</li>
@@ -1541,7 +1556,6 @@
 <p>Alguns dels directoris són:</p>
 <ul>
 <li><strong>Bin</strong>: fitxers executables: javac, jdb, java, appletviewer...</li>
-<li><strong>Demo</strong>: directoris amb exemples de programes i applets en Java.</li>
 <li><strong>Include</strong>: capçaleres per a utilitzar  funcions escrites en C.</li>
 <li><strong>Lib</strong>: llibreries de classes proporcionades pel llenguatge. Estan comprimides en el fitxer classes.zip (però no s'ha de descomprimir).</li>
 </ul>
@@ -2090,7 +2104,7 @@
 <h2 id="entrada-de-dades">Entrada de dades</h2>
 <p>En Java, per a arreplegar dades de teclat és un poc més complicat que en Python, però no patiu si vos pareix complicat, ja que en la pràctica usarem una funcioneta nostra que ens servirà per a llegir en tot els programes.</p>
 <p>Per a llegir de teclat cal usar una classe que ens "unisca" el teclat amb el programa.</p>
-<p><center><img alt="Buffer" src="../img/ud5/buffer.png" /></center></p>
+<p><center><img alt="Buffer" src="../img/ud5/buffer.png" width="50%" /></center></p>
 <p>Vorem 2 formes de fer-ho: amb la classe <strong><em>Scanner</em></strong> i amb la classe <strong><em>BufferesReader</em></strong>. Les principals diferències són:</p>
 <p><center></p>
 <table>
