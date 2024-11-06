@@ -2636,12 +2636,12 @@
 <p><center><img alt="Switch" src="../img/ud5/switch.png" /></center></p>
 <p>La idea sembla clara: depenent del valor de la variable <code>estacio</code>, s'executarà un trós de codi o un altre.</p>
 <p><strong>Per a què serveix un <code>break</code> en un switch?</strong></p>
-<p>El funcionament del <em>switch</em> no és exactament "com voldríem". Suposem que <strong>no</strong> hem posat cap <em>break</em> i que estació val 3. Per pantalla es mostraria: <em>Tardor</em>, <em>Hivern</em> i <em>Error</em>. És a dir: després d'avaluar-se el que hem posat en el <em>switch</em> (estació), l'intèrpret comprova si el valor correspon el primer <em>case</em>. Si no, amb el segon. Si no, amb el tercer (i així successivament). Si sí que coincideix amb el valor d'un <em>case</em>, s'executarà tot el codi no només d'eixe <em>case</em>, sinó de tots els <em>cases</em> següents, fins trobar un <em>break</em>.</p>
+<p>El funcionament del <em>switch</em> no és exactament "com voldríem". Suposem que <strong>no</strong> hem posat cap <em>break</em> i que <code>estacio</code> val 3. Per pantalla es mostraria: <em>Tardor</em>, <em>Hivern</em> i <em>Error</em>. És a dir: després d'avaluar-se el que hem posat en el <em>switch</em> (estació), l'intèrpret comprova si el valor correspon el primer <em>case</em>. Si no, amb el segon. Si no, amb el tercer (i així successivament). Si sí que coincideix amb el valor d'un <em>case</em>, <strong>s'executarà tot el codi no només d'eixe <em>case<em>, sinó de tots els </em>cases<em> següents, fins trobar un </em>break</em></strong>.</p>
 <p>Per tant, si volem que s'execute només el codi corresponent al valor trobat, posarem un <em>break</em> en l'útima instrucció de cada <em>case</em>.</p>
-<p>Si l'expressió que s'avalua és un caràcter, els valors que es posen en els <em>case</em> han d'anar entre cometes simples:</p>
+<p>Si l'expressió que s'avalua és un <strong>caràcter</strong>, els valors que es posen en els <em>case</em> han d'anar entre <strong>cometes simples</strong>:</p>
 <p><center><img alt="Switch 2" src="../img/ud5/switch2.png" /></center></p>
-<p>En este exemple veiem que, amb el truquet de no posar el <em>break</em> en la 's', fa que si la variable <em>eixir</em> és una 's', s'execute tot fins trobar un <em>break</em>. És a dir, tant si és 's' com si és 'S', s'executarà el mateix codi. Igual per a la 'n' i 'N'.</p>
-<p>I si l'expressió és un <em>String</em>, els valors dels <em>case</em> han d'anar en cometes dobles:</p>
+<p>En este exemple veiem que, amb el <strong><em>truquet</em></strong> de no posar el <em>break</em> en la 's', fa que si la variable <em>eixir</em> és una 's', s'execute tot fins trobar un <em>break</em>. És a dir, tant si és 's' com si és 'S', s'executarà el mateix codi. Igual per a la 'n' i 'N'.</p>
+<p>I si l'expressió és un <strong><em>String</em></strong>, els valors dels <em>case</em> han d'anar en <strong>cometes dobles</strong>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
 <span class="normal"><a href="#__codelineno-27-2">2</a></span>
 <span class="normal"><a href="#__codelineno-27-3">3</a></span>
