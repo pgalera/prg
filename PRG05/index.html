@@ -2634,7 +2634,7 @@
 <p>Depenent dels diferents valors d'una variable (o expressió), es podran executar diferents blocs de codi.</p>
 <p>Eixa variable o expressió ha de ser de tipus <em>int</em>, <em>char</em> o <em>String</em>.</p>
 <p><center><img alt="Switch" src="../img/ud5/switch.png" /></center></p>
-<p>La idea sembla clara: depenent del valor de la variable <em>estacio</em>, s'executarà un trós de codi o un altre.</p>
+<p>La idea sembla clara: depenent del valor de la variable <code>estacio</code>, s'executarà un trós de codi o un altre.</p>
 <p><strong>Per a què serveix un <code>break</code> en un switch?</strong></p>
 <p>El funcionament del <em>switch</em> no és exactament "com voldríem". Suposem que <strong>no</strong> hem posat cap <em>break</em> i que estació val 3. Per pantalla es mostraria: <em>Tardor</em>, <em>Hivern</em> i <em>Error</em>. És a dir: després d'avaluar-se el que hem posat en el <em>switch</em> (estació), l'intèrpret comprova si el valor correspon el primer <em>case</em>. Si no, amb el segon. Si no, amb el tercer (i així successivament). Si sí que coincideix amb el valor d'un <em>case</em>, s'executarà tot el codi no només d'eixe <em>case</em>, sinó de tots els <em>cases</em> següents, fins trobar un <em>break</em>.</p>
 <p>Per tant, si volem que s'execute només el codi corresponent al valor trobat, posarem un <em>break</em> en l'útima instrucció de cada <em>case</em>.</p>
