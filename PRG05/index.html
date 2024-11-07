@@ -1537,7 +1537,7 @@
     end</code></pre>
 </center></p>
 <p>Una volta <strong>compilat</strong> el programa, es crea un fitxer que guarda el que s'anomena <em>bytecodes</em> o <em>j_codes</em> (pseudocodi pràcticament al nivell de codi màquina). Per a executar-lo cal un <strong>intèrpret</strong>: la JVM (<em>Java Virtual Machine</em>) o <strong>Màquina Virtual de Java</strong>.</p>
-<p>D'esta forma, és possible compilar el programa en Linux i executar-lo en altra amb Windows usant la màquina virtual Java per a eixa versio de Windows. Esta JVM s'encarrega de llegir els <em>bytecodes</em> i traduir-los a instruccions executables directament en un determinat microprocessador, de forma eficient. Esta idea de màquina virtual fa que els programes siguen <strong>independents de la plataforma</strong> (Hw + SO) en la qual vaja a executar-se.</p>
+<p>D'esta forma, és possible compilar el programa en Linux i executar-lo en altra amb Windows usant la màquina virtual Java per a eixa versió de Windows. Esta JVM s'encarrega de llegir els <em>bytecodes</em> i traduir-los a instruccions executables directament en un determinat microprocessador, de forma eficient. Esta idea de màquina virtual fa que els programes siguen <strong>independents de la plataforma</strong> (Hw + SO) en la qual vaja a executar-se.</p>
 <p>Encara que s'haja d'interpretar, <strong>la velocitatd'execució no és lenta</strong> ja que la interpretació es fa pràcticament al nivell de codi màquina. Per exemple, és molt més ràpid que un llenguatge interpretat com Visual Basic, encara que és més lent que si està escrit en un llenguatge compilat com C++.</p>
 <p><strong>Les JVM no ocupen molt d'espai</strong> en memòria (van ser dissenyades per a executar-se en xicotets electrodomèstics, com ara telèfons, televisors...).</p>
 <p>Les <strong>JVM</strong> també s'anomenen <strong>JRE</strong> (Java Runtime Environment: Entorn en temps d'execució de Java).</p>
@@ -1604,7 +1604,7 @@
 <p>Anem a fer el nostre primer programa en Java. Només ha de fer un cosa: traure per pantalla el text "Hola, món!".</p>
 <p>Si no el tenim ja, crearem el projecte <code>hola</code> com hem vist abans i sobre el directori <code>src</code> farem clic dret per crear una nova classe:</p>
 <p><center><img alt="Nova Classe" src="../img/ud5/novaClasse.png" /></center></p>
-<p>Escriurem el nom <code>Hola</code> d'aquesta (les <em>Classes</em> en Java han de començar en majúscules!):</p>
+<p>Escriurem el nom <code>Hola</code> d'aquesta (Per convenció, les <em>Classes</em> en Java han de començar en majúscules, encara que no és obligatori):</p>
 <p><center><img alt="Nom de la Classe" src="../img/ud5/novaClasse2.png" /></center></p>
 <p>El fitxer que tindrà el nostre programa s'anomenarà <strong>Hola.java</strong> i estarà en  <code>~IdeaProjects/hola/src/Hola.java</code></p>
 <p>En eixe fitxer (Hola.java) escrivim el nostre programa:</p>
@@ -1644,7 +1644,7 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Després podem observar una sèrie de comentaris que hi ha al programa. Igual que en Python, poden ser d'una línia amb <code>//</code>, o de diverses línies amb <code>/*</code> i <code>*/</code>. El cas del comentari que comença amb <code>/**</code> també l'estudiarem més endavant.</p>
-<p>Per a començar a executar-se un qualsevol programa necessita una porta d'entrada. En Java podem tindre diversos fitxers <code>*.java</code>, però només un d'ells contindrà la classe pública i, a més, contindrà el mètode <code>main()</code>. Este  mètode sempre l'escriurem així:</p>
+<p>Per començar a executar-se qualsevol programa, necessita una <em>porta d'entrada</em>. En Java podem tindre diversos fitxers <code>*.java</code>, però només un d'ells contindrà <strong>la classe pública</strong> i, a més, contindrà el mètode <code>main()</code>. Este  mètode sempre l'escriurem així:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">){</span>
@@ -1654,9 +1654,9 @@
 <p>A la línia 8 tenim la instrucció per a mostrar per pantalla:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola, món!&quot;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<p>I per què hem de posar <code>System.out.println(...)</code> i no només <code>println(...)</code>?</p>
+<p><strong>I per què hem de posar <code>System.out.println(...)</code> i no només <code>println(...)</code>?</strong></p>
 <p>Perquè en Java, la invocació de funcions depén de les llibreries on estan. En l'exemple es crida a la llibreria <code>System</code>. Dins d'ella està la llibreria <code>out</code> (que conté les funcions de sortida) i dins d'ella està la funció <code>println()</code>, que és qui definitivament imprimix el text per pantalla. Per a accedir a eixa funció hem de posar l'estructura de llibreries separades per un punt <code>(.)</code>.</p>
-<p>Aquesta funció també fa un salt de línia. SI no el volem, usarem <code>print()</code>.</p>
+<p>Aquesta funció també fa un salt de línia. Si no el volem, usarem <code>print()</code>.</p>
 <p>Fora del mètode <code>main()</code> podem declarar variables globals i funcions.</p>
 <p>Una volta hem escrit el nostre programa, necessitarem compilar-lo i executar-lo.</p>
 <p>Amb IntelliJ farem les dues accions seguides amb el botó de <em>play</em> situat a la part de dalt del nostre programa (o en els marges del mateix):</p>
@@ -1696,7 +1696,7 @@
 <p></center></p>
 <h2 id="introduccio-a-la-programacio-en-java">Introducció a la programació en Java</h2>
 <p>En este tema introduirem el llenguate de programació Java i vorem com s'implementen en este llenguatge tots els aspectes que hem vist en Python.</p>
-<p><strong>Tot en Java són classes</strong></p>
+<p><strong>En Java TOT són classes</strong></p>
 <p>Per a començar, quan programem en Java, ens apareix el concepte de <em>programació modular</em>. Això ens obliga a encapsular tot el codi que fem dins de funcions, especialment dins d'una que s'anomena <strong><em>main</em></strong>. A més, com Java és un llenguatge <em>orientat a objectes</em>, tot el codi ha d'estar estructurat en classes: totes les funcions (també el <em>main</em>, clar) han d'estar dins d'una estructura anomenada <strong><em>class</em></strong>. Això ho treballarem al final de curs, però de moment hem de:</p>
 <ol>
 <li>Crear el nostre programa en un fitxer que s'ha d'anomenar exactament igual que la classe on encapsulem el nostre codi, i extensió <em>.java</em>.</li>
@@ -1827,14 +1827,14 @@
 <li>En Python el tipus <em>str</em> podia admetre qualsevol cadena de caràcters però en Java no existe</li>
 </ul>
 </div>
-<p>Com hem dit, les variables deuen ser declarades abbans de ser utilitzades (assignar-li un tipus). Amb el tipus aconseguirem acotar el conjunt de valors que admet la variables (domini) i el conjunt d'operacions que podem fer sobre la variable.</p>
+<p>Com hem dit, les variables deuen ser declarades abans de ser utilitzades (assignar-li un tipus). Amb el tipus aconseguirem acotar el conjunt de valors que admet la variables (domini) i el conjunt d'operacions que podem fer sobre la variable.</p>
 <p>Per tant, la informació bàsica que hem de saber d'una variable és:</p>
 <ul>
 <li><strong>Tipus</strong>: El tipus bàsic de la variable (char, float...)</li>
 <li><strong>Identificador</strong>: El nom amb el qual accedim a la variable</li>
 <li><strong>Valor</strong>: La informació que guarda la variable en un moment donat de l'execució del programa</li>
 </ul>
-<p>El valor de la variable és opcional: quan es declara una variable no cal indicar-lo.</p>
+<p>El valor de la variable és opcional: quan es declara una variable, no cal indicar-lo.</p>
 <details class="example">
 <summary>Exemples de declaració de variables</summary>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
@@ -1850,9 +1850,9 @@
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="kt">boolean</span><span class="w"> </span><span class="n">pagat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 </details>
-<p>Com veiem, al final de cada assignació cal posar un punt i coma. També caldrà posar-lo desprñes de cada instrucció.</p>
+<p>Com veiem, al final de cada assignació cal posar un punt i coma. També caldrà posar-lo després de cada instrucció.</p>
 <h3 id="constants">Constants</h3>
-<p>Una constant és com una variable (té un tipus, un nom i un valor) però amb la condició que el seu contingut (el valor de la variable) no va a canviar al llarg del programa. Per aixxò diem que és una <strong>constant</strong> i no una <strong>variable</strong> (no pot variar).</p>
+<p>Una constant és com una variable (té un tipus, un nom i un valor) però amb la condició que el seu contingut (el valor de la variable) no va a canviar al llarg del programa. Per això diem que és una <strong>constant</strong> i no una <strong>variable</strong> (no pot variar).</p>
 <p>La forma de declarar una constant en Java és indicant-ho amb la paraula <strong><em>final</em></strong>. És a dir, el valor que li posem en eixe moment, és el valor "final" que tindrà:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">2</a></span>
@@ -1861,9 +1861,12 @@
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kd">final</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">BOMBA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;Q&#39;</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>Per convenció, posarem els noms de les constants tot en majúscules.</p>
-<p>En Python no hi habia possibilitat de definir constants.</p>
+<div class="admonition info">
+<p class="admonition-title">Constants en Python</p>
+<p>En Python no hi ha possibilitat de definir constants. Malgrat açò, podem trobar-nos codi Python amb variables definides en MAJÚSCULES en un intent del programador perquè la variable siga una constant (o que siga tractada com una), però el seu valor SÍ que es pot canviar, però no es deu. Per tant, podem parlar de <strong><em>Constants per Honor</em></strong>, que encara que el valor es pot canviar, no ho farem.</p>
+</div>
 <h3 id="paraules-reservades">Paraules reservades</h3>
-<p>Estes paraules no podran usar-se per a noms de variables, ja que estan reservades:</p>
+<p>Estes paraules no podran usar-se per a noms de variables perquè estan reservades:</p>
 <p><center></p>
 <table style="width: 100%; border-collapse: collapse;">
     <tr>
@@ -2004,7 +2007,7 @@
 <tr>
 <td style="text-align: center;">'o' lògic</td>
 <td style="text-align: center;">or</td>
-<td style="text-align: center;">|| ^    sni</td>
+<td style="text-align: center;">|| ^</td>
 <td style="text-align: center;">ESQUERRA</td>
 </tr>
 <tr>
