@@ -2921,7 +2921,7 @@
 <p>Una <strong>excepció</strong> és un error que pot avortar un programa. Cada error que es produeix és un objecte de la classe <em>Exception</em> (ja vorem això de classes i objectes).</p>
 <p>Com hi ha molts tipus d'errors, hi ha moltes classes d'<em>Exceptions</em>. De fet, hi ha una <strong>jerarquia d'excepcions</strong>. Ací hi ha una xicoteta mostra de les més freqüents:</p>
 <p><center><img alt="Excepcions Java" src="../img/ud5/excepcions.png" /></center></p>
-<p>Si volem "capturar" un error i tractar-lo sense que avorte el programa, ho podem fer amb blocs <em>try-cathc-finally</em>:</p>
+<p>Si volem "capturar" un error i tractar-lo sense que avorte el programa, ho podem fer amb blocs <em>try-catch-finally</em>:</p>
 <p><strong>Sintaxi</strong>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-37-2"> 2</a></span>
@@ -2947,7 +2947,7 @@
 <a id="__codelineno-37-9" name="__codelineno-37-9"></a><span class="p">}</span>
 <a id="__codelineno-37-10" name="__codelineno-37-10"></a><span class="k">finally</span><span class="p">{</span>
 <a id="__codelineno-37-11" name="__codelineno-37-11"></a><span class="w">    </span><span class="c1">// Instruccions que SEMPRE s&#39;executaran</span>
-<a id="__codelineno-37-12" name="__codelineno-37-12"></a><span class="w">    </span><span class="c1">// encara que haja jagut algun error no capturat</span>
+<a id="__codelineno-37-12" name="__codelineno-37-12"></a><span class="w">    </span><span class="c1">// encara que haja hagut algun error no capturat</span>
 <a id="__codelineno-37-13" name="__codelineno-37-13"></a><span class="p">}</span>
 <a id="__codelineno-37-14" name="__codelineno-37-14"></a><span class="c1">// Instruccions que no deuen donar error (3)</span>
 </code></pre></div></td></tr></table></div>
@@ -3128,8 +3128,8 @@
 <details class="example">
 <summary>Exemple de <em>Javadoc</em></summary>
 <p><center><img alt="Comentaris javaDoc" src="../img/ud5/javaDoc.png" width="70%" /></center></p>
-</details>
 <p>Una volta documentat amb el <em>Javadoc</em>, si el programador escriu el nom de la funció, apareixerà l'ajuda de la informació que li hem posat, amb una estètica estàndard.</p>
+</details>
 <h2 id="exercicis">Exercicis</h2>
 <details class="question">
 <summary>Exercici 21</summary>
