@@ -25,7 +25,7 @@ public class funcionsIO {
      */
     public static void printMG(String missatge) {
         JOptionPane.showMessageDialog(null, missatge);
-    } // ()
+    }
 
     /**
      * Recull un número sencer per consola
@@ -43,7 +43,7 @@ public class funcionsIO {
      */
     public static int readIntG(String missatge) {
         return Integer.parseInt(readTextG(missatge));
-    } // ()
+    }
 
     /**
      * Recull un número amb decimals per consola
@@ -61,7 +61,7 @@ public class funcionsIO {
      */
     public static double readDoubleG(String missatge) {
         return Double.parseDouble(readTextG(missatge));
-    } // ()
+    }
 
     /**
      * Recull un text per consola

@@ -2481,7 +2481,7 @@
 <p><center><img alt="Classes Wrapper" src="../img/ud5/wrapper.png" /></center></p>
 <div class="admonition warning">
 <p class="admonition-title">Compte!</p>
-<p>No existeix un <em>Interger.parseChar()</em> ja que no podem convertir tota una cadena en només 1 caràcter. Si volem llegir de teclat només 1 caràcter, farem com si llegírem una cadena però ens quedarem només en el primer caràcter d'eixa cadena. Això es fa amb el <em>charAt(0)</em>, com féiem en la classe <em>Scanner</em>:</p>
+<p>No existeix un <em>Interger.parseChar()</em> ja que no podem convertir tota una cadena en només 1 caràcter. <strong>Si volem llegir de teclat només 1 caràcter</strong>, farem com si llegírem una cadena però ens quedarem només en el primer caràcter d'eixa cadena. Això es fa amb el <em>charAt(0)</em>, com féiem en la classe <em>Scanner</em>:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
 <span class="normal"><a href="#__codelineno-21-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">lletra</span><span class="p">;</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="n">lletra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">teclat</span><span class="p">.</span><span class="na">readLine</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
@@ -2649,7 +2649,7 @@
 </details>
 <details class="question">
 <summary>Exercici 8</summary>
-<p>Demana una nota amb decimals i mostra el text corresponent: "ins", "suf", "bé", "not" o "exc". O bé "error" si la nota està entre 0 i 10.</p>
+<p>Demana una nota amb decimals i mostra el text corresponent: "ins", "suf", "bé", "not" o "exc". O bé "error" si la nota no està entre 0 i 10.</p>
 </details>
 <h4 id="bifurcacio-composta-switch">Bifurcació composta: <code>switch</code></h4>
 <p>Depenent dels diferents valors d'una variable (o expressió), es podran executar diferents blocs de codi.</p>
@@ -2785,7 +2785,7 @@
 </details>
 <details class="question">
 <summary>Exercici 14</summary>
-<p>Programa que mostre els núermos del 20 a 10, de 3 en 3.</p>
+<p>Programa que mostre els números del 20 a 10, de 3 en 3.</p>
 </details>
 <h4 id="bucle-incondicional-for">Bucle incondicional <code>for</code></h4>
 <p>A l'explicació del <em>for</em> de Python del tema anterior veiérem l'exemple de recórrer els números de l'1 al 9. Veiem ara com seria en Java (i C):</p>
@@ -2823,11 +2823,11 @@
 <p>És a dir, un possible flux seria:</p>
 <ul>
 <li>Inicialització</li>
-<li>Condició <em>True</em> --&gt; sentències --&gt; actualització</li>
-<li>Condició <em>True</em> --&gt; sentències --&gt; actualització</li>
-<li>Condició <em>True</em> --&gt; sentències --&gt; actualització</li>
+<li>Condició <em>true</em> --&gt; sentències --&gt; actualització</li>
+<li>Condició <em>true</em> --&gt; sentències --&gt; actualització</li>
+<li>Condició <em>true</em> --&gt; sentències --&gt; actualització</li>
 <li>...</li>
-<li>Condició <strong><em>False</em></strong> --&gt; El bucle acaba</li>
+<li>Condició <strong><em>false</em></strong> --&gt; El bucle acaba</li>
 </ul>
 <p>Altres exemples:</p>
 <div class="admonition example">
@@ -3187,7 +3187,7 @@
 </details>
 <details class="question">
 <summary>Exercici 26</summary>
-<p>Altre programa d'endevinar un número. L'ordinador tria un número de l'1 al 100 (busca a Internet una funció que calcule un nñumero aleatori en Java). L'usuari ha d'intentar endevinar-lo amb els missatges que vaja dient l'ordinador de si el número és major o menor del que ha dit l'usuari.</p>
+<p>Altre programa d'endevinar un número. L'ordinador tria un número de l'1 al 100 (busca a Internet una funció que calcule un número aleatori en Java). L'usuari ha d'intentar endevinar-lo amb els missatges que vaja dient l'ordinador de si el número és major o menor del que ha dit l'usuari.</p>
 </details>
 <h2 id="annex-funcionsiojava">Annex: <code>funcionsIO.java</code></h2>
 <p>Per tal de facilitar l'entrada i la sortida, hem creat un fitxer de funcions útils que podeu emprar als vostres programes. Algunes de les solucions de les activitats anteriors faran referència a les funcions contingudes en aquest fitxer. Per emprar-lo, sols heu de emmagatzermar-lo a la mateixa carpeta on teniu els codis font dels vostres programes.</p>
