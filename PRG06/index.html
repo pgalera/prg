@@ -703,6 +703,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#tractament-de-tota-la-llista-en-conjunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tractament de tota la llista en conjunt
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -917,6 +926,15 @@
   <a href="#recorregut-duna-llista" class="md-nav__link">
     <span class="md-ellipsis">
       Recorregut d'una llista
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tractament-de-tota-la-llista-en-conjunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tractament de tota la llista en conjunt
     </span>
   </a>
   
@@ -1478,6 +1496,67 @@ reservar memòria per a v3.</p>
 <p><center><code>coses = [1984, "Paco Garcia", "1DAM-SP", "PRG", "SXA", True, 15.5]</code></center></p>
 <p>Si volem recórrer eixa llista (per a mostrar els elements, etc.), igual que en Java, en Python també hem d'utilitzar un bucle, preferiblement, un <em>for</em>. Però recordem que el for de Python no és com el de Java. Veiem 2 formes de recòrrer la llista:</p>
 <p><strong>a) Amb un bucle <em>for</em> tradicional: accedint amb l'índex dels elements</strong></p>
+<p>Podem recórrer-la amb les posicions que van de la 0 a la longitud de la llista -1:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">coses</span><span class="p">)):</span> <span class="c1"># És com si férem: for i in [0,1,2,3,4,5,6]</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;element de la posició&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;val&quot;</span><span class="p">,</span> <span class="n">coses</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<p>O bé, sense indicar la posició inicial (ja que per defecte és 0):</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">coses</span><span class="p">)):</span> <span class="c1"># És com si férem: for i in [0,1,2,3,4,5,6]</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;element de la posició&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;val&quot;</span><span class="p">,</span> <span class="n">coses</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition note">
+<p class="admonition-title">NOTES</p>
+<ul>
+<li><strong>len(llista)</strong> ens dona la longitud de la llista.</li>
+<li>Recordem que amb <strong>range(10,20)</strong> obtenim els números del 10 al 19. I que amb <strong>range(20)</strong> obtenim els números del 0 al 19.</li>
+<li>Per tant, amb <strong>range(len(llista))</strong> obtenim totes les posicions de la llista.</li>
+</ul>
+</div>
+<p><strong>b) Amb un <em>for</em> tipus <em>foreach</em>: accedint directament als elements</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">coses</span><span class="p">:</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Un element val&quot;</span><span class="p">,</span> <span class="n">element</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p>Però en este cas no podem accedir al número de la posició de cada element, ni podem modificar la llista. Per tant, usarem esta forma quan no ens faça falta saber les posicions de cada element ni hajam de modificar la llista.</p>
+<h3 id="tractament-de-tota-la-llista-en-conjunt">Tractament de tota la llista en conjunt</h3>
+<p>En Python, igual que en Java, si usem el vector sense indicar la posició, estem accedint a una <strong>adreça de memòria</strong> RAM (on comencen les dades que guarda el vector). Recordem:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span>
+<span class="normal"><a href="#__codelineno-34-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">notesPep</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2"></a><span class="n">notesPepa</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p><center><img alt="Els vectors a la RAM" src="../img/ud6/vectorsRAM.png" /></center></p>
+<p>Per tant, passarà igual que a Java:</p>
+<ul>
+<li><strong>Si copiem un vector a un altre</strong>, els 2 vectors apuntaran a la mateixa zona de memòria. Llavors, si canviem algun element canviarà als 2 vectors.</li>
+<li><strong>Si li assignem altre conjunt de valors</strong> també estarem assignant una nova zona de memòria i, per tant, perdrem les dades que tenia abans.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
+<span class="normal"><a href="#__codelineno-35-2">2</a></span>
+<span class="normal"><a href="#__codelineno-35-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span>      <span class="c1"># Ara notes val [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="o">...</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>   <span class="c1"># Ara notes val [6, 7, 9]</span>
+</code></pre></div></td></tr></table></div>
+<p>Però, <strong>a diferència de Java</strong>:</p>
+<ul>
+<li><strong>Si comparem un vector amb altre</strong>, encara que tinguen distinta zona de memòria, si els elements són iguals donarà <strong><em>True</em></strong>.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
+<span class="normal"><a href="#__codelineno-36-2">2</a></span>
+<span class="normal"><a href="#__codelineno-36-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">v1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="n">v2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">v1</span> <span class="o">==</span> <span class="n">v2</span><span class="p">)</span>     <span class="c1"># Mostrarà True</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li><strong>Podem mostrar "de colp" tot un vector</strong>:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="nb">print</span><span class="p">(</span><span class="n">notesPep</span><span class="p">)</span>     <span class="c1"># Mostrarà tot el vector, en este format: [5, 7, 8]</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Exercici 4. Vectors en Python</summary>
+<p>Fes en Python els exercicis de vectors que has fet en Java <img alt="😉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f609.svg" title=":wink:" /></p>
+</details>
 
 
 
