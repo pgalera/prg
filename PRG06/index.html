@@ -717,6 +717,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#matrius-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrius en Java
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrius en Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaracio-de-matrius-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaració de matrius en Java
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-matriu-es-un-vector-de-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Una matriu és un vector de vectors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -935,6 +968,39 @@
   <a href="#tractament-de-tota-la-llista-en-conjunt" class="md-nav__link">
     <span class="md-ellipsis">
       Tractament de tota la llista en conjunt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrius-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrius en Java
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrius en Java">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaracio-de-matrius-en-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaració de matrius en Java
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#una-matriu-es-un-vector-de-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Una matriu és un vector de vectors
     </span>
   </a>
   
@@ -1181,7 +1247,7 @@
 <li>En Python amb el -1 accedirem a l'última posició, però en Java dona ERROR!</li>
 </ol>
 <h3 id="recorregut-dun-vector">Recorregut d'un vector</h3>
-<p><img align="right" alt="Recorregut d'un vector" src="../img/ud6/recorregutVector.png" /></p>
+<p><center><img alt="Recorregut d'un vector" src="../img/ud6/recorregutVector.png" /></center></p>
 <p>Imaginem que un vector té 1000 posicions i volem mostrar-les totes. Com ho fem?</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">String</span><span class="w"> </span><span class="n">noms</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">1000</span><span class="o">]</span><span class="p">;</span>
@@ -1189,7 +1255,7 @@
 </code></pre></div></td></tr></table></div>
 <p>Ja vorem per què NO podem fer-ho amb un únic <em>println</em> del nom del vector. Per tant, haurem de recórrer tots els seus components, amb un bucle. Tenim 2 opcions:</p>
 <p><strong>a. Recórrer el vector amb un <em>for</em> tradicional:</strong></p>
-<p><img align="right" alt="Recorregut d'un vector" src="../img/ud6/recorregutVector2.png" /></p>
+<p><center><img alt="Recorregut d'un vector" src="../img/ud6/recorregutVector2.png" /></center></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
 <span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">noms</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
@@ -1201,7 +1267,7 @@
 <li>En compte de posar 1000, usarem sempre la propietat <strong><em>length</em></strong> del vector (<em>nomVector.length</em>). Així, si després el programador canvia eixe 1000 per altre número, no ho ha de canviar en altres parts del programa.</li>
 </ul>
 <p><strong>b. Recórrer el vector amb un <em>for</em> tipus <em>foreach</em>:</strong></p>
-<p><img align="right" alt="Recorregut vector amb foreach" src="../img/ud6/recorregutVectorForeach.png" /></p>
+<p><center><img alt="Recorregut vector amb foreach" src="../img/ud6/recorregutVectorForeach.png" /></center></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">:</span><span class="w"> </span><span class="n">noms</span><span class="p">){</span>
@@ -1557,6 +1623,59 @@ reservar memòria per a v3.</p>
 <summary>Exercici 4. Vectors en Python</summary>
 <p>Fes en Python els exercicis de vectors que has fet en Java <img alt="😉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f609.svg" title=":wink:" /></p>
 </details>
+<h2 id="matrius-en-java">Matrius en Java</h2>
+<p>Són com els vectors que hem vist, però en 2 dimensions (<em>arrays</em> bidimensionals). També poden haver *<em>arrays</em> de 3 dimensions, de 4...</p>
+<p><center><img alt="Arrays multidimensionals" src="../img/ud6/arraysMultidimensionals.png" /></center></p>
+<p>S'utilitzen per a guardar moltes dades, del mateix tipus, quan cadascuna d'eixes dades es pot identificar per dos (o més) índexos. Per exemple:</p>
+<ul>
+<li>Les <strong>notes dels alumnes</strong> en distintes avaluacions:</li>
+</ul>
+<p><center><img alt="matriu amb notes i avaluacions" src="../img/ud6/alumnesAvaluacions.png" /></center></p>
+<ul>
+<li>Els <strong>taulers de jocs</strong>:</li>
+</ul>
+<p><center><img alt="Taulers de jocs en forma de matriu" src="../img/ud6/taulersJocs.png" /></center></p>
+<ul>
+<li>Una <strong>imatge <em>.bmp<em> o </em>.jpg</em></strong> es guarda internament com una matriu de 3 dimensions. Cada element representa un píxel de la foto, i està indexat per una posició de la foto (alt, ample) i per un valor depenent del color (roig, verd o blau).</li>
+</ul>
+<p><center><img alt="imatge matricial" src="../img/ud6/imatgeMatricial.png" /></center></p>
+<p>Per exemple, suposant que el verd és la posició 2, si volem que el píxel 150,300 tinga una tonalitat de 10 verd, podríem fer: <code>foto[150][300][2] = 10;</code></p>
+<h3 id="declaracio-de-matrius-en-java">Declaració de matrius en Java</h3>
+<p>Podem definir una <strong>matriu</strong> com un conjunt finit d'elements del mateix tipus, als quals podem accedir mitjançant el nom de la matriu i dos índexs.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple de declaració d'una matriu</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<span class="normal"><a href="#__codelineno-38-2">2</a></span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span>
+<span class="normal"><a href="#__codelineno-38-4">4</a></span>
+<span class="normal"><a href="#__codelineno-38-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ALU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="w">                       </span><span class="c1">// Quantitat d&#39;alumnes</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">EXER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w">                      </span><span class="c1">// Quantitat d&#39;exercicis</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">notes</span><span class="o">[][]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">float</span><span class="o">[</span><span class="n">ALU</span><span class="o">][</span><span class="n">EXER</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Guardarà 30 notes (6*5) (1)!</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">alu</span><span class="p">;</span><span class="w">                                </span><span class="c1">// Índex per a recórrer els alumnes</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">exer</span><span class="p">;</span><span class="w">                               </span><span class="c1">// Índex per a recórrer els exercicis</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>O bé [EXER][ALU], però la disposició que triem s'ha de respectar <strong>en tot el programa</strong>.</li>
+</ol>
+<p><center><img alt="Representació d'una matriu" src="../img/ud6/representacioMatriu.png" /></center></p>
+</div>
+<h3 id="una-matriu-es-un-vector-de-vectors">Una matriu és un vector de vectors</h3>
+<p>També podem definir una <strong>matriu</strong> com un vector on cadascun dels seus elements és un altre vector.</p>
+<p>Veiem-ho amb l'exemple anterior, on volem guarar les notes que han tret 6 alumnes en cadascun dels 5 exercicis.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
+<span class="normal"><a href="#__codelineno-39-2">2</a></span>
+<span class="normal"><a href="#__codelineno-39-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">ALU</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span><span class="w">                      </span><span class="c1">// Quantitat d&#39;alumnes</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">EXER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">                     </span><span class="c1">// Quantitat d&#39;exercicis </span>
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">notes</span><span class="o">[][]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">float</span><span class="o">[</span><span class="n">ALU</span><span class="o">][</span><span class="n">EXER</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Per a guardar 30 notes</span>
+</code></pre></div></td></tr></table></div>
+<p>En el següent gràfic (part esquerre) veiem que, per a guardar les notes dels 6 alumnes tenim el <strong>vector</strong> de notes. El que passa és que cada alumne no té una nota, sinó 5. És a dir, en cada posició del vector de notes, hi ha un altre "vectoret".</p>
+<p><center><img alt="vector de vectors" src="../img/ud6/vectorDeVectors.png" /></center></p>
+<p>En el gràfic (part dreta) veiem que eixa estructura de vector de vectors és realment una matriu. Aleshores, tenim que:</p>
+<ul>
+<li><strong>notes</strong>: és tota la <strong>matriu</strong> (les notes de tots els alumnes en tots els exercicis).</li>
+<li><strong>notes[2]</strong>: és un <strong>vector</strong> de notes (les notes de l'alumne 2).</li>
+<li><strong>notes[4][3]</strong>: és un <strong>element nota</strong> (la nota de l'alumne 4 a l'exercici 3).</li>
+</ul>
 
 
 
