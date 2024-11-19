@@ -619,6 +619,90 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#tractament-de-tot-el-vector-en-conjunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tractament de tot el vector en conjunt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tractament de tot el vector en conjunt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copiar-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiar vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparar-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparar vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altres-operacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altres operacions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectors-en-python-llistes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectors en Python (llistes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vectors en Python (llistes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-duna-llista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació d'una llista
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tractament-de-cada-element-de-la-llista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tractament de cada element de la llista
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recorregut-duna-llista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recorregut d'una llista
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -749,6 +833,90 @@
   <a href="#vectors-parallels" class="md-nav__link">
     <span class="md-ellipsis">
       Vectors paral·lels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tractament-de-tot-el-vector-en-conjunt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tractament de tot el vector en conjunt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tractament de tot el vector en conjunt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copiar-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copiar vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparar-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparar vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#altres-operacions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Altres operacions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectors-en-python-llistes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectors en Python (llistes)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vectors en Python (llistes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creacio-duna-llista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creació d'una llista
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tractament-de-cada-element-de-la-llista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tractament de cada element de la llista
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recorregut-duna-llista" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recorregut d'una llista
     </span>
   </a>
   
@@ -1140,6 +1308,176 @@
 <summary>Exercici 2. Vectors paral·lels</summary>
 <p>Fes un programa en Java que demane el número d'expedient, nota i edat de 15 alumnes (amb un únic bucle). Posteriorment, que mostre en 3 columnes les 3 dades de cada alumne. Després, es demanarà per teclat un número d'expedient i es mostrarà per pantalla la seua edat i nota.</p>
 </details>
+<h3 id="tractament-de-tot-el-vector-en-conjunt">Tractament de tot el vector en conjunt</h3>
+<p>Abans de vore les operacions que podem fer en un vector en conjunt (no component a component), hem de tindre en compte que si usem el vector sense indicar la posició, estem accedint a una <strong>adreça de memòria</strong> RAM (on comencen les dades que guarda el vector).</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Suposem que tenim estos dos vectors:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">notesPep</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">};</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">notesPepa</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<p>i pososem que, quan s'ha executat el programa, se'ls han assignat estes zones de memòria RAM (que comencen en la 1004 i en la 1024):</p>
+<p><center><img alt="RAM i vectors" src="../img/ud6/vectorsRAM.png" /></center></p>
+<p>A la vista d'este esquema, quan usem el nom d'un vector sense indicar l'índex (ni els claudàtros, clar), estarem accedint a eixe número 1004 o 1024, no al contingut del vector.</p>
+<p>Per tant, <strong>hem d'anar en compte amb les operacions que fem amb els vectors sencers en conjunt</strong>, ja que, possiblement, no estarem fent allò que pretenem. Ara ho vorem.</p>
+</div>
+<h4 id="copiar-vectors">Copiar vectors</h4>
+<p>Què pasaa si copiem un vector a un altre?</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span>
+<span class="normal"><a href="#__codelineno-25-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">notesPep</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">};</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">notesPepa</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">};</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="p">...</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="n">notesPepa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">notesPep</span><span class="p">;</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="p">...</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>No donarà error però està fent que <em>notesPepa</em> apunte a la mateixa adreça que <em>notesPep</em></li>
+</ol>
+<p>Efeectivament, si mostrem ara les notes de Pepa, vorem que sí que mostra 5, 7, 6 (en compte de 7, 8, 8 que tenia abans), però... compte! Si modifiquem una nota de Pep, també estarem modificant la de Pepa, i al revés.</p>
+<p><strong>SOLUCIÓ</strong>: Si realment volíem que <em>notesPepa</em> tinguera els mateixos valors que <em>notesPep</em> (conservant l'adreça de memòria que tenia) caldria copiar component a component, mitjançant un bucle. Vorem després com fer-ho.</p>
+<h4 id="comparar-vectors">Comparar vectors</h4>
+<p>Què passa si comparem vectors?</p>
+<p>No es compararan els seus valors sinó l'adreça de memòria que ocupen. Per tant:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-26-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-26-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-26-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-26-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-26-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-26-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-26-10">10</a></span>
+<span class="normal"><a href="#__codelineno-26-11">11</a></span>
+<span class="normal"><a href="#__codelineno-26-12">12</a></span>
+<span class="normal"><a href="#__codelineno-26-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">notesPep</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">};</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">notespepa</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">};</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">notesPep</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">notesPepa</span><span class="p">){</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="p">}</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a>
+<a id="__codelineno-26-8" name="__codelineno-26-8"></a><span class="n">notesPepa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">notesPep</span><span class="p">;</span><span class="w"> </span><span class="c1">//(3)!</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9"></a><span class="n">notesPepa</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">//(4)!</span>
+<a id="__codelineno-26-10" name="__codelineno-26-10"></a>
+<a id="__codelineno-26-11" name="__codelineno-26-11"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">notesPep</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">notesPepa</span><span class="p">){</span><span class="w"> </span><span class="c1">//(5)!</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-26-13" name="__codelineno-26-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Els 2 vectors tenen els mateixos valors però en distinta zona de memòria.</li>
+<li>Donarà <strong><em>false</em></strong> ja que, encara que tinguen els mateixos valors, l'adreça de memòria és distinta.</li>
+<li>Els 2 vectors apunten a la mateixa zona de memòria.</li>
+<li>Estem canviant una nota de Pepa... i de Pep!</li>
+<li>Donarà <strong><em>true</em></strong> ja que l'adreça de memòria és la mateixa.</li>
+</ol>
+<h4 id="altres-operacions">Altres operacions</h4>
+<p>No podem mostrar "de colp" un vector ni assignar-li un valor a tots els components:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">notesPep</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">};</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">notesPep</span><span class="p">);</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="n">notesPep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">//(2)!</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>No donarà error de compilació ni d'execució però mostrarà l'adreça de memòria RAM on comença el vector (un número en hexadecimal).</li>
+<li>Error de compilació.</li>
+</ol>
+<p><strong>SOLUCIÓ</strong>: tant per mostrar els elements d'un vector, com per assignar un mateix valor a cada element, cal fer-ho mitjançant un bucle.</p>
+<details class="question">
+<summary>Exercici 3. Operacions amb vectors en conjunt</summary>
+<p>a. Crea 3 vectors d'enters (v1, v2 i v3) sense reservar memòria (sense indicar la grandària ni posar valors inicials).</p>
+<p>b. Pregunta per teclat quantes dades es volen guardar en els vectors (només 1 quantitat, igual per als tres).</p>
+<p>c. Reserva memòria al vector1 amb eixa quantitat d'elements introduïda.</p>
+<p>d. Ompli v1 amb dades introduïdes per teclat.</p>
+<p>e. Copia el vector v1 al vector v2, en una sola operació.</p>
+<p>f. Copia el vector v1 al vector v3, copiant component a component. Primer caldrà 
+reservar memòria per a v3.</p>
+<p>g. Mostra per pantalla si v1 és igual a v2, en una sola operació. Fes el mateix per a v1 i v3.</p>
+<p>h. Mostra per pantalla si v1 és igual a v3, component a component (però només haurà de dir: "vectors iguals" o "vectors diferents").</p>
+<p>i. Mostra el que hi ha en cada posició de cada vector (format lliure).</p>
+<p>j. Fes que els 3 vectors ara tinguen 5 dades cadascun. I que totes les dades tinguen el valor -1. Torna a mostrar el contingut dels vectors.</p>
+<p>k. Pensa quin resultat de mostrar per pantalla i comprova el resultat després d'executar el programa.</p>
+</details>
+<h2 id="vectors-en-python-llistes">Vectors en Python (llistes)</h2>
+<p>Els vectors de Python també s'anomenen llistes. Ara bé, les llistes de Python:</p>
+<ul>
+<li>Poden contindre elements de tipus diferents.</li>
+<li>Són dinàmiques: poden canviar de grandària al llarg del programa.</li>
+</ul>
+<h3 id="creacio-duna-llista">Creació d'una llista</h3>
+<p>Recordem que en Python no es declaren les variable. Tampoc els vectors. Per tant, per a crear un vector, simplement hem d'inicialitzar-lo. 2 formes de fer-ho:</p>
+<p><strong>a) Creació d'una llista indicant els valors</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-28-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-28-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-28-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-28-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-28-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-28-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-28-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-28-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-28-10">10</a></span>
+<span class="normal"><a href="#__codelineno-28-11">11</a></span>
+<span class="normal"><a href="#__codelineno-28-12">12</a></span>
+<span class="normal"><a href="#__codelineno-28-13">13</a></span>
+<span class="normal"><a href="#__codelineno-28-14">14</a></span>
+<span class="normal"><a href="#__codelineno-28-15">15</a></span>
+<span class="normal"><a href="#__codelineno-28-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="c1"># Llista d&#39;enters:</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a>
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="c1"># Llista de textos:</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="n">noms</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;pep&quot;</span><span class="p">,</span> <span class="s2">&quot;pepa&quot;</span><span class="p">,</span> <span class="s2">&quot;pepeta&quot;</span><span class="p">,</span> <span class="s2">&quot;pepet&quot;</span><span class="p">]</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a>
+<a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="c1"># Llista amb tipus de dades diferents:</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="n">persona</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pep&quot;</span><span class="p">,</span> <span class="s2">&quot;Garcia&quot;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mf">72.5</span><span class="p">]</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9"></a>
+<a id="__codelineno-28-10" name="__codelineno-28-10"></a><span class="c1"># Llista buida i anem afegint valors:</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11"></a><span class="n">llista</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12"></a><span class="n">llista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Pep&quot;</span><span class="p">)</span>
+<a id="__codelineno-28-13" name="__codelineno-28-13"></a><span class="n">llista</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Garcia&quot;</span><span class="p">)</span>
+<a id="__codelineno-28-14" name="__codelineno-28-14"></a>
+<a id="__codelineno-28-15" name="__codelineno-28-15"></a><span class="c1"># Llista de 4 elements sense valors:</span>
+<a id="__codelineno-28-16" name="__codelineno-28-16"></a><span class="n">llista</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>b) Creació d'una llista indicant la grandària</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span>
+<span class="normal"><a href="#__codelineno-29-3">3</a></span>
+<span class="normal"><a href="#__codelineno-29-4">4</a></span>
+<span class="normal"><a href="#__codelineno-29-5">5</a></span>
+<span class="normal"><a href="#__codelineno-29-6">6</a></span>
+<span class="normal"><a href="#__codelineno-29-7">7</a></span>
+<span class="normal"><a href="#__codelineno-29-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="c1"># Llista de 7 elements enters iniciats a 3</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="n">vides</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">*</span><span class="mi">7</span>   <span class="c1"># [3, 3, 3, 3, 3, 3, 3]</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a>
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="c1"># Llista de 10 caràcters amb valors alternats &#39;a&#39; i &#39;b&#39;:</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="n">lletres</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span>  <span class="c1"># [&#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;, &#39;a&#39;, &#39;b&#39;]</span>
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a>
+<a id="__codelineno-29-7" name="__codelineno-29-7"></a><span class="c1"># Llista de 5 elements sense valors</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8"></a><span class="n">coses</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span>    <span class="c1"># [None, None, None, None, None]</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="tractament-de-cada-element-de-la-llista">Tractament de cada element de la llista</h3>
+<p>Com en C i Java: amb el nom del vector i l'índex entre claudàtors.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span>
+<span class="normal"><a href="#__codelineno-30-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">coses</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">6</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="n">vides</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">vides</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">notes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">notes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="c1">#(1)!</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Python admet índexs negatius: amb el -1 accedim a l'últim element de la llista. Amb el -2 accedim al penúltim. I així, successivament.</li>
+</ol>
+<h3 id="recorregut-duna-llista">Recorregut d'una llista</h3>
+<p><center><code>coses = [1984, "Paco Garcia", "1DAM-SP", "PRG", "SXA", True, 15.5]</code></center></p>
+<p>Si volem recórrer eixa llista (per a mostrar els elements, etc.), igual que en Java, en Python també hem d'utilitzar un bucle, preferiblement, un <em>for</em>. Però recordem que el for de Python no és com el de Java. Veiem 2 formes de recòrrer la llista:</p>
+<p><strong>a) Amb un bucle <em>for</em> tradicional: accedint amb l'índex dels elements</strong></p>
 
 
 
