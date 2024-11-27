@@ -754,8 +754,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#la-protpietat-length-en-les-matrius" class="md-nav__link">
+    <span class="md-ellipsis">
+      La protpietat length en les matrius
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recorreguts-duna-matriu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recorreguts d'una matriu
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrius-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrius en Python
+    </span>
+  </a>
   
 </li>
       
@@ -1024,8 +1051,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#la-protpietat-length-en-les-matrius" class="md-nav__link">
+    <span class="md-ellipsis">
+      La protpietat length en les matrius
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recorreguts-duna-matriu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recorreguts d'una matriu
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrius-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrius en Python
+    </span>
+  </a>
   
 </li>
       
@@ -1697,6 +1751,342 @@ reservar memòria per a v3.</p>
 <h3 id="inicialitzacio-de-matrius">Inicialització de matrius</h3>
 <p>Ja hem vist que, igual que en els vectors, les matrius es declaren així:</p>
 <p><center><code>tipusDeDades nomMatriu[][] = new tipusDeDades[qFiles][qColumnes];</code></center></p>
+<p>O bé, igual que en els vectors, podem separar la part de la reserva de memòria:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
+<span class="normal"><a href="#__codelineno-40-2">2</a></span>
+<span class="normal"><a href="#__codelineno-40-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="n">tipusDeDades</span><span class="w"> </span><span class="n">nomMatriu</span><span class="o">[][]</span><span class="p">;</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="p">...</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="n">nomMatriu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">tipusDeDades</span><span class="o">[</span><span class="n">qFiles</span><span class="o">][</span><span class="n">qColumnes</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">//(2)!</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Declarem la matriu</li>
+<li>Li assignem memòria</li>
+</ol>
+<p>Igual que en els vectors, en compte de la reserva de memòria, es poden donar uns valors inicials als elements de la mtriu.</p>
+<p>Per exemple, si volem que tinga estos valors:</p>
+<p><center></p>
+<table border="1" style="margin: auto; text-align: center;">
+    <tr>
+        <td>10</td>
+        <td>20</td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <td>40</td>
+        <td>50</td>
+        <td>60</td>
+    </tr>
+</table>
+<p></center></p>
+<p>Farem el següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">matriu</span><span class="o">[][]=</span><span class="p">{{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">}};</span><span class="w"> </span><span class="c1">//(1)!</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Cada "grupet de números" és la inicialització de cada vector de la matriu. Per tant, hauran de ser de la mateixa grandària.</li>
+</ol>
+<h3 id="la-protpietat-length-en-les-matrius">La protpietat <em>length</em> en les matrius</h3>
+<p>Suposem que tenim esta matriu:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">m</span><span class="o">[][]=</span><span class="k">new</span><span class="w"> </span><span class="kt">float</span><span class="o">[</span><span class="mi">6</span><span class="o">][</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Amb <code>m.length</code> tindrem eixe <strong><em>6</em></strong> (quantitat de files)</li>
+<li>Amb <code>m[0].length</code> tindrem eixe <strong><em>5</em></strong> (quantitat de columnes)</li>
+</ul>
+<p>Ja vorem que, en ocasions, en alguna part del programa no sabrem la quantitat de files i columnes que té eixa matriu <em>m</em> (no coneixerem eixe 6 i 5). En eixos casos accedirem amb <strong><em>m.length</em></strong> per a accedir a la grandària de la 1a component de la matriu, i amb <strong><em>m[0].length</em></strong> per a accedir a la grandària de la 2a component de la matriu. Però per què?</p>
+<p>Recordem que una matriu és un "vectorot" de "vectorets". Per tant, <strong><em>m.length</em></strong> és la longitud d'eixe "vectorot". I com <strong><em>m[0]</em></strong> és el primer dels "vectorets", <strong><em>m[0].length</em></strong> és la longitud d'eixe "vectoret" (i dels altres, ja que tots són igual de grans). Sabent això, també podrem accedir als "cantons" de la matriu, etc. És a dir:</p>
+<p><center><img alt="Esquema de matriu amb lengths" src="../img/ud6/matriusLength.png" /></center></p>
+<h3 id="recorreguts-duna-matriu">Recorreguts d'una matriu</h3>
+<p>Si volem mostrar tots els elements d'una matriu, o assignar-los un valor, etc., haurem de recòrrer-la tota. És a dir, haurem de passar per cadascun dels seus elements. Podem fer eixe recorregut de 2 maneres: per files o per columnes.</p>
+<p><strong>Recorregut per files</strong>:</p>
+<p><center><img alt="Recorregut per files" src="../img/ud6/recorregutFiles.png" /></center></p>
+<p><strong>Recorregut per columnes</strong>:</p>
+<p><center><img alt="Recorregut per columnes" src="../img/ud6/recorregutColumnes.png" /></center></p>
+<p>Però si nomñes volem recórrer una fila, per exemple la 2, <strong>NO</strong> hem de recórrer tota la matriu, sinó simplement la fila que volem:</p>
+<p><center><img alt="Recorregut d'una fila en una matriu" src="../img/ud6/recorregutFilaMatriu.png" /></center></p>
+<p>I si volem recórrer només una columna, per exemple la 1, farem:</p>
+<p><center><img alt="Recorregut d'una columna en una matriu" src="../img/ud6/recorregutColumnaMatriu.png" /></center></p>
+<p>Un <strong>error freqüent</strong> és que, per a recórrer una columna (per exemple la 1), es recórrega tota la matriu:</p>
+<p><center><img alt="Error freqüent" src="../img/ud6/errorRecorrerMatriu.png" /></center></p>
+<details class="success">
+<summary>Exercici 5 RESOLT</summary>
+<p><strong>Estadística de temperatures</strong></p>
+<p>A un centre meteorològic volem guardar les temperatures d'un mes (31 dies), mesurades 4 voltes al dia (a les 0, 6, 12 i 18 hores de cada dia).</p>
+<p>Al principi del programa es demanaran totes les temperatures del mes: per cada dia es demanaran les 4 temperatures.</p>
+<p>posteriorment, el programa presentarà un menú perquè l'usuari faça una anàlisi de les dades recol·lectades:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Temperatura mitja d&#39;un dia demanat per programa.
+2. Temperatura mitja d&#39;una hora demanada per programa.
+3. Temperatura mitja del mes.
+0. Eixir.
+</code></pre></div></td></tr></table></div>
+<p>Repetidament es mostrarà el menú, es demanarà una opció i s'executarà, fins posar l'opció 0.</p>
+<p><strong>Plantejament de la solució</strong></p>
+<p>Caldrà guardar les dades en una matriu. Podem plantejar-ho de moltes formes. Per a vore l'estructura de dades que ens farà falta, hem de fer-nos un "dibuxet" amb el que volem. Així veiem que ens vindria bé una matriu de 32 x 4:</p>
+<p><center><img alt="Dibuixet plantejament exercici" src="../img/ud6/imatgeACT5.png" /></center></p>
+<p>(*) Si definiríem una matriu de 31 files, els números de fila anirien de 0 a 30 però els dies són de l'1 al 31. Per tant, definiriem una matriu de 32 files, i només usarem de la fila 1 a la 31. Simplement, no usarem la fila 0.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-43-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-43-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-43-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-43-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-43-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-43-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-43-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-43-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-43-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-43-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-43-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-43-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-43-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-43-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-43-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-43-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-43-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-43-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-43-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-43-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-43-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-43-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-43-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-43-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-43-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-43-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-43-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-43-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-43-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-43-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-43-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-43-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-43-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-43-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-43-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-43-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-43-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-43-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-43-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-43-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-43-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-43-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-43-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-43-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-43-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-43-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-43-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-43-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-43-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-43-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-43-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-43-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-43-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-43-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-43-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-43-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-43-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-43-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-43-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-43-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-43-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-43-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-43-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-43-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-43-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-43-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-43-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-43-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-43-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-43-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-43-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-43-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-43-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-43-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-43-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-43-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-43-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-43-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-43-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-43-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-43-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-43-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-43-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-43-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-43-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-43-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-43-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-43-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-43-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-43-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-43-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-43-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-43-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-43-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-43-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-43-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-43-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-43-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-43-100">100</a></span>
+<span class="normal"><a href="#__codelineno-43-101">101</a></span>
+<span class="normal"><a href="#__codelineno-43-102">102</a></span>
+<span class="normal"><a href="#__codelineno-43-103">103</a></span>
+<span class="normal"><a href="#__codelineno-43-104">104</a></span>
+<span class="normal"><a href="#__codelineno-43-105">105</a></span>
+<span class="normal"><a href="#__codelineno-43-106">106</a></span>
+<span class="normal"><a href="#__codelineno-43-107">107</a></span>
+<span class="normal"><a href="#__codelineno-43-108">108</a></span>
+<span class="normal"><a href="#__codelineno-43-109">109</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExerciciTemperatures</span><span class="p">{</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">){</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3"></a>
+<a id="__codelineno-43-4" name="__codelineno-43-4"></a><span class="w">        </span><span class="c1">// DECLARACIÓ DE VARIABLES ------------------------------</span>
+<a id="__codelineno-43-5" name="__codelineno-43-5"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">DIES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-43-6" name="__codelineno-43-6"></a><span class="w">        </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">FRANGES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<a id="__codelineno-43-7" name="__codelineno-43-7"></a>
+<a id="__codelineno-43-8" name="__codelineno-43-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="o">[][]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">DIES</span><span class="o">+</span><span class="mi">1</span><span class="o">][</span><span class="n">FRANGES</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-43-9" name="__codelineno-43-9"></a>
+<a id="__codelineno-43-10" name="__codelineno-43-10"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">diaTriat</span><span class="p">,</span><span class="w"> </span><span class="n">horaTriada</span><span class="p">,</span><span class="w"> </span><span class="n">franjaTriada</span><span class="p">;</span>
+<a id="__codelineno-43-11" name="__codelineno-43-11"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">opcio</span><span class="p">;</span>
+<a id="__codelineno-43-12" name="__codelineno-43-12"></a><span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">total</span><span class="p">,</span><span class="w"> </span><span class="n">mitjana</span><span class="p">;</span>
+<a id="__codelineno-43-13" name="__codelineno-43-13"></a>
+<a id="__codelineno-43-14" name="__codelineno-43-14"></a><span class="w">        </span><span class="c1">// INTRODUCCIÓ DE DADES ---------------------------------</span>
+<a id="__codelineno-43-15" name="__codelineno-43-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;--- INTRODUCCIÓ DE TEMPERATURES ---&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-16" name="__codelineno-43-16"></a>
+<a id="__codelineno-43-17" name="__codelineno-43-17"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">DIES</span><span class="p">;</span><span class="w"> </span><span class="n">dia</span><span class="o">++</span><span class="p">){</span><span class="w">  </span><span class="c1">// No agafem el dia 0</span>
+<a id="__codelineno-43-18" name="__codelineno-43-18"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nDia &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dia</span><span class="p">);</span>
+<a id="__codelineno-43-19" name="__codelineno-43-19"></a>
+<a id="__codelineno-43-20" name="__codelineno-43-20"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">franja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">franja</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">FRANGES</span><span class="p">;</span><span class="w"> </span><span class="n">franja</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-43-21" name="__codelineno-43-21"></a><span class="w">                </span><span class="n">temp</span><span class="o">[</span><span class="n">dia</span><span class="o">][</span><span class="n">franja</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">funcionsIO</span><span class="p">.</span><span class="na">readIntC</span><span class="p">(</span><span class="s">&quot;Temperatura a les &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">franja</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="p">);</span>
+<a id="__codelineno-43-22" name="__codelineno-43-22"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-43-23" name="__codelineno-43-23"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-43-24" name="__codelineno-43-24"></a>
+<a id="__codelineno-43-25" name="__codelineno-43-25"></a><span class="w">        </span><span class="c1">// MOSTREM LES TEMPERATURES POSADES ---------------------</span>
+<a id="__codelineno-43-26" name="__codelineno-43-26"></a>
+<a id="__codelineno-43-27" name="__codelineno-43-27"></a><span class="w">        </span><span class="c1">// Mostrem el titolet de les hores</span>
+<a id="__codelineno-43-28" name="__codelineno-43-28"></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">franja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">franja</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">FRANGES</span><span class="p">;</span><span class="w"> </span><span class="n">franja</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-43-29" name="__codelineno-43-29"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\t&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">franja</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;h&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-30" name="__codelineno-43-30"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-43-31" name="__codelineno-43-31"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-32" name="__codelineno-43-32"></a>
+<a id="__codelineno-43-33" name="__codelineno-43-33"></a><span class="w">        </span><span class="c1">// Mostrem les files de la matriu</span>
+<a id="__codelineno-43-34" name="__codelineno-43-34"></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">DIES</span><span class="p">;</span><span class="w"> </span><span class="n">dia</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-43-35" name="__codelineno-43-35"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Dia_&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-36" name="__codelineno-43-36"></a>
+<a id="__codelineno-43-37" name="__codelineno-43-37"></a><span class="w">            </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">franja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">franja</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">FRANGES</span><span class="p">;</span><span class="w"> </span><span class="n">franja</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-43-38" name="__codelineno-43-38"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">temp</span><span class="o">[</span><span class="n">dia</span><span class="o">][</span><span class="n">franja</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-39" name="__codelineno-43-39"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-43-40" name="__codelineno-43-40"></a>
+<a id="__codelineno-43-41" name="__codelineno-43-41"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-42" name="__codelineno-43-42"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-43-43" name="__codelineno-43-43"></a>
+<a id="__codelineno-43-44" name="__codelineno-43-44"></a><span class="w">        </span><span class="c1">// BUCLE: Mostrar menú, demanar opció i executar opció</span>
+<a id="__codelineno-43-45" name="__codelineno-43-45"></a><span class="w">        </span><span class="k">do</span><span class="p">{</span>
+<a id="__codelineno-43-46" name="__codelineno-43-46"></a><span class="w">            </span><span class="c1">// MOSTREM MENU</span>
+<a id="__codelineno-43-47" name="__codelineno-43-47"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;***********************************&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-48" name="__codelineno-43-48"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1. Mostrar temp. mitjana d&#39;un dia&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-49" name="__codelineno-43-49"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2. Mostrar temp. mitjana d&#39;una hora&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-50" name="__codelineno-43-50"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3. Mostrar temp. mitjana del mes&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-51" name="__codelineno-43-51"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0. Eixir&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-52" name="__codelineno-43-52"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;***********************************&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-53" name="__codelineno-43-53"></a>
+<a id="__codelineno-43-54" name="__codelineno-43-54"></a><span class="w">            </span><span class="c1">// DEMANEM UNA OPCIO CORRECTA</span>
+<a id="__codelineno-43-55" name="__codelineno-43-55"></a><span class="w">            </span><span class="k">do</span><span class="p">{</span>
+<a id="__codelineno-43-56" name="__codelineno-43-56"></a><span class="w">                </span><span class="n">opcio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">funcionsIO</span><span class="p">.</span><span class="na">readIntC</span><span class="p">(</span><span class="s">&quot;Tria opció: &quot;</span><span class="p">);</span>
+<a id="__codelineno-43-57" name="__codelineno-43-57"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">opcio</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">opcio</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">));</span>
+<a id="__codelineno-43-58" name="__codelineno-43-58"></a>
+<a id="__codelineno-43-59" name="__codelineno-43-59"></a><span class="w">            </span><span class="c1">// EXECUTEM L&#39;OPCIÓ TRIADA</span>
+<a id="__codelineno-43-60" name="__codelineno-43-60"></a><span class="w">            </span><span class="k">switch</span><span class="p">(</span><span class="n">opcio</span><span class="p">){</span>
+<a id="__codelineno-43-61" name="__codelineno-43-61"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="c1">// Mitjana de les temperatures d&#39;un dia</span>
+<a id="__codelineno-43-62" name="__codelineno-43-62"></a><span class="w">                    </span><span class="k">do</span><span class="p">{</span>
+<a id="__codelineno-43-63" name="__codelineno-43-63"></a><span class="w">                        </span><span class="n">diaTriat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">funcionsIO</span><span class="p">.</span><span class="na">readIntC</span><span class="p">(</span><span class="s">&quot;De quin dia vols la mitjana: &quot;</span><span class="p">);</span>
+<a id="__codelineno-43-64" name="__codelineno-43-64"></a><span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">diaTriat</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="o">||</span><span class="p">(</span><span class="n">diaTriat</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">DIES</span><span class="p">));</span>
+<a id="__codelineno-43-65" name="__codelineno-43-65"></a>
+<a id="__codelineno-43-66" name="__codelineno-43-66"></a><span class="w">                    </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-43-67" name="__codelineno-43-67"></a><span class="w">                    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">franja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">franja</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">FRANGES</span><span class="p">;</span><span class="w"> </span><span class="n">franja</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-43-68" name="__codelineno-43-68"></a><span class="w">                        </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">temp</span><span class="o">[</span><span class="n">diaTriat</span><span class="o">][</span><span class="n">franja</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-43-69" name="__codelineno-43-69"></a><span class="w">                    </span><span class="p">}</span>
+<a id="__codelineno-43-70" name="__codelineno-43-70"></a><span class="w">                    </span><span class="n">mitjana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">FRANGES</span><span class="p">;</span>
+<a id="__codelineno-43-71" name="__codelineno-43-71"></a><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La mitjana del dia &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">diaTriat</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mitjana</span><span class="p">);</span>
+<a id="__codelineno-43-72" name="__codelineno-43-72"></a><span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-43-73" name="__codelineno-43-73"></a>
+<a id="__codelineno-43-74" name="__codelineno-43-74"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="c1">// Mitjana de les temperatures d&#39;una hora</span>
+<a id="__codelineno-43-75" name="__codelineno-43-75"></a><span class="w">                    </span><span class="k">do</span><span class="p">{</span>
+<a id="__codelineno-43-76" name="__codelineno-43-76"></a><span class="w">                        </span><span class="n">horaTriada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">funcionsIO</span><span class="p">.</span><span class="na">readIntC</span><span class="p">(</span><span class="s">&quot;De quina hora vols la mitjana (0, 6, 12, o 18): &quot;</span><span class="p">);</span>
+<a id="__codelineno-43-77" name="__codelineno-43-77"></a><span class="w">                        </span><span class="n">franjaTriada</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">horaTriada</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<a id="__codelineno-43-78" name="__codelineno-43-78"></a><span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">franjaTriada</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">franjaTriada</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-43-79" name="__codelineno-43-79"></a>
+<a id="__codelineno-43-80" name="__codelineno-43-80"></a><span class="w">                    </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-43-81" name="__codelineno-43-81"></a><span class="w">                    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">DIES</span><span class="p">;</span><span class="w"> </span><span class="n">dia</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-43-82" name="__codelineno-43-82"></a><span class="w">                        </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">temp</span><span class="o">[</span><span class="n">dia</span><span class="o">][</span><span class="n">franjaTriada</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-43-83" name="__codelineno-43-83"></a><span class="w">                    </span><span class="p">}</span>
+<a id="__codelineno-43-84" name="__codelineno-43-84"></a><span class="w">                    </span><span class="n">mitjana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">DIES</span><span class="p">;</span>
+<a id="__codelineno-43-85" name="__codelineno-43-85"></a><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La mitjana de les &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">franjaTriada</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mitjana</span><span class="p">);</span>
+<a id="__codelineno-43-86" name="__codelineno-43-86"></a><span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-43-87" name="__codelineno-43-87"></a>
+<a id="__codelineno-43-88" name="__codelineno-43-88"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span><span class="w"> </span><span class="c1">// Mitjana de les temepratures de tot el mes</span>
+<a id="__codelineno-43-89" name="__codelineno-43-89"></a><span class="w">                    </span><span class="n">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-43-90" name="__codelineno-43-90"></a><span class="w">                    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">dia</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">DIES</span><span class="p">;</span><span class="w"> </span><span class="n">dia</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-43-91" name="__codelineno-43-91"></a><span class="w">                        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">franja</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">franja</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">FRANGES</span><span class="p">;</span><span class="w"> </span><span class="n">franja</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-43-92" name="__codelineno-43-92"></a><span class="w">                            </span><span class="n">total</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">temp</span><span class="o">[</span><span class="n">dia</span><span class="o">][</span><span class="n">franja</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-43-93" name="__codelineno-43-93"></a><span class="w">                        </span><span class="p">}</span>
+<a id="__codelineno-43-94" name="__codelineno-43-94"></a><span class="w">                    </span><span class="p">}</span>
+<a id="__codelineno-43-95" name="__codelineno-43-95"></a><span class="w">                    </span><span class="n">mitjana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">total</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="n">DIES</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">FRANGES</span><span class="p">);</span>
+<a id="__codelineno-43-96" name="__codelineno-43-96"></a><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La mitjana del mes és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mitjana</span><span class="p">);</span>
+<a id="__codelineno-43-97" name="__codelineno-43-97"></a><span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-43-98" name="__codelineno-43-98"></a>
+<a id="__codelineno-43-99" name="__codelineno-43-99"></a><span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="w"> </span><span class="c1">// Eixir</span>
+<a id="__codelineno-43-100" name="__codelineno-43-100"></a><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Adéu!&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-101" name="__codelineno-43-101"></a><span class="w">                    </span><span class="k">break</span><span class="p">;</span>
+<a id="__codelineno-43-102" name="__codelineno-43-102"></a>
+<a id="__codelineno-43-103" name="__codelineno-43-103"></a><span class="w">                </span><span class="k">default</span><span class="p">:</span>
+<a id="__codelineno-43-104" name="__codelineno-43-104"></a><span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Opció incorrecta&quot;</span><span class="p">);</span>
+<a id="__codelineno-43-105" name="__codelineno-43-105"></a>
+<a id="__codelineno-43-106" name="__codelineno-43-106"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="c1">// Fi del switch</span>
+<a id="__codelineno-43-107" name="__codelineno-43-107"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">opcio</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">//Fi del bucle</span>
+<a id="__codelineno-43-108" name="__codelineno-43-108"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-43-109" name="__codelineno-43-109"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 6. Matrius en Java</summary>
+<p>Modifica l'exercici anterior sobre l'estadística de temperatures, afegint estes opcions al menú:</p>
+<ul>
+<li>4.Mostra temperatura en un dia i hora en concret.</li>
+<li>5.Mostra la mínima i la màxima d'un dia.</li>
+<li>6.Canviar una temperatura.</li>
+</ul>
+<p>Pensa altres possibles opcions que podries fer i implementa-les.</p>
+</details>
+<details class="question">
+<summary>Exercici 7</summary>
+<p>Fes un programa que guarde en una matriu les notes de programació que han tret 15 alumnes en cadascuna de les 3 avaluacions. A continuació trau de cada alumne: el número (1 a 15), la nota mitjana i quantes suspeses. També trau de cada avaluació: el número (1 a 3), la nota màxima i la mínima. Per exemple, l'eixida de resultats podria ser:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple de sortida</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-44-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-44-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-44-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-44-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-44-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-44-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-44-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-44-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-44-10">10</a></span>
+<span class="normal"><a href="#__codelineno-44-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a>ALUMNE   MITJA   SUSPESES
+<a id="__codelineno-44-2" name="__codelineno-44-2"></a> 1       3.33     3
+<a id="__codelineno-44-3" name="__codelineno-44-3"></a> 2       5.00     1
+<a id="__codelineno-44-4" name="__codelineno-44-4"></a> 3       6.67     0
+<a id="__codelineno-44-5" name="__codelineno-44-5"></a> 4       8.76     0
+<a id="__codelineno-44-6" name="__codelineno-44-6"></a>...
+<a id="__codelineno-44-7" name="__codelineno-44-7"></a>
+<a id="__codelineno-44-8" name="__codelineno-44-8"></a>AVAL   MÍNIMA   MÀXIMA
+<a id="__codelineno-44-9" name="__codelineno-44-9"></a> 1      3.5      5.7
+<a id="__codelineno-44-10" name="__codelineno-44-10"></a> 2      3.0      8.0
+<a id="__codelineno-44-11" name="__codelineno-44-11"></a> 3      4.0      9.0
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 8</summary>
+<p>Modifica el programa anterior perquè es puguen guardar, en la mateixa matriu (ara serà tridimensional), a més de les notes del mòdul de programació, les de bases de dades i les de llenguatge de marques. Mostra quantes avaluacions han suspés en total els alumnes.</p>
+</details>
+<h2 id="matrius-en-python">Matrius en Python</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2v6l4 4-4 4v6h12v-6l-4-4 4-4V2H6m10 14.5V20H8v-3.5l4-4 4 4m-4-5-4-4V4h8v3.5l-4 4Z"/></svg></span> <em>Pròximament...</em></p>
 
 
 
