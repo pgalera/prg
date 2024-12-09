@@ -784,6 +784,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Matrius en Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matriu-tridimensional-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matriu tridimensional en Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cadenes-de-caracters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cadenes de caràcters
+    </span>
+  </a>
+  
 </li>
       
     </ul>
@@ -1078,6 +1102,30 @@
   <a href="#matrius-en-python" class="md-nav__link">
     <span class="md-ellipsis">
       Matrius en Python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Matrius en Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matriu-tridimensional-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matriu tridimensional en Python
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cadenes-de-caracters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cadenes de caràcters
     </span>
   </a>
   
@@ -2086,7 +2134,81 @@ reservar memòria per a v3.</p>
 <p>Modifica el programa anterior perquè es puguen guardar, en la mateixa matriu (ara serà tridimensional), a més de les notes del mòdul de programació, les de bases de dades i les de llenguatge de marques. Mostra quantes avaluacions han suspés en total els alumnes.</p>
 </details>
 <h2 id="matrius-en-python">Matrius en Python</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2v6l4 4-4 4v6h12v-6l-4-4 4-4V2H6m10 14.5V20H8v-3.5l4-4 4 4m-4-5-4-4V4h8v3.5l-4 4Z"/></svg></span> <em>Pròximament...</em></p>
+<p>Veiem les diferències de crear la matriu en Java i Python:</p>
+<div class="admonition example">
+<p class="admonition-title">Matrius en Java i Python</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Java</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
+<span class="normal"><a href="#__codelineno-45-2">2</a></span>
+<span class="normal"><a href="#__codelineno-45-3">3</a></span>
+<span class="normal"><a href="#__codelineno-45-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">FIL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">COL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span>
+<a id="__codelineno-45-3" name="__codelineno-45-3"></a>
+<a id="__codelineno-45-4" name="__codelineno-45-4"></a><span class="kt">float</span><span class="w"> </span><span class="n">matriu</span><span class="o">[][]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">float</span><span class="o">[</span><span class="n">FIL</span><span class="o">][</span><span class="n">COL</span><span class="o">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-46-1">1</a></span>
+<span class="normal"><a href="#__codelineno-46-2">2</a></span>
+<span class="normal"><a href="#__codelineno-46-3">3</a></span>
+<span class="normal"><a href="#__codelineno-46-4">4</a></span>
+<span class="normal"><a href="#__codelineno-46-5">5</a></span>
+<span class="normal"><a href="#__codelineno-46-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1"></a><span class="n">FIL</span> <span class="o">=</span> <span class="mi">6</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2"></a><span class="n">COL</span> <span class="o">=</span> <span class="mi">5</span>
+<a id="__codelineno-46-3" name="__codelineno-46-3"></a>
+<a id="__codelineno-46-4" name="__codelineno-46-4"></a><span class="n">matriu</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">]</span> <span class="o">*</span> <span class="n">FIL</span>
+<a id="__codelineno-46-5" name="__codelineno-46-5"></a><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="n">FIL</span><span class="p">):</span>
+<a id="__codelineno-46-6" name="__codelineno-46-6"></a>    <span class="n">matriu</span><span class="p">[</span><span class="n">F</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">COL</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<p>En Java es crea directament, amb el <em>new</em> i indicant la quantitat de files i columnes. Però Python només entén una matriu com un <strong>vector de vectors</strong> (recorda que ho hem comentat també en el cas de Java). Per tant, en Python primer creem un vector i després fem que cada component del vector siga també un vector.</p>
+<p><center><img alt="Matrius en Python" src="../img/ud6/matriusPython.png" /></center></p>
+<p>En compte d'inicialitzar els components a 0, ho haguérem pogut fer a qualsevol valor.</p>
+<p>Ara bé: Python té una altra forma de crear matrius, encara que no massa intuïtiva:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1"></a><span class="n">matriu</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">COL</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">FIL</span><span class="p">)]</span>
+</code></pre></div></td></tr></table></div>
+<p>L'accés als elements és igual que en Java <code>matriu[f][c]</code></p>
+<h3 id="matriu-tridimensional-en-python">Matriu tridimensional en Python</h3>
+<p>El procediment seria el mateix:</p>
+<ul>
+<li>Crear un vector</li>
+<li>Per a cada element d'eixe vector, convertir-lo també en vector</li>
+<li>Per a cada element d'eixe nou vector, convertir-lo també en vector</li>
+</ul>
+<p>Per exemple, si volem una matriu de 2 x 3 x 4:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1">1</a></span>
+<span class="normal"><a href="#__codelineno-48-2">2</a></span>
+<span class="normal"><a href="#__codelineno-48-3">3</a></span>
+<span class="normal"><a href="#__codelineno-48-4">4</a></span>
+<span class="normal"><a href="#__codelineno-48-5">5</a></span>
+<span class="normal"><a href="#__codelineno-48-6">6</a></span>
+<span class="normal"><a href="#__codelineno-48-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1"></a><span class="n">m</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span> <span class="c1">#(1)!</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2"></a>
+<a id="__codelineno-48-3" name="__codelineno-48-3"></a><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+<a id="__codelineno-48-4" name="__codelineno-48-4"></a>    <span class="n">m</span><span class="p">[</span><span class="n">f</span><span class="p">]</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span> <span class="c1">#(2)!</span>
+<a id="__codelineno-48-5" name="__codelineno-48-5"></a>
+<a id="__codelineno-48-6" name="__codelineno-48-6"></a>    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<a id="__codelineno-48-7" name="__codelineno-48-7"></a>        <span class="n">m</span><span class="p">[</span><span class="n">f</span><span class="p">][</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">4</span> <span class="c1">#(3)!</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Creem un vector de 2 elements (2 files)</li>
+<li>Ara cada fila serà un vector de 3 elements (3 columnes)</li>
+<li>Ara cada columna d'eixa fila serà un vector de 4 elements (4 de profunditat)</li>
+</ol>
+<p>Si mostrem la matriu (<code>print(m)</code>) vorem que tenim una matriu de 2 files x 3 columnes x 4 "de profunditat":</p>
+<p><center><img alt="print(m)" src="../img/ud6/printM.png" /></center></p>
+<p>Per a accedir a cada element, igual que en Java: <code>matriu[f][c][p]</code></p>
+<details class="question">
+<summary>Exercici 9. Matrius en Python</summary>
+<p>Fes en Python els exercicis de matrius proposats en Java <img alt="😉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f609.svg" title=":wink:" /></p>
+</details>
+<h2 id="cadenes-de-caracters">Cadenes de caràcters</h2>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Proximament...</em></p>
 
 
 
