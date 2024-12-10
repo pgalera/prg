@@ -889,6 +889,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Llistes dinàmiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llistes-en-java-la-classe-arraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Llistes en Java: la classe ArrayList
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1290,6 +1305,21 @@
       Llistes dinàmiques
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Llistes dinàmiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#llistes-en-java-la-classe-arraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Llistes en Java: la classe ArrayList
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2863,7 +2893,324 @@ reservar memòria per a v3.</p>
 <p>Fes el mateix que a l'exercici 10, però en <strong>Python</strong>.</p>
 </details>
 <h2 id="llistes-dinamiques">Llistes dinàmiques</h2>
-<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
+<p>Els <em>arrays</em> que hem vist en Java són <strong>llistes estàtiques</strong>: tenen una grandària fixa que s'estableix al principi i ja no pot variar durant l'execució del programa. Té sentit que siga així per a certes utilitats, ja que el dia sempre tindrà 24 hores, els alumnes sempre tenen 3 avaluacions, un tauler d'escacs sempre és 8x8...</p>
+<p>Però a voltes la quantitat d'elements podrà canviar. Per exemple, podem tindre en un principi20 alumnes però en poden vindre més (o anar-se'n). Per a això estan les <strong>llistes dinàmiques</strong>: tindran una grandària inicial però podran canviar durant l'execució del programa. De fet, les llistes que hem vist en Python són dinàmiques.</p>
+<p>Hi ha diferents tipus de llistes dinàmiques o "col·leccions" de dades. Cada llenguatge de programació té les seues. Algunes de Java i Python són:</p>
+<p><center></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-7n4c{border-color:inherit;font-family:"Courier New", Courier, monospace !important;text-align:center;vertical-align:top}
+.tg .tg-ee1q{background-color:#ecf4ff;border-color:inherit;font-family:"Courier New", Courier, monospace !important;
+  font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-dyxd{background-color:#9aff99;border-color:inherit;font-family:"Courier New", Courier, monospace !important;
+  text-align:center;vertical-align:top}
+.tg .tg-l1b7{background-color:#ffccc9;border-color:inherit;font-family:"Courier New", Courier, monospace !important;
+  text-align:center;vertical-align:top}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-7n4c" rowspan="2"></th>
+    <th class="tg-ee1q" colspan="3">COL·LECCIONS</th>
+  </tr>
+  <tr>
+    <th class="tg-ee1q">Llistes</th>
+    <th class="tg-ee1q">Conjunts</th>
+    <th class="tg-ee1q">Diccionaris</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-7n4c">Els elements estan ordenats?</td>
+    <td class="tg-dyxd">SÍ</td>
+    <td class="tg-l1b7">NO</td>
+    <td class="tg-l1b7">NO</td>
+  </tr>
+  <tr>
+    <td class="tg-7n4c">Els elements estan indexats?</td>
+    <td class="tg-dyxd">SÍ</td>
+    <td class="tg-l1b7">NO</td>
+    <td class="tg-dyxd">SÍ, per la clau</td>
+  </tr>
+  <tr>
+    <td class="tg-7n4c">Permet elements repetits?</td>
+    <td class="tg-dyxd">SÍ</td>
+    <td class="tg-l1b7">NO</td>
+    <td class="tg-l1b7">NO</td>
+  </tr>
+</tbody>
+</table>
+<p></center></p>
+<p><center><img alt="Col·lecions" src="../img/ud6/coleccions.png" /></center></p>
+<p>A continuació vorem un esquema <strong>resum dels principals mètodes</strong> o operacions que es poden fer amb els diferents tipus de col·leccions de Java i Python:</p>
+<p><center></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-majd{color:#3531ff;font-family:"Courier New", Courier, monospace !important;text-align:center;vertical-align:top}
+.tg .tg-dkyj{color:#963400;font-family:"Courier New", Courier, monospace !important;text-align:center;vertical-align:top}
+.tg .tg-yfis{font-family:"Courier New", Courier, monospace !important;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-yac9{background-color:#ecf4ff;font-family:"Courier New", Courier, monospace !important;font-weight:bold;text-align:center;
+  vertical-align:top}
+.tg .tg-83nf{background-color:#ecf4ff;color:#963400;font-family:"Courier New", Courier, monospace !important;font-weight:bold;
+  text-align:center;vertical-align:top}
+.tg .tg-ze2l{background-color:#ecf4ff;color:#3531ff;font-family:"Courier New", Courier, monospace !important;font-weight:bold;
+  text-align:center;vertical-align:top}
+.tg .tg-vxqb{font-family:"Courier New", Courier, monospace !important;text-align:center;vertical-align:top}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-yfis" rowspan="2"></th>
+    <th class="tg-yac9" colspan="6">MÈTODES DE LES COL·LECCIONS</th>
+  </tr>
+  <tr>
+    <th class="tg-yac9" colspan="2">Llistes</th>
+    <th class="tg-yac9" colspan="2">Conjunts</th>
+    <th class="tg-yac9" colspan="2">Diccionaris</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-yac9">Llenguatge</td>
+    <td class="tg-83nf">J</td>
+    <td class="tg-ze2l">P</td>
+    <td class="tg-83nf">J</td>
+    <td class="tg-ze2l">P</td>
+    <td class="tg-83nf">J</td>
+    <td class="tg-ze2l">P</td>
+  </tr>
+  <tr>
+    <td class="tg-yac9">Classe</td>
+    <td class="tg-83nf">ArrayList</td>
+    <td class="tg-ze2l">list</td>
+    <td class="tg-83nf">HashSet</td>
+    <td class="tg-ze2l">set</td>
+    <td class="tg-83nf">HashMap</td>
+    <td class="tg-ze2l">dict</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Afegir al final</td>
+    <td class="tg-dkyj">.add</td>
+    <td class="tg-majd">.append</td>
+    <td class="tg-dkyj">-</td>
+    <td class="tg-majd">-</td>
+    <td class="tg-dkyj">-</td>
+    <td class="tg-majd">-</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Afegir a un lloc</td>
+    <td class="tg-dkyj">.add</td>
+    <td class="tg-majd">.insert</td>
+    <td class="tg-dkyj">-</td>
+    <td class="tg-majd">-</td>
+    <td class="tg-dkyj">-</td>
+    <td class="tg-majd">-</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Afegir a cap lloc</td>
+    <td class="tg-dkyj">-</td>
+    <td class="tg-majd">-</td>
+    <td class="tg-dkyj">.add</td>
+    <td class="tg-majd">.add</td>
+    <td class="tg-dkyj">put</td>
+    <td class="tg-majd">[clau]=</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Modificar</td>
+    <td class="tg-dkyj">.set</td>
+    <td class="tg-majd">[i]=</td>
+    <td class="tg-dkyj">-</td>
+    <td class="tg-majd">-</td>
+    <td class="tg-dkyj">put</td>
+    <td class="tg-majd">[clau]=</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Esborrar posició</td>
+    <td class="tg-dkyj">.remove</td>
+    <td class="tg-majd">.pop</td>
+    <td class="tg-dkyj">-</td>
+    <td class="tg-majd">-</td>
+    <td class="tg-dkyj">-</td>
+    <td class="tg-majd">-</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Esborrar element</td>
+    <td class="tg-dkyj">.remove</td>
+    <td class="tg-majd">.remove</td>
+    <td class="tg-dkyj">.remove</td>
+    <td class="tg-majd">.remove<br>.discard</td>
+    <td class="tg-dkyj">.remove(clau)</td>
+    <td class="tg-majd">.pop(clau)</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Buidar</td>
+    <td class="tg-dkyj">.clear</td>
+    <td class="tg-majd">.clear</td>
+    <td class="tg-dkyj">.clear</td>
+    <td class="tg-majd">.clear</td>
+    <td class="tg-dkyj">.clear</td>
+    <td class="tg-majd">.clear</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Consultar posició</td>
+    <td class="tg-dkyj">.get</td>
+    <td class="tg-majd">[i]</td>
+    <td class="tg-dkyj">-</td>
+    <td class="tg-majd">-</td>
+    <td class="tg-dkyj">.get(clau)</td>
+    <td class="tg-majd">.get(clau)<br>[clau]</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Saber si està un element</td>
+    <td class="tg-dkyj">.contains<br>.indexof</td>
+    <td class="tg-majd">in<br>.index</td>
+    <td class="tg-dkyj">.contains</td>
+    <td class="tg-majd">in</td>
+    <td class="tg-dkyj">.containsKey<br>.containsValue</td>
+    <td class="tg-majd">in</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Longitud</td>
+    <td class="tg-dkyj">.size</td>
+    <td class="tg-majd">len</td>
+    <td class="tg-dkyj">.size</td>
+    <td class="tg-majd">.size</td>
+    <td class="tg-dkyj">.size</td>
+    <td class="tg-majd">.size</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Ordenar</td>
+    <td class="tg-dkyj">Collections.sort</td>
+    <td class="tg-majd">.sort</td>
+    <td class="tg-dkyj">-</td>
+    <td class="tg-majd">-</td>
+    <td class="tg-dkyj">-</td>
+    <td class="tg-majd">-</td>
+  </tr>
+  <tr>
+    <td class="tg-vxqb">Altres</td>
+    <td class="tg-dkyj"></td>
+    <td class="tg-majd"></td>
+    <td class="tg-dkyj"></td>
+    <td class="tg-majd">.union<br>.intersection<br>.difference<br>.issubset<br>.issuperset</td>
+    <td class="tg-dkyj">.values<br>.keyset</td>
+    <td class="tg-majd">.values()<br>.keys()<br>.items()</td>
+  </tr>
+</tbody></table>
+<p></center></p>
+<p>A continunació vorem en detall les col·leccions que més s'utilitzen: les llistes. Java usa la classe <strong><em>ArrayList</em></strong>; Python, la classe <strong><em>list</em></strong>.</p>
+<h3 id="llistes-en-java-la-classe-arraylist">Llistes en Java: la classe <em>ArrayList</em></h3>
+<p>Un <em>ArrayList</em> és una llista en Java. La diferència entre un vector i una llista és que la grandària d'un vector no es pot modificar i la d'una llista, sí. A més, es poden fer moltes més coses en una llista. Ara vorem com fer tot això en Java, amb exemples:</p>
+<details class="example">
+<summary>Exemples d'ús de llistes en Java</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-53-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-53-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-53-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-53-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-53-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-53-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-53-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-53-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-53-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-53-10">10</a></span>
+<span class="normal"><a href="#__codelineno-53-11">11</a></span>
+<span class="normal"><a href="#__codelineno-53-12">12</a></span>
+<span class="normal"><a href="#__codelineno-53-13">13</a></span>
+<span class="normal"><a href="#__codelineno-53-14">14</a></span>
+<span class="normal"><a href="#__codelineno-53-15">15</a></span>
+<span class="normal"><a href="#__codelineno-53-16">16</a></span>
+<span class="normal"><a href="#__codelineno-53-17">17</a></span>
+<span class="normal"><a href="#__codelineno-53-18">18</a></span>
+<span class="normal"><a href="#__codelineno-53-19">19</a></span>
+<span class="normal"><a href="#__codelineno-53-20">20</a></span>
+<span class="normal"><a href="#__codelineno-53-21">21</a></span>
+<span class="normal"><a href="#__codelineno-53-22">22</a></span>
+<span class="normal"><a href="#__codelineno-53-23">23</a></span>
+<span class="normal"><a href="#__codelineno-53-24">24</a></span>
+<span class="normal"><a href="#__codelineno-53-25">25</a></span>
+<span class="normal"><a href="#__codelineno-53-26">26</a></span>
+<span class="normal"><a href="#__codelineno-53-27">27</a></span>
+<span class="normal"><a href="#__codelineno-53-28">28</a></span>
+<span class="normal"><a href="#__codelineno-53-29">29</a></span>
+<span class="normal"><a href="#__codelineno-53-30">30</a></span>
+<span class="normal"><a href="#__codelineno-53-31">31</a></span>
+<span class="normal"><a href="#__codelineno-53-32">32</a></span>
+<span class="normal"><a href="#__codelineno-53-33">33</a></span>
+<span class="normal"><a href="#__codelineno-53-34">34</a></span>
+<span class="normal"><a href="#__codelineno-53-35">35</a></span>
+<span class="normal"><a href="#__codelineno-53-36">36</a></span>
+<span class="normal"><a href="#__codelineno-53-37">37</a></span>
+<span class="normal"><a href="#__codelineno-53-38">38</a></span>
+<span class="normal"><a href="#__codelineno-53-39">39</a></span>
+<span class="normal"><a href="#__codelineno-53-40">40</a></span>
+<span class="normal"><a href="#__codelineno-53-41">41</a></span>
+<span class="normal"><a href="#__codelineno-53-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-53-2" name="__codelineno-53-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Collections</span><span class="p">;</span>
+<a id="__codelineno-53-3" name="__codelineno-53-3"></a>
+<a id="__codelineno-53-4" name="__codelineno-53-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ProvesLlistes</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-53-5" name="__codelineno-53-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-53-6" name="__codelineno-53-6"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">amics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-53-7" name="__codelineno-53-7"></a>
+<a id="__codelineno-53-8" name="__codelineno-53-8"></a><span class="w">        </span><span class="c1">// AFEGIR</span>
+<a id="__codelineno-53-9" name="__codelineno-53-9"></a><span class="w">        </span><span class="n">amics</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pep&quot;</span><span class="p">);</span>
+<a id="__codelineno-53-10" name="__codelineno-53-10"></a><span class="w">        </span><span class="n">amics</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pepa&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//(3)!</span>
+<a id="__codelineno-53-11" name="__codelineno-53-11"></a><span class="w">        </span><span class="n">amics</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pepet&quot;</span><span class="p">);</span>
+<a id="__codelineno-53-12" name="__codelineno-53-12"></a><span class="w">        </span><span class="n">amics</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pepeta&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//(4)!</span>
+<a id="__codelineno-53-13" name="__codelineno-53-13"></a>
+<a id="__codelineno-53-14" name="__codelineno-53-14"></a><span class="w">        </span><span class="c1">// CONSULTAR</span>
+<a id="__codelineno-53-15" name="__codelineno-53-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">amics</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w"> </span><span class="c1">//(5)!</span>
+<a id="__codelineno-53-16" name="__codelineno-53-16"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">amiguet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">amics</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-53-17" name="__codelineno-53-17"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">amics</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot;Pepa&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">//(6)!</span>
+<a id="__codelineno-53-18" name="__codelineno-53-18"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">amics</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;Pepa&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">//(7)!</span>
+<a id="__codelineno-53-19" name="__codelineno-53-19"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">amics</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">&quot;Josep&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">//(8)!</span>
+<a id="__codelineno-53-20" name="__codelineno-53-20"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">amics</span><span class="p">.</span><span class="na">size</span><span class="p">());</span><span class="w"> </span><span class="c1">//(9)!</span>
+<a id="__codelineno-53-21" name="__codelineno-53-21"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">amics</span><span class="p">);</span><span class="w"> </span><span class="c1">//(10)!</span>
+<a id="__codelineno-53-22" name="__codelineno-53-22"></a>
+<a id="__codelineno-53-23" name="__codelineno-53-23"></a><span class="w">        </span><span class="c1">// RECÓRRER</span>
+<a id="__codelineno-53-24" name="__codelineno-53-24"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">amics</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//(11)!</span>
+<a id="__codelineno-53-25" name="__codelineno-53-25"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">amics</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+<a id="__codelineno-53-26" name="__codelineno-53-26"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-53-27" name="__codelineno-53-27"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">amic</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">amics</span><span class="p">){</span><span class="w"> </span><span class="c1">//(12)!</span>
+<a id="__codelineno-53-28" name="__codelineno-53-28"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">amic</span><span class="p">);</span>
+<a id="__codelineno-53-29" name="__codelineno-53-29"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-53-30" name="__codelineno-53-30"></a>
+<a id="__codelineno-53-31" name="__codelineno-53-31"></a><span class="w">        </span><span class="c1">// MODIFICAR</span>
+<a id="__codelineno-53-32" name="__codelineno-53-32"></a><span class="w">        </span><span class="n">amics</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pau&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//(13)!</span>
+<a id="__codelineno-53-33" name="__codelineno-53-33"></a>
+<a id="__codelineno-53-34" name="__codelineno-53-34"></a><span class="w">        </span><span class="c1">// ORDENAR</span>
+<a id="__codelineno-53-35" name="__codelineno-53-35"></a><span class="w">        </span><span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">amics</span><span class="p">);</span><span class="w"> </span><span class="c1">//(14)!</span>
+<a id="__codelineno-53-36" name="__codelineno-53-36"></a>
+<a id="__codelineno-53-37" name="__codelineno-53-37"></a><span class="w">        </span><span class="c1">// ESBORRAR</span>
+<a id="__codelineno-53-38" name="__codelineno-53-38"></a><span class="w">        </span><span class="n">amics</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">//(15)!</span>
+<a id="__codelineno-53-39" name="__codelineno-53-39"></a><span class="w">        </span><span class="n">amics</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="s">&quot;Pepet&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//(16)!</span>
+<a id="__codelineno-53-40" name="__codelineno-53-40"></a><span class="w">        </span><span class="n">amics</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span><span class="w"> </span><span class="c1">//(17)!</span>
+<a id="__codelineno-53-41" name="__codelineno-53-41"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-53-42" name="__codelineno-53-42"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Cal importar eixa classe <em>Arrayist</em></li>
+<li>Creem una llista d'amics.</li>
+<li>Afegim elements al final: <code>["Pep", "Pepa", "Pepet"]</code></li>
+<li>Afegim en la 2a posició: <code>["Pep", "Pepeta", "Pepa", "Pepet"]</code></li>
+<li>Consultem el 1r element ("Pep")</li>
+<li>Comprovem si està Pepa: <code>true</code></li>
+<li>Posició on està Pepa: <code>2</code></li>
+<li>Posició on està Josep: <code>-1</code></li>
+<li>Consultem la grandària de la llista: <code>4</code></li>
+<li>Mostrem la llista "de colp": <code>[Pep, Pepeta, Pepa, Pepet]</code></li>
+<li>Recorrem la llista amb un for tradicional</li>
+<li>Recorrem la llista amb un bucle <em>foreach</em></li>
+<li>Modifiquem el 2n element: <code>["Pep", "Pau", "Pepa", "Pepet"]</code></li>
+<li>Ordenem la llista: <code>["Pau", "Pep", "Pepa", "Pepet"]</code></li>
+<li>Esborrem el 2n element: <code>["Pau", "Pepa", "Pepet"]</code></li>
+<li>Esborrem l'element <em>Pepet</em>: <code>["Pau", "Pepa"]</code></li>
+<li>Esborrem la llista: <code>[]</code> </li>
+</ol>
+</details>
 
 
 
