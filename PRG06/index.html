@@ -808,6 +808,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Cadenes de caràcters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cadenes-de-java-la-classe-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cadenes de Java: la classe String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cadenes-de-python-la-classe-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cadenes de Python: la classe str
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1128,6 +1152,30 @@
       Cadenes de caràcters
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Cadenes de caràcters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cadenes-de-java-la-classe-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cadenes de Java: la classe String
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cadenes-de-python-la-classe-str" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cadenes de Python: la classe str
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2208,7 +2256,247 @@ reservar memòria per a v3.</p>
 <p>Fes en Python els exercicis de matrius proposats en Java <img alt="😉" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/1f609.svg" title=":wink:" /></p>
 </details>
 <h2 id="cadenes-de-caracters">Cadenes de caràcters</h2>
-<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Proximament...</em></p>
+<p>Com es guarda un nom de persona, per exemple? Alguns llenguatges com C, ho guarden en un vector de caràcters. Però en Python i Java ho tracten com un tipus de dades, amb moltes operacions disponibles sobre variables d'eixe tipus.</p>
+<ul>
+<li>Python té el tipus de dades <strong><em>str</em></strong></li>
+<li>Java té la classe <strong><em>String</em></strong> (una classe és més que un tipus, ja ho vorem)</li>
+</ul>
+<h3 id="cadenes-de-java-la-classe-string">Cadenes de Java: la classe <code>String</code></h3>
+<p><strong>DECLARACIÓ DE VARIABLES String</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1">1</a></span>
+<span class="normal"><a href="#__codelineno-49-2">2</a></span>
+<span class="normal"><a href="#__codelineno-49-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1"></a><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span><span class="w"> </span><span class="c1">//(1)</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2"></a>
+<a id="__codelineno-49-3" name="__codelineno-49-3"></a><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Pep Garcia&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">//(2)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Ja vorem que, més que "variables de tipus String", realment són "objectes de la classe String".</li>
+<li>En Java es tanquen entre "cometes dobles". En Python, "cometes dobles" o 'simples'.</li>
+</ol>
+<p><strong>ALGUNS MÈTODES SOBRE CADENES EN Java</strong></p>
+<p>Com ja hem dit, String no és un tipus, és una classe (les classes comencen en majúscula). I, per tant, tindrà uns <strong>mètodes</strong> associats, per a treballar amb cadenes. Vegem uns exemples. Partim que tenim: <code>String nom = "Pep Garcia"</code></p>
+<p><center></p>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-fgy3{font-family:"Courier New", Courier, monospace !important;text-align:left;vertical-align:top}
+.tg .tg-cjtp{background-color:#ecf4ff;border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-8m8h{background-color:#cbcefb;border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+.tg .tg-i7na{background-color:#ecf4ff;font-family:"Courier New", Courier, monospace !important;text-align:center;vertical-align:top}
+.tg .tg-d8ld{background-color:#ecf4ff;border-color:inherit;font-family:"Courier New", Courier, monospace !important;text-align:left;
+  vertical-align:top}
+.tg .tg-wjeb{background-color:#ecf4ff;border-color:inherit;font-family:"Courier New", Courier, monospace !important;
+  text-align:center;vertical-align:top}
+.tg .tg-7n4c{border-color:inherit;font-family:"Courier New", Courier, monospace !important;text-align:center;vertical-align:top}
+.tg .tg-zh46{border-color:inherit;font-family:"Courier New", Courier, monospace !important;text-align:left;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-vxqb{font-family:"Courier New", Courier, monospace !important;text-align:center;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+.tg .tg-azjw{background-color:#ecf4ff;font-family:"Courier New", Courier, monospace !important;text-align:left;vertical-align:top}
+.tg .tg-0qe0{background-color:#ecf4ff;text-align:left;vertical-align:top}
+</style>
+<table class="tg"><thead>
+  <tr>
+    <th class="tg-8m8h">MÈTODE DE CADENES JAVA</th>
+    <th class="tg-8m8h">RETORNA</th>
+    <th class="tg-8m8h">EXPLICACIÓ</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td class="tg-d8ld">nom.length()</td>
+    <td class="tg-wjeb">10</td>
+    <td class="tg-cjtp">Longitud de la cadena. En un vector seria nom.lenght (sense parèntesis).</td>
+  </tr>
+  <tr>
+    <td class="tg-d8ld">"Hola".length()</td>
+    <td class="tg-wjeb">4</td>
+    <td class="tg-cjtp"></td>
+  </tr>
+  <tr>
+    <td class="tg-zh46">nom.charAt(0)</td>
+    <td class="tg-7n4c">'P'</td>
+    <td class="tg-0pky">Primera lletra.</td>
+  </tr>
+  <tr>
+    <td class="tg-zh46">nom.charAt(4)</td>
+    <td class="tg-7n4c">'G'</td>
+    <td class="tg-0pky">Lletra posició 4. En un vector seria nom[4]</td>
+  </tr>
+  <tr>
+    <td class="tg-zh46">nom.charAt(nom.legth()-1)</td>
+    <td class="tg-7n4c">'a'</td>
+    <td class="tg-0pky">Última lletra.</td>
+  </tr>
+  <tr>
+    <td class="tg-zh46">nom.charAt(10)</td>
+    <td class="tg-7n4c">ERROR</td>
+    <td class="tg-0pky">No existeix la posició 10 en nom.</td>
+  </tr>
+  <tr>
+    <td class="tg-d8ld">nom.substring(4, 7)</td>
+    <td class="tg-wjeb">"Gar"</td>
+    <td class="tg-cjtp">De la posició 4 a la 6.</td>
+  </tr>
+  <tr>
+    <td class="tg-d8ld">nom.substring(4)</td>
+    <td class="tg-wjeb">"Garcia"</td>
+    <td class="tg-cjtp">De la posició 4 al final.</td>
+  </tr>
+  <tr>
+    <td class="tg-zh46">nom.indexOf('a')</td>
+    <td class="tg-7n4c">5</td>
+    <td class="tg-0pky">Primera posició de la 'a'.</td>
+  </tr>
+  <tr>
+    <td class="tg-zh46">nom.indexOf('x')</td>
+    <td class="tg-7n4c">-1</td>
+    <td class="tg-0pky">Si no troba la lletra.</td>
+  </tr>
+  <tr>
+    <td class="tg-zh46">nom.indexOf('a', 6)</td>
+    <td class="tg-7n4c">9</td>
+    <td class="tg-0pky">Primera posició de la 'a' a partir de la 6.</td>
+  </tr>
+  <tr>
+    <td class="tg-zh46">nom.indexOf("Gar")</td>
+    <td class="tg-7n4c">4</td>
+    <td class="tg-0pky">Primera posició del text "Gar"</td>
+  </tr>
+  <tr>
+    <td class="tg-d8ld">nom.contains("Gar")</td>
+    <td class="tg-wjeb">true</td>
+    <td class="tg-cjtp">Per a saber si una cadena n'inclou altra</td>
+  </tr>
+  <tr>
+    <td class="tg-fgy3">nom.equals("Pep Garcia")</td>
+    <td class="tg-vxqb">true</td>
+    <td class="tg-0lax">Per a saber si 2 cadenes són iguals.</td>
+  </tr>
+  <tr>
+    <td class="tg-fgy3">nom.equals("pep garcia")</td>
+    <td class="tg-vxqb">false</td>
+    <td class="tg-0lax"></td>
+  </tr>
+  <tr>
+    <td class="tg-fgy3">nom.equalseIgnoreCase("pep garcia")</td>
+    <td class="tg-vxqb">true</td>
+    <td class="tg-0lax">Per a saber si 2 cadenes són iguals sense importar les majúscules.</td>
+  </tr>
+  <tr>
+    <td class="tg-azjw">nom.comparetTo("Pop")</td>
+    <td class="tg-i7na">núm. < 0</td>
+    <td class="tg-0qe0">Pep Garcia &lt; Pop</td>
+  </tr>
+  <tr>
+    <td class="tg-azjw">"Pop".compareTo(nom)</td>
+    <td class="tg-i7na">núm. > 0</td>
+    <td class="tg-0qe0">Pop &gt; Pep Garcia</td>
+  </tr>
+  <tr>
+    <td class="tg-azjw">nom.compareTo("Pep Garcia")</td>
+    <td class="tg-i7na">0</td>
+    <td class="tg-0qe0">Cadenes iguals</td>
+  </tr>
+  <tr>
+    <td class="tg-fgy3">nom.toLowerCase()</td>
+    <td class="tg-vxqb">"pep garcia"</td>
+    <td class="tg-0lax">A minúscules.</td>
+  </tr>
+  <tr>
+    <td class="tg-azjw">nom.toUpperCase()</td>
+    <td class="tg-i7na">"PEP GARCIA"</td>
+    <td class="tg-0qe0">A majúscules.</td>
+  </tr>
+  <tr>
+    <td class="tg-fgy3">"&nbsp;&nbsp;&nbsp;Hola, Pep!&nbsp;&nbsp;&nbsp;".trim()</td>
+    <td class="tg-vxqb">"Hola, Pep!"</td>
+    <td class="tg-0lax">Lleva espais davant i darrere.</td>
+  </tr>
+  <tr>
+    <td class="tg-azjw">nom.replace("Pep", "Josep")</td>
+    <td class="tg-i7na">"Josep Garcia"</td>
+    <td class="tg-0qe0">Reemplaça subcadena.</td>
+  </tr>
+  <tr>
+    <td class="tg-azjw">nom.replace('a', 'A')</td>
+    <td class="tg-i7na">"Pep GArciA"</td>
+    <td class="tg-0qe0">Reemplaça caràcter.</td>
+  </tr>
+  <tr>
+    <td class="tg-fgy3">String s = "IES Jaume II";<br>String[] paraules = s.split(" ");</td>
+    <td class="tg-vxqb">["IES",<br>"Jaume",<br>"II"]</td>
+    <td class="tg-0lax">Obté un vector de Strings les parts de la cadena, segons el caràcter separador (igual que en Python).</td>
+  </tr>
+</tbody></table>
+<p></center></p>
+<details class="example">
+<summary>Exemple d'ús dels mètodes de les cadenes en Java</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-50-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-50-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-50-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-50-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-50-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-50-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-50-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-50-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-50-10">10</a></span>
+<span class="normal"><a href="#__codelineno-50-11">11</a></span>
+<span class="normal"><a href="#__codelineno-50-12">12</a></span>
+<span class="normal"><a href="#__codelineno-50-13">13</a></span>
+<span class="normal"><a href="#__codelineno-50-14">14</a></span>
+<span class="normal"><a href="#__codelineno-50-15">15</a></span>
+<span class="normal"><a href="#__codelineno-50-16">16</a></span>
+<span class="normal"><a href="#__codelineno-50-17">17</a></span>
+<span class="normal"><a href="#__codelineno-50-18">18</a></span>
+<span class="normal"><a href="#__codelineno-50-19">19</a></span>
+<span class="normal"><a href="#__codelineno-50-20">20</a></span>
+<span class="normal"><a href="#__codelineno-50-21">21</a></span>
+<span class="normal"><a href="#__codelineno-50-22">22</a></span>
+<span class="normal"><a href="#__codelineno-50-23">23</a></span>
+<span class="normal"><a href="#__codelineno-50-24">24</a></span>
+<span class="normal"><a href="#__codelineno-50-25">25</a></span>
+<span class="normal"><a href="#__codelineno-50-26">26</a></span>
+<span class="normal"><a href="#__codelineno-50-27">27</a></span>
+<span class="normal"><a href="#__codelineno-50-28">28</a></span>
+<span class="normal"><a href="#__codelineno-50-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExempleStrings</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-50-3" name="__codelineno-50-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">funcionsIO</span><span class="p">.</span><span class="na">readTextC</span><span class="p">(</span><span class="s">&quot;Com et diuen? &quot;</span><span class="p">);</span>
+<a id="__codelineno-50-4" name="__codelineno-50-4"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;HOLA, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">());</span>
+<a id="__codelineno-50-5" name="__codelineno-50-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El teu nom té &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; lletres&quot;</span><span class="p">);</span>
+<a id="__codelineno-50-6" name="__codelineno-50-6"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">utlLletra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">nom</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-50-7" name="__codelineno-50-7"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">utlLletra</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">){</span>
+<a id="__codelineno-50-8" name="__codelineno-50-8"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tens nom de xica&quot;</span><span class="p">);</span>
+<a id="__codelineno-50-9" name="__codelineno-50-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-50-10" name="__codelineno-50-10"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;Pep&quot;</span><span class="p">)){</span>
+<a id="__codelineno-50-11" name="__codelineno-50-11"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;També eres Josep&quot;</span><span class="p">);</span>
+<a id="__codelineno-50-12" name="__codelineno-50-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-50-13" name="__codelineno-50-13"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="sc">&#39;ç&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span><span class="w"> </span><span class="c1">// O bé: nom.contains(&quot;ç&quot;)</span>
+<a id="__codelineno-50-14" name="__codelineno-50-14"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tens nom valencià&quot;</span><span class="p">);</span>
+<a id="__codelineno-50-15" name="__codelineno-50-15"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-50-16" name="__codelineno-50-16"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="s">&quot;Pep&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<a id="__codelineno-50-17" name="__codelineno-50-17"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Alfabèticament vas després de Pep&quot;</span><span class="p">);</span>
+<a id="__codelineno-50-18" name="__codelineno-50-18"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-50-19" name="__codelineno-50-19"></a><span class="w">        </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">trim</span><span class="p">();</span><span class="w"> </span><span class="c1">// Llevem espais davant i darrere</span>
+<a id="__codelineno-50-20" name="__codelineno-50-20"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">)){</span><span class="w"> </span><span class="c1">// Si és nom compost</span>
+<a id="__codelineno-50-21" name="__codelineno-50-21"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nom d&#39;usuari: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="sc">&#39; &#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;_&#39;</span><span class="p">));</span>
+<a id="__codelineno-50-22" name="__codelineno-50-22"></a><span class="w">            </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">noms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<a id="__codelineno-50-23" name="__codelineno-50-23"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tens estos &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">noms</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; noms:&quot;</span><span class="p">);</span>
+<a id="__codelineno-50-24" name="__codelineno-50-24"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom1</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">noms</span><span class="p">){</span>
+<a id="__codelineno-50-25" name="__codelineno-50-25"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom1</span><span class="p">);</span>
+<a id="__codelineno-50-26" name="__codelineno-50-26"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-50-27" name="__codelineno-50-27"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-50-28" name="__codelineno-50-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-50-29" name="__codelineno-50-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>En executar-se dona la següent sortida:</p>
+<p><center><img alt="sortida exemple" src="../img/ud6/sortidaStrings.png" /></center></p>
+</details>
+<h3 id="cadenes-de-python-la-classe-str">Cadenes de Python: la classe <code>str</code></h3>
+<p><center><a class="md-button" href=""><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
 
