@@ -901,6 +901,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#llistes-de-python-la-classe-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Llistes de Python: la classe list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diccionaris-de-java-la-classe-hashmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diccionaris de Java: la classe HashMap
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1313,6 +1331,24 @@
   <a href="#llistes-en-java-la-classe-arraylist" class="md-nav__link">
     <span class="md-ellipsis">
       Llistes en Java: la classe ArrayList
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llistes-de-python-la-classe-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Llistes de Python: la classe list
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diccionaris-de-java-la-classe-hashmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diccionaris de Java: la classe HashMap
     </span>
   </a>
   
@@ -3208,9 +3244,164 @@ reservar memòria per a v3.</p>
 <li>Ordenem la llista: <code>["Pau", "Pep", "Pepa", "Pepet"]</code></li>
 <li>Esborrem el 2n element: <code>["Pau", "Pepa", "Pepet"]</code></li>
 <li>Esborrem l'element <em>Pepet</em>: <code>["Pau", "Pepa"]</code></li>
-<li>Esborrem la llista: <code>[]</code> </li>
+<li>Esborrem la llista: <code>[]</code></li>
 </ol>
 </details>
+<div class="admonition tip">
+<p class="admonition-title">Per practicar més...</p>
+<p>En <a href="https://www.w3schools.com/">www.w3schools.com</a> podem consultar i practicar l'<a href="https://www.w3schools.com/java/java_arraylist.asp">ArrayList</a> (llistes) i altres tipus de col·leccions, com els <a href="https://www.w3schools.com/java/java_hashset.asp">HashSet</a>, els <a href="https://www.w3schools.com/java/java_hashmap.asp">HashMap</a> (diccionaris), etc.</p>
+</div>
+<h3 id="llistes-de-python-la-classe-list">Llistes de Python: la classe <code>list</code></h3>
+<p>Una <em>list</em> és una llista en Python. Recordem que els vectors de Python són realment llistes. Per tant, ja hem vist les llistes de Python, però anem a vore altres operacions que es poden feer sobre elles.</p>
+<p>La <em>list</em> de Python permet més coses que l'<em>ArrayList</em> de Java:</p>
+<ul>
+<li>Una llista de Python pot inicialitzar-se amb una sèrie d'elements:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1">1</a></span>
+<span class="normal"><a href="#__codelineno-54-2">2</a></span>
+<span class="normal"><a href="#__codelineno-54-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1"></a><span class="n">assignatures</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;prg&quot;</span><span class="p">,</span> <span class="s2">&quot;bd&quot;</span><span class="p">,</span> <span class="s2">&quot;lm&quot;</span><span class="p">,</span> <span class="s2">&quot;edd&quot;</span><span class="p">,</span> <span class="s2">&quot;si&quot;</span><span class="p">,</span> <span class="s2">&quot;ang&quot;</span><span class="p">,</span> <span class="s2">&quot;fol&quot;</span><span class="p">]</span>
+<a id="__codelineno-54-2" name="__codelineno-54-2"></a><span class="c1"># O bé:</span>
+<a id="__codelineno-54-3" name="__codelineno-54-3"></a><span class="n">assignatures</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="s2">&quot;prg&quot;</span><span class="p">,</span> <span class="s2">&quot;bd&quot;</span><span class="p">,</span> <span class="s2">&quot;lm&quot;</span><span class="p">,</span> <span class="s2">&quot;edd&quot;</span><span class="p">,</span> <span class="s2">&quot;si&quot;</span><span class="p">,</span> <span class="s2">&quot;ang&quot;</span><span class="p">,</span> <span class="s2">&quot;fol&quot;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Els elements d'una mateixa llista de Python poden ser de distints tipus:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1"></a><span class="n">dadesInsti</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Jaume II el Just&quot;</span><span class="p">,</span> <span class="s2">&quot;Camí la Dula&quot;</span><span class="p">,</span> <span class="mi">46760</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition example">
+<p class="admonition-title">Exemples d'inicialització de les distintes col·leccions de Python</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-56-1">1</a></span>
+<span class="normal"><a href="#__codelineno-56-2">2</a></span>
+<span class="normal"><a href="#__codelineno-56-3">3</a></span>
+<span class="normal"><a href="#__codelineno-56-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1"></a><span class="n">amics</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pep&quot;</span><span class="p">,</span> <span class="s2">&quot;Pepa&quot;</span><span class="p">,</span> <span class="s2">&quot;Pepet&quot;</span><span class="p">,</span> <span class="s2">&quot;Pep&quot;</span><span class="p">]</span>     <span class="c1"># Llista</span>
+<a id="__codelineno-56-2" name="__codelineno-56-2"></a><span class="n">siOno</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">)</span>                <span class="c1"># Tupla (1)</span>
+<a id="__codelineno-56-3" name="__codelineno-56-3"></a><span class="n">animals</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;gos&quot;</span><span class="p">,</span> <span class="s2">&quot;gat&quot;</span><span class="p">,</span> <span class="s2">&quot;peix&quot;</span><span class="p">,</span> <span class="s2">&quot;tortuga&quot;</span><span class="p">}</span> <span class="c1"># Conjunt</span>
+<a id="__codelineno-56-4" name="__codelineno-56-4"></a><span class="n">notes</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Pep&quot;</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span> <span class="s2">&quot;Pepa&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;Pepet&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span>     <span class="c1"># Diccionari (2)</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Una tupla és una llista però invariable (no podrem afegir, modificar ni llevar elements).</li>
+<li>Cada tipus de col·lecció té el seu delimitador.</li>
+</ol>
+<p>O bé, així:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-1">1</a></span>
+<span class="normal"><a href="#__codelineno-57-2">2</a></span>
+<span class="normal"><a href="#__codelineno-57-3">3</a></span>
+<span class="normal"><a href="#__codelineno-57-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1"></a><span class="n">amics</span> <span class="o">=</span> <span class="nb">list</span><span class="p">((</span><span class="s2">&quot;Pep&quot;</span><span class="p">,</span> <span class="s2">&quot;Pepa&quot;</span><span class="p">,</span> <span class="s2">&quot;Pepet&quot;</span><span class="p">,</span> <span class="s2">&quot;Pep&quot;</span><span class="p">))</span>       <span class="c1"># Llista</span>
+<a id="__codelineno-57-2" name="__codelineno-57-2"></a><span class="n">siOno</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">((</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;S&quot;</span><span class="p">,</span> <span class="s2">&quot;n&quot;</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">))</span>                 <span class="c1"># Tupla</span>
+<a id="__codelineno-57-3" name="__codelineno-57-3"></a><span class="n">animals</span> <span class="o">=</span> <span class="nb">set</span><span class="p">((</span><span class="s2">&quot;gos&quot;</span><span class="p">,</span> <span class="s2">&quot;gat&quot;</span><span class="p">,</span> <span class="s2">&quot;peix&quot;</span><span class="p">,</span> <span class="s2">&quot;tortuga&quot;</span><span class="p">))</span>    <span class="c1"># Conjunt</span>
+<a id="__codelineno-57-4" name="__codelineno-57-4"></a><span class="n">notes</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">((</span><span class="n">Pep</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">Pepa</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">Pepet</span><span class="o">=</span><span class="mi">7</span><span class="p">))</span>             <span class="c1"># Diccionari</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<p>Vegem amb exemples algunes operacions que podem fer amb les llistes de Python:</p>
+<details class="example">
+<summary>Operacions amb llistes</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-58-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-58-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-58-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-58-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-58-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-58-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-58-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-58-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-58-10">10</a></span>
+<span class="normal"><a href="#__codelineno-58-11">11</a></span>
+<span class="normal"><a href="#__codelineno-58-12">12</a></span>
+<span class="normal"><a href="#__codelineno-58-13">13</a></span>
+<span class="normal"><a href="#__codelineno-58-14">14</a></span>
+<span class="normal"><a href="#__codelineno-58-15">15</a></span>
+<span class="normal"><a href="#__codelineno-58-16">16</a></span>
+<span class="normal"><a href="#__codelineno-58-17">17</a></span>
+<span class="normal"><a href="#__codelineno-58-18">18</a></span>
+<span class="normal"><a href="#__codelineno-58-19">19</a></span>
+<span class="normal"><a href="#__codelineno-58-20">20</a></span>
+<span class="normal"><a href="#__codelineno-58-21">21</a></span>
+<span class="normal"><a href="#__codelineno-58-22">22</a></span>
+<span class="normal"><a href="#__codelineno-58-23">23</a></span>
+<span class="normal"><a href="#__codelineno-58-24">24</a></span>
+<span class="normal"><a href="#__codelineno-58-25">25</a></span>
+<span class="normal"><a href="#__codelineno-58-26">26</a></span>
+<span class="normal"><a href="#__codelineno-58-27">27</a></span>
+<span class="normal"><a href="#__codelineno-58-28">28</a></span>
+<span class="normal"><a href="#__codelineno-58-29">29</a></span>
+<span class="normal"><a href="#__codelineno-58-30">30</a></span>
+<span class="normal"><a href="#__codelineno-58-31">31</a></span>
+<span class="normal"><a href="#__codelineno-58-32">32</a></span>
+<span class="normal"><a href="#__codelineno-58-33">33</a></span>
+<span class="normal"><a href="#__codelineno-58-34">34</a></span>
+<span class="normal"><a href="#__codelineno-58-35">35</a></span>
+<span class="normal"><a href="#__codelineno-58-36">36</a></span>
+<span class="normal"><a href="#__codelineno-58-37">37</a></span>
+<span class="normal"><a href="#__codelineno-58-38">38</a></span>
+<span class="normal"><a href="#__codelineno-58-39">39</a></span>
+<span class="normal"><a href="#__codelineno-58-40">40</a></span>
+<span class="normal"><a href="#__codelineno-58-41">41</a></span>
+<span class="normal"><a href="#__codelineno-58-42">42</a></span>
+<span class="normal"><a href="#__codelineno-58-43">43</a></span>
+<span class="normal"><a href="#__codelineno-58-44">44</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1"></a><span class="c1"># AFEGIR</span>
+<a id="__codelineno-58-2" name="__codelineno-58-2"></a><span class="n">amics</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pep&quot;</span><span class="p">,</span> <span class="s2">&quot;Pepa&quot;</span><span class="p">]</span>     <span class="c1"># Creem una llista d&#39;amics</span>
+<a id="__codelineno-58-3" name="__codelineno-58-3"></a><span class="n">amics</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;Pepet&quot;</span><span class="p">)</span>       <span class="c1"># Afegim elements al final: [&#39;Pep&#39;, &#39;Pepa&#39;, &#39;Pepet&#39;]</span>
+<a id="__codelineno-58-4" name="__codelineno-58-4"></a><span class="n">amics</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Pepeta&quot;</span><span class="p">)</span>    <span class="c1"># Afegim en la 2a pos: [&#39;Pep&#39;, &#39;Pepeta&#39;, &#39;Pepa&#39;, &#39;Pepet&#39;]</span>
+<a id="__codelineno-58-5" name="__codelineno-58-5"></a>
+<a id="__codelineno-58-6" name="__codelineno-58-6"></a><span class="c1"># CONSULTAR</span>
+<a id="__codelineno-58-7" name="__codelineno-58-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">amics</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>             <span class="c1"># Consultem el 1r element (&#39;Pep&#39;)</span>
+<a id="__codelineno-58-8" name="__codelineno-58-8"></a><span class="n">amiguet</span> <span class="o">=</span> <span class="n">amics</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>          <span class="c1"># Consultem el 3r element (&#39;Pepa&#39;)</span>
+<a id="__codelineno-58-9" name="__codelineno-58-9"></a>
+<a id="__codelineno-58-10" name="__codelineno-58-10"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">amics</span><span class="p">))</span>           <span class="c1"># Consultem la grandària de la llista: 4</span>
+<a id="__codelineno-58-11" name="__codelineno-58-11"></a>
+<a id="__codelineno-58-12" name="__codelineno-58-12"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pepa&quot;</span> <span class="ow">in</span> <span class="n">amics</span><span class="p">)</span>      <span class="c1"># Consultem si Pepa està en amics: True</span>
+<a id="__codelineno-58-13" name="__codelineno-58-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">amics</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;Pepa&quot;</span><span class="p">))</span>  <span class="c1"># Consultem l&#39;índex de Pepa: 2</span>
+<a id="__codelineno-58-14" name="__codelineno-58-14"></a><span class="c1">#print(amics.index(&quot;Josep&quot;)) # Consultem índex d&#39;element inexistent: error!!!</span>
+<a id="__codelineno-58-15" name="__codelineno-58-15"></a>
+<a id="__codelineno-58-16" name="__codelineno-58-16"></a><span class="nb">print</span><span class="p">(</span><span class="n">amics</span><span class="p">)</span>                <span class="c1"># Mostrem la llista de colp: [&#39;Pep&#39;, &#39;Pepeta&#39;, &#39;Pepa&#39;, &#39;Pepet&#39;]</span>
+<a id="__codelineno-58-17" name="__codelineno-58-17"></a><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">amics</span><span class="p">)</span>               <span class="c1"># Mostrem els distints elements: Pep Pepeta Pepa Pepet</span>
+<a id="__codelineno-58-18" name="__codelineno-58-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Amics:&quot;</span><span class="p">,</span> <span class="o">*</span><span class="n">amics</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> - &#39;</span><span class="p">)</span>    <span class="c1"># Mostrarà cada element en una linia:</span>
+<a id="__codelineno-58-19" name="__codelineno-58-19"></a>
+<a id="__codelineno-58-20" name="__codelineno-58-20"></a><span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-58-21" name="__codelineno-58-21"></a><span class="sd">Amics:</span>
+<a id="__codelineno-58-22" name="__codelineno-58-22"></a><span class="sd">- Pep</span>
+<a id="__codelineno-58-23" name="__codelineno-58-23"></a><span class="sd">- Pepeta</span>
+<a id="__codelineno-58-24" name="__codelineno-58-24"></a><span class="sd">- Pepa</span>
+<a id="__codelineno-58-25" name="__codelineno-58-25"></a><span class="sd">- Pepet</span>
+<a id="__codelineno-58-26" name="__codelineno-58-26"></a><span class="sd">&#39;&#39;&#39;</span>
+<a id="__codelineno-58-27" name="__codelineno-58-27"></a>
+<a id="__codelineno-58-28" name="__codelineno-58-28"></a><span class="c1"># RECORRER</span>
+<a id="__codelineno-58-29" name="__codelineno-58-29"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">amics</span><span class="p">)):</span>    <span class="c1"># Recorrem la llista amb un for tradicional</span>
+<a id="__codelineno-58-30" name="__codelineno-58-30"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">amics</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<a id="__codelineno-58-31" name="__codelineno-58-31"></a>
+<a id="__codelineno-58-32" name="__codelineno-58-32"></a><span class="k">for</span> <span class="n">amic</span> <span class="ow">in</span> <span class="n">amics</span><span class="p">:</span>              <span class="c1"># Recorrem la llista amb un bucle foreach</span>
+<a id="__codelineno-58-33" name="__codelineno-58-33"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">amic</span><span class="p">)</span>
+<a id="__codelineno-58-34" name="__codelineno-58-34"></a>
+<a id="__codelineno-58-35" name="__codelineno-58-35"></a><span class="c1"># MODIFICAR</span>
+<a id="__codelineno-58-36" name="__codelineno-58-36"></a><span class="n">amics</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Pau&quot;</span>    <span class="c1"># Modifiquem el 2n element: [&#39;Pep&#39;, &#39;Pau&#39;, &#39;Pepa&#39;, &#39;Pepet&#39;]</span>
+<a id="__codelineno-58-37" name="__codelineno-58-37"></a>
+<a id="__codelineno-58-38" name="__codelineno-58-38"></a><span class="c1"># ORDENAR</span>
+<a id="__codelineno-58-39" name="__codelineno-58-39"></a><span class="n">amics</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>        <span class="c1"># Ordenenm la llista</span>
+<a id="__codelineno-58-40" name="__codelineno-58-40"></a>
+<a id="__codelineno-58-41" name="__codelineno-58-41"></a><span class="c1"># ESBORRAR</span>
+<a id="__codelineno-58-42" name="__codelineno-58-42"></a><span class="n">amics</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>            <span class="c1"># Esborrem el 2n element: [&#39;Pep&#39;, &#39;Pepa&#39;, &#39;Pepeta&#39;]</span>
+<a id="__codelineno-58-43" name="__codelineno-58-43"></a><span class="n">amics</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;Pepeta&quot;</span><span class="p">)</span>  <span class="c1"># Esborrem l&#39;element Pepeta: [&#39;Pep&#39;, &#39;Pepa&#39;]</span>
+<a id="__codelineno-58-44" name="__codelineno-58-44"></a><span class="n">amics</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>           <span class="c1"># Buidem la llista: []</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 12. Llistes en Java</summary>
+<p>Fes un programa en <strong>Java</strong> sobre una agenda d'amics. Haurà de mostrar el següent menú, demanar una opció i executar-la. Tornarà a fer-se el mateix fins eixir del programa:</p>
+<p>a. Introduir un amic. Es demanarà el nom de l'amic, si ja existia l'amic en la llista avisarà i no el tornarà a posar.
+b. Esborrar un amic. Es demanarà el nom i l'esborrarà. Avisarà que s'ha esborrat o que no estava.
+c. Mostrar la llista. Cada amic en una línia. Al final dirà quants amics hi ha.
+d. Mostrar per inicial. Es demanarà una lletra i es mostraran tots els amics que comencen per eixa lletra.
+e. Modificar amic. Es demanarà una posició i un nou nom i el modificarà. Avisarà del resultat.
+f. Ordenar la llista alfabèticament.
+g. Buidar la llista.
+h. Eixir.</p>
+</details>
+<details class="question">
+<summary>Exercici 12b. LListes en Python</summary>
+<p>Fes el <strong>Python</strong> el programa anterior sobre l'agenda d'amics.</p>
+</details>
+<h3 id="diccionaris-de-java-la-classe-hashmap">Diccionaris de Java: la classe <code>HashMap</code></h3>
+<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
 
