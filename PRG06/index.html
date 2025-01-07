@@ -3486,7 +3486,53 @@ h. Eixir.</p>
 <p>Pots investigar més creant un programa al teu IDE: posael nom d'un <em>HashMap</em> i el punt, i apareixeran tots els mètodes amb informació de com emprar-los. O bé:</p>
 <p><center><a class="md-button" href="https://www.w3schools.com/java/java_hashmap.asp"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m0 4v4h6V8H5m8 0v4h6V8h-6m-8 6v4h6v-4H5m8 0v4h6v-4h-6Z"/></svg></span> HashMap en Java</a></center></p>
 <h3 id="diccionaris-de-python-la-classe-dict">Diccionaris de Python: la classe <em>dict</em></h3>
-<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
+<p>Un <em>dict</em> és un diccionari en Python. Per tant, com en Java, també està format per parelles clau-valor, on no té importància l'ordre de les parelles.</p>
+<p>Veiem-ho amb un exemple, on volem guardar el preu de cada article:</p>
+<details class="example">
+<summary>Exemple Diccionari en Python</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-60-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-60-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-60-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-60-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-60-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-60-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-60-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-60-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-60-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-60-10">10</a></span>
+<span class="normal"><a href="#__codelineno-60-11">11</a></span>
+<span class="normal"><a href="#__codelineno-60-12">12</a></span>
+<span class="normal"><a href="#__codelineno-60-13">13</a></span>
+<span class="normal"><a href="#__codelineno-60-14">14</a></span>
+<span class="normal"><a href="#__codelineno-60-15">15</a></span>
+<span class="normal"><a href="#__codelineno-60-16">16</a></span>
+<span class="normal"><a href="#__codelineno-60-17">17</a></span>
+<span class="normal"><a href="#__codelineno-60-18">18</a></span>
+<span class="normal"><a href="#__codelineno-60-19">19</a></span>
+<span class="normal"><a href="#__codelineno-60-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1"></a><span class="n">articles</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;peres&quot;</span><span class="p">:</span><span class="mf">4.5</span><span class="p">,</span> <span class="s2">&quot;cebes&quot;</span><span class="p">:</span><span class="mf">2.2</span><span class="p">}</span>   <span class="c1"># Creem diccionari amb 2 entrades</span>
+<a id="__codelineno-60-2" name="__codelineno-60-2"></a><span class="c1">#articles = dict(peres=4.5, cebes=2.2)  # Altra forma de crear el diccionari</span>
+<a id="__codelineno-60-3" name="__codelineno-60-3"></a>
+<a id="__codelineno-60-4" name="__codelineno-60-4"></a><span class="n">articles</span><span class="p">[</span><span class="s2">&quot;melons&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.5</span>    <span class="c1"># Afig una entrada de melons</span>
+<a id="__codelineno-60-5" name="__codelineno-60-5"></a><span class="n">articles</span><span class="p">[</span><span class="s2">&quot;melons&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.7</span>    <span class="c1"># Modifica l&#39;entrada de melons</span>
+<a id="__codelineno-60-6" name="__codelineno-60-6"></a>
+<a id="__codelineno-60-7" name="__codelineno-60-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tinc </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">articles</span><span class="p">)</span><span class="si">}</span><span class="s2"> articles&quot;</span><span class="p">)</span> <span class="c1"># Grandària del diccionari</span>
+<a id="__codelineno-60-8" name="__codelineno-60-8"></a>
+<a id="__codelineno-60-9" name="__codelineno-60-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">articles</span><span class="p">)</span>
+<a id="__codelineno-60-10" name="__codelineno-60-10"></a>
+<a id="__codelineno-60-11" name="__codelineno-60-11"></a><span class="n">art</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Què vols comprar? &quot;</span><span class="p">)</span>
+<a id="__codelineno-60-12" name="__codelineno-60-12"></a>
+<a id="__codelineno-60-13" name="__codelineno-60-13"></a><span class="k">if</span> <span class="ow">not</span> <span class="n">art</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">:</span>     <span class="c1"># Comprovem si existeix la clau</span>
+<a id="__codelineno-60-14" name="__codelineno-60-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No existeix l&#39;article&quot;</span><span class="p">)</span>
+<a id="__codelineno-60-15" name="__codelineno-60-15"></a><span class="k">else</span><span class="p">:</span>                       <span class="c1"># Accedim al valor corresponent d&#39;eixa clau</span>
+<a id="__codelineno-60-16" name="__codelineno-60-16"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Són a </span><span class="si">{</span><span class="n">articles</span><span class="p">[</span><span class="n">art</span><span class="p">]</span><span class="si">}</span><span class="s2"> €/kg&quot;</span><span class="p">)</span>    <span class="c1"># O bé: articles.get(art)</span>
+<a id="__codelineno-60-17" name="__codelineno-60-17"></a>
+<a id="__codelineno-60-18" name="__codelineno-60-18"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ARTICLE&quot;</span><span class="p">,</span> <span class="s2">&quot;PREU&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-60-19" name="__codelineno-60-19"></a><span class="k">for</span> <span class="n">art</span> <span class="ow">in</span> <span class="n">articles</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>     <span class="c1"># Recorrem el diccionari. O bé in articles</span>
+<a id="__codelineno-60-20" name="__codelineno-60-20"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">art</span><span class="p">,</span> <span class="n">articles</span><span class="p">[</span><span class="n">art</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Pots practicar o ampliar sobre els diccionaris de Python en:</p>
+<p><center><a class="md-button" href="https://www.w3schools.com/python/python_dictionaries.asp"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m0 4v4h6V8H5m8 0v4h6V8h-6m-8 6v4h6v-4H5m8 0v4h6v-4h-6Z"/></svg></span> Diccionaris en Python</a></center></p>
 
 
 
