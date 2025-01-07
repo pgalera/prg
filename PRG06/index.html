@@ -919,6 +919,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#diccionaris-de-python-la-classe-dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diccionaris de Python: la classe dict
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1349,6 +1358,15 @@
   <a href="#diccionaris-de-java-la-classe-hashmap" class="md-nav__link">
     <span class="md-ellipsis">
       Diccionaris de Java: la classe HashMap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diccionaris-de-python-la-classe-dict" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diccionaris de Python: la classe dict
     </span>
   </a>
   
@@ -3401,6 +3419,73 @@ h. Eixir.</p>
 <p>Fes el <strong>Python</strong> el programa anterior sobre l'agenda d'amics.</p>
 </details>
 <h3 id="diccionaris-de-java-la-classe-hashmap">Diccionaris de Java: la classe <code>HashMap</code></h3>
+<p>Un <em>HashMap</em> és un diccionari en Java. Un diccionari està format per parelles clau-valor, on no té importància l'ordre de les parelles.</p>
+<p>Veiem-ho amb un exemple, on volem guardar el preu de cada article:</p>
+<details class="example">
+<summary>Exemple HashMap</summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">HashMap.java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-59-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-59-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-59-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-59-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-59-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-59-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-59-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-59-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-59-10">10</a></span>
+<span class="normal"><a href="#__codelineno-59-11">11</a></span>
+<span class="normal"><a href="#__codelineno-59-12">12</a></span>
+<span class="normal"><a href="#__codelineno-59-13">13</a></span>
+<span class="normal"><a href="#__codelineno-59-14">14</a></span>
+<span class="normal"><a href="#__codelineno-59-15">15</a></span>
+<span class="normal"><a href="#__codelineno-59-16">16</a></span>
+<span class="normal"><a href="#__codelineno-59-17">17</a></span>
+<span class="normal"><a href="#__codelineno-59-18">18</a></span>
+<span class="normal"><a href="#__codelineno-59-19">19</a></span>
+<span class="normal"><a href="#__codelineno-59-20">20</a></span>
+<span class="normal"><a href="#__codelineno-59-21">21</a></span>
+<span class="normal"><a href="#__codelineno-59-22">22</a></span>
+<span class="normal"><a href="#__codelineno-59-23">23</a></span>
+<span class="normal"><a href="#__codelineno-59-24">24</a></span>
+<span class="normal"><a href="#__codelineno-59-25">25</a></span>
+<span class="normal"><a href="#__codelineno-59-26">26</a></span>
+<span class="normal"><a href="#__codelineno-59-27">27</a></span>
+<span class="normal"><a href="#__codelineno-59-28">28</a></span>
+<span class="normal"><a href="#__codelineno-59-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<a id="__codelineno-59-2" name="__codelineno-59-2"></a>
+<a id="__codelineno-59-3" name="__codelineno-59-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExempleHashMap</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-59-4" name="__codelineno-59-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-59-5" name="__codelineno-59-5"></a><span class="w">        </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">Double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">articles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="p">();</span>
+<a id="__codelineno-59-6" name="__codelineno-59-6"></a>
+<a id="__codelineno-59-7" name="__codelineno-59-7"></a><span class="w">        </span><span class="n">articles</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;tomaques&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">4.5</span><span class="p">);</span>
+<a id="__codelineno-59-8" name="__codelineno-59-8"></a><span class="w">        </span><span class="n">articles</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;cebes&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2.2</span><span class="p">);</span>
+<a id="__codelineno-59-9" name="__codelineno-59-9"></a><span class="w">        </span><span class="n">articles</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;melons&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">);</span>
+<a id="__codelineno-59-10" name="__codelineno-59-10"></a><span class="w">        </span><span class="n">articles</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;melons&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1.7</span><span class="p">);</span><span class="w">    </span><span class="c1">// Sobreescriu l&#39;entrada de melons</span>
+<a id="__codelineno-59-11" name="__codelineno-59-11"></a>
+<a id="__codelineno-59-12" name="__codelineno-59-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tinc &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">articles</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; articles:&quot;</span><span class="p">);</span>
+<a id="__codelineno-59-13" name="__codelineno-59-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">articles</span><span class="p">);</span><span class="w"> </span><span class="c1">// {melons = 1.7, tomaques = 4.5, cebes = 2.2}</span>
+<a id="__codelineno-59-14" name="__codelineno-59-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Què vols comprar? &quot;</span><span class="p">);</span>
+<a id="__codelineno-59-15" name="__codelineno-59-15"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">art</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">funcionsIO</span><span class="p">.</span><span class="na">readTextC</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-59-16" name="__codelineno-59-16"></a>
+<a id="__codelineno-59-17" name="__codelineno-59-17"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">articles</span><span class="p">.</span><span class="na">containsKey</span><span class="p">(</span><span class="n">art</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-59-18" name="__codelineno-59-18"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No existeix l&#39;article&quot;</span><span class="p">);</span>
+<a id="__codelineno-59-19" name="__codelineno-59-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-59-20" name="__codelineno-59-20"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-59-21" name="__codelineno-59-21"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Són a &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">articles</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">art</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; €/kg&quot;</span><span class="p">);</span>
+<a id="__codelineno-59-22" name="__codelineno-59-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-59-23" name="__codelineno-59-23"></a>
+<a id="__codelineno-59-24" name="__codelineno-59-24"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;ARTICLES\tPREU&quot;</span><span class="p">);</span>
+<a id="__codelineno-59-25" name="__codelineno-59-25"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">articles</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w">    </span><span class="c1">// Recorrem el diccionari</span>
+<a id="__codelineno-59-26" name="__codelineno-59-26"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\t&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">articles</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">a</span><span class="p">));</span>
+<a id="__codelineno-59-27" name="__codelineno-59-27"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-59-28" name="__codelineno-59-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-59-29" name="__codelineno-59-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<p>Però els <em>HashMap</em> tenen més mètodes: per a esborrar una entrada, esborrar tot el diccionari, comprovar si està buit, comprovar si existeix tal valor...</p>
+<p>Pots investigar més creant un programa al teu IDE: posael nom d'un <em>HashMap</em> i el punt, i apareixeran tots els mètodes amb informació de com emprar-los. O bé:</p>
+<p><center><a class="md-button" href="https://www.w3schools.com/java/java_hashmap.asp"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m0 4v4h6V8H5m8 0v4h6V8h-6m-8 6v4h6v-4H5m8 0v4h6v-4h-6Z"/></svg></span> HashMap en Java</a></center></p>
+<h3 id="diccionaris-de-python-la-classe-dict">Diccionaris de Python: la classe <em>dict</em></h3>
 <p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
