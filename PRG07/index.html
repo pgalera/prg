@@ -569,15 +569,39 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introducció">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tipus-de-subrutines-procediments-i-funcions" class="md-nav__link">
     <span class="md-ellipsis">
       Tipus de subrutines: procediments i funcions
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Tipus de subrutines: procediments i funcions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procediments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procediments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Procediments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procediments-sense-parametre-dentrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procediments sense paràmetre d'entrada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -629,15 +653,39 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introducció">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tipus-de-subrutines-procediments-i-funcions" class="md-nav__link">
     <span class="md-ellipsis">
       Tipus de subrutines: procediments i funcions
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Tipus de subrutines: procediments i funcions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procediments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procediments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Procediments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procediments-sense-parametre-dentrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Procediments sense paràmetre d'entrada
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -665,11 +713,55 @@
 <h2 id="introduccio">Introducció</h2>
 <p>Si un programa és molt llarg, és a dir, ocupa moltes línies de codi, tendix a complicar-se molt i a ser costón d'entendre.</p>
 <p>Per tant, basant-nos en la idea de <strong><em>dividix i venceràs</em></strong>, farem ús de la tècnica coneguda com descomposició modular, amb la qual cosa es descompon el programa (mòdul) en mòduls més xicotets i, per tant, més fàcils d'entendre. Eixe procés també és conegut com disseny descendent o <em>top-down</em>.</p>
-<p><center><img alt="Disseny top-down" src="../img/ud7/descomposicio.png" /></center></p>
+<p><center>
+<pre class="mermaid"><code>graph TD
+    A[PROGRAMA PRINCIPAL]
+    A --&gt; B[SUBPROBLEMA A]
+    A --&gt; C[SUBPROBLEMA B]
+    B --&gt; B1[SUBPROBLEMA A.1]
+    B --&gt; B2[SUBPROBLEMA A.2]
+    C --&gt; C1[SUBPROBLEMA B.1]
+    C --&gt; C2[SUBPROBLEMA B.2]
+    C --&gt; C3[SUBPROBLEMA B.3]</code></pre>
+</center></p>
 <p>Això s'aconseguix amb les <strong>subrutines</strong>. També anomenades <em>subprogrames</em>, <em>funcions</em> o <em>procediments</em>. O bé, <strong>mètodes</strong>, en el cas de llenguatges orientats a objectes, com Java.</p>
 <p>Cal anar fent eixa descomposició successivament. Però fins quan? Hem de parar de descompondre quan un mòdul (o funció, mètode...) faça una feina molt concreta.</p>
 <p>Altre avantatge que aconseguim amb les subrutines és no haver de repetir constantment fragments de codi.</p>
-<h3 id="tipus-de-subrutines-procediments-i-funcions">Tipus de subrutines: procediments i funcions</h3>
+<h2 id="tipus-de-subrutines-procediments-i-funcions">Tipus de subrutines: procediments i funcions</h2>
+<p>Una subrutina és un bloc d'instruccions que executa una tasca concreta i a la qual se li dona un nom. Esta subrutina és invocada des d'altra o altres subrutines.</p>
+<p>Per emprar una subrutina cal fer:</p>
+<ol>
+<li>Definir la subrutina (nomes 1 vegada).</li>
+<li>Invocar (usar, cridar) eixa subrutina sempre que ho necessitem.</li>
+</ol>
+<p>Depenent de si la subrutina ha de retornar un valor o no, serà diferent eixa definició de la subrutina i les invocacions a ella. Per tant, cal distingir <strong>2 tipus de subrutines</strong>:</p>
+<ul>
+<li><strong>Procediments</strong>: no retornen cap valor</li>
+<li><strong>Funcions</strong>: retornen un valor</li>
+</ul>
+<p>Podem pensar que <strong>una subrutina és com una màquina</strong> a la qual se li entren unes dades i fa unes accions determinades segons eixes dades. Si la màquina fa eixir alguna cosa fora d'ella direm que és una funció. Si no, és un procediment.</p>
+<div class="admonition info">
+<p class="admonition-title">FUNCIÓ</p>
+<p><img align="left" alt="Símil funció-màquina de café" src="../img/ud7/funcioCafe.png" width="25%" /></p>
+<p>Una <strong>funció</strong> podria ser com una màquina de café:</p>
+<ul>
+<li><em>Entrada</em>: la selecció del tipus de café, quantitat de sucre...</li>
+<li><em>Accions</em>: preparar el café</li>
+<li><em>Eixida</em>: el café</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">PROCEDIMENT</p>
+<p><img align="left" alt="Símil procediment-pinball" src="../img/ud7/procedimentPinball.png" width="25%" /></p>
+<p>Un <strong>procediment</strong> podria ser com una màquina de pinball:</p>
+<ul>
+<li><em>Entrada</em>: les pulsacions dels botons</li>
+<li><em>Accions</em>: moure la boleta i mostrar punts per pantalla</li>
+<li><em>Eixida</em>: (res)</li>
+</ul>
+</div>
+<h3 id="procediments">Procediments</h3>
+<h4 id="procediments-sense-parametre-dentrada">Procediments sense paràmetre d'entrada</h4>
 <p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
