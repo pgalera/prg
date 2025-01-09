@@ -762,7 +762,143 @@
 </div>
 <h3 id="procediments">Procediments</h3>
 <h4 id="procediments-sense-parametre-dentrada">Procediments sense paràmetre d'entrada</h4>
-<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
+<p>Però ara pensem que estaria bé poder iniciar cada vegada que posem una línia, quants guionets volem pintar. Per a fer això, caldrà dir-ho en la crida al procediment i, clar està, també a la definició del procediment:</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple de subrituna</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Rutina principal (main)</label><label for="__tabbed_1_2">Subrutina (linia)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span>
+<span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">){</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Vaig a dibuixar una línia de longitud 15\n&quot;</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">linia</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">funcionsIO</span><span class="p">.</span><span class="na">readIntC</span><span class="p">(</span><span class="s">&quot;Dis-me la longitud de la línia: &quot;</span><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="n">linia</span><span class="p">(</span><span class="n">longitud</span><span class="p">);</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">linia</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">lon</span><span class="p">){</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">lon</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;-&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<p>Els valors que fan d'ellaç entre les 2 rutines que es comuniquen s'anomenen <strong>paràmetres</strong>:</p>
+<ul>
+<li><strong>Paràmetres actuals</strong>: són els que s'envien a la subrituna. Poden ser constants, variables o expressions.</li>
+<li><strong>Paràmetres formals</strong>: són els que rep la subrutina (les variables que estan en la definicó de la funció, només poden ser variables).</li>
+</ul>
+<p>En qualsevol moment podem eixir d'un procediment amb una sentència <strong><em>return;</em></strong>, encara que és recomanable no posar-lo i eixir en l'última instrucció del procediment.</p>
+<p>Més <strong>avantatges</strong> d'usar subrutines:</p>
+<ul>
+<li>Podem aprofitar un mateix tros de codi per a fer coses amb diferents valors o variables.</li>
+<li>Podem escriure eixe tros de codi sense saber el nom de les variables amb les quals es cridarà a la subrutina.</li>
+</ul>
+<p>A l'exemple anterior hem passat un paràmetre al procediment. Per a fer això hem hagut de modificar la crida i definició del procediment. <strong>Una subrutina pot tindre tots els paràmetres que necessiten</strong>. Pensem per exemple, que també volem donar-li el caràcter amb el qual ha de pintar la línia. Calrien 2 paràmetres:</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple de subrutina amb 2 paràmetres</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Rutina principal (main)</label><label for="__tabbed_2_2">Subrutina amb dos paràmetres (linia)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">        </span><span class="n">linia</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;=&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">funcionsIO</span><span class="p">.</span><span class="na">readIntC</span><span class="p">(</span><span class="s">&quot;Longitud de la linia: &quot;</span><span class="p">);</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">caracter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">funcionsIO</span><span class="p">.</span><span class="na">readTextC</span><span class="p">(</span><span class="s">&quot;Caràcter a repetir: &quot;</span><span class="p">);</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="n">linia</span><span class="p">(</span><span class="n">longitud</span><span class="p">,</span><span class="w"> </span><span class="n">caracter</span><span class="p">);</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Crida a la subrutina</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">linia</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">lon</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">car</span><span class="p">){</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">lon</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">car</span><span class="p">);</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Definició de la subrutina</li>
+</ol>
+</div>
+</div>
+</div>
+<p>Tractarem el "caràcter" com a String i no Char per simplificar el codi.</p>
+</div>
+<p>Com veiem, quan es crida a una subrutina, el valor del 1r paràmetre de la crida es copia en el 1r paràmetre de la definició de la subrutina; el 2n en el 2n...</p>
+<p><strong>Resumint el que hem vist de procediment</strong>: quan s'invoca un procediment, este fa una tasca determinada, acaba després de l'última sentència (o bé, quan ve una sentència <em>return</em>) i torna a cedir el control a on s'havia fet la crida.</p>
+<p>Ara bé: els <strong>procediments</strong> poden tindre paràmetres d'entrada però no d'eixida. No retornen cap valor. Després vorem que les <strong>funcions</strong> (a més de poder tindre paràmetres d'entrada) sí que tenen un paràmetre d'eixida: retornaran un valor a qui ha invocat la funció.</p>
+<details class="question">
+<summary>Exercici 1. Procediments</summary>
+<p>Fes un programa anomenat <strong><em>ProvesProcediments</em></strong>. En ell fes els procediments que es detallen i prova'l amb crides des del <em>main</em>.</p>
+<p>Fes un procediment anomenat <strong><em>maxim</em></strong> al quan li passes 2 enters com a paràmetres. El procediment haurà de mostrar el màxima dels 2 números.</p>
+</details>
+<details class="question">
+<summary>Exercici 2</summary>
+<p>Prova el procediment anterior fent crides des del main:</p>
+<ul>
+<li>Mostra el més gran entre el 10 i el 20, fent una crida a "maxim".</li>
+<li>Demana 2 números per teclat i mostra el major usant "maxim".</li>
+</ul>
+</details>
+<details class="question">
+<summary>Exercici 3</summary>
+<p>Fes els següents procediments sobre figures geomètriques:</p>
+<p>3.1. Fes el procediment <strong><em>rectangle</em></strong>, el qual rep 3 paràmetres:</p>
+<ul>
+<li>Un enter indicant la quantitat de files</li>
+<li>Un enter indicant la quantitat de columnes</li>
+<li>Un caràcter</li>
+</ul>
+<p>El procediment ha de mostrar un <strong>rectangle</strong> amb eixe caràcter i amb tantes files i columnes com indiquen els paràmetres. Exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">rectangle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;*&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p><code>* * * *</code></p>
+<p><code>* * * *</code></p>
+<p><code>* * * *</code></p>
+<p>3.2. Fes un altre procediment que es diga també <strong><em>rectangle</em></strong> però que només li passes la quantitat de files i de columnes. El procediment ha de pintar un rectangle d'eixes files i columnes però sempre amb el caràcter "X" (Pots passar-lo com a String, si és més fàcil). Nota: dins d'eixa funció només hi haurà una única instrucció (usa la funció anterior).</p>
+<p>3.3. Fes un altre procediment anomenat <strong><em>quadrat</em></strong>, que rep només dos paràmetres: la longitud d'un costat i el caràcter amb el qual s'ha de pintar el quadrat. Nota: dins de la funció només hi haurà 1 única instrucció. </p>
+</details>
+<details class="question">
+<summary>Exercici 4</summary>
+<p>Fes el procediment de nom <strong><em>titol</em></strong>, al qual li passes com a paràmetre una cadena de text (String) i ha de mostrar eixa cadena envoltada d'asteriscos. Per exemple:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">titol</span><span class="p">(</span><span class="s">&quot;Pep Garcia&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p><center><img alt="Eixida del títol" src="../img/ud7/E04titol.png" /></center></p>
+</details>
 
 
 
