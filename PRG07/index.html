@@ -628,6 +628,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#classificacio-dels-moduls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificació dels mòduls
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -725,6 +734,15 @@
   <a href="#el-control-de-flux" class="md-nav__link">
     <span class="md-ellipsis">
       El control de flux
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classificacio-dels-moduls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificació dels mòduls
     </span>
   </a>
   
@@ -1120,6 +1138,65 @@
 <li>Continua el flux de control per on s'havia quedat el main. És a dir, ara que ja se sap que el valor de area_triangle(5, 4) té el valor de 10, es fa l'assignació d'eixe 10 a la variable areatri.</li>
 <li>Continuen executant-se les instruccions del main fins una altra crida a altra funció (o a la mateixa).</li>
 </ol>
+<details class="question">
+<summary>Exercici 7. Funcions</summary>
+<p>Fes un programa anomenat <strong><em>ProvesFuncions</em></strong>. En ell fes les funcions que es demanen i prova-les amb crides des del <em>main</em>.</p>
+<ul>
+<li>Funció booleana <strong><em>esBixest</em></strong> que li passes com a paràmetre un any i retorna si és bixest o no. La funció no ha de demanar res per teclat ni mostrar res per pantalla. Un any és bixest només si complix alguna d'estes 2 condicions:<ul>
+<li>és múltiple de 4 i no de 100 (per exemple, el 2008)</li>
+<li>és múltiple de 400 (per exemple, el 2000)
+Observem que, per exemple, l'any 1900 no és bixest.</li>
+</ul>
+</li>
+</ul>
+</details>
+<details class="question">
+<summary>Exercici 8</summary>
+<p>Funció <strong><em>dataLletra</em></strong> que li passes una data amb 3 enters (19,2,2009) i que retorne la data amb el format "19 de febrer de 2009". Utilitza un <em>switch</em>. Si és un mes incorrecte, que retorne directament "error". Després, es del main, crida a la funció amb la data que cregues convenient. Si és correcta, la mostres. Si no, mostra el text "Data incorrecta".</p>
+</details>
+<details class="question">
+<summary>Exercici 9</summary>
+<p>Fes les següents funcions, que et serviran per a usar-les en altres Exercicis. Passa com a paràmetre a cadascuna el text que es mostrarà en pantalla:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>- La funció ***llegirString*** que llija una cadena de teclat i la retorne.
+- Fes la funció ***llegirChar*** que llija un caràcter de teclat i el retorne.
+- Fes la funció ***llegirInt*** que llija un *int* de teclat i el retorne.
+- Fes la funció ***llegirFloat*** que llija un float de teclat i el retorne.
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 10</summary>
+<p>Funció <strong><em>esTriangle</em></strong> que, a partir de 3 dades, retorne un booleà dient si eixes dades es poden correspondre amb les longituds d'un triangle o no. Nota: formaran triangle si cada costat és menor que la suma dels altres dos.</p>
+</details>
+<details class="question">
+<summary>Exercici 11</summary>
+<p>Funció <strong><em>tipusTriangle</em></strong> que, a partir de les longituds dels costats, retorne el tipus de triangle: equilàter, isòsceles o escalé. O bé, "error" si les dades no es corresponen amb un triangle (utilitza la funció <em>esTriangle</em>).</p>
+<p><center><img alt="Tipus de triangles" src="../img/ud7/triangles.png" /></center></p>
+</details>
+<details class="question">
+<summary>Exercici 12</summary>
+<p>Funció <em>factorial</em> que, a partir d'un enter, retorne el factorial. Sabent que:
+- 0! = 1
+- n! = 1 * 2 * ... * (n-1) * n</p>
+</details>
+<details class="question">
+<summary>Exercici 13</summary>
+<p>Funció booleana <strong><em>numeroPrimer</em></strong> que diga si el número passat és primer o no (és a dir, si és divisible només per ell mateix i per 1).</p>
+</details>
+<details class="question">
+<summary>Exercici 14</summary>
+<p>Funció booleana <strong><em>numeroPerfecte</em></strong> que diga si el número passat és perfecte o no. És a dir, si és igual a la suma dels seus divisors excepte ell. Per exemple, el 6 és perfecte perquè:
+- 6 = 1 + 2 + 3     (1, 2 i 3 són els divisors de 6, llevat del 6).</p>
+</details>
+<details class="question">
+<summary>Exercici 15</summary>
+<p>Funció <strong><em>sumaPotencies</em></strong> que, a partir d'un número n, retorne un enter que serà el resultat de fer este càlcul:
+- 1¹ + 2² + 3³ + ... + n^n</p>
+</details>
+<h2 id="classificacio-dels-moduls">Classificació dels mòduls</h2>
+<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
 
