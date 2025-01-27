@@ -746,6 +746,48 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Recursivitat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionament" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionament
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-vore-si-la-recursio-esta-ben-feta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com vore si la recursió està ben feta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursivitat-vs-interacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursivitat vs Interació
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -967,6 +1009,48 @@
       Recursivitat
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Recursivitat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#implementacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionament" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcionament
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-vore-si-la-recursio-esta-ben-feta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com vore si la recursió està ben feta
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recursivitat-vs-interacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursivitat vs Interació
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1599,6 +1683,59 @@ Observem que, per exemple, l'any 1900 no és bixest.</li>
 </ul>
 </details>
 <h2 id="recursivitat">Recursivitat</h2>
+<p>La <strong>recursivitat</strong> és la forma d'especificar un procés basant-se en la seua pròpia definició. Per tant, una funció recursiva és aquella que es crida a ella mateixa.</p>
+<p>Un mateix problema pot tindre una solució <strong>iterativa</strong> (amb bucles) o <strong>recursiva</strong> (funció que s'autocrida). Exemple: Com podem baixar una escala de 10 escalons?</p>
+<div class="admonition example">
+<p class="admonition-title">Baixar una escala de 10 escalons</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Solució iterativa</label><label for="__tabbed_3_2">Solució recursiva</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Baixar una escala</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>Fes 10 voltes{
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>    Baixar 1 escaló
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>}
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Baixar una escala</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>Baixar 1 escaló
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>Baixar una escala de 9 escalons
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</div>
+<p>Sol usar-se quan la solució d'un programa pot expressar-se com un problema igual, però de menor complexitat (com hem vist a l'exemple).</p>
+<p>Ja hem dit que una funció recursiva és aquella que es crida a ella mateixa (directament o indirecta). Quan pararà? Quan es complisca una determinada condició. Eixa condició (o condicions) s'anomena <strong><em>cas base</em></strong>.</p>
+<div class="admonition example">
+<p class="admonition-title">Calcular la suma dels <em>n</em> primers números naturals</p>
+<p><code>n + (n-1) + (n-2) + ... + 1</code></p>
+<p><center><img alt="Exemple recursiu" src="../img/ud7/exemple_recursiu.png" /></center></p>
+</div>
+<h3 id="implementacio">Implementació</h3>
+<p><center><img alt="Implementació recursiva" src="../img/ud7/implementacio_recursiva.png" /></center></p>
+<p>Dins d'una funció recursiva trobem 2 parts.</p>
+<ul>
+<li><strong>Cas general</strong>: es torna a cridar a la funció, amb valors de paràmetres <em>més menuts</em>.</li>
+<li><strong>Cas base</strong>: no es torna a cridar a la funció. El cas o casos base són situacions que es poden resoldre amb molta facilitat.</li>
+</ul>
+<h3 id="funcionament">Funcionament</h3>
+<p>El programa principal (<em>main</em>) crida a la funció recursiva, on, generalment, s’executa el <strong>cas general</strong>. Este cas consistix en cridar altra volta a la mateixa funció, on es torna a executar el cas general i així successivament fins que arriba un punt en què s’executa el <strong>cas base</strong>. En eixe moment acaba la recursió i el flux de control "va tornant per on havia vingut". Açò últim queda reflectit en les fletxes verdes de l'esquema que vorem a continuació.</p>
+<p>Per a entendre millor el funcionament, hem d'imaginar-nos que, cada vegada que es fa una crida a la recursió, és com si es cridara a un "clon de la funció", amb els seus paràmetres i variables locals que no tenen res a vore amb els de "l'altre clon".</p>
+<p><center><img alt="Funcionament recursió" src="../img/ud7/funcionament_recursiu.png" /></center></p>
+<p><strong>La recursió va (fletxes blaves):</strong></p>
+<p>Quan fem la crida a <em>suma(4)</em>, s'executa la funció, que li direm <em>clon A</em>. Esta fa una crida a <em>suma(3)</em> i s'executa B. Esta fa una crida a <em>sumar(2)</em> i s'executa C. Esta fa una crida a <em>suma(1)</em> i s'executa D. Esta arriba al cas base i ja no crida a ningú.</p>
+<p><strong>...i la recursió torna (fletxes verdes):</strong></p>
+<p>La funció D acaba i retorna el valor 1 a qui l'havia cridat, que era el clon C, qui continua executant-se per on ho havia deixat. El clon C fa uns càlculs i retorna un 3 al clon B. Este fa uns càlculs i retorna un 6 al clon A. I este fa uns càlculs i retorna un 10 al <em>main</em>, qui havia iniciat la crida.</p>
+<h3 id="com-vore-si-la-recursio-esta-ben-feta">Com vore si la recursió està ben feta</h3>
+<p>Per a vore que ñes correcte l'algorisme recursiu, hem de vore <strong>almenys</strong>:</p>
+<ul>
+<li>Existix al menys un cas base</li>
+<li>El paràmetre de la crida a la recursió de dins de la funció és cada volta "més menut" (va acostant-se al cas base).</li>
+<li>Finalment la crida recursiva acaba passant per algun cas base.</li>
+</ul>
+<h3 id="recursivitat-vs-interacio">Recursivitat vs Interació</h3>
 <p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
