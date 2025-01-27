@@ -688,6 +688,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#els-parametres-de-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Els paràmetres de main
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -847,6 +856,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#els-parametres-de-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Els paràmetres de main
+    </span>
+  </a>
   
 </li>
       
@@ -1395,6 +1413,68 @@ Observem que, per exemple, l'any 1900 no és bixest.</li>
 <details class="question">
 <summary>Exercici 21</summary>
 <p>Funció <em>perfectes4</em> que retorne en un vector els primers 4 números perfectes. Ajuda't de la funció <em>numeroPerfecte</em> que ja has fet.</p>
+</details>
+<details class="question">
+<summary>Exercici 22</summary>
+<p>Fes un procediment <em>grafic</em> que li passes un vector d'enters possitius i mostre la gràfica. Utilitza el procediment <em>línia</em> descrit als apunts. Per exemple, si el vector és [2][1][4][7], ha de mostrar la gràfica:</p>
+<p>0   **
+1   *
+2   <strong><em>*
+3   </em></strong>****</p>
+</details>
+<h2 id="els-parametres-de-main">Els paràmetres de <em>main</em></h2>
+<p>Fins ara hem parlat de paràmetres de les funcions en general, però no hem parlat dels paràmetres de la funció <em>main</em>.</p>
+<p>En Java, la funció <em>main</em> només té un paràmetre formal: un vector de Strings:</p>
+<p><code>public static void main (String args[])</code></p>
+<p>Però... per a què serveix?</p>
+<p>Des de consola, en la línia de comandaments, l'usuari llança el programa amb l'ordre <strong>java</strong> i el nom del fitxer java (sense extensió .java). Així:</p>
+<p><code>java nomPrograma</code></p>
+<p>Però també podem passar-li al programa uns paràmetres (arguments). Per exemple, si tenim un programa anomenat <strong><em>HolaPersona.java</em></strong> i volem executar-lo passant-li com a paràmetres un nom, un cognom i una edat, ho farem així:</p>
+<p><code>java HolaPersona Pep Garcia 33</code></p>
+<p>Eixa ordre farà que s'execute la funció <em>main()</em> de <em>HolaPersona.java</em>, de forma que cadascun dels arguments es copiaran en una posició del vector de Strings <em>args</em> (encara que es podria dir d'una altra fomra, en compte d'<em>args</em>). És a dir, quan s'execute el <em>main</em>, com li hem passat 3 arguments, el vector <em>args</em> tindrà 3 posicions.</p>
+<p>Si volem fer eixe programa, editem el fitxer <em>HolaPersona.java</em>, escrivim açò i el guardem:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">class</span> <span class="nc">HolaPersona</span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">){</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Tens &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">args</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; anys.&quot;</span><span class="p">);</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>El compilem:</p>
+<p><code>javac HolaPersona.java</code></p>
+<p>L'executem amb els arguments:</p>
+<p><code>java HolaPersona Pep Garcia 33</code></p>
+<p>Comprovem que per pantalla apareix:</p>
+<p><center><img alt="Arguments del main" src="../img/ud7/main_args.png" /></center></p>
+<p>Si executem <em>HolaPersona</em> sense paràmetres, el programa donarà error d'execució (<em>ArrayIndexOutOfBoundsException</em>), ja que intentarà accedir a <em>args[0]</em> però com no li hem passat cap argument, el vector <em>args</em> no tindrà reservada cap memòria.</p>
+<p>Si no volem executar l'aplicació de de consola, sinó des de <em>intelliJ</em>, i volem passar-li paràmetres al <em>main</em>, li'ls hem de posar així:</p>
+<ul>
+<li>Botó dret del ratolí sobre el nom de la aplicació o a sobre del mètode <em>main</em>.</li>
+<li>Seleccionar <em>More Run/Debug</em></li>
+<li>Opció <em>Modify Run Configuration...</em></li>
+<li>Escriure els arguments en l'apartat <em>Program arguments</em>: Pep Garcia 33</li>
+<li>Acceptar els canvis i executar l'aplicació (no cal tornar a compilar-la).</li>
+</ul>
+<p><center><img alt="args del main en IDE" src="../img/ud7/mian_args_ide.png" /></center></p>
+<p>En <em>main</em>, amb <strong><em>args.length</em></strong> podem saber quants paràmetres ens passen cada vegada.</p>
+<details class="success">
+<summary>Exercici 23 RESOLT. Paràmetres del main</summary>
+<p>Programa que mostre per pantalla els arguments passats com a paràmetres al programa (és a dir, a <em>main</em>).</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">args</span><span class="o">[]</span><span class="p">){</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">args</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 </details>
 
 
