@@ -697,6 +697,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#arguments-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arguments variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sobrecarrega-de-funcions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobrecàrrega de funcions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passar-un-vector-darguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passar un vector d'arguments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-de-varargs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ús de varargs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursivitat
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -863,6 +914,57 @@
   <a href="#els-parametres-de-main" class="md-nav__link">
     <span class="md-ellipsis">
       Els paràmetres de main
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arguments variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sobrecarrega-de-funcions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobrecàrrega de funcions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passar-un-vector-darguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passar un vector d'arguments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#us-de-varargs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ús de varargs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursivitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recursivitat
     </span>
   </a>
   
@@ -1476,6 +1578,28 @@ Observem que, per exemple, l'any 1900 no és bixest.</li>
 <a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 </details>
+<h2 id="arguments-variables">Arguments variables</h2>
+<p>Podem cridar una funció amb distinta quantitat d'arguments. Tenim 3 solucions:</p>
+<h3 id="sobrecarrega-de-funcions">Sobrecàrrega de funcions</h3>
+<p>Podem tindre diverses funcions amb el mateix nom però distinta quantitat de paràmetres o de tipus diferents.</p>
+<p><center><img alt="Sobrecàrrega de funcions" src="../img/ud7/sobrecarrega_funcions.png" /></center></p>
+<h3 id="passar-un-vector-darguments">Passar un vector d'arguments</h3>
+<p>Realment és un únic argument, però com és un vector, podem posar tots els valors que volem.</p>
+<p><center><img alt="Vector arguments" src="../img/ud7/vector_arguments.png" /></center></p>
+<h3 id="us-de-varargs">Ús de <em>varargs</em></h3>
+<p>Amb els "..." en l'últim paràmetre d'una funció podrem arreplegar distinta quantitat de paràmetres (com si fora un vector).</p>
+<p><center><img alt="Ús de varargs" src="../img/ud7/varargs.png" /></center></p>
+<details class="question">
+<summary>Exercici 24. Procediments i funcions amb vectors</summary>
+<p>Volem una funció que calcule el màxim de distinta quantitat de números enters.</p>
+<ul>
+<li><strong>Sobrecàrrega</strong>: Fes una funció <em>maxim</em> que retorne el màxim de 2 enters passats com a paràmetre. Fes-ne una altra que es diga igual però que accepte 3 enters. Usa-la des del <em>main</em> per comprovar el resultat.</li>
+<li><strong>Vector d'arguments</strong>: Fes una funció <em>maxim</em> que li passes un vector d'enters i que retorne el major. Fes crides des del <em>main</em>.</li>
+<li><strong><em>Varargs</em></strong>: Fes una funció que accepte qualsevol quantitat d'enters com a paràmetre i ha de tornar el major. No es podrà dir <em>maxim</em>, ja que entraria en conflicte amb la funció del mateix nom que rep un vector. Prova-la al <em>main</em>.</li>
+</ul>
+</details>
+<h2 id="recursivitat">Recursivitat</h2>
+<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
 
