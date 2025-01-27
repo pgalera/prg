@@ -646,6 +646,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#comunicacio-entre-les-funcions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comunicació entre les funcions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comunicació entre les funcions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fromes-de-comunicacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fromes de comunicació
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -763,6 +787,30 @@
       Variable globals i locals
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comunicacio-entre-les-funcions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comunicació entre les funcions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comunicació entre les funcions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fromes-de-comunicacio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fromes de comunicació
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1245,6 +1293,37 @@ Observem que, per exemple, l'any 1900 no és bixest.</li>
 <h2 id="variable-globals-i-locals">Variable globals i locals</h2>
 <p>Hi ha diferents tipus de variables depenent d'on es definisquen.</p>
 <p><center><img alt="Àmbit de les variables" src="../img/ud7/variables_ambit.png" /></center></p>
+<h2 id="comunicacio-entre-les-funcions">Comunicació entre les funcions</h2>
+<p>Quan una funció A invoca a una altra B, hi ha un possible intercanvi de dades. En este apartat vorem les formes en què es poden passar eixa informació.</p>
+<h3 id="fromes-de-comunicacio">Fromes de comunicació</h3>
+<div class="admonition info">
+<p class="admonition-title">Variables globals</p>
+<p><img align="left" alt="Variables globals" src="../img/ud7/variables_globals.png" width="25%" /></p>
+<p>Potser siga la forma més senzilla però <strong>es desaconsella el seu ús</strong> ja que:</p>
+<ul>
+<li>Les funcions que invoquen B han de saber el nom de les variables globals que usa B, etc.</li>
+<li>Les variables poden ser modificades en qualsevol lloc no desitjat i interessa restringir eixe accés.</li>
+</ul>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Pas de paràmetres per valor</p>
+<p><img align="left" alt="Pas per valor" src="../img/ud7/variables_pervalor.png" width="25%" /></p>
+<p>El paràmetre actual (X) es copia en el paràmetre formal (X') però si B modifica el valor de X', el valor de X no es vorà alterat.</p>
+<p>X pot ser una constant, variable atòmica (no vector ni objecte) o una expressió. X' ha de ser una variable atòmica.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Valor retornat</p>
+<p><img align="left" alt="Valor retornat" src="../img/ud7/valor_retornat.png" width="25%" /></p>
+<p>B podrà passar un valor X a A mitjançant la instrucció <em>return X</em>.</p>
+<p>A haurà de tindre la crida a B dins d'alguna expressió per a usar el valor retornat per B.</p>
+<p>X pot ser una constant, variable (atòmica, array o objecte) o una expressió.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Pas de paràmetres per referència</p>
+<p><img align="left" alt="Pas per referència" src="../img/ud7/variables_perreferencia.png" width="25%" /></p>
+<p>El paràmetre actual (X) "es copia" en el paràmetre formal (X') i, a més, si B modifica el valor de X', el valor de X també es vorà alterat.</p>
+<p>X i X' han de ser arrays (vectors o matrius) o objcetes. Ja vorem què son els objectes però per exemple, un <em>ArrayList</em> o un <em>HashMap</em> són objectes.</p>
+</div>
 
 
 
