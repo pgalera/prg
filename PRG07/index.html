@@ -637,6 +637,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#variable-globals-i-locals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable globals i locals
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -743,6 +752,15 @@
   <a href="#classificacio-dels-moduls" class="md-nav__link">
     <span class="md-ellipsis">
       Classificació dels mòduls
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variable-globals-i-locals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable globals i locals
     </span>
   </a>
   
@@ -1196,7 +1214,37 @@ Observem que, per exemple, l'any 1900 no és bixest.</li>
 - 1¹ + 2² + 3³ + ... + n^n</p>
 </details>
 <h2 id="classificacio-dels-moduls">Classificació dels mòduls</h2>
-<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
+<p>Hi ha distints tipus de mòduls. Anem a classificar-los atenent a distints criteris.</p>
+<p><strong>Segons el valor de retorn</strong></p>
+<ul>
+<li><strong>Funcions</strong>: retornen un valor al mòdul que l'ha invocat. El valor ha de ser arreplegat per una expressió. Per exemple, si la funció <em>maxim()</em> retorna el màxima de 2 nñumeros, la crida a eixa funció la trobarem a una expressió com per exemple <em>k = maxim(i,j)</em>.</li>
+<li><strong>Procediments</strong>: el mòdul no retorna cap valor, simplement fa una determinada feina i punt.</li>
+</ul>
+<p><strong>Segons el moment en què ha estat desenvolupat</strong></p>
+<ul>
+<li><strong>De llibreria</strong>: implementades prèviament i guardades als fitxers de llibreria (els fitxers .h de C), com per exemple <em>printf</em>, <em>strlen</em>, <em>scanf</em>, o directament les llibreries de classe de Java.</li>
+<li><strong>De programa</strong>: la funció s'ha desenvolupat mentre féiem el programa.</li>
+</ul>
+<p><strong>Segons la quantitat de mòduls que el criden</strong></p>
+<ul>
+<li><strong>Subprograma</strong>: només l'invocarà un mòdul (normalment serà main).</li>
+<li><strong>Rutina o subrutina</strong>: poden ser invocats per qualsevol mòdul.</li>
+</ul>
+<p><strong>Segons la situació respecte al mòdul que l'invoca</strong></p>
+<ul>
+<li><strong>Intern</strong>: quan està al mateix fitxer que el mòdul que invoca.</li>
+<li><strong>Extern</strong>: quan està en un fitxer distint que el mòdul que invoca.</li>
+</ul>
+<p>A partir d'això podem trobar altres avantatges de la descomposició modular:</p>
+<ul>
+<li><strong>Reduix el temps de desenvolupament</strong>, usant mòduls ja implementats.</li>
+<li><strong>Diversos programadors</strong> poden col·laborar en la resolució d'un problema.</li>
+<li><strong>Millora la depuració</strong>, ja que podem anar corregint mòduls individualment.</li>
+<li><strong>Facilita modificacions</strong> posteriors ja que els programes són més fàcils de llegir.</li>
+</ul>
+<h2 id="variable-globals-i-locals">Variable globals i locals</h2>
+<p>Hi ha diferents tipus de variables depenent d'on es definisquen.</p>
+<p><center><img alt="Àmbit de les variables" src="../img/ud7/variables_ambit.png" /></center></p>
 
 
 
