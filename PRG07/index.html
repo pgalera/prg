@@ -665,6 +665,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#com-passar-un-vector-com-a-parametre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com passar un vector com a paràmetre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-fer-que-una-funcio-retorne-un-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com fer que una funció retorne un vector
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -804,6 +822,24 @@
   <a href="#fromes-de-comunicacio" class="md-nav__link">
     <span class="md-ellipsis">
       Fromes de comunicació
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-passar-un-vector-com-a-parametre" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com passar un vector com a paràmetre
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#com-fer-que-una-funcio-retorne-un-vector" class="md-nav__link">
+    <span class="md-ellipsis">
+      Com fer que una funció retorne un vector
     </span>
   </a>
   
@@ -1324,6 +1360,42 @@ Observem que, per exemple, l'any 1900 no és bixest.</li>
 <p>El paràmetre actual (X) "es copia" en el paràmetre formal (X') i, a més, si B modifica el valor de X', el valor de X també es vorà alterat.</p>
 <p>X i X' han de ser arrays (vectors o matrius) o objcetes. Ja vorem què son els objectes però per exemple, un <em>ArrayList</em> o un <em>HashMap</em> són objectes.</p>
 </div>
+<p>De les 4 formes de comunicació anteriors només no hem vist el pas de paràmetres per referència. Anem a vore-ho mitjançantun vector com a paràmetre. També vorem com retornar un vector. De forma anàloga, en compte de vectors podríem passar matrius (o dels objectes, que ja vorem més endavant).</p>
+<h3 id="com-passar-un-vector-com-a-parametre">Com passar un vector com a paràmetre</h3>
+<p><center><img alt="Vector com a paràmetre" src="../img/ud7/vector_comaparametre.png" /></center></p>
+<p>En la funció <em>main</em>, abans de cridar a <em>inivec</em>, la variable <em>vector</em> tindrà zeros als seus elements. I després de cridar a la funció, eixa variable estarà tota a cincs.</p>
+<p>Això és degut a que <strong>els arrays no es passen per valor</strong> (no es passa una còpia del valor) <strong>sinó per referència</strong>: realment es passa com a paràmetre l'adreça en memòria (la "referència") del vector. Per això, <em>vector</em> i <em>v</em> apuntaran a la mateixa adreça de memòria i, si els components de <em>v</em> es modifiquen, també es modificaran els de <em>vector</em>, como podem vore ací:</p>
+<p><center><img alt="Pas de vector" src="../img/ud7/pas_de_vector.png" /></center></p>
+<p>Compte! Si en la funció reservem memòria per al vector del paràmetre formal. NO podrem accedir a eixa informació en el paràmetre actual (el de la crida):</p>
+<p><center><img alt="Pas de vector II" src="../img/ud7/pas_de_vector2.png" /></center></p>
+<h3 id="com-fer-que-una-funcio-retorne-un-vector">Com fer que una funció retorne un vector</h3>
+<p><center><img alt="Retorn de vectors" src="../img/ud7/retorn_vector.png" /></center></p>
+<p>Veiem que ara és la funció qui reserva memòria per al vector <em>v</em>. Després de cridar a la funció, la variable <em>vector</em> apuntarà a eixa zona de memòria:</p>
+<p><center><img alt="Retron de vectors II" src="../img/ud7/retorn_vector2.png" /></center></p>
+<details class="question">
+<summary>Exercici 16. Procediments i funcions amb vectors</summary>
+<p>Fes el procediment <em>mostrarVectorInt</em>, que imprimisca un vector d'enters passat com a paràmetre. Cal mostrar els elements separats per comes i amb salt de línia final.</p>
+</details>
+<details class="question">
+<summary>Exercici 17</summary>
+<p>Procediment <em>mostrarMatriuInt</em>, que imprimisca una matriu d'enters passada com a paràmetre. Cal mostrar-la en forma de matriu on, en cada fila, els elements han d'estar separats per comes. Pots ajudar-te del procediment <em>mostrarVectorInt</em>.</p>
+</details>
+<details class="question">
+<summary>Exercici 18</summary>
+<p>Procediment <em>copiarVector</em>. Rebrà 2 vectors com a paràmetres i ha de copiar el primer vector al segon. Si el vector origen té mes elements que el vector destí, es copiaran els elements que càpiguen. Feu-ho sense utilitzar <em>System.arraycopy</em>.</p>
+</details>
+<details class="question">
+<summary>Exercici 19</summary>
+<p>Funció <em>igualsVectors</em>. Rebrà 2 vectors. La funció ha de retornar un booleà dient si els 2 vectors són iguals (igual grandària i mateixos elements). Feu-ho sense utilitzar <em>Array.equals</em>.</p>
+</details>
+<details class="question">
+<summary>Exercici 20</summary>
+<p>Fes un procediment que llija un vector d'enters. La crida serà <em>llegirVectorInt(vector)</em>. És a dir, li passem com a argument un vector (que ja té memòria reservada) i la funció l'ha d'omplir amb enters llegits per teclat. Ajuda't de la funció <em>llegirInt</em> que has fet anteriorment.</p>
+</details>
+<details class="question">
+<summary>Exercici 21</summary>
+<p>Funció <em>perfectes4</em> que retorne en un vector els primers 4 números perfectes. Ajuda't de la funció <em>numeroPerfecte</em> que ja has fet.</p>
+</details>
 
 
 
