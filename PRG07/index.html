@@ -638,9 +638,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variable-globals-i-locals" class="md-nav__link">
+  <a href="#variables-globals-i-locals" class="md-nav__link">
     <span class="md-ellipsis">
-      Variable globals i locals
+      Variables globals i locals
     </span>
   </a>
   
@@ -785,8 +785,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#exemples-dus-de-recursio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'ús de recursió
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples d'ús de recursió">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercicis-de-recursio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercicis de recursió
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcions-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcions en Python
+    </span>
+  </a>
   
 </li>
       
@@ -902,9 +935,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#variable-globals-i-locals" class="md-nav__link">
+  <a href="#variables-globals-i-locals" class="md-nav__link">
     <span class="md-ellipsis">
-      Variable globals i locals
+      Variables globals i locals
     </span>
   </a>
   
@@ -1049,8 +1082,41 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#exemples-dus-de-recursio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'ús de recursió
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples d'ús de recursió">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercicis-de-recursio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercicis de recursió
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcions-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funcions en Python
+    </span>
+  </a>
   
 </li>
       
@@ -1530,7 +1596,7 @@ Observem que, per exemple, l'any 1900 no és bixest.</li>
 <li><strong>Millora la depuració</strong>, ja que podem anar corregint mòduls individualment.</li>
 <li><strong>Facilita modificacions</strong> posteriors ja que els programes són més fàcils de llegir.</li>
 </ul>
-<h2 id="variable-globals-i-locals">Variable globals i locals</h2>
+<h2 id="variables-globals-i-locals">Variables globals i locals</h2>
 <p>Hi ha diferents tipus de variables depenent d'on es definisquen.</p>
 <p><center><img alt="Àmbit de les variables" src="../img/ud7/variables_ambit.png" /></center></p>
 <h2 id="comunicacio-entre-les-funcions">Comunicació entre les funcions</h2>
@@ -1737,6 +1803,235 @@ Observem que, per exemple, l'any 1900 no és bixest.</li>
 </ul>
 <h3 id="recursivitat-vs-interacio">Recursivitat vs Interació</h3>
 <p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
+<p>Com hem de resoldre un problema determinat? De forma iterativa o recursiva? Per a saber-ho, veiem els inconvenients i avantatges de la recursió:</p>
+<p><strong>Inconvenients</strong>:</p>
+<ul>
+<li>La funció recursiva usa més RAM ja que per a cada clon reserva nova memòria per als seus paràmetres i variables locals.</li>
+<li>La funció recursiva tarda més en executar-se ja que fa moltes crides a funcions i ha de reservar memòria per a les variables dels clons.</li>
+</ul>
+<p><strong>Avantatges</strong></p>
+<ul>
+<li>A vegades, la solució recursiva és molt més fàcil de trobar que la iterativa. Fins i tot, en ocasions és l'única alternativa.</li>
+</ul>
+<h3 id="exemples-dus-de-recursio">Exemples d'ús de recursió</h3>
+<ul>
+<li>Càlcul del factorial d'un número.</li>
+<li>Destapar les caselles en el joc del buscamines.</li>
+<li>Buscar la solució a un laberint.</li>
+<li>Trobar la ruta òptima entre 2 pobles.</li>
+<li>Mostrar els fitxers que hi ha en un arbre de direccions i subdirectoris.</li>
+</ul>
+<details class="success">
+<summary>Exercici 25. Recursió. RESOLT</summary>
+<p>Fes una funció que calcules el factorial d'un número de forma iterativa i altra funció que el calcule de forma recursiva. Suposem que mai es crida a la funció amb un número negatiu.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Versió iterativa</label><label for="__tabbed_4_2">Versió recursiva</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span>
+<span class="normal"><a href="#__codelineno-15-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">static</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">){</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">fact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">){</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">        </span><span class="n">fact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fact</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">fact</span><span class="p">;</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kd">static</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">factorial</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">){</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="o">*</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
+<details class="success">
+<summary>Exercici 26. RESOLT</summary>
+<p>Fes el procediment recursiu anomenat <strong><em>mostraBinari</em></strong>, que reba un número enter (en el sistema decimal) i mostre el corresponent número en binari. Després fes la funció recursiva <strong><em>calculaBinari</em></strong> que, en compte de mostrar el número en binari, retorne una cadena amb eixe binari.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">mostraBinari</label><label for="__tabbed_5_2">calculaBinari</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span>
+<span class="normal"><a href="#__codelineno-17-6">6</a></span>
+<span class="normal"><a href="#__codelineno-17-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraBinari</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">){</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">        </span><span class="n">mostraBinari</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span>
+<span class="normal"><a href="#__codelineno-18-5">5</a></span>
+<span class="normal"><a href="#__codelineno-18-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">calculaBinari</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">){</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">calculaBinari</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
+<details class="success">
+<summary>Exercici 27. RESOLT</summary>
+<p>Procediment recursiu anomenat <strong><em>mostraInvers</em></strong>, que mostre en pantalla els dígits d'un número enter positiu en ordre invers.</p>
+<p><strong><em>Exemple de crida</em></strong>: mostraInvers(3478) --&gt; 8743</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostraInvers</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">){</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="n">mostraInvers</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">10</span><span class="p">);</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h4 id="exercicis-de-recursio">Exercicis de recursió</h4>
+<details class="question">
+<summary>Exercici 28</summary>
+<p>Observa el següent procediment recursiu. Quin és el cas base? Quin és el cas general? Sense executar-lo, intenta vore què mostrarà per pantalla si l'invoquem amb <strong><em>hola(4)</em></strong>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span>
+<span class="normal"><a href="#__codelineno-20-6">6</a></span>
+<span class="normal"><a href="#__codelineno-20-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hola</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">){</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">        </span><span class="n">hola</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="question">
+<summary>Exercici 29</summary>
+<p>Calcula la potència de forma recursiva:</p>
+<p><center><img alt="Exercici 29" src="../img/ud7/exercici29.png" /></center></p>
+</details>
+<details class="question">
+<summary>Exercici 30</summary>
+<p>Funció recursiva que calcule un número de la sèria <em>Fibonacci</em>:</p>
+<p><center><img alt="Exercici 30" src="../img/ud7/exercici30.png" /></center></p>
+</details>
+<details class="question">
+<summary>Exercici 31</summary>
+<p>Funció recursiva anomenada <strong><em>palindrom</em></strong> que retorne un <em>booleà</em> que indique si la cadena passada com a paràmetre és un palíndrom o no (si es llig igual d'asquerra a dreta que de dreta a esquerra). Exemples (sense tindre en compte accents ni espais ni majñuscules):</p>
+<ul>
+<li><em>Senén té sis nens i set nenes</em></li>
+<li><em>Adán no cede con Eva y Yavé no cede con nada</em></li>
+<li><em>Sé verla al revés</em></li>
+<li><em>Dábale arroz a la zorra el abad</em></li>
+<li><em>Anita lava la tina</em></li>
+<li><em>La ruta nos aportó otro paso natural</em></li>
+</ul>
+<p><strong>NOTA</strong>: Intenta millorar la funció, de forma que no faça cas dels possibles espais de la frase. Usa el mètode <em>replace</em> dels String de Java per a "canviar" els espais per res.</p>
+</details>
+<h2 id="funcions-en-python">Funcions en Python</h2>
+<p>Anem a vore en Python com s'implementen les funcions (i procediments), així com algunes diferències respecte a Java.</p>
+<ul>
+<li>Una <strong>funció</strong> es definix igual que un <strong>procediment</strong>. Només es diferència en el <em>return</em>:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="k">def</span> <span class="nf">areaTriangle</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>    <span class="k">return</span> <span class="n">b</span><span class="o">*</span><span class="n">h</span><span class="o">/</span><span class="mi">2</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">areaTriangle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>En Python la definició de la funció ha d'anar abans que la crida.</li>
+<li>Com no s'indiquen els tipus dels paràmetres, estos poden admetre dades de qualsevol tipus:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span>
+<span class="normal"><a href="#__codelineno-22-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="k">def</span> <span class="nf">mostra</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a val&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;i b val&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="n">mostra</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="n">mostra</span><span class="p">(</span><span class="s2">&quot;Pep&quot;</span><span class="p">,</span> <span class="s2">&quot;Pepa&quot;</span><span class="p">)</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="n">mostra</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="n">mostra</span><span class="p">((</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="p">[</span><span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">])</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Així passem un vector (llista) com a paràmetre:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="k">def</span> <span class="nf">mostra</span><span class="p">(</span><span class="n">llista</span><span class="p">):</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">llista</span><span class="p">:</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="n">amics</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Pep&quot;</span><span class="p">,</span> <span class="s2">&quot;Pepa&quot;</span><span class="p">,</span> <span class="s2">&quot;Pepet&quot;</span><span class="p">]</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="n">mostra</span><span class="p">(</span><span class="n">amics</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>Els paràmetres poden tindre un valor per defecte:</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span>
+<span class="normal"><a href="#__codelineno-24-5">5</a></span>
+<span class="normal"><a href="#__codelineno-24-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="k">def</span> <span class="nf">mostra</span><span class="p">(</span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;persona&quot;</span><span class="p">):</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sóc&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="n">mostra</span><span class="p">(</span><span class="s2">&quot;dona&quot;</span><span class="p">)</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="n">mostra</span><span class="p">(</span><span class="s2">&quot;home&quot;</span><span class="p">)</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="n">mostra</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>En Python no hi ha sobrecàrrega de funcions (dos funcions no poden tindre el mateix nom) però sí que admet <em>varangs</em> (una funció admet distinta quantitat de paràmmetres). En Python cal posar un * davant de l'últim paràmetre. Este funcionarà com una tupla (una llista no modificable):</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Python</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span>
+<span class="normal"><a href="#__codelineno-25-5">5</a></span>
+<span class="normal"><a href="#__codelineno-25-6">6</a></span>
+<span class="normal"><a href="#__codelineno-25-7">7</a></span>
+<span class="normal"><a href="#__codelineno-25-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="k">def</span> <span class="nf">mostra</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">*</span><span class="n">c</span><span class="p">):</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a val&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;i b val&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="s2">&quot;i c val&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">c</span><span class="p">:</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="n">mostra</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="n">mostra</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="n">mostra</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Exercici 32. Funcions en Python</summary>
+<p>Intenta fer en Python els exercicis de procediments i funcions que has fet en Java.</p>
+</details>
 
 
 
