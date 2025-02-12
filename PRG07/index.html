@@ -1641,7 +1641,7 @@ Observem que, per exemple, l'any 1900 no és bixest.</li>
 <p>En la funció <em>main</em>, abans de cridar a <em>inivec</em>, la variable <em>vector</em> tindrà zeros als seus elements. I després de cridar a la funció, eixa variable estarà tota a cincs.</p>
 <p>Això és degut a que <strong>els arrays no es passen per valor</strong> (no es passa una còpia del valor) <strong>sinó per referència</strong>: realment es passa com a paràmetre l'adreça en memòria (la "referència") del vector. Per això, <em>vector</em> i <em>v</em> apuntaran a la mateixa adreça de memòria i, si els components de <em>v</em> es modifiquen, també es modificaran els de <em>vector</em>, como podem vore ací:</p>
 <p><center><img alt="Pas de vector" src="../img/ud7/pas_de_vector.png" /></center></p>
-<p>Compte! Si en la funció reservem memòria per al vector del paràmetre formal. NO podrem accedir a eixa informació en el paràmetre actual (el de la crida):</p>
+<p><strong>Compte</strong>! Si en la funció reservem memòria per al vector del paràmetre formal. NO podrem accedir a eixa informació en el paràmetre actual (el de la crida):</p>
 <p><center><img alt="Pas de vector II" src="../img/ud7/pas_de_vector2.png" /></center></p>
 <h3 id="com-fer-que-una-funcio-retorne-un-vector">Com fer que una funció retorne un vector</h3>
 <p><center><img alt="Retorn de vectors" src="../img/ud7/retorn_vector.png" /></center></p>
