@@ -1312,7 +1312,44 @@
 <p>Comprova en el <em>main</em> que la nova data (<em>dDestí</em>) té els valors esperats: els mateixos que <em>dOrigen</em> però amb un any més (mostra-ho per pantalla).</p>
 </details>
 <h2 id="classes-niuades">Classes niuades</h2>
-<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4V2m10 14.5-4-4-4 4V20h8v-3.5m-4-5 4-4V4H8v3.5l4 4M10 6h4v.75l-2 2-2-2V6Z"/></svg></span> <em>Pròximament...</em></a></center></p>
+<p>Ja hem vist que una classe és una estructura que conté distints atributs. Eixos atributs poden ser variables (d'un cert tipus)... o objectes (d'una certa classe).</p>
+<p>És com si tinguérem una classe dins d'altra. Eixa classe de dins es diu que és una <strong><em>classe niuada</em></strong>.</p>
+<p><center><img alt="Classes niuades" src="../img/ud8/classeNiuada.png" /></center></p>
+<p><strong>IMPLEMENTACIÓ</strong></p>
+<p>Primer crearem la classe <em>Domicili</em>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">class</span> <span class="nc">Domicili</span><span class="p">{</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">carrer</span><span class="p">;</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">codPostal</span><span class="p">;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">poble</span><span class="p">;</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Esta classe podrà estar definida dins la classe <em>Client</em> però nosaltres la posarem fora (per si volguérem crear objectes de la classe <em>Domicili</em>).</li>
+</ol>
+<p>A continuació crearem la classe <em>Client</em>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span>
+<span class="normal"><a href="#__codelineno-11-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">class</span> <span class="nc">Client</span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">dni</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="n">Domicili</span><span class="w"> </span><span class="n">dom</span><span class="p">;</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">deute</span><span class="p">;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>O bé: <strong>Domicili dom = new Domicili();</strong></li>
+</ol>
+<p>Ara vorem la diferència d'indicar o no la reserva de memòria per a la subclasse.</p>
+<ol>
+<li>Sense instanciar</li>
+</ol>
 
 
 
