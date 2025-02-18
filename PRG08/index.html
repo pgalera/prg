@@ -710,6 +710,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vectors-dobjectes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectors d'objectes
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -852,6 +861,15 @@
   <a href="#classes-niuades" class="md-nav__link">
     <span class="md-ellipsis">
       Classes niuades
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vectors-dobjectes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vectors d'objectes
     </span>
   </a>
   
@@ -1348,8 +1366,134 @@
 </ol>
 <p>Ara vorem la diferència d'indicar o no la reserva de memòria per a la subclasse.</p>
 <ol>
-<li>Sense instanciar</li>
+<li>Sense instanciar l'atribut objecte (és a dir, sense <em>new</em>):</li>
 </ol>
+<p><center><img alt="Sense instanciar l'atribut Objecte" src="../img/ud8/senseInstanciar.png" /></center></p>
+<ol>
+<li>Instanciant l'atribut objecte (és a dir, amb <em>new</em>):</li>
+</ol>
+<p><center><img alt="Instanciant l'atribut objecte" src="../img/ud8/instanciant.png" /></center></p>
+<p>A la vista d'això... quan definirem un atribut objecte amb el <em>new</em> i quan sense <em>new</em>?</p>
+<ul>
+<li>
+<p>Si anem a tindre molts objectes de la classe <em>Client</em> però només a uns pocs d'ells els posarem domicili, reservarem memòria per al domicili només als que ho necessiten. Per tant, <strong>sense <em>new</em></strong>.</p>
+</li>
+<li>
+<p>Si tots els objectes de la classe <em>Client</em> han de tindre un domicili, reservarem memòria per a tots ells. Per tant, <strong>amb <em>new</em></strong>.</p>
+</li>
+</ul>
+<p><center><img alt="Notació als exemples" src="../img/ud8/notaFletxes.png" /></center></p>
+<details class="question">
+<summary>Exercici 7. Classes niuades</summary>
+<p>En el projecte <em>Proves</em>:</p>
+<ol>
+<li>
+<p>Crea la classe <em>Cercle</em> amb els atributs <em>radi</em>, <em>colorVora</em> i <em>colorDins</em>, tenint en compte que els colors han de ser objectes de la classe <em>Color</em> que ja estava definida. Fes-ho de la primera forma que hem vist: la que en la definició de la classe NO es reserva memòria per a la subclasse.</p>
+</li>
+<li>
+<p>Després, en el <em>main</em> crea l'objecte <em>cercle1</em> (de la classe <em>Cercle</em>) i ompli'l de dades qualseol.</p>
+</li>
+<li>
+<p>MMostra per pantalla les dades de <em>cercle1</em>.</p>
+</li>
+<li>
+<p>Executa el projecte per vore que funciona.</p>
+</li>
+</ol>
+</details>
+<details class="question">
+<summary>Exercici 8</summary>
+<p>Crea el projecte <em>Institut</em>. A continuació:</p>
+<ol>
+<li>
+<p>Copia en ell les classes <em>NomComplet</em>, <em>Domicili</em> i <em>TelFix</em> (que tenies en el projecte <em>Proves</em>).</p>
+</li>
+<li>
+<p>Crea la classe <em>Alumne</em> que tinga 4 atributs: un nom compplet, un domicili, un telèfon del pare i un telèfon de la mare, basant-te en les classes anteriors. És a dir: caldrà fer ús de les classes niuades. Com de tots els alumnes és normal guardar eixes dades, ho farem de la segona forma que hem vist: la que en la definició de la classe es reserva memòria per a la subclasse.</p>
+</li>
+<li>
+<p>Crea la classe <em>Ordinador</em>, sabent que de cadascun voldrem guardar el número de sèrie (enter), la cpu (String), ram (enter) i dd (enter) i, a més, qui és l'alumne que l'utilitza. L'alumne serà un objecte de la classe <em>Alumne</em>. És a dir: cadrà fer ús de les classes niuades. Com no tots els ordinadors tenen un alumne assignat, ho farem de la primera forma que hem vist: la que en la definició de la classe NO es reserva memòria per a la subclasse.</p>
+</li>
+</ol>
+</details>
+<details class="question">
+<summary>Exercici 9</summary>
+<p>En el projecte <em>Institut</em>, en el <em>main</em>:</p>
+<ol>
+<li>
+<p>Crea 2 alumnes (<em>alu1</em> i <em>alu2</em>) i ompli'ls de dades qualsevol.</p>
+</li>
+<li>
+<p>Crea 3 ordinadors (<em>ord1</em>, <em>ord2</em> i <em>ord3</em>), sense omplir-los de dades.</p>
+</li>
+<li>
+<p>Ompli <em>ord1</em> de dades qualsevol però sense assignar-li cap alumne.</p>
+</li>
+<li>
+<p>Ompli <em>ord2</em> de dades qualsevol assignant-li les dades d'un nom alumne.</p>
+</li>
+<li>
+<p>Assigna a l'ordinador 1 l'alumne 2.</p>
+</li>
+<li>
+<p>Canvia el número de telèfon del pare de l'alumne 2 (per exemple 5555555)</p>
+</li>
+<li>
+<p>Mostra per pantalla el telèfon del pare de l'alumne que està usant l'ordinador 1. No ho faces a partir de l'alumne 2, sinó a partir de l'ordinador 1. Comprova que ha canviat (ha de mostrar 5555555).</p>
+</li>
+</ol>
+</details>
+<h2 id="vectors-dobjectes">Vectors d'objectes</h2>
+<p>L'ús simultani de vectors i objectes ens proporciona una eina potent per a guardar i manipular informació.</p>
+<p>Per exemple, suposem que volem guardar les dades dels N clients d'una empresa:</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"><strong>0</strong></th>
+<th style="text-align: center;"><strong>1</strong></th>
+<th style="text-align: center;"><strong>2</strong></th>
+<th style="text-align: center;"><strong>...</strong></th>
+<th style="text-align: center;"><strong>N-1</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>dni</strong></td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>nom</strong></td>
+<td style="text-align: center;">Pep</td>
+<td style="text-align: center;">Pepa</td>
+<td style="text-align: center;">Pepet</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>deute</strong></td>
+<td style="text-align: center;">500.0</td>
+<td style="text-align: center;">0.0</td>
+<td style="text-align: center;">200.0</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Abans de vore este tema, haguérem implementat això com 3 vectors paral·lels:</p>
+<p><center><img alt="Amb vectors" src="../img/ud8/ambVectors.png" /></center></p>
+<p>Però ara ho implementarem com un únic vector... de clients. És a dir, d'objectes de cla classe Client:</p>
+<p><center><img alt="Únic vector de Clients" src="../img/ud8/unicVectorClients.png" /></center></p>
+<div class="admonition warning">
+<p class="admonition-title">Compte!</p>
+<p>El vector és d'objectes. Recordem que un objecte és només una referència i cal reservar memòria per a eixe objecte. Per tant, el <em>new</em> del vector d'objectes només reserva espai per a les referencies i <strong>caldrà fer un new per a cada objecte del vector</strong>. Ara ho vorem amb la implementació d'un exemple.</p>
+</div>
 
 
 
