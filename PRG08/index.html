@@ -1499,6 +1499,101 @@
 <p><center><img alt="Exemple vector objectes" src="../img/ud8/exempleVectorObjectes.png" /></center></p>
 <p><strong>NOTA</strong>: també es poden crear matrius n-dimensionals d'objectes, o objectes que tenen alguna matriu com a atribut...</p>
 </details>
+<details class="question">
+<summary>Exercici 10. Arrays d'objectes</summary>
+<p><strong>BIBLIOTECA</strong></p>
+<p>Una biblioteca vol emmagatzemar informació de cada llibre que té:</p>
+<ul>
+<li>Codi de referència (alfanumèric)</li>
+<li>Autors (màxim, 3)</li>
+<li>Títol</li>
+<li>Editorial</li>
+<li>Any de publicació</li>
+</ul>
+<hr />
+<ol>
+<li>Implementa l'estructura necessària per a guardar 100 llibres.</li>
+<li>Reserva memòria per a cadascun d'eixos llibres.</li>
+<li>Dona d'alta un llibre qualsevol.</li>
+</ol>
+</details>
+<details class="question">
+<summary>Exercici 11</summary>
+<p><strong>LLOGUER DE COTXES</strong></p>
+<p>Una empresa de lloguer de cotxes vol tindre guardada la informació de cadascun dels costxes:</p>
+<ul>
+<li>Matrícula (lletres i número)</li>
+<li>Marca</li>
+<li>Model</li>
+<li>Data de compra (una la classe <em>Data</em> que ja tenim definida)</li>
+<li>Kilòmetres</li>
+</ul>
+<hr />
+<ol>
+<li>Implementa l'estructura necessària per a guardar 100 cotxes (però no reserves memòria per als cotxes).</li>
+<li>Fes un bucle per a omplir les dades dels cotxes.</li>
+<li>Mostra les dades de tots els cotxes.</li>
+</ol>
+</details>
+<details class="question">
+<summary>Exercici 12</summary>
+<p><strong>EMPRESA CONSTRUCTORA</strong></p>
+<p>L'empresa constructora "MACA S.A." promou la construcció de l'edifici de luxe "Xequin-Pis". L'edifici està organitzat en 6 escales (de l'A a l'F). Per cada escala hi ha 8 plantes, i en cada planta hi han 5 portes. La constructora vol tindre registrat de cada vivenda els metres quadrats, habitacions i preu. A més, si la vivenda està venuda, també vol guardar el nom i NIF del nou propietari.</p>
+<ol>
+<li>Definix la classe <strong><em>Vivenda</em></strong> amb les variables: m2, q_hab, preu, nom i nif.</li>
+<li>Definix <strong><em>edifici</em></strong> (al <em>main</em>), com una matriu tridimensional de vivendes. Utilitza les constants necessàries per a establir les dimensions de la matriu.</li>
+<li>Definix el procediment <strong><em>contruirVivenda</em></strong>, al qual se li passa com a paràmetre l'edifici. EL procediment demanarà per teclat la identificació de la vivenda i les característiques i les guardarà.</li>
+<li>Definix el procediment <strong><em>comprarVivenda</em></strong>, al qual se li passa com a paràmetre l'edifici. El procediment demanarà per teclat la identificació de la vivenda. Si està fabricada (m2 &gt; 0) i per vendre (camp propietari buit), es demanaran les dades del propietari i es guardaran en el lloc corresponent.</li>
+<li>Definix el procediment <strong><em>propietats</em></strong>, al qual se li passa com a paràmetre l'edifici i el nif d'una persona, i ha de mostrar les dades de totes les seues vivendes.</li>
+<li>Crea al <em>main</em> l'aplicació principal amb un bucle i un menú amb les opcions:<ol>
+<li>Construir vivenda</li>
+<li>Comprar vivenda</li>
+<li>Mostrar propietats d'algú</li>
+<li>Eixir</li>
+</ol>
+</li>
+</ol>
+</details>
+<details class="question">
+<summary>Exercici 13</summary>
+<p><strong><em>TALLER DE COTXES</em></strong></p>
+<p>En un taller de cotxes, cada volta que in treballador acaba una feina, inserix en l'ordinador el seu nom ¡, la data (dia, mes i any) i quantes hores i minuts ha estat treballant.</p>
+<ol>
+<li>Defineix la classe <strong><em>Feina</em></strong> amb les variables: nom, dia, mes, any, hores i minuts.</li>
+<li>El programa serà un bucle amb un menú:<ol>
+<li>Afegir feina</li>
+<li>Llistar feines d'un treballador</li>
+<li>Eixir</li>
+</ol>
+</li>
+</ol>
+<p><strong>Opció 1</strong>: Demanar dades d'una feina i afegir-la en una llista de feines.
+    - Si ho fas amb un vector de feines, caldrà tindre una variable on indicar quantes feines tenim en cada moment, per a saber on posar la nova feina.
+    - Però seria millor un <em>ArrayList</em> de feines, ja que realment és una llista perquè va variant la grandària al llarg del programa.</p>
+<p><strong>Opció 2</strong>: Demanar el nom del treballador. Es mostrarà per pantalla una línia per cada feina seua (amb les dades corresponents) i, a la dreta, l'import a cobrar corresponent, a 40€ l'hora. Al final del llistat, es posarà la quantitat d'hores i minuts totals, així com l'import total del treballador.</p>
+</details>
+<details class="question">
+<summary>Exercici 14</summary>
+<p><strong>HORARIS DE L'INSTITUT</strong></p>
+<p>Volem crear una aplicació que ens permeta introduir les dades dels horaris dels grups de l'institut.</p>
+<p>Per a cada grup volem guardar el codi del grup i el seu horari. En este horari ha de guardar informació de cada sessió de la setmana (5 dies x 6 franges horàries).No cal guardar en cap lloc els dies de la setmana ni les franges horàries.</p>
+<p>Per a cada sessió caldrà guardar el codi del mòdul (assignatura), el nom del professor i el número de l'aula on s'impartirà la classe.</p>
+<p>Tria l'estructura de dades més adient per a emmagatzemar tota eixa informació.</p>
+<p>El programa tindrà un menú amb estes opcions:</p>
+<ol>
+<li>Crear horari</li>
+<li>Mostrar horari</li>
+<li>Modificar horari</li>
+</ol>
+<p>Caldrà definir i utilitzar adequadament estes següents:</p>
+<ul>
+<li><strong><em>getGrup</em></strong>. Se li passa la llista de grups i un codi de grup. Retornarà l'objecte del grup corresponent. O <em>null</em> si no l'ha trobat.</li>
+<li><strong><em>creaGrup</em></strong>. Se li passa la llista de grups. Es demanarà per teclat un codi de grup. Si ja està el grup en la llista (crida a <em>getGrup</em>), avisarà. Si no, per cada sessió de la setmana es preguntarà el mòdul, qui l'imparteix i a quina aula, i afegirà eixe grup a la llista. Retornarà l'objecte del grup creat (o <em>null</em> si no l'ha creat).</li>
+<li><strong><em>mostraHorari</em></strong>. Se li passa la llista de grups, el codi de grup i quina dada d'estes 3 volem mostrar: (M)òdul / (P)rofe / (A)ula. Es mostrarà l'horari per pantalla (en forma de matriu) amb la informació corresponent. SI no existeix el grup retornarà <em>false</em>.</li>
+<li><strong><em>modificaHorari</em></strong>. Se li passa la llista de grups i el codi del grup que volem modificar. Si existeix, es mostrarà el seu horari i es preguntarà per dia de la setmana (1 a 5) i hora (1 a 6) que es vol modificar. A continuació es preguntarà l'assignatura, el professor i l'aula a canviar (si alguna d'estes dades es deixa en blanc, no es modificarà). A continuació s'actualitzaran les dades corresponents. Si no existeix el grup retornarà <em>false</em>.</li>
+</ul>
+<p>A més d'eixes funcions, crea-te'n altres si creus que et fan falta.</p>
+</details>
 
 
 
