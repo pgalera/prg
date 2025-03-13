@@ -816,13 +816,40 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#crides-als-constructors-instanciacio-dobjectes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crides als constructors (instanciació d'objectes)
+    </span>
+  </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destructors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstraccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstracció
+    </span>
+  </a>
   
 </li>
       
@@ -1002,13 +1029,40 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#crides-als-constructors-instanciacio-dobjectes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crides als constructors (instanciació d'objectes)
+    </span>
+  </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#destructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Destructors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstraccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstracció
+    </span>
+  </a>
   
 </li>
       
@@ -1407,6 +1461,116 @@
 </ol>
 </div>
 <h4 id="propietats-dels-constructors">Propietats dels constructors</h4>
+<ul>
+<li>El <strong>nom</strong> del constructor sempre és el nom de la classe.</li>
+<li>Rep zero o més <strong>paràmetres d'entrada</strong> i els utilitza per a inicialitzar els valors dels atributs de l'objecte.</li>
+<li>No té <strong>paràmetres de sortida</strong> (ni <em>void</em> ni cap altre tipus).</li>
+<li>No podem <strong>invocar els constructors</strong> directament des del programa principal. S'invocaran automàticament quan creem un objecte amb <em>new</em>.</li>
+<li>El constructor pot estar <strong>sobrecarregat</strong>: una classe pot tindre més d'un constructor (sempre amb el mateix nom) però amb diferent llista de paràmetres. En eixe cas, des d'un constructor de la classe es pot cridar a un altre constructor de la mateixa classe (sempre en la primera línia del constructor) amb <em>this</em>;</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">pucli</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumne</span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="c1">// CONSTRUCTORS</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="n">Alumne</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">){</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Estic creant l&#39;alumne &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="p">);</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">    </span><span class="n">Alumne</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">poble</span><span class="p">){</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">nom</span><span class="p">);</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edat</span><span class="p">;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">poble</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">poble</span><span class="p">;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>
+<p>Estem cridant a l'altre constructor. Només podem fer-ho en la primera instrucció del constructor.</p>
+</li>
+<li>
+<p>Constructor per defecte. Si no hem especificat cap constructor, es crea automàticament un constructor sense paràmetres. No es veu, però està:</p>
+</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">Alumne</span><span class="w"> </span><span class="p">(){</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Però compte! <strong>Si creem un constructor amb paràmetres, el constructor per defecte sense paràmetres deixa d'existir</strong>.</li>
+</ol>
+<details class="question">
+<summary>Exercici 6</summary>
+<p>Crea un constructor de la classe <em>Cotxe</em> que reba com a paràmetres el nñumero de bastidor, la matrícula, marca, model, color i preu. El constructor deu inicialitzar l'estat de l'objecte amb estos. El vector de revision es posarà tot a fals. Voràs que ara dona error la creació dels cotxes anteriors que usaven el constructor per defecte. Què ha passat? Passa a l'exercici següent per a solucionar-ho.</p>
+</details>
+<details class="question">
+<summary>Exercici 7</summary>
+<p>Totes les classes tenen un constructor per defecte (sense paràmetres) però "desapareix" si creem altre constructor. Per tant, crea un constructor sense paràmetres que no faça res. Comprova que ara ja no et dona error la creació dels cotxes que usaven el constructor sense paràmetres.</p>
+</details>
+<details class="question">
+<summary>Exercici 8</summary>
+<p>Crea un altre constructor de la classe <em>Cotxe</em> que reba com a paràmetre el número de bastidor, la marca i el model. No inicialitzarà cap atribut, sinó que cridarà a l'altre constructor per a que ho faça ell, amb l'ús de <em>this(paràmetres)</em>.</p>
+</details>
+<details class="question">
+<summary>Exercici 9</summary>
+<p>Crea altre constructor a la classe <em>Cotxe</em>, que reba només la matrícula. El constructor haurà de preguntar per pantalla els valors del número de bastidor, marca i model. Igual que l'exercici anterior, intenta cridar al primer constructor amb <em>this</em> per a que s'encarregue dels seus atributs.Per què no et deixa? Perquè la crida a un altre constructor ha de ser la primera instrucció del constructor. Per tant, no hi haurà més remei que repetir el codi de la inicialització dels atributs.</p>
+</details>
+<h4 id="crides-als-constructors-instanciacio-dobjectes">Crides als constructors (instanciació d'objectes)</h4>
+<p>Sempre havíem creat els objectes amb el <em>new</em>. Estàvem cridant al constructor per defecte (el que no té paràmetres).</p>
+<p><center><code>NomClasse nomObjecte = new nomClasse();</code></center></p>
+<p>Com ara ens hem creat els nostres constructors, podem usar-los posant els corresponents paràmetres al <em>new</em>:</p>
+<p><center><img alt="Crides als constructors" src="../img/ud9/cridesConstructors.png" /></center></p>
+<p>És a dir, una instrucció d'<strong>instanciació</strong> d'un objecte (crear-lo, amb el <em>new</em>) fa açò:</p>
+<ul>
+<li>Reserva memòria per a l'objecte.</li>
+<li>Crida al constructor corresponent, qui sol omplir dades en eixa memòria.</li>
+<li>Assigna a l'objecte una referència (adreça) a la memòria reservada.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>L'String no és un tipus sinó una classe (per això es posa en majúscula, a diferència de <em>int</em>, <em>char</em>, <em>float</em>...) Per tant, si volem <em>una variable de tipus cadena</em>, el que hauríem de fer és declarar un objecte de la classe <em>String</em>.</p>
+<p><code>String nom = new String("Pep");</code></p>
+<p>Ara bé, com sabem, hi ha una forma abreujada de fer-ho per als objectes de la classe <em>String</em>:</p>
+<p><code>String nom = "Pep";</code></p>
+</div>
+<details class="question">
+<summary>Exercici 10. Crides als constructors</summary>
+<p>Crea els objectes <em>cotxe3</em>, <em>cotxe4</em> i <em>cotxe5</em>, amb valors qualsevol, usant els 3 constructors de cotxes que has definit.</p>
+</details>
+<details class="question">
+<summary>Exercici 11</summary>
+<p>Demana per teclat les dades d'un cotxe (bastidor, marca, model, color i preu). Crea l'objecte <em>cotxe6</em> passant-li com a paràmetres al constructor les dades que s'han arreplegat per teclat. <strong>Nota</strong>: passa una cadena buida per a la matrícula.</p>
+</details>
+<details class="question">
+<summary>Exercici 12</summary>
+<p>Intenta crear l'objecte <em>cotxe7</em> passant-li al constructor només el preu. Per què no et deixa?</p>
+</details>
+<details class="question">
+<summary>Exercici 13</summary>
+<p>Crea el vector <em>cotxesAparador</em> de 5 cotxes. Inicialitza'ls tots usant el constructor al qual només se li passa la matrícula. Les matrícules aniran de l'1 al 5.</p>
+</details>
+<h3 id="destructors">Destructors</h3>
+<p>Igual que es creen els objectes (amb <em>new</em>), com que ocupen espai en memòria, cal alliberar eixe espai quan ja no els necessitem.</p>
+<p>En molts llenguatges de programació, com C++, es poden definir els destructors per a que s'executen automàticament quan ja no es faça servir l'objecte. En Java, no es poden definir els destructors. Java té un sistema de recollida d'escombraries, el <strong><em>Garbage Collector</em></strong> que s'encarrega de recollir els objectes que ja no s'utilitzen. Per tant, el programador no ha de preocupar-se de l'alliberament de memòria.</p>
+<p><center><img alt="Garbage Collector" src="../img/ud9/garbageCollector.webp" width="50%" /></center></p>
+<p>Exemples d'alliberament de memòria:</p>
+<ul>
+<li>Si fem un 2n <em>new</em> a un objecte, el primer ja no es pot accedir i el Garbage Collector el recollirà.</li>
+<li>En eixir d'una funció on s'ha creat un objecte, eixe objecte ja no es pot accedir i el Garbage Collector el recollirà.</li>
+</ul>
+<h2 id="abstraccio">Abstracció</h2>
 <p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
