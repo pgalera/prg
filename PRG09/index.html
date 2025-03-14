@@ -908,6 +908,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Herència">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propietats-de-lherencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propietats de l'herència
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantatges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avantatges
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1177,6 +1201,30 @@
       Herència
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Herència">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propietats-de-lherencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propietats de l'herència
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avantatges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avantatges
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1892,7 +1940,128 @@
 <p>Encapsula els atributs <em>numBastidor</em>, <em>matrícula</em>, <em>marca</em> i <em>model</em> de la classe <em>Cotxe</em>. Fes-ho amb la inserció automàtica que ofereix el teu IDE.</p>
 </details>
 <h2 id="herencia">Herència</h2>
-<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
+<p>L'herència és un dels principals avantatges de la POO. Ens permet establir una jerarquia de classes. Podrem definir classes específiques a partir d'una altra més general, afegint-hi atributs i mètodes nous o sobreescriure els ja existents.</p>
+<p><center>
+<pre class="mermaid"><code>    flowchart TD
+        A[Animal] --&gt; B[Mamífer]
+        A --&gt; C[Rèptil]
+        A --&gt; D[Au]
+        B --&gt; E[Caní]
+        B --&gt; F[Felí]
+        E --&gt; G[Gos]
+        E --&gt; H[Llop]
+        F --&gt; I[Gat]</code></pre>
+</center></p>
+<p>La classe més general (<em>Animal</em>) es diu <strong>classe pare</strong> o <strong>superclasse</strong>. Les classes més específiques (<em>Mamífer</em>, <em>Rèptil</em>, <em>Au</em>) es diuen <strong>classes filles</strong> o <strong>subclasses</strong>.</p>
+<h3 id="propietats-de-lherencia">Propietats de l'herència</h3>
+<ul>
+<li>La subclasse <strong>hereta</strong> els atributs i mètodes de la superclasse.</li>
+<li>La subclasse pot afegir <strong>nous</strong> atributs i mètodes.</li>
+<li>La subclasse pot <strong>redefinir</strong> mètodes de la superclasse (per exemple, un mateix mètode pot tindre una implementació diferent en la superclasse i en la subclasse).</li>
+</ul>
+<h3 id="avantatges">Avantatges</h3>
+<ul>
+<li>Reusabilitat o <strong>reutilització</strong> del codi: una subclasse pot aprofitar el codi d'una superclasse ja existent, modificant-lo mínimament per a que s'adapte a les seues necessitats.</li>
+<li>Els canvis en una classe general (nous mètodes, atributs...) es <strong>propaguen</strong> a les seues subclasses.</li>
+</ul>
+<details class="example">
+<summary>Exemples</summary>
+<p>L'herència és la forma natural de definir objectes en la vida real. Per exemple, podríem definir un <strong>xalet</strong> com una <strong>casa</strong> però amb jardí. Per tant, un xalet és un tipus de casa: xalet serà una classe filla de casa</p>
+<p><center>
+<pre class="mermaid"><code>    flowchart TD
+        A[Casa] --&gt; B[Xalet]
+        A --&gt; C[Pis]
+        A --&gt; D[Adossat]</code></pre>
+</center></p>
+<p>Vegem les propietats de l'herència en este exemple de xalet:</p>
+<ul>
+<li>El xalet (com a casa que és) també tindrà els <strong>atributs de la casa</strong> (portes, finestres, color...) i els <strong>mètodes de la casa</strong> (contruir, printar...).</li>
+<li>El xalet tindrà <strong>nous atributs</strong> (color de la tanca, jardí, metres de la piscina, quantitat d'arbres...) i <strong>nous mètodes</strong> (plantar un arbre, netejar piscina...).</li>
+<li>A més, amb la propietat de <em>polimorfisme</em> (que veurem més endavant), podríem redefinir mètodes de la casa en el xalet (per exemple, el mètode <em>printar</em>, a més de fer el que feia, que pinte també la tanca).</li>
+</ul>
+<p><strong>IMPLEMENTACIÓ</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Superclasse</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Casa</span><span class="p">{</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">amlple</span><span class="p">;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">llarg</span><span class="p">;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">netejar</span><span class="p">(){</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Casa neta&quot;</span><span class="p">);</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">area</span><span class="p">(){</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">ample</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">llarg</span><span class="p">;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Subclasse</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-18-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-18-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-18-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-18-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-18-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-18-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-18-10">10</a></span>
+<span class="normal"><a href="#__codelineno-18-11">11</a></span>
+<span class="normal"><a href="#__codelineno-18-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Xalet</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Casa</span><span class="p">{</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">m2Jardi</span><span class="p">;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">tallarGespa</span><span class="p">(){</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Gespa tallada&quot;</span><span class="p">);</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">area</span><span class="p">(){</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">areaCasa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">area</span><span class="p">();</span><span class="w"> </span><span class="c1">//(3)!</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">areaCasa</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">m2Jardi</span><span class="p">;</span>
+<a id="__codelineno-18-11" name="__codelineno-18-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>L'herència s'indica amb la paraula <strong>extends</strong>.</li>
+<li>El mètode <em>area</em> de la subclasse <em>Xalet</em> sobreescriu el mètode <em>area</em> de la superclasse <em>Casa</em>.</li>
+<li>Amb <strong>super.</strong> podem accedir als mètodes de la superclasse.</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span>
+<span class="normal"><a href="#__codelineno-19-11">11</a></span>
+<span class="normal"><a href="#__codelineno-19-12">12</a></span>
+<span class="normal"><a href="#__codelineno-19-13">13</a></span>
+<span class="normal"><a href="#__codelineno-19-14">14</a></span>
+<span class="normal"><a href="#__codelineno-19-15">15</a></span>
+<span class="normal"><a href="#__codelineno-19-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">        </span><span class="n">Casa</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Casa</span><span class="p">();</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">        </span><span class="n">Xalet</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Xalet</span><span class="p">();</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">ample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">llarg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">m2Jardi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">netejar</span><span class="p">();</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">tallarGespa</span><span class="p">();</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a>
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;L&#39;àrea del xalet és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="na">area</span><span class="p">());</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;L&#39;àrea de la casa és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="na">area</span><span class="p">());</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
 
 
 
