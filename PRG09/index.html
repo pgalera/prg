@@ -929,6 +929,33 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#que-es-el-override" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és el @Override?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-constructor-de-la-subclasse" class="md-nav__link">
+    <span class="md-ellipsis">
+      El constructor de la subclasse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasos-a-fer-per-a-crear-una-subclasse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pasos a fer per a crear una subclasse
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1218,6 +1245,33 @@
   <a href="#avantatges" class="md-nav__link">
     <span class="md-ellipsis">
       Avantatges
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#que-es-el-override" class="md-nav__link">
+    <span class="md-ellipsis">
+      Què és el @Override?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#el-constructor-de-la-subclasse" class="md-nav__link">
+    <span class="md-ellipsis">
+      El constructor de la subclasse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasos-a-fer-per-a-crear-una-subclasse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pasos a fer per a crear una subclasse
     </span>
   </a>
   
@@ -2046,21 +2100,224 @@
 <span class="normal"><a href="#__codelineno-19-15">15</a></span>
 <span class="normal"><a href="#__codelineno-19-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">        </span><span class="n">Casa</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Casa</span><span class="p">();</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">        </span><span class="n">Xalet</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Xalet</span><span class="p">();</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">        </span><span class="n">Casa</span><span class="w"> </span><span class="n">casa1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Casa</span><span class="p">();</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">        </span><span class="n">Xalet</span><span class="w"> </span><span class="n">xalet1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Xalet</span><span class="p">();</span>
 <a id="__codelineno-19-5" name="__codelineno-19-5"></a>
-<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">ample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">llarg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
-<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">m2Jardi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">        </span><span class="n">xalet1</span><span class="p">.</span><span class="na">ample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">        </span><span class="n">xalet1</span><span class="p">.</span><span class="na">llarg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">15</span><span class="p">;</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">        </span><span class="n">xalet1</span><span class="p">.</span><span class="na">m2Jardi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">50</span><span class="p">;</span><span class="w"> </span><span class="c1">//(1)!</span>
 <a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">        </span><span class="p">...</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">netejar</span><span class="p">();</span>
-<a id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">tallarGespa</span><span class="p">();</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">        </span><span class="n">xalet1</span><span class="p">.</span><span class="na">netejar</span><span class="p">();</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="w">        </span><span class="n">xalet1</span><span class="p">.</span><span class="na">tallarGespa</span><span class="p">();</span><span class="w"> </span><span class="c1">//(2)!</span>
 <a id="__codelineno-19-12" name="__codelineno-19-12"></a>
-<a id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;L&#39;àrea del xalet és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="na">area</span><span class="p">());</span>
-<a id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;L&#39;àrea de la casa és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="na">area</span><span class="p">());</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">xalet1</span><span class="p">.</span><span class="na">area</span><span class="p">());</span><span class="w"> </span><span class="c1">//(3)!</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">casa1</span><span class="p">.</span><span class="na">area</span><span class="p">());</span><span class="w"> </span><span class="c1">//(4)!</span>
 <a id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-19-16" name="__codelineno-19-16"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<ol>
+<li>Un xalet pot usar tant els seus <strong>atributs</strong> com els heretats de la casa.</li>
+<li>Un xalet pot usar tant els seus <strong>mètodes</strong> com els heretats de la casa.</li>
+<li>El <em>xalet1</em> invocarà el mètode <em>area()</em> de <em>Xalet</em>.</li>
+<li>La <em>casa1</em> invocarà el mètode <em>area()</em> de <em>Casa</em>.</li>
+</ol>
+</details>
+<h3 id="que-es-el-override">Què és el @Override?</h3>
+<p>Quan estem sobreescrivint un mètode, alguns IDEs ens avisen amb un missatge semblant al següent:</p>
+<p><center><img alt="Override" src="../img/ud9/override.png" /></center></p>
+<p>No és un error. Simplement ens avisa que el mètode <em>mostrar()</em> de la classe <em>Cotxe</em> ja l'hem definit en la classe mare <em>Vehicle</em> i, per tant, l'oculta. És a dir: abans de sobreescriure el mètode, si un objecte de la classe <em>Cotxe</em> cridava a <em>mostrar()</em> s'executa el de la classe pare <em>Vehicle</em>, però ara ja no podrem invocar-lo en objectes de la classe <em>Cotxe</em> ja que estarem invocant al <em>mostrar()</em> de la classe <em>Cotxe</em>.</p>
+<p>Si fem clic en els avisos se'ns recomana escriure <em>@Override</em> abans del mètode que estem sobreescribint.</p>
+<p>El funcionament serà el mateix però té distintes utilitats:</p>
+<ul>
+<li>Indica al programador que eixe mètode "substitueix" l'altre en el fill (que "oculta" el mètode del pare).</li>
+<li>Si volem sobreescriure un mètode i posem <em>@Override</em> però ens hem equivocat amb el nom del mètode en alguna lletra, ens avisarà, ja que no hi ha cap mètode a sobreescriure.</li>
+<li>Si més endavant eliminàrem el mètode <em>mostrar()</em> de la classe pare o li canviàrem el nom, el compilador avisaria, ja que el mètode corresponent en la classe filla deixaria d'estar sobreescrit.</li>
+</ul>
+<h3 id="el-constructor-de-la-subclasse">El constructor de la subclasse</h3>
+<p>Observem el funcionament dels constructors de la subclasse amb el mateix exemeple del Xalet:</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Superclasse</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span>
+<span class="normal"><a href="#__codelineno-20-6">6</a></span>
+<span class="normal"><a href="#__codelineno-20-7">7</a></span>
+<span class="normal"><a href="#__codelineno-20-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Casa</span><span class="p">{</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">    </span><span class="n">Casa</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ample</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">llarg</span><span class="p">){</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ample</span><span class="p">;</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">llarg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">llarg</span><span class="p">;</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Casa creada&quot;</span><span class="p">);</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Subclasse</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span>
+<span class="normal"><a href="#__codelineno-21-5">5</a></span>
+<span class="normal"><a href="#__codelineno-21-6">6</a></span>
+<span class="normal"><a href="#__codelineno-21-7">7</a></span>
+<span class="normal"><a href="#__codelineno-21-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Xalet</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Casa</span><span class="p">{</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">    </span><span class="n">Xalet</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">ample</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">llarg</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m2Jardi</span><span class="p">){</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">ample</span><span class="p">,</span><span class="w"> </span><span class="n">llarg</span><span class="p">);</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">m2Jardi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m2Jardi</span><span class="p">;</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Xalet creat&quot;</span><span class="p">);</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Crida al constructor de la superclasse (sempre en la 1a instrucció). Si no estiguera eixa crida, estaria <strong><em>super()</em></strong> per defecte. Per tant, donaria error perquè no existeix el constructor de la superclasse sense paràmetres.</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Main</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span>
+<span class="normal"><a href="#__codelineno-22-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">        </span><span class="n">Casa</span><span class="w"> </span><span class="n">casa1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Casa</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">);</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">        </span><span class="n">Xalet</span><span class="w"> </span><span class="n">xalet1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Xalet</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Crida al constructor de <em>Casa</em>. Mostrarà "Casa creada".</li>
+<li>Crida al constructor de <em>Xalet</em>. Mostrarà "Casa creada" i "Xalet creat".</li>
+</ol>
+</div>
+<h3 id="pasos-a-fer-per-a-crear-una-subclasse">Pasos a fer per a crear una subclasse</h3>
+<p>Quan definim una subclasse no hem de copiar atributs i mètodes ja que podrem usar-los encara que no estiguen físicament. Només farem el següent:</p>
+<p><center><img alt="Passos Subclasse" src="../img/ud9/pasosSubclasse.png" /></center></p>
+<details class="question">
+<summary>Exercici 16. Herència</summary>
+<p>Crea, en un altre fitxer, la classe <strong><em>Cotxe2aMa</em></strong>.</p>
+<ol>
+<li>Fes que siga subclasse de <em>Cotxe</em>.</li>
+<li>Posa en <em>Cotxe2aMa</em> un atribut nou, <em>kms</em> (enter), i encapsula'l (fes-lo privat i crea els seus mètodes <em>getter</em> i <em>setter</em>).</li>
+<li>Sobreescriu <em>mostrarDades()</em> perquè també mostre els kms. Però no faces un copiar i pegar del codi de <em>Cotxe</em> sinó que crida al mètode <em>mostrarDades()</em> de la superclasse i després mostra els kms.</li>
+<li>Comprova que si en la classe <em>Cotxe</em> eliminares el constructor sense paràmetres, tindries un error de compilació en la classe <em>Cotxe2aMa</em>. Pensat per què.</li>
+<li>Fes un contructor de la classe <em>Cotxe2aMa</em> que agafe com a paràmetres el <em>bastidor</em>, <em>marca</em>, <em>model</em>, <em>matrícula</em> i <em>kms</em>. Este constructor haurà de cridar al constructor adequat de la superclasse amb els paràmetres corresponents i inicialitzar la resta d'atributs.</li>
+</ol>
+</details>
+<details class="question">
+<summary>Exercici 17</summary>
+<p>En el <em>main</em> fes el següent:</p>
+<ol>
+<li>Crea l'objecte <em>cotxeAntic</em> de la classe <em>Cotxe2aMa</em> passant-li al constructor els paràmetres necessaris (inventa'ls).</li>
+<li>Crea l'objecte <em>cotxeNou</em> de la classe <em>Cotxe</em>. Mostra per pantalla les dades dels dos cotxes amb crides a <em>mostrarDades()</em>. Comprova que no trauen la mateixa informació. Podríem invocar el <em>mostrarDades()</em> de la classe <em>Cotxe</em> amb l'objecte <em>cotxeAntic</em>?</li>
+</ol>
+</details>
+<details class="example">
+<summary>Exemple resum de l'us de <em>this</em>, <em>this (...) super.</em> i <em>super(...)</em></summary>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Persona</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span>
+<span class="normal"><a href="#__codelineno-23-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Persona</span><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hola</span><span class="p">(){</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="p">);</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">soc</span><span class="p">(){</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sóc persona&quot;</span><span class="p">);</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a>
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Persona</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">){</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Estudiant</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-24-10">10</a></span>
+<span class="normal"><a href="#__codelineno-24-11">11</a></span>
+<span class="normal"><a href="#__codelineno-24-12">12</a></span>
+<span class="normal"><a href="#__codelineno-24-13">13</a></span>
+<span class="normal"><a href="#__codelineno-24-14">14</a></span>
+<span class="normal"><a href="#__codelineno-24-15">15</a></span>
+<span class="normal"><a href="#__codelineno-24-16">16</a></span>
+<span class="normal"><a href="#__codelineno-24-17">17</a></span>
+<span class="normal"><a href="#__codelineno-24-18">18</a></span>
+<span class="normal"><a href="#__codelineno-24-19">19</a></span>
+<span class="normal"><a href="#__codelineno-24-20">20</a></span>
+<span class="normal"><a href="#__codelineno-24-21">21</a></span>
+<span class="normal"><a href="#__codelineno-24-22">22</a></span>
+<span class="normal"><a href="#__codelineno-24-23">23</a></span>
+<span class="normal"><a href="#__codelineno-24-24">24</a></span>
+<span class="normal"><a href="#__codelineno-24-25">25</a></span>
+<span class="normal"><a href="#__codelineno-24-26">26</a></span>
+<span class="normal"><a href="#__codelineno-24-27">27</a></span>
+<span class="normal"><a href="#__codelineno-24-28">28</a></span>
+<span class="normal"><a href="#__codelineno-24-29">29</a></span>
+<span class="normal"><a href="#__codelineno-24-30">30</a></span>
+<span class="normal"><a href="#__codelineno-24-31">31</a></span>
+<span class="normal"><a href="#__codelineno-24-32">32</a></span>
+<span class="normal"><a href="#__codelineno-24-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Estudiant</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Persona</span><span class="p">{</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">curs</span><span class="p">;</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">soc</span><span class="p">(){</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sóc estudiant&quot;</span><span class="p">);</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a>
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Estudiant</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">){</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a>
+<a id="__codelineno-24-13" name="__codelineno-24-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Estudiant</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">curs</span><span class="p">){</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nom</span><span class="p">);</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">curs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">curs</span><span class="p">;</span>
+<a id="__codelineno-24-16" name="__codelineno-24-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-17" name="__codelineno-24-17"></a>
+<a id="__codelineno-24-18" name="__codelineno-24-18"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">proves</span><span class="p">(){</span>
+<a id="__codelineno-24-19" name="__codelineno-24-19"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">curs</span><span class="p">);</span>
+<a id="__codelineno-24-20" name="__codelineno-24-20"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">curs</span><span class="p">);</span><span class="w"> </span><span class="c1">//(3)!</span>
+<a id="__codelineno-24-21" name="__codelineno-24-21"></a>
+<a id="__codelineno-24-22" name="__codelineno-24-22"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nom</span><span class="p">);</span>
+<a id="__codelineno-24-23" name="__codelineno-24-23"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="p">);</span>
+<a id="__codelineno-24-24" name="__codelineno-24-24"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="kd">super</span><span class="p">.</span><span class="na">nom</span><span class="p">);</span><span class="w"> </span><span class="c1">//(4)!</span>
+<a id="__codelineno-24-25" name="__codelineno-24-25"></a>
+<a id="__codelineno-24-26" name="__codelineno-24-26"></a><span class="w">        </span><span class="n">soc</span><span class="p">();</span>
+<a id="__codelineno-24-27" name="__codelineno-24-27"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">soc</span><span class="p">();</span><span class="w"> </span><span class="c1">//(5)!</span>
+<a id="__codelineno-24-28" name="__codelineno-24-28"></a>
+<a id="__codelineno-24-29" name="__codelineno-24-29"></a><span class="w">        </span><span class="n">hola</span><span class="p">();</span>
+<a id="__codelineno-24-30" name="__codelineno-24-30"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">hola</span><span class="p">();</span>
+<a id="__codelineno-24-31" name="__codelineno-24-31"></a><span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">soc</span><span class="p">();</span><span class="w"> </span><span class="c1">//(6)!</span>
+<a id="__codelineno-24-32" name="__codelineno-24-32"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-24-33" name="__codelineno-24-33"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Accés a un altre constructor de la mateixa classe.</li>
+<li>Accés al constructor de la superclasse.</li>
+<li>Accés a l'atribut de la mateixa classe.</li>
+<li>Accés a l'atribut de la superclasse.</li>
+<li>Accés a un mètode de la mateixa classe.</li>
+<li>Accés a un mètode de la superclasse.</li>
+</ol>
+<p><strong>CONSELL:</strong> usa sempre <em>this</em>. Quan no siga possible, usa <em>super</em>.</p>
 </details>
 
 
