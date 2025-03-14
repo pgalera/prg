@@ -853,6 +853,63 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#encapsulament" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encapsulament
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encapsulament">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducció
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getters-i-setters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getters i setters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getters i setters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#construccio-automatica-de-getters-i-setters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construcció automàtica de getters i setters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herència
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1061,6 +1118,63 @@
   <a href="#abstraccio" class="md-nav__link">
     <span class="md-ellipsis">
       Abstracció
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encapsulament" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encapsulament
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Encapsulament">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccio_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducció
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getters-i-setters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getters i setters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getters i setters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#construccio-automatica-de-getters-i-setters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construcció automàtica de getters i setters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herència
     </span>
   </a>
   
@@ -1571,6 +1685,213 @@
 <li>En eixir d'una funció on s'ha creat un objecte, eixe objecte ja no es pot accedir i el Garbage Collector el recollirà.</li>
 </ul>
 <h2 id="abstraccio">Abstracció</h2>
+<p>Els llenguatges de programació OO han de complir unes propietats bàsiques:</p>
+<p><center><img alt="Propietats OO" src="../img/ud9/propietatsOO.png" /></center></p>
+<p>En este apartat veurem l'abstracció:</p>
+<p><strong>Definició</strong></p>
+<p>Capacitat per a aïllar un conjunt d'informació i/o comportaments relacionats.</p>
+<p><strong>Avantatges</strong></p>
+<ul>
+<li>Reduix la complexitat dels programes (dividix i guanyaràs)</li>
+<li>Fomenta la reutilitzaació del codi.</li>
+</ul>
+<p><strong>Mecanismes d'abstracció</strong></p>
+<p>L'<strong>abtracció en la POO</strong> és la capacitat per a aïllar en una classe els atributs i mètodes comuns a un determinat conjunt d'objectes. Però l'abstracció no la trobem únicament en les classes:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>MECANISMES D'ABSTRACCIÓ</strong></th>
+<th style="text-align: center;"><strong>CARACTERÍSTIQUES</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Funcions</strong></td>
+<td style="text-align: center;">Conjunt d'instruccions que es pot parametritzar i ser invocat en qualsevol moment.</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Mòduls</strong></td>
+<td style="text-align: center;">Conjunt de funcions que guarden alguna relació. Són fitxers, paquets, llibreries...</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Classes</strong></td>
+<td style="text-align: center;">Conjunt de dades i funcions que descriuen una sèrie d'objectes. Incorpora tècniques com l'herència, polimorfisme...</td>
+</tr>
+</tbody>
+</table>
+<h2 id="encapsulament">Encapsulament</h2>
+<h3 id="introduccio_1">Introducció</h3>
+<p>Els usuaris dels objectes (<em>main</em>, per exemple) poden accedir als atributs directament, però no és aconsellable.</p>
+<p>En compte d'això, els usuaris dels objectes haurien d'accedir als atributs mitjançant una interfície (enllaç): el conjunt de noms dels mètodes públics de la classe. Estos mètodes faran d'intermediaris entre l'usuari i l'objecte.</p>
+<p><center><img alt="Encapsulament" src="../img/ud9/encapsulament.png" /></center></p>
+<p>Així, si el programador vol canviar la forma d'accedir a un atribut, no ha de canviar tot el programa sinó solament els mètodes de la classe que accedeixen a eixe atribut.</p>
+<p>L'<strong><em>encapsulament</em></strong> és la propietat que tenen els objectes d'<strong>ocultar</strong> els seus atributs a altres parts del programa.</p>
+<div class="admonition note">
+<p class="admonition-title">Com ho farem?</p>
+<ul>
+<li><strong>Atributs</strong>: privats.</li>
+<li><strong>Mètodes</strong>: públics (o protegits, si cal).</li>
+</ul>
+<p>És a dir: l'estructira interna d'un objecte normalment està oculta als usuaris de l'objecte, i l'única forma que té l'usuari d'un objecte de comunicar-se amb ell és a través dels mètodes públics de l'objecte. El conjunt de mètodes públics d'un objecte s'anomena <strong>interfície</strong> de l'objecte.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span>
+<span class="normal"><a href="#__codelineno-13-24">24</a></span>
+<span class="normal"><a href="#__codelineno-13-25">25</a></span>
+<span class="normal"><a href="#__codelineno-13-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">class</span> <span class="nc">Casa</span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">qPortes</span><span class="p">;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">qFinestres</span><span class="p">;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Casa</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">qPortes</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">qFinestres</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">){</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">qPortes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qPortes</span><span class="p">;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">qFinestres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qFinestres</span><span class="p">;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pinta</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nouColor</span><span class="p">){</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nouColor</span><span class="p">;</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">creaFinestres</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">qFinestresNoves</span><span class="p">){</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">qFinestres</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">qFinestresNoves</span><span class="p">;</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">llevaFinestres</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">qFinestresLlevades</span><span class="p">){</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">qFinestres</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">qFinestresLlevades</span><span class="p">;</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">qFinestres</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">){</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">qFinestres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Des de fora no podem accedir directament als <strong>atributs privats</strong> de la classe Casa. Per a això, la classe Casa proporciona els mètodes públics <em>pinta</em>, <em>creaFinestres</em> i <em>llevaFinestres</em>.</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span>
+<span class="normal"><a href="#__codelineno-14-7">7</a></span>
+<span class="normal"><a href="#__codelineno-14-8">8</a></span>
+<span class="normal"><a href="#__codelineno-14-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">        </span><span class="n">Casa</span><span class="w"> </span><span class="n">macasa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Casa</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;blanc&quot;</span><span class="p">);</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">        </span><span class="n">macasa</span><span class="p">.</span><span class="na">qfinestres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">        </span><span class="n">macasa</span><span class="p">.</span><span class="na">createFinestres</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Aques ús de l'atribut <em>qFinestres</em> donaria error de compilació ja que és privat. Per a accedir a eixe atribut, s'ha de fer a través dels mètodes públics de la classe Casa.</li>
+</ol>
+</div>
+<p><strong>Per què usar encapsulament?</strong></p>
+<p>Un dels motius és per a evitar errors posteriors. Si donàrem permís per a accedir directament als atributs, podria donar-se el cas que, per exemple, llevàrem més finestres de les que té la casa.</p>
+<p>Per tant, són els mètodes dels objectes qui controlen els errors. Podríem dir que els mètodes són "professionals" en crear finestres, llevar-les... Així, els usuaris de l'objecte no s'han de preocupar de comprovar si hi ha suficients finestres o no abans de tancar-les.</p>
+<h3 id="getters-i-setters">Getters i setters</h3>
+<p>Com hem vist, convé que els atributs siguen privats. Per tant, per cada atribut necessitem 2 mètodes: un per a modificar el seu valor i un altre per a consultar-lo.</p>
+<p>Els mètodes destinats a donar un valor a un atribut s'anomenen <strong><em>setters</em></strong>, mentre que els destinats a consultar el valor de l'atribut s'anomenen <strong><em>getters</em></strong>.</p>
+<p>Per simplificar la tasca dels programadors, hi ha una convenció pel que fa als noms dels <em>setters</em> i <em>getters</em>: sempre els anomenarem amb les lletres <em>get</em> o <em>set</em> més el nom de l'atribut (amb la primera lletra en majúscula). Per exemple, per a l'atribut <em>edat</em> de la classe <em>Alumne</em> tindrem els mètodes <em>setEdat</em> i <em>getEdat</em>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumne</span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="p">;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setEdat</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="p">){</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">e</span><span class="p">;</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getEdat</span><span class="p">(){</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">edat</span><span class="p">;</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Al <em>setter</em> de l'atribut <em>edat</em> li passem un paràmetre <em>e</em> que serà el nou valor de l'atribut.</li>
+<li>El <em>getter</em> de l'atribut <em>edat</em> no necessita cap paràmetre i retorna el valor de l'atribut.</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">        </span><span class="n">Alumne</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumne</span><span class="p">();</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Edat:&quot;</span><span class="p">);</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">        </span><span class="n">a1</span><span class="p">.</span><span class="na">setEdat</span><span class="p">(</span><span class="n">teclat</span><span class="p">.</span><span class="na">nextInt</span><span class="p">());</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;En complirà &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">a1</span><span class="p">.</span><span class="na">getEdat</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">));</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Invoquem al <em>setter</em> d'edat de l'objecte <em>a1</em>.</li>
+<li>Invoquem al <em>getter</em> d'edat de l'objecte <em>a1</em>.</li>
+</ol>
+<details class="question">
+<summary>Exercici 14. Encapsulament</summary>
+<p>Encapsula els atributs <em>color</em> i <em>preu</em> de la classe <em>Cotxe</em>: posa'ls com a privats i crea els <em>setters</em> i <em>getters</em> corresponents. Modifica el programa principal per a que use els mètodes <em>setters</em> i <em>getters</em> per a accedir als atributs.</p>
+</details>
+<h4 id="construccio-automatica-de-getters-i-setters">Construcció automàtica de <em>getters</em> i <em>setters</em></h4>
+<p>Per generar <strong>getters</strong> i <strong>setters</strong> de forma automàtica en <strong>IntelliJ IDEA</strong>, segueix aquests passos:</p>
+<ol>
+<li>Obre la classe on vols afegir els getters i setters.</li>
+<li>Situa el cursor dins de la classe (a qualsevol lloc).</li>
+<li>Accedeix al menú de generació:<ol>
+<li>Mètode 1: Clic dret → Generate (o bé <code>Alt + Insert</code> a Windows/Linux, <code>Cmd + N</code> a macOS).</li>
+<li>Mètode 2: Menú superior → Code → Generate.</li>
+</ol>
+</li>
+<li>Selecciona "Getter and Setter". Es mostrarà un diàleg amb tots els atributs de la classe.</li>
+<li>Tria els atributs per als quals vols generar mètodes:</li>
+</ol>
+<details class="question">
+<summary>Exercici 15. Encapsulament automàtic</summary>
+<p>Encapsula els atributs <em>numBastidor</em>, <em>matrícula</em>, <em>marca</em> i <em>model</em> de la classe <em>Cotxe</em>. Fes-ho amb la inserció automàtica que ofereix el teu IDE.</p>
+</details>
+<h2 id="herencia">Herència</h2>
 <p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
