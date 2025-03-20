@@ -956,6 +956,66 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#metodes-abstractes-i-classes-abstractes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mètodes abstractes i classes abstractes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polimorfisme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polimorfisme
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Polimorfisme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sobrecarrega-basada-en-els-parametres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobrecàrrega basada en els paràmetres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobreescriptura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobreescriptura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobrecarrega-basada-en-lambit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobrecàrrega basada en l'àmbit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-polimorfiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables polimòrfiques
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1272,6 +1332,66 @@
   <a href="#pasos-a-fer-per-a-crear-una-subclasse" class="md-nav__link">
     <span class="md-ellipsis">
       Pasos a fer per a crear una subclasse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodes-abstractes-i-classes-abstractes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mètodes abstractes i classes abstractes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polimorfisme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Polimorfisme
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Polimorfisme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sobrecarrega-basada-en-els-parametres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobrecàrrega basada en els paràmetres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobreescriptura" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobreescriptura
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sobrecarrega-basada-en-lambit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sobrecàrrega basada en l'àmbit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variables-polimorfiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables polimòrfiques
     </span>
   </a>
   
@@ -2451,6 +2571,201 @@
 <li>Si una variable està en pare i fill, cadascuna pot guardar un valor diferent.</li>
 </ol>
 </details>
+<h3 id="metodes-abstractes-i-classes-abstractes">Mètodes abstractes i classes abstractes</h3>
+<p>En una jerarquia de classes podem fer que una classe tinga algun mètode declarat però no implementat. Per exemple:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Figura. Classe Abstracta</label><label for="__tabbed_8_2">Cercle</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span>
+<span class="normal"><a href="#__codelineno-27-4">4</a></span>
+<span class="normal"><a href="#__codelineno-27-5">5</a></span>
+<span class="normal"><a href="#__codelineno-27-6">6</a></span>
+<span class="normal"><a href="#__codelineno-27-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Figura</span><span class="p">{</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">;</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getColor</span><span class="p">(){</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">color</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setColor</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">color</span><span class="p">){</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nf">area</span><span class="p">();</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Mètode abstracte: definit però no implementat. Per tant, no podrem crear objectes de la classe Figura (per això és també abstracta), sinó que només podrem crear objectes d'alguna classe filla de Figura que sí que implemente eixe mètode abstracte.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span>
+<span class="normal"><a href="#__codelineno-28-4">4</a></span>
+<span class="normal"><a href="#__codelineno-28-5">5</a></span>
+<span class="normal"><a href="#__codelineno-28-6">6</a></span>
+<span class="normal"><a href="#__codelineno-28-7">7</a></span>
+<span class="normal"><a href="#__codelineno-28-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="kd">class</span> <span class="nc">Cercle</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Figura</span><span class="p">{</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">radi</span><span class="p">;</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a>
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nf">area</span><span class="p">(){</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">radi</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Com la classe <em>Cercle</em> és filla de <em>Figura</em>, està obligada a implementar el mètode <em>area()</em> per a així poder crear objectes de la classe <em>Cercle</em>.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>Ara bé, si en la classe <em>Cercle</em> no volguérem implementar el mètode <em>area()</em>, hauríem de declarar també la classe <em>Cercle</em> com a abstracta. En eixe cas, no podríem crear objectes de la classe <em>Cercle</em> sinó que hauríem de crear objectes d'una classe filla de <em>Cercle</em> que sí que implemente el mètode <em>area()</em>.</p>
+<p>Per tant, tenim que:</p>
+<ul>
+<li><strong>Mètode abstracte</strong>: mètode declarat però no implementat. Les classes que hereten d'una classe amb mètodes abstractes han de sobreescriure eixos mètodes.</li>
+<li><strong>Classe abstracta</strong>: classe que conté almenys un mètode abstracte. No es poden crear objectes d'una classe abstracta (sinó que s'han de crear objectes de les seues classes filles que sí que implementen eixos mètodes).</li>
+</ul>
+<details class="question">
+<summary>Exercici 19. Mètodes i classe abstractes</summary>
+<p>Practica amb els mètodes i classes abstractes amb l'exemple anterior. Concretament, segueix els passos següents:</p>
+<ol>
+<li>Crea la classe <em>Figura</em> amb el mètode <em>area()</em> com està en els apunts però sense posar el <em>abstract</em> (ni en el mètode ni en la classe).</li>
+<li>Et donarà error en el mètode. Llig l'error i intenta comprendre el per què. Caldrà declarar el mètode com a abstracte.</li>
+<li>Et donarà error la classe. Llig l'error i intenta comprendre el per què. Caldrà declarar la classe com a abstracta.</li>
+<li>En el <em>main</em> intenta crear un objecte de la classe <em>Figura</em>. No et deixarà. Per què?</li>
+<li>Crea la classe <em>Cercle</em> de l'enunciat però sense posar el mètode <em>area()</em>. Et donarà un error. Llig i intenta entendre el per què. Implementa els mètodes abstractes del pare.</li>
+<li>Posa el cos que cal al mètode <em>area()</em> de <em>Cercle</em>.</li>
+<li>Prova a crear un objecte de <em>Cercle</em> en el <em>main</em>. Ara sí que et deixarà, ja que la classe no és abstracta i ja s'ha implementat el mètode abstracte.</li>
+</ol>
+</details>
+<h2 id="polimorfisme">Polimorfisme</h2>
+<p>Acabem de vore que pot haver diferents mètodes amb el mateix nom però que fan coses diferents. Això és el <strong>polimorfisme</strong>.</p>
+<p>Una paraula polisèmica és aquella que té distints significats, segons el context. Igual passa amb el polimorfisme en la POO: un nom de mètode pot tindre distintes implementacions, i s'invocarà a un o altre segons el context.</p>
+<p><strong>Tipus de polimorfisme</strong>:</p>
+<ul>
+<li><strong>Sobrecàrrega basada en els paràmetres</strong>: mètodes amb el mateix nom en una mateixa classe però amb diferents paràmetres. S'executarà un mètode o altre depenent dels paràmetres.</li>
+<li><strong>Sobreescriptura</strong>: mètodes amb el mateix nom i mateixos paràmetres en classes distintes però amb relacions d'herència entre ells. S'executarà un mètode o altre depenent de la classe de l'objecte que fa la crida.</li>
+<li><strong>Sobrecàrrega basada en l'àmbit</strong>:mètodes amb el mateix nom en diferents classes sense relacions d'herència entre ells. S'executarà un mètode o altre depenent de la classe de l'objecte que fa la crida.</li>
+<li><strong>Variables polimòrfiques</strong>: És el prolimorfisme pròpiament dit. Ens permet que un objecte definit sobre una <em>superclasse</em> puga ser instanciat en qualsevol de les seues subclasses.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Alguns autors solen diferenciar <em>sobrecàrrrega</em> de <em>polimorfisme</em> però nosaltres vorem la <em>sobrecàrrega</em> com un tipus de <em>polimorfisme</em>.</p>
+</div>
+<p>Veiem detalladament els 4 tipus de polimorfisme amb l'ajuda d'exemples.</p>
+<h3 id="sobrecarrega-basada-en-els-parametres">Sobrecàrrega basada en els paràmetres</h3>
+<p>En una classe poden haver distints mètodes amb el mateix nom, sempre que tinguen distints paràetres d'entrada (no importa el paràmetre d'eixida).</p>
+<p>En temps de compilació ja se sap el mètode que s'invocarà en cada crida: segons els paràmetres.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemples</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Exemple 1</label><label for="__tabbed_9_2">Exemple 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Podem tindre en una classe distints mètodes per a mostrar dades per pantalla, una per a cada tipus de paràmetre.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-29-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-29-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-29-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-29-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-29-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-29-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-29-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-29-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-29-10">10</a></span>
+<span class="normal"><a href="#__codelineno-29-11">11</a></span>
+<span class="normal"><a href="#__codelineno-29-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Eixida</span><span class="p">{</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">imprimir</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">){</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+<a id="__codelineno-29-4" name="__codelineno-29-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a>
+<a id="__codelineno-29-6" name="__codelineno-29-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">imprimir</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">v</span><span class="p">){</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7"></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">v</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+<a id="__codelineno-29-8" name="__codelineno-29-8"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">v</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-29-12" name="__codelineno-29-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Este mètode s'executarà quan invoquem <em>imprimir</em> amb un enter com a paràmetre.</li>
+<li>Este mètode s'executarà quan invoquem <em>imprimir</em> amb un vector d'enters com a paràmetre.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Una classe pot tindre distints constructors (amb el mateix nom, clar), sempre que tinguen distints paràmetres.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-30-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-30-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-30-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-30-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-30-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-30-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-30-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-30-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-30-10">10</a></span>
+<span class="normal"><a href="#__codelineno-30-11">11</a></span>
+<span class="normal"><a href="#__codelineno-30-12">12</a></span>
+<span class="normal"><a href="#__codelineno-30-13">13</a></span>
+<span class="normal"><a href="#__codelineno-30-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Casa</span><span class="p">{</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Casa</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">qp</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">qf</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">col</span><span class="p">){</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">qPortes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qp</span><span class="p">;</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">qFinestres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qf</span><span class="p">;</span>
+<a id="__codelineno-30-6" name="__codelineno-30-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">col</span><span class="p">;</span>
+<a id="__codelineno-30-7" name="__codelineno-30-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-30-8" name="__codelineno-30-8"></a>
+<a id="__codelineno-30-9" name="__codelineno-30-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Casa</span><span class="p">(){</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-30-10" name="__codelineno-30-10"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">qPortes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-30-11" name="__codelineno-30-11"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">qFinestres</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-30-12" name="__codelineno-30-12"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<a id="__codelineno-30-13" name="__codelineno-30-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-30-14" name="__codelineno-30-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>S'executarà quan creem un objecte de la classe <em>Casa</em> amb 3 paràmetres: 2 enters i una cadena. Casa casa1 = new Casa(2, 4, "blanc");</li>
+<li>S'executarà quan creem un objecte de la classe <em>Casa</em> sense paràmetres. Casa casa2 = new Casa();</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<h3 id="sobreescriptura">Sobreescriptura</h3>
+<p>És el tipus de polimorfisme que hhem vist en l'herència: mètodes amb el mateix nom i mateixos paràmetres en classes distintes però amb relacions d'herència entre ells. Se sol dir que la sobreescritura és el polimorfisme pròpiament dit.</p>
+<p><center><img alt="Sobreescriptura" src="../img/ud9/sobreescriptura.png" /></center></p>
+<p>Quan s'invoque un mètode sobreescrit s'executarà el de la casse de l'objecte que ha fet la crida:</p>
+<p><center><img alt="Sobreescriptura, crides" src="../img/ud9/sobreescriptura2.png" /></center></p>
+<p>Recordem que, si una subclasse sobreescriu un mètode però en eixa subclasse volem invocar la implementació de la superclasse, ho farem amb <strong>super</strong>.</p>
+<h3 id="sobrecarrega-basada-en-lambit">Sobrecàrrega basada en l'àmbit</h3>
+<p>Mètodes amb el mateix nom en diferents classes sense relacions d'herència entre ells.</p>
+<p><center><img alt="Sobrecàrrega basada en l'ambit" src="../img/ud9/sobrecarregaAmbit.png" /></center></p>
+<p>El mètode <em>mostrarNom()</em> està sobrecarregat en base a l'àmbit en les classe <em>Profe</em>, <em>Conserge</em> i <em>Cotxe</em>. El <em>mostrarNom()</em> de <em>Profe</em> i el de <em>Conserge</em> no tenen res a vore, ja que no estan sobreescrint el mètode, ja que no existeix en la classe pare.</p>
+<p><center><img alt="Sobrecàrrega, crides" src="../img/ud9/sobrecarregaCrides.png" /></center></p>
+<p>No hi ha conflicte. En cadascuna de les crides anteriors cridarà al <em>mostrarNom()</em> corresponent de la classe de cada objecte.</p>
+<p>En temps de compilació ja se sap quin mètode s'invocarà. Per això donarà error de compilació la instrucció <em>per.mostrarNom()</em>, ja que la classe <em>Persona</em> no té eixe mètode.</p>
+<h3 id="variables-polimorfiques">Variables polimòrfiques</h3>
+<p>Donada esta jerarquia de classes, si tinc un objecte definit com a <em>Persona</em>, puc instanciar-lo a un objecte d'eixa classe... o a qualsevol descendent d'eixa classe.</p>
+<p><center>
+<pre class="mermaid"><code>    flowchart TD
+        A[Persona] --&gt; B[Alumne]
+        A --&gt; C[Professor]
+        C --&gt; D[Interí]
+        C --&gt; E[Definitiu]</code></pre>
+</center></p>
+<div class="admonition example">
+<p class="admonition-title">Per exemple</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span>
+<span class="normal"><a href="#__codelineno-31-3">3</a></span>
+<span class="normal"><a href="#__codelineno-31-4">4</a></span>
+<span class="normal"><a href="#__codelineno-31-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="w">    </span><span class="n">Persona</span><span class="w"> </span><span class="n">p</span><span class="p">;</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Persona</span><span class="p">();</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumne</span><span class="p">();</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Profe</span><span class="p">();</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Definitiu</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>En una persona puc posar un alumne, un profe... (qualsevol descendent)</li>
+</ol>
+</div>
+<p>En eixe cas diguem que <em>p</em> és una <strong>variable polimòrfica</strong>, ja que admet distints tipus d'objectes (<em>Persona</em>, <em>Alumne</em>, <em>Professor</em>, <em>Definitiu</em>...), no només 1.</p>
 
 
 
