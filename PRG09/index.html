@@ -3083,6 +3083,39 @@
 <summary>Exercici 21</summary>
 <p>Anem a sobrecarregar el mètode <em>revisar</em> en la classe <em>Cotxe</em>. Crea en la classe <em>Cotxe</em> altre mètode <em>revisar</em> però que reba un vector de 5 booleans. El mètode haurà de copiar les components del vector d'entrada en les components de l'atribut revisions.</p>
 </details>
+<details class="question">
+<summary>Exercici 22</summary>
+<p>En el programa principal:</p>
+<ol>
+<li>Crea un cotxe i fes diverses crides al mètode <em>revisar()</em> de forma que s'executen les 2 implementacions d'eixe mètode.</li>
+<li>Crea un array de cotxes i posa en ell cotxes nous i de 2a mà. Recorre tot l'array per a cridar al <em>mostrarDades()</em> de cada objectes de la llista.</li>
+<li>Dins de la classe principal (la que té el <em>main</em>) crea el mètode <em>mostrarKms()</em> de forma que accepte com a paràmetre un cotxe de segona mà o normal (per tant, el paràmetre serà de la casse pare: <em>Cotxe</em>) i que mostre per pantalla la quantitat de kms que té.<ul>
+<li><ins>Problema</ins>: Voràs que et dóna error al compilar ja que la classe <em>Cotxe</em> té l'atribut dels kms.</li>
+<li><ins>Solució</ins>: Fes un càsting de l'objecte cotxe per a accedir als kms.</li>
+</ul>
+</li>
+<li>Crida al mètode anterior passant-li com a paràmetre un objecte de la classe <em>Cotxe2aMa</em> i una altra crida passant-li un objecte de la classe <em>Cotxe</em>.<ul>
+<li><ins>Problema</ins>: Voràs que dóna error d'execució en el moment de passar-li com a paràmetre un objecte de la classe <em>Cotxe</em>. El motiu és que ja que no pot fer el càsting a <em>Cotxe2aMa</em>, ja que només podem fer càsting a una classe ascendent.</li>
+<li><ins>Solució</ins>: Modifica el mètode <em>mostrarKms()</em> per a que si el paràmetre és una instància de <em>Cotxe2aMa</em>, que mostre els kms; si no, que mostre el text "Cotxe nou, amb 0 kms". Prova diverses solucions (<em>instanceof</em>, +getClass<em> o </em>try-catch*).</li>
+</ul>
+</li>
+</ol>
+</details>
+<details class="question">
+<summary>Exercici 23</summary>
+<p>Llista de persona de l'institut.</p>
+<ol>
+<li>Crea l'aplicació <em>PersonesInstitut</em>, amb les següents classes:</li>
+</ol>
+<p><center><img alt="Classes exercici 23" src="../img/ud9/exercici23.png" /></center></p>
+<ol>
+<li>En el main crea una llista (vector de 100 persones o un ArrayList) on guardarem tot el personal de l'institut (profes, alumnes o qualsevol altre tipus de persones).</li>
+<li>Assigna un professor en el 1r element de la llista; un alumne en el 2n; i una persona en el 3r. Posa dades qualsevol a les 3 persones. Si vols, crea els constructors que necessites.</li>
+<li>Utilitzant el mètode <em>mostraNom()</em>, mostra els 3 objectes que tens (usa un for de tipus <em>foreach</em>). Executa-ho per comprovar a quina implementació de <em>mostrarNom()</em> s'ha invocat en cada cas.</li>
+<li>Amb un altre for, mostrar els cursos dels 3 objectes de la llista (invocant el mètode <em>mostraCurs()</em>). Et donarà error de compilació ja que la llista és de persones però la classe <em>Persona</em> no té eixe mètode, sinó que és només de la classe <em>Alumne</em>. Fes ús del càsting per a solucionar-ho.</li>
+<li>Executa el programa. T'eixirà un error quan intente fer el càsting del professor, ja que un <em>Professor</em> no pot "convertir-se" en <em>Alumne</em>. Arregla-ho per a que no done eixe error: fes que només es cride a <em>mostrarCurs()</em> si l'objecte és un <em>Alumne</em> (usa <em>instanceof</em>, <em>getClass</em> o <em>try-catch</em>).</li>
+</ol>
+</details>
 <h2 id="atributs-i-metodes-estatics">Atributs i mètodes estàtics</h2>
 <p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
