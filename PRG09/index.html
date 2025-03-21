@@ -1035,6 +1035,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#formes-de-comprovar-a-quina-classe-sha-instanciat-fet-el-new-un-objecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formes de comprovar a quina classe s'ha instanciat (fet el new) un objecte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esquema-resum-dels-distints-tipus-de-polimorfisme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esquema resum dels distints tipus de polimorfisme
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1042,6 +1060,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atributs-i-metodes-estatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atributs i mètodes estàtics
+    </span>
+  </a>
   
 </li>
       
@@ -1440,6 +1467,24 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#formes-de-comprovar-a-quina-classe-sha-instanciat-fet-el-new-un-objecte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formes de comprovar a quina classe s'ha instanciat (fet el new) un objecte
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esquema-resum-dels-distints-tipus-de-polimorfisme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Esquema resum dels distints tipus de polimorfisme
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1447,6 +1492,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atributs-i-metodes-estatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atributs i mètodes estàtics
+    </span>
+  </a>
   
 </li>
       
@@ -2890,6 +2944,147 @@
 <p>Només farem el càsting si es pot fer. És a dir: només voldrem fer el càsting a <em>Alumne</em>, si l'objecte en qüestió està instanciat a <em>Alumne</em>.</p>
 </div>
 <p>Veiem distintes formes de comprovar a quina classe està instanciat un objecte:</p>
+<h4 id="formes-de-comprovar-a-quina-classe-sha-instanciat-fet-el-new-un-objecte">Formes de comprovar a quina classe s'ha instanciat (fet el <em>new</em>) un objecte</h4>
+<ol>
+<li>
+<p><ins>Saber si un objecte està instanciat a una determinada classe</ins>. Usarem el mètode <strong><em>getClass()</em></strong> de l'objecte i l'atribut <strong><em>class</em></strong> de la classe que volem comprovar:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-35-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-35-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-35-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-35-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-35-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-35-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-35-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-35-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-35-10">10</a></span>
+<span class="normal"><a href="#__codelineno-35-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostra</span><span class="w"> </span><span class="p">(</span><span class="n">Persona</span><span class="w"> </span><span class="n">per</span><span class="p">){</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">per</span><span class="p">.</span><span class="na">getClass</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">Alumne</span><span class="p">.</span><span class="na">class</span><span class="p">){</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4"></a><span class="w">        </span><span class="p">((</span><span class="n">Alumne</span><span class="p">)</span><span class="n">per</span><span class="p">).</span><span class="na">mostraCurs</span><span class="p">();</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6"></a><span class="w">    </span><span class="k">else</span><span class="p">{</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Alumne</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; sinó &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<a id="__codelineno-35-8" name="__codelineno-35-8"></a><span class="w">        </span><span class="n">per</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getName</span><span class="p">());</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-35-10" name="__codelineno-35-10"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-35-11" name="__codelineno-35-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Si necessitàrem mostrar el nom de la classe podem fer-ho amb el mètode <em>getName()</em> del class. Si <em>per</em> està instanciat a <em>Profe</em>, mostraria: <em>No és Alumne sinó Profe</em>.</li>
+</ol>
+</li>
+<li>
+<p><ins>Saber si un objecte és una instància d'una classe <strong>o descendent</strong> d'ella</ins>. Usarem l'operador <strong><em>instanceof</em></strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
+<span class="normal"><a href="#__codelineno-36-2">2</a></span>
+<span class="normal"><a href="#__codelineno-36-3">3</a></span>
+<span class="normal"><a href="#__codelineno-36-4">4</a></span>
+<span class="normal"><a href="#__codelineno-36-5">5</a></span>
+<span class="normal"><a href="#__codelineno-36-6">6</a></span>
+<span class="normal"><a href="#__codelineno-36-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostra</span><span class="w"> </span><span class="p">(</span><span class="n">Persona</span><span class="w"> </span><span class="n">per</span><span class="p">){</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">per</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Alumne</span><span class="p">){</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="w">        </span><span class="p">((</span><span class="n">Alumne</span><span class="p">)</span><span class="n">per</span><span class="p">).</span><span class="na">mostraCurs</span><span class="p">();</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Si <em>per</em> està instanciat a una classe filla d'<em>Alumne</em> (com podria ser <em>AlumneESO</em>), també es compliria la condició.</li>
+</ol>
+</li>
+<li>
+<p><ins>També podem  fer un càsting sense comprovar la classe instanciada</ins>. Usarem un <strong>try-catch</strong>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span>
+<span class="normal"><a href="#__codelineno-37-2">2</a></span>
+<span class="normal"><a href="#__codelineno-37-3">3</a></span>
+<span class="normal"><a href="#__codelineno-37-4">4</a></span>
+<span class="normal"><a href="#__codelineno-37-5">5</a></span>
+<span class="normal"><a href="#__codelineno-37-6">6</a></span>
+<span class="normal"><a href="#__codelineno-37-7">7</a></span>
+<span class="normal"><a href="#__codelineno-37-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostra</span><span class="w"> </span><span class="p">(</span><span class="n">Persona</span><span class="w"> </span><span class="n">per</span><span class="p">){</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="w">    </span><span class="k">try</span><span class="p">{</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a><span class="w">        </span><span class="p">((</span><span class="n">Alumne</span><span class="p">)</span><span class="n">per</span><span class="p">).</span><span class="na">mostraCurs</span><span class="p">();</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a><span class="w">    </span><span class="k">catch</span><span class="p">(</span><span class="n">ClassCastException</span><span class="w"> </span><span class="n">e</span><span class="p">){</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-37-8" name="__codelineno-37-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>No estem obligats a posar alguna instrucció en el bloc del <em>catch</em>.</li>
+</ol>
+</li>
+</ol>
+<h4 id="esquema-resum-dels-distints-tipus-de-polimorfisme">Esquema resum dels distints tipus de polimorfisme</h4>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Tipus</th>
+<th style="text-align: center;">Sobrecàrrega basada en paràmetres</th>
+<th style="text-align: center;">Sobrecàrrega (Override)</th>
+<th style="text-align: center;">Sobrecàrrega basada en l'àmbit</th>
+<th style="text-align: center;">Variables polimòrfiques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">De mètode o de variable</td>
+<td style="text-align: center;">Mètode</td>
+<td style="text-align: center;">Mètode</td>
+<td style="text-align: center;">Mètode</td>
+<td style="text-align: center;">Variable</td>
+</tr>
+<tr>
+<td style="text-align: center;">On està el polimorfisme?</td>
+<td style="text-align: center;">En la mateixa classe</td>
+<td style="text-align: center;">En classes distintes amb herència</td>
+<td style="text-align: center;">En classes distintes sense herència</td>
+<td style="text-align: center;">En objectes definits en certa classe però instanciats a una filla</td>
+</tr>
+<tr>
+<td style="text-align: center;">Poden tenir els mateixos paràmetres?</td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">Sí</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: center;">Usos freqüents</td>
+<td style="text-align: center;">- Classe amb més d’un constructor</td>
+<td style="text-align: center;">- Subclasses que volen modificar el comportament d’un mètode de la superclasse</td>
+<td style="text-align: center;">- Mètodes amb un nom comú però que tenen poc a veure</td>
+<td style="text-align: center;">- Llista que accepta objectes de distintes subclasses</td>
+</tr>
+<tr>
+<td style="text-align: center;">Quan s'invoca un mètode, quin s'executa?</td>
+<td style="text-align: center;">El que concorda amb els paràmetres d'entrada</td>
+<td style="text-align: center;">El de la classe de l'objecte que fa la crida. Si no existeix, el de la superclasse.</td>
+<td style="text-align: center;">El de la classe de l'objecte que fa la crida</td>
+<td style="text-align: center;">- Si el mètode (o atribut) està en pare i fill, agafa el del fill. - Si només en pare, agafa el del classe. - Si només en fill, cal fer el càsting per a agafar-lo (si no, error de compilació)</td>
+</tr>
+<tr>
+<td style="text-align: center;">Se sap a qui invoca en temps de...</td>
+<td style="text-align: center;">Compilació</td>
+<td style="text-align: center;">Compilació</td>
+<td style="text-align: center;">Compilació</td>
+<td style="text-align: center;">Execució</td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<details class="question">
+<summary>Exercici 20. Polimorfisme</summary>
+<p>El mètode <em>mostrarDades()</em> té polimorfisme de sobreescriptura, ja que està implementat en distintes classes amb relació d'herència (<em>Cotxe</em> i <em>Cotxe2aMa</em>). Modifica el mètode <em>mostrarDades()</em> de la subclasse: fes ús de "<em>super.</em>" per a accedir al <em>mostrarDades()</em> de la superclasse.</p>
+</details>
+<details class="question">
+<summary>Exercici 21</summary>
+<p>Anem a sobrecarregar el mètode <em>revisar</em> en la classe <em>Cotxe</em>. Crea en la classe <em>Cotxe</em> altre mètode <em>revisar</em> però que reba un vector de 5 booleans. El mètode haurà de copiar les components del vector d'entrada en les components de l'atribut revisions.</p>
+</details>
+<h2 id="atributs-i-metodes-estatics">Atributs i mètodes estàtics</h2>
+<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
 
