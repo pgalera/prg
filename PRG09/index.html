@@ -1072,6 +1072,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#annex-i-diagrames-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annex I. Diagrames de classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Annex I. Diagrames de classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components-dun-diagrama-de-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components d'un Diagrama de Classe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-diagrames-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples de Diagrames de Classes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1501,6 +1534,39 @@
       Atributs i mètodes estàtics
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annex-i-diagrames-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Annex I. Diagrames de classes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Annex I. Diagrames de classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#components-dun-diagrama-de-classe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Components d'un Diagrama de Classe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-diagrames-de-classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples de Diagrames de Classes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3107,7 +3173,25 @@
 <ol>
 <li>Crea l'aplicació <em>PersonesInstitut</em>, amb les següents classes:</li>
 </ol>
-<p><center><img alt="Classes exercici 23" src="../img/ud9/exercici23.png" /></center></p>
+<p><center>
+<pre class="mermaid"><code>classDiagram
+class Persona {
+    - String nom
+    + mostraNom()
+}
+
+class Profe {
+    + mostraNom()
+}
+
+class Alumne {
+    - String curs
+    + mostraCurs()
+}
+
+Persona &lt;|-- Profe
+Persona &lt;|-- Alumne</code></pre>
+</center></p>
 <ol>
 <li>En el main crea una llista (vector de 100 persones o un ArrayList) on guardarem tot el personal de l'institut (profes, alumnes o qualsevol altre tipus de persones).</li>
 <li>Assigna un professor en el 1r element de la llista; un alumne en el 2n; i una persona en el 3r. Posa dades qualsevol a les 3 persones. Si vols, crea els constructors que necessites.</li>
@@ -3118,6 +3202,99 @@
 </details>
 <h2 id="atributs-i-metodes-estatics">Atributs i mètodes estàtics</h2>
 <p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
+<h2 id="annex-i-diagrames-de-classes">Annex I. Diagrames de classes</h2>
+<p>Els <strong>diagrames de classes</strong> són una representació gràfica de les classes, els seus atributs i mètodes, i les relacions entre elles en un sistema orientat a objectes. Són una part fonamental del llenguatge de modelatge unificat (UML), que s'utilitza per a dissenyar i documentar sistemes informàtics de manera clara i entenedora. Els diagrames de classes ajuden a visualitzar l'arquitectura del sistema i les interaccions entre els diferents components (clases) d'una aplicació.</p>
+<h3 id="components-dun-diagrama-de-classe">Components d'un Diagrama de Classe</h3>
+<p>Un diagrama de classe conté diversos components que ajuden a definir clarament la relació entre les classes i les seves característiques. Alguns dels components més comuns són:</p>
+<ol>
+<li>
+<p><strong>Classes</strong>: Cada classe s'ofereix com un rectangle que es divideix en tres seccions:</p>
+<ul>
+<li>El nom de la classe.</li>
+<li>Els atributs de la classe.</li>
+<li>Els mètodes de la classe.</li>
+</ul>
+</li>
+<li>
+<p><strong>Visibilitat</strong>: Els atributs i mètodes poden tenir visibilitat, indicada mitjançant símbols:</p>
+<ul>
+<li><strong>+</strong> Públic (accessible des de qualsevol classe).</li>
+<li><strong>-</strong> Privat (només accessible dins de la classe).</li>
+<li><strong>#</strong> Protegit (accessible a la classe i les seves subclases).</li>
+</ul>
+</li>
+<li>
+<p><strong>Relacions</strong>:</p>
+<ul>
+<li><strong>Herència</strong>: Representa la relació d'herència entre classes, mostrada amb una fletxa amb un triangle ple a l'extrem.</li>
+<li><strong>Associació</strong>: Una línia simple entre classes que indica que les dues tenen algun tipus de relació.</li>
+<li><strong>Composició</strong>: Representada per una línia amb un diamant ple en l'extrem, indicant que una classe "conté" a una altra i depèn de la seva existència.</li>
+<li><strong>Agregació</strong>: Similar a la composició, però amb un diamant buit, la qual cosa indica que les instàncies de les classes associades poden existir de manera independent.</li>
+</ul>
+</li>
+</ol>
+<h3 id="exemples-de-diagrames-de-classes">Exemples de Diagrames de Classes</h3>
+<details class="example">
+<summary>Herència entre Classes</summary>
+<p>En aquest exemple, tenim una classe <code>Persona</code> que té atributs i mètodes comuns. Les classes <code>Profe</code> i <code>Alumne</code> hereten de la classe <code>Persona</code>, afegint els seus propis mètodes.</p>
+<p><center>
+<pre class="mermaid"><code>classDiagram
+    class Persona {
+        - String nom
+        + mostraNom()
+    }
+
+    class Profe {
+        + mostraNom()
+    }
+
+    class Alumne {
+        - String curs
+        + mostraCurs()
+    }
+
+    Persona &lt;|-- Profe
+    Persona &lt;|-- Alumne</code></pre>
+</center></p>
+<p>En aquest cas, <code>Profe</code> i <code>Alumne</code> hereten la classe <code>Persona</code>, però cada una té els seus propis mètodes, com <code>mostraNom</code> i <code>mostraCurs</code>.</p>
+</details>
+<details class="example">
+<summary>Relació d'Associació</summary>
+<p>En aquest cas, dues classes <code>Client</code> i <code>CompteBancari</code> estan associades. Un client pot tenir múltiples comptes bancaris.</p>
+<p><center>
+<pre class="mermaid"><code>classDiagram
+    class Client {
+        - String nom
+        + obtenirNom()
+    }
+
+    class CompteBancari {
+        - String numeroCompte
+        + obtenirSaldo()
+    }
+
+    Client "1" -- "0..*" CompteBancari : té</code></pre>
+</center></p>
+<p>Aquest diagrama mostra que un <code>Client</code> pot tenir diversos <code>CompteBancari</code>, representant una relació d'associació entre les dues classes.</p>
+</details>
+<details class="example">
+<summary>Composició</summary>
+<p>En aquest exemple, es mostra una relació de composició, on una classe <code>CistellaCompra</code> conté diverses instàncies de la classe <code>Producte</code>. Si es destrueix la <code>CistellaCompra</code>, també es destrueixen els <code>Productes</code> dins d'ella.</p>
+<p><center>
+<pre class="mermaid"><code>classDiagram
+    class CistellaCompra {
+        + afegirProducte()
+    }
+
+    class Producte {
+        - String nom
+        + obtenirPreu()
+    }
+
+    CistellaCompra "1" *-- "0..*" Producte : conté</code></pre>
+</center></p>
+<p>En aquest diagrama, la relació de composició es representa amb un diamant ple a l'extrem de la línia, indicant que la vida de <code>Producte</code> depèn de la de <code>CistellaCompra</code>.</p>
+</details>
 
 
 
