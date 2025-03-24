@@ -1753,13 +1753,13 @@
 </ul>
 </li>
 <li><strong><em>abstract / final / (res)</em></strong>: s'utilitza per a l'herència de classes (ja ho vorem).<ul>
-<li><strong>Si una classe és <em>abstract</em></strong> no podrem crear objectes d'eixa classe, sinó que s'hauran de definir de classes filles d'eixa classe.</li>
+<li><strong>Si una classe és <em>abstract</em></strong> no podrem crear objectes d'eixa classe, sinó que s'hauran de definir classes filles d'eixa classe.</li>
 <li><strong>Si una classe és <em>final</em></strong> no es podran crear subclasses d'ella.</li>
 </ul>
 </li>
 </ul>
 <h3 id="atributs">Atributs</h3>
-<p>Com ja hem vist al tema anterior, són les variables membre que caracteritzen l'objecte. EL seu valor en un moment donat indica l'<strong>estat</strong> de l'objecte.</p>
+<p>Com ja hem vist al tema anterior, són les variables membre que caracteritzen l'objecte. El seu valor en un moment donat indica l'<strong>estat</strong> de l'objecte.</p>
 <p>Esta és la sintaxi de Java per a definir un atribut:</p>
 <p><center><code>&lt;nivellD'Accés&gt; &lt;tipusDeDades&gt; nomAtribut;</code></center></p>
 <h4 id="tipus-de-dades-dels-atributs">Tipus de dades dels atributs</h4>
@@ -1771,16 +1771,16 @@
 <p class="admonition-title">Consell</p>
 <p><strong>Els atributs solen ser privats</strong>, i la classe que els inclou, si cal, donarà accés a ells mitjançant els mètodes (generalment públics) de lectura i modificació d'eixos atributs. És el que es coneix com a <strong>encapsulament</strong> (que vorem en detall més endavant).</p>
 </div>
-<p>Per si no ha quedat clar, mireu en la següent taula els diferents nivells d'accés dels atributs i mètodes:</p>
+<p>Per si no ha quedat clar, a la següent taula tenimi resumits els diferents nivells d'accés dels atributs i mètodes:</p>
 <p><center><img alt="Taula nivells accés" src="../img/ud9/taulaNivellsAcc%C3%A9s.png" /></center></p>
 <details class="question">
 <summary>Exercici 3</summary>
-<p>Posa els següents atributs a la classe <em>Cotxe</em>: <em>numBastidor</em>, <em>matricula</em>, <em>marca</em>, <em>model</em>, <em>color</em>, <em>preu</em>. També l'atribut <strong>privat</strong> <em>revisions</em> (vector de 5 booleans).</p>
+<p>Posa els següents atributs a la classe <em>Cotxe</em>: <em>numBastidor</em>, <em>matricula</em>, <em>marca</em>, <em>model</em>, <em>color</em> i <em>preu</em>. També l'atribut <strong>privat</strong> <em>revisions</em> (vector de 5 booleans).</p>
 </details>
 <h3 id="metodes">Mètodes</h3>
 <p>Són les operacions (procediments o funcions) que s'apliquen sobre els objectes. Entre altres coses, permeten canviar el seu estat (valor dels atributs), fer operacions sobre el seu estat, consultes... però tenen un funcionament un poc diferent ja que actuen sobre un objecte. Veiem com invocaríem un mètode i com es defineix:</p>
 <h4 id="us-dels-metodes">Ús dels mètodes</h4>
-<p>Després de crear un objecte (en el <em>main</em> o on siga), si volem fer alguna cosa sobre ell, "li enviarem un missatge": indicarem el nom de l'objecte, un punt, i el missatge (nom del mètode amb els paràmetres). Pr exemple, si tenim un objecte de la classe Cercle (on tindrà el radi, etc), podríem fer:</p>
+<p>Després de crear un objecte (en el <em>main</em> o on siga), si volem fer alguna cosa sobre ell, "li enviarem un missatge": indicarem el nom de l'objecte, un punt, i el missatge (nom del mètode amb els paràmetres). Per exemple, si tenim un objecte de la classe <em>Cercle</em> (on tindrà el <em>radi</em>, etc), podríem fer:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -1844,8 +1844,8 @@
 <li>El <em>this</em> és una referència a <em>cercle1</em> (l'objecte de la crida). Per tant, usarem el <em>this</em> per a accedir als atributs, encara que és opcional.</li>
 </ol>
 <h4 id="modificador-static-dels-metodes">Modificador <em>static</em> dels mètodes</h4>
-<p>Recordem que sempre posàvem la paraula <em>static</em> en la declaració de funcions i procediments. Però observem que ara no l'estem posant.</p>
-<p>Quan posarem el modificador <em>static</em> en un mètode?</p>
+<p>Recordem que sempre posàvem la paraula <strong><em>static</em></strong> en la declaració de funcions i procediments. Però observem que ara no l'estem posant.</p>
+<p>Quan posarem el modificador <strong><em>static</em></strong> en un mètode?</p>
 <p><mark><strong>Mètode sense <em>static</em></strong></mark>: Quan volem que s'invoque amb el nom de l'objecte:</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">cercle1</span><span class="p">.</span><span class="na">diametre</span><span class="p">();</span><span class="w"> </span><span class="c1">//(1)!</span>
 </code></pre></div></td></tr></table></div>
