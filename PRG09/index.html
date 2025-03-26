@@ -1170,6 +1170,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Els mètodes equals(...) i hashCode()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-metode-equals" class="md-nav__link">
+    <span class="md-ellipsis">
+      El mètode equals()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -1748,6 +1763,21 @@
       Els mètodes equals(...) i hashCode()
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Els mètodes equals(...) i hashCode()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#el-metode-equals" class="md-nav__link">
+    <span class="md-ellipsis">
+      El mètode equals()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -3572,7 +3602,53 @@ Persona &lt;|-- Alumne</code></pre>
 </ul>
 </details>
 <h3 id="els-metodes-equals-i-hashcode">Els mètodes <em>equals(...)</em> i <em>hashCode()</em></h3>
-<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
+<h4 id="el-metode-equals">El mètode <em>equals()</em></h4>
+<p>Com ja sabem, per saber si 2 objectes són iguals no podem usar <code>==</code> ja que ens compararà les adreces de memòria. Per tant, hem de fer servir el mètode <strong><em>equals()</em></strong> de la classe <em>Object</em>.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple d'ús</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1">1</a></span>
+<span class="normal"><a href="#__codelineno-41-2">2</a></span>
+<span class="normal"><a href="#__codelineno-41-3">3</a></span>
+<span class="normal"><a href="#__codelineno-41-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1"></a><span class="n">Alumne</span><span class="w"> </span><span class="n">alu1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumne</span><span class="p">();</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2"></a><span class="n">Alumne</span><span class="w"> </span><span class="n">alu2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumne</span><span class="p">();</span>
+<a id="__codelineno-41-3" name="__codelineno-41-3"></a><span class="p">...</span>
+<a id="__codelineno-41-4" name="__codelineno-41-4"></a><span class="k">if</span><span class="p">(</span><span class="n">alu1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">alu2</span><span class="p">)){...}</span><span class="w"> </span><span class="c1">//(1)!</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Comprova si <em>alu1</em> és <strong>igual</strong> a <em>alu2</em>.</li>
+</ol>
+</div>
+<p>Ara bé: el mètode equals de la classe <em>Object</em> no pot saber quan 2 alumnes són iguals, i per això només diu que 2 objectes són iguals si són el mateix objecte (mateixa adreça de memòria).</p>
+<p>Per tant, en la nostra classe <em>Alumne</em> hem de sobreescriure el mètode <em>equals</em> per a que compare els atributs de 2 objectes i ens diga si són iguals o no. Haurem de definir les condicions de quan 2 objectes són iguals (per exemple, si tenen el mateix nom i edat).</p>
+<p>I no podríem dir-li d'una forma (en compte d'<em>equals</em>)? La resposta és no. És important que reimplemente el mètode <em>equals()</em> de la classe <em>Object</em>, ja que eixe mètode és invocat per certs mètodes d'altes classes de Java (com <em>contains()</em> de <em>ArrayList</em> o <em>containsKey()</em> de <em>HashMap</em>).</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
+<span class="normal"><a href="#__codelineno-42-2">2</a></span>
+<span class="normal"><a href="#__codelineno-42-3">3</a></span>
+<span class="normal"><a href="#__codelineno-42-4">4</a></span>
+<span class="normal"><a href="#__codelineno-42-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1"></a><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Alumne</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alumnes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span>
+<a id="__codelineno-42-2" name="__codelineno-42-2"></a><span class="p">...</span>
+<a id="__codelineno-42-3" name="__codelineno-42-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">alumnes</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="n">alu1</span><span class="p">)){...}</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-42-4" name="__codelineno-42-4"></a><span class="kt">int</span><span class="w"> </span><span class="n">posicio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alumnes</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="n">alu1</span><span class="p">);</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-42-5" name="__codelineno-42-5"></a><span class="n">alumnes</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">alumne1</span><span class="p">);</span><span class="w"> </span><span class="c1">//(3)!</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Comprova si en la llista <em>alumnes</em> hi ha un alumne <strong>igual</strong> a <em>alu1</em>.</li>
+<li>Retorna la posició de la llista <em>alumnes</em> on està el primer alumne <strong>igual</strong> a <em>alu1</em>.</li>
+<li>Esborra de la llista d'alumnes el primer alumne que trobe que siga <strong>igual</strong> a <em>alu1</em>.</li>
+</ol>
+</div>
+<p>L'estructura d'un mètode <em>equals</em> sol ser la següent:</p>
+<p><center><img alt="estructura Equals" src="../img/ud9/exempleEquals.png" /></center></p>
+<details class="question">
+<summary>Exercici 30. <em>equals()</em></summary>
+<ul>
+<li>a. Fes el mètode <em>equals()</em> de la classe <em>Cotxe</em> tenint en compte que 2 cotxes són iguals si tenen la mateixa matrícula o si tenen el mateix número de bastidor.</li>
+<li>b. Crea 2 cotxes amb les mateixes dades i comprova si són iguals.</li>
+<li>c. Posa un d'eixos cotxes en l'ArrayList <em><em>llistaCotxes</em> i comprova (amb el </em>contains*) si eixe cotxe està o no en la llisa.</li>
+</ul>
+</details>
 <h2 id="annex-i-diagrames-de-classes">Annex I. Diagrames de classes</h2>
 <p>Els <strong>diagrames de classes</strong> són una representació gràfica de les classes, els seus atributs i mètodes, i les relacions entre elles en un sistema orientat a objectes. Són una part fonamental del llenguatge de modelatge unificat (UML), que s'utilitza per a dissenyar i documentar sistemes informàtics de manera clara i entenedora. Els diagrames de classes ajuden a visualitzar l'arquitectura del sistema i les interaccions entre els diferents components (clases) d'una aplicació.</p>
 <h3 id="components-dun-diagrama-de-classe">Components d'un Diagrama de Classe</h3>
