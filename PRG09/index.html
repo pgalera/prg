@@ -1202,6 +1202,39 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#la-classe-arraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      La classe ArrayList
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La classe ArrayList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaracio-dun-objecte-arraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaració d'un objecte ArrayList
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodes-darraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mètodes d'ArrayList
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#annex-i-diagrames-de-classes" class="md-nav__link">
     <span class="md-ellipsis">
       Annex I. Diagrames de classes
@@ -1796,6 +1829,39 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-classe-arraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      La classe ArrayList
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La classe ArrayList">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaracio-dun-objecte-arraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Declaració d'un objecte ArrayList
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodes-darraylist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mètodes d'ArrayList
+    </span>
+  </a>
   
 </li>
         
@@ -3673,7 +3739,114 @@ Persona &lt;|-- Alumne</code></pre>
 <p>Fes l'<em>equals()</em> de <em>Cotxe2aMa</em> de forma que 2 cotxes de 2a mà són igual si, a més de tindre el mateix bastidro o matrícula, tenen els mateixos kms. L'<em>equals</em> de <em>Cotxe2aMa</em> haurà d'invocar l'equals de <em>Cotxe</em>. Comprova des del <em>main</em> que 2 cotxes de 2a mà són iguals.</p>
 </details>
 <h4 id="el-metode-hashcode">El mètode <em>hashCode()</em></h4>
-<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
+<p>Este mètode complementa l'<em>equals(...)</em>, i serveix per a buscar elements iguals en estructures tipus <em>HashSet</em> o <em>HashMap</em> de forma més eficient. Per tant, només caldrà sobreescriure'l si volem usar eixes estructures (i estaríem obligats a fer-ho).</p>
+<p>Com funciona el <em>hashCode()</em>? Per exemple, cada vegada que intentem inserir un element en un <em>HashSet</em>, el mètode <em>add</em> necessita saber si ja hi ha un objecte igual en la llista (ja que no poden estar repetits). Com ha de recórrer tots els elements, amb l'<em>equals()</em> aniria molt lent. La idea és associar a cada element un número i així tindre el <em>HashSet</em> ordenat per eixe número per fer la recerca més ràpida.</p>
+<p>Exemple de <em>hashCode()</em> que genera intelliJ des del menú <em>Generate</em> per a la classe <em>Cotxe</em>:</p>
+<p><center><img alt="hashCode" src="../img/ud9/hashCode.png" /></center></p>
+<p>Altres IDEs generen un <em>hashCode</em> diferent, però la idea és la mateixa. El que fa és combinar els atributs de l'objecte i generar un número.</p>
+<p>Per exemple, el Netbeans per a la nostra classe <em>Alumne</em> generaria un <em>hashCode</em> com el següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
+<span class="normal"><a href="#__codelineno-43-2">2</a></span>
+<span class="normal"><a href="#__codelineno-43-3">3</a></span>
+<span class="normal"><a href="#__codelineno-43-4">4</a></span>
+<span class="normal"><a href="#__codelineno-43-5">5</a></span>
+<span class="normal"><a href="#__codelineno-43-6">6</a></span>
+<span class="normal"><a href="#__codelineno-43-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1"></a><span class="nd">@Override</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">hashCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-43-3" name="__codelineno-43-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<a id="__codelineno-43-4" name="__codelineno-43-4"></a><span class="w">    </span><span class="n">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">53</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">hash</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Objects</span><span class="p">.</span><span class="na">hashCode</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="p">);</span>
+<a id="__codelineno-43-5" name="__codelineno-43-5"></a><span class="w">    </span><span class="n">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">89</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">hash</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">edat</span><span class="p">;</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-43-6" name="__codelineno-43-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hash</span><span class="p">;</span>
+<a id="__codelineno-43-7" name="__codelineno-43-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>
+<p>Este mètode retorna el número associat a l'objecte. No l'hem d'invocar nosaltres, sinó que ho farà el <em>contains</em>, <em>indexOf</em> o <em>remove</em> de les estructures <em>HashSet</em> i <em>HashMap</em>.</p>
+</li>
+<li>
+<p>No intentes entendre el per què de les fórmules. Es tracta de fer correspondre un número a les dades de l'objecte, de la millor forma possible per tal de minimitzar les col·lisions.</p>
+</li>
+</ol>
+<p>No passa res si hi ha col·lisions, (que els objectes diferents tinguen el mateix número de <em>hashCode()</em>), ja que , per a saber si un objecte és igual a un altre, primer es mira si els dos tenen el mateix número de <em>hashCode()</em>. Si és diferent, els objectes són diferents. Si és el mateix, llavors es mira si són iguals amb el mètode <em>equals()</em>.</p>
+<p>Si no sobreescrivim el <em>hashCode()</em> d'<em>Object</em>, no funcionaries els mètodes <em>add</em>, <em>remove</em> i <em>contains</em> del <em>HashSet</em> i <em>HashMap</em>, ja que el <em>hashCode()</em> de la classe <em>Object</em> retorna la posició de memòria (en sistema decimal) de l'objcete. Per tant, encara que els objectes tinguen les mateixes dades, sempre consideraria que són diferents (si no tenen la mateixa adreça de memòria).</p>
+<h2 id="la-classe-arraylist">La classe <em>ArrayList</em></h2>
+<p>Al llarg del curs ja hem usat els <em>ArrayList</em> però els hem vist un poc per damunt. Ara els vorem més detalladament ja que, a més, ara tindrem <em>ArrayList</em> d'objectes, no només de tipus bàsics.</p>
+<p>Com ja sabem, la classe <em>ArrayList</em> permet guardar dades en memòria de manera similar als arrays convencionals, però amb avantatges com:</p>
+<ul>
+<li>No s'indica la grandària sinó que s'assigna de forma dinàmica.</li>
+<li>Disposen d'un conjunt de mètodes que permeten consultar, eliminar, introduir elements, etc de forma automàtica.</li>
+</ul>
+<p>Per a usar eixa classe cal importar el paquet: <strong><em>java.util.ArrayList</em></strong></p>
+<h3 id="declaracio-dun-objecte-arraylist">Declaració d'un objecte ArrayList</h3>
+<p><center><code>ArrayList &lt;nomClasse&gt; nomLlista = new ArrayList();</code></center></p>
+<ul>
+<li>Podrà guardar elements d'eixa classe o d'una classe o de subclasses. Si no es posa <code>&lt;nomClasse&gt;</code> admetrà objectes de qualsevol classe però, com vorem, després caldrà fer càstings per a accedir als atributs.</li>
+<li>En cas de guardar dades d'un tipus bàsic de Java com <em>char</em>, <em>int</em>, <em>double</em>, etc, s'ha d'especificar el nom de la classe associada: <em>Character</em>, <em>Integer</em>, <em>Double</em>, etc.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Exemples</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span>
+<span class="normal"><a href="#__codelineno-44-2">2</a></span>
+<span class="normal"><a href="#__codelineno-44-3">3</a></span>
+<span class="normal"><a href="#__codelineno-44-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">paisos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2"></a><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">edats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3"></a><span class="n">ArrayList</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Alumne</span><span class="o">&gt;</span><span class="w"> </span><span class="n">alumnes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span>
+<a id="__codelineno-44-4" name="__codelineno-44-4"></a><span class="n">ArrayList</span><span class="w"> </span><span class="n">coses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h3 id="metodes-darraylist">Mètodes d'ArrayList</h3>
+<details class="info">
+<summary>boolean add</summary>
+<p><center><img alt="boolean add" src="../img/ud9/metodes/booleanAdd.png" /></center></p>
+</details>
+<details class="info">
+<summary>void add</summary>
+<p><center><img alt="void add" src="../img/ud9/metodes/voidAdd.png" /></center></p>
+</details>
+<details class="info">
+<summary>Object set</summary>
+<p><center><img alt="Object set" src="../img/ud9/metodes/ObjectSet.png" /></center></p>
+</details>
+<details class="info">
+<summary>Object remove</summary>
+<p><center><img alt="Object remove" src="../img/ud9/metodes/ObjectRemove.png" /></center></p>
+</details>
+<details class="info">
+<summary>boolean remove</summary>
+<p><center><img alt="boolean remove" src="../img/ud9/metodes/booleanRemove.png" /></center></p>
+</details>
+<details class="info">
+<summary>Object get</summary>
+<p><center><img alt="Object get" src="../img/ud9/metodes/ObjectGet.png" /></center></p>
+</details>
+<details class="info">
+<summary>int indexOf</summary>
+<p><center><img alt="int IndexOf" src="../img/ud9/metodes/intIndexOf.png" /></center></p>
+</details>
+<details class="info">
+<summary>boolean contains</summary>
+<p><center><img alt="boolean contains" src="../img/ud9/metodes/booleanContains.png" /></center></p>
+</details>
+<details class="info">
+<summary>void clear</summary>
+<p><center><img alt="void clear" src="../img/ud9/metodes/voidClear.png" /></center></p>
+</details>
+<details class="info">
+<summary>boolean isEmpty</summary>
+<p><center><img alt="boolean isEmpty" src="../img/ud9/metodes/booleanIsEmpty.png" /></center></p>
+</details>
+<details class="info">
+<summary>Object clone</summary>
+<p><center><img alt="Object clone" src="../img/ud9/metodes/ObjectClone.png" /></center></p>
+</details>
+<details class="info">
+<summary>Object [] toArray</summary>
+<p><center><img alt="Object toArray" src="../img/ud9/metodes/ObjectToArray.png" /></center></p>
+</details>
+<details class="info">
+<summary>int size</summary>
+<p><center><img alt="int size" src="../img/ud9/metodes/intSize.png" /></center></p>
+</details>
 <h2 id="annex-i-diagrames-de-classes">Annex I. Diagrames de classes</h2>
 <p>Els <strong>diagrames de classes</strong> són una representació gràfica de les classes, els seus atributs i mètodes, i les relacions entre elles en un sistema orientat a objectes. Són una part fonamental del llenguatge de modelatge unificat (UML), que s'utilitza per a dissenyar i documentar sistemes informàtics de manera clara i entenedora. Els diagrames de classes ajuden a visualitzar l'arquitectura del sistema i les interaccions entre els diferents components (clases) d'una aplicació.</p>
 <h3 id="components-dun-diagrama-de-classe">Components d'un Diagrama de Classe</h3>
