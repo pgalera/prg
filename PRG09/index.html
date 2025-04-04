@@ -3847,6 +3847,75 @@ Persona &lt;|-- Alumne</code></pre>
 <summary>int size</summary>
 <p><center><img alt="int size" src="../img/ud9/metodes/intSize.png" /></center></p>
 </details>
+<details class="question">
+<summary>Exercici 32. ArrayList de Strings</summary>
+<ul>
+<li>Crea un <em>ArrayList</em> de <em>Strings</em> anomenat pobles.</li>
+<li>Afig a la llista 4 pobles: Tavernes, Sueca, Sollana i Cullera.</li>
+<li>Afig en la primera posició: Gandia.</li>
+<li>Canvia el poble de la posició número 2 per Cullera (un altre Cullera la que ja hi havia) i guarda el poble que s'ha canviat en la variable PobleCanviat.</li>
+<li>Esborra el poble de la posició 3 de la llista i guarda el poble esborrat en la variable PobleEsborrat.</li>
+<li>Esborra Sueca (no sabem en quina posició està) i mostra el resultat.</li>
+<li>Mostra per pantalla el poble de la posició 2.</li>
+<li>Mostra per pantalla la primera posició de Cullera i l'última.</li>
+<li>Mostra tots els pobles de la llista (cadascun en una línia).</li>
+<li>Mostra per pantalla si la llista està buida o no.</li>
+</ul>
+</details>
+<details class="question">
+<summary>Exercici 33. ArrayList d'objectes</summary>
+<p>Volem guardar les dades de cada alumne i les de cada grup, així com quins alumnes pertanyen a cada grup. Per a fer això, crearem la classe Alumne i la classe Grup. Esta última tindrà, com a un altre atribut, un vector d’alumnes on estaran tots els alumnes de cada grup. És a dir, crea en una aplicació nova:</p>
+<ul>
+<li>La classe <strong><em>Alumne</em></strong>:<ul>
+<li>Atributs (privats): dni, nom, cognoms, edat, poble.</li>
+<li>Mètodes:<ul>
+<li>Constructor amb paràmetres: dni, nom, cognoms, edat, poble.</li>
+<li>Getters i setters.</li>
+<li><strong><em>toString</em></strong>. Retornar una cadena amb les dades. Per exemple: "12999999 Pep Garcia, 21 anys (Sueca)"</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>La classe <strong><em>Grup</em></strong>:<ul>
+<li>Atributs (privats): codi, curs, cicle, alumnes.<ul>
+<li>L'atribut <em>alumnes</em> ha de ser un <em>ArrayList</em> d'alumnes (no de noms d'alumnes, sinó d'objectes de la classe <em>Alumne</em>).</li>
+</ul>
+</li>
+<li>Mètodes:<ul>
+<li>Constructor amb paràmetres: codi, curs, cicle.</li>
+<li>Getters i setters de codi, curs i cicle (però no de la llista alumnes).</li>
+<li><strong><em>afegirAlumne</em></strong>: Per a afegir un alumne al grup. Li passem com a paràmetre un <em>Alumne</em>. En un grup no podran haver més de 20 alumnes. Si cap l'alumne, l'inserirà i retornarà la quantitat d'alumnes que encara caben. Si ja estava posat, retornarà -1. Si no cap, retornarà -2.</li>
+<li><strong><em>llevarAlumne</em></strong>. Per a llevar un alumne del grup. Li passem com a paràmetre un alumne. Si estava, el llevarà del grup i retornarà <em>true</em>. Si no, <em>false</em>.</li>
+<li><strong><em>llevarAlumne</em></strong>. Per a llevar un alumne del grup. Li passem com a paràmetre el dni de l’alumne. Retornarà <em>true</em> si l’alumne estava en el grup. Si no, <em>false</em>.</li>
+<li><strong><em>quantitat</em></strong>. Retornarà la quantitat d’alumnes del grup.</li>
+<li><strong><em>getAlumne</em></strong>. Li passem com a paràmetre el dni i ha de retornar l’Alumne corresponent (no el nom). Si no està, retornarà <em>null</em>.</li>
+<li><strong><em>toString</em></strong>. Retornarà una cadena amb les dades del grup i dels alumnes:<ul>
+<li>GRUP: 1DAM Curs: 1 Cicle: Desenv.Aplic.Informàtiques</li>
+<li>12999999 Pep Garcia Garcia, 21 anys (Sueca)</li>
+<li>86444368 Pepa Garcia Garcia, 23 anys (Sueca)</li>
+<li>94577544 Pepet Manyes Garcia, 18 anys (Simat)</li>
+</ul>
+</li>
+<li>Crea altres mètodes que cregues convenients</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>La classe <strong><em>Main</em></strong>. En el mètode <strong><em>main</em></strong>:<ul>
+<li>Crea un <em>ArrayList</em> de grups (anomenat <em>grupInsti</em>) on estaran tots els grups de l'institut.</li>
+<li>Crea un <em>ArrayList</em> d'alumnes (anomenat <em>alumnesInsti</em>) on estaran tots els alumnes de l'institut.</li>
+<li>Fes proves per a utilitzar eixos <em>ArrayList</em> i utilitzar els mètodes de les classes fetes anteriorment. O, millor, un bucle amb el següent menú:<ul>
+<li>Crear grup.</li>
+<li>Crear alumne.</li>
+<li>Afegir alumne a grup.</li>
+<li>Llevar alumne de grup.</li>
+<li>etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</details>
 <h2 id="annex-i-diagrames-de-classes">Annex I. Diagrames de classes</h2>
 <p>Els <strong>diagrames de classes</strong> són una representació gràfica de les classes, els seus atributs i mètodes, i les relacions entre elles en un sistema orientat a objectes. Són una part fonamental del llenguatge de modelatge unificat (UML), que s'utilitza per a dissenyar i documentar sistemes informàtics de manera clara i entenedora. Els diagrames de classes ajuden a visualitzar l'arquitectura del sistema i les interaccions entre els diferents components (clases) d'una aplicació.</p>
 <h3 id="components-dun-diagrama-de-classe">Components d'un Diagrama de Classe</h3>
