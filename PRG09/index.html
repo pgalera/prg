@@ -3547,8 +3547,8 @@
 </ul>
 </li>
 <li>Crida al mètode anterior passant-li com a paràmetre un objecte de la classe <em>Cotxe2aMa</em> i una altra crida passant-li un objecte de la classe <em>Cotxe</em>.<ul>
-<li><ins>Problema</ins>: Voràs que dóna error d'execució en el moment de passar-li com a paràmetre un objecte de la classe <em>Cotxe</em>. El motiu és que ja que no pot fer el càsting a <em>Cotxe2aMa</em>, ja que només podem fer càsting a una classe ascendent.</li>
-<li><ins>Solució</ins>: Modifica el mètode <em>mostrarKms()</em> per a que si el paràmetre és una instància de <em>Cotxe2aMa</em>, que mostre els kms; si no, que mostre el text "Cotxe nou, amb 0 kms". Prova diverses solucions (<em>instanceof</em>, +getClass<em> o </em>try-catch*).</li>
+<li><ins>Problema</ins>: Voràs que dóna error d'execució en el moment de passar-li com a paràmetre un objecte de la classe <em>Cotxe</em>. El motiu és que no pot fer el càsting a <em>Cotxe2aMa</em>, ja que només podem fer càsting a una classe ascendent.</li>
+<li><ins>Solució</ins>: Modifica el mètode <em>mostrarKms()</em> per a que si el paràmetre és una instància de <em>Cotxe2aMa</em>, que mostre els kms; si no, que mostre el text "Cotxe nou, amb 0 kms". Prova diverses solucions (<em>instanceof</em>, <em>getClass</em> o <em>try-catch</em>).</li>
 </ul>
 </li>
 </ol>
@@ -3562,7 +3562,7 @@
 <p><center>
 <pre class="mermaid"><code>classDiagram
 class Persona {
-    - String nom
+    String nom
     + mostraNom()
 }
 
@@ -3571,7 +3571,7 @@ class Profe {
 }
 
 class Alumne {
-    - String curs
+    String curs
     + mostraCurs()
 }
 
