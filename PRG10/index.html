@@ -783,6 +783,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#les-interficies-comparable-i-comparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les interfícies Comparable i Comparator
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -882,6 +891,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-interficies-comparable-i-comparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les interfícies Comparable i Comparator
+    </span>
+  </a>
   
 </li>
       
@@ -1157,6 +1175,45 @@
 <p><center><img alt="Interfícies vs Classes" src="../img/ud10/interfVSclasses.png" /></center></p>
 <h3 id="interficies-vs-classes-abstractes">Interfícies vs classes abstractes</h3>
 <p><center><img alt="Interfícies vs Classes abstractes" src="../img/ud10/interfVSclassesAbs.png" /></center></p>
+<details class="question">
+<summary>Exercici 1. Interfícies</summary>
+<p>Crea el projecte <strong><em>ProvesInterficies</em></strong>. L'objectiu d'este exercici és poder fer càlculs estadístics (mínim, màxim i suma) de llistes de números, independentment de com estiguen implementades eixes llistes.</p>
+<ul>
+<li>
+<p>Crea esta interfície:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Estadistiques</span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">minim</span><span class="p">();</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">maxim</span><span class="p">();</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">suma</span><span class="p">();</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Crea la classe <strong><em>ArrayListEstad</em></strong> que tinga un ArrayList de <em>doubles</em> (nomenat <em>numeros</em>) i que implemente la interfície <em>Estaistiques</em>. <strong>NOTA</strong>: quan escrigues l'<em>implements</em>, voràs que dona error. És degut a que encara no has implementat els mètodes de la interfície. Implementa'ls.</p>
+</li>
+<li>
+<p>Crea la classe <strong><em>ArrayEstad</em></strong>, amb un array (un vector, no ArrayList) de doubles (anomenat <em>numeros</em>), que implemente la interfície <em>Estadístiques</em>. <strong>NOTA</strong>: Quan poses l'<em>implements</em>, clica en la icona de l'error i fes que l'IDE t'implemente els mètodes de la interfície. Després posa el cos dels mètodes.</p>
+</li>
+<li>
+<p>En el <em>main</em> defineix un objecte de cadascuna de les classes anteriors, afegeix valors a les seues llistes i usa els mètodes de la interfície per a mostrar els respectius mínims, màxims i sumes dels seus elements.</p>
+</li>
+</ul>
+</details>
+<details class="question">
+<summary>Exercici 2</summary>
+<p>Si volem que els objectes d’una classe es puguen comparar, eixa classe hauria de definir els mètodes <em>esMajor</em>, <em>esMenor</em> i <em>esIgual</em>. En compte d’implementar-los en eixa classe, l’objectiu és definir-los en una interfície i fer que cada classe que necessite poder comparar els seus objectes implemente eixa interfície.</p>
+<ul>
+<li>En el projecte <em>provesInterficies</em> construeix la interfície <strong><em>EsComparable</em></strong> amb els mètodes <strong><em>esMajor</em></strong>, <strong><em>esMenor</em></strong> i <strong><em>esIgual</em></strong>, als quals se’ls passa com a paràmetre un objecte i retornaran un <strong>booleà</strong> (<em>true</em> si this és major/menor/igual que l’objecte del paràmetre). Com sabràs, en la interfície no s’implementen, sinó que només es posa la capçalera dels mètodes. Posa també un comentari en <a href="https://www.oracle.com/es/technical-resources/articles/java/javadoc-tool.html">Javadoc</a> de què fa cada mètode.</li>
+<li>Crea la classe <strong><em>Cotxe</em></strong> (amb matrícula i preu) i que implemente la interfície <em>EsComparable</em>. Un cotxe serà menor que un altre si el preu és menor.</li>
+<li>En el <em>main</em> mostra el més gran de 2 cotxes qualssevol.</li>
+</ul>
+</details>
+<h2 id="les-interficies-comparable-i-comparator">Les interfícies <em>Comparable</em> i <em>Comparator</em></h2>
+<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
 
