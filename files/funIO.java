@@ -125,6 +125,21 @@ public class funIO {
         return text.toString() + ' '; // Un espai al final
     }
 
+    /**
+     * Retorna un caràcter repetit (cridat per funció lligOpcio)
+     *
+     * @param c       Caràcter a repetir
+     * @param vegades Quantitat de vegades a repetir el caràcter
+     * @return cadena amb el caràcter repetit
+     */
+    private static String repetix(char c, int vegades) {
+        String cadena = "";
+        for (int i = 0; i < vegades; i++) {
+            cadena += c;
+        }
+        return cadena;
+    }
+
 
     /**
      * Retorna el toString d'un ArrayList de Strings però en altre format.
@@ -458,20 +473,37 @@ public class funIO {
     }
 
     /**
-     * Mostra menú d'opcions i torna el número de l'opció triada per teclat.
+     * Mostra menú d'opcions i torna el número de l'opció triada per Teclat.
      *
+     * @param titol   Títol del menú
      * @param opcions Textos de les distintes opcions (en format d'arguments
-     * variables)
+     *                variables). No es passarà opció d'eixir, ja que s'afegirà l'opció 0.
      * @return El número de l'opció triada (1, 2, 3... o 0 per a eixir)
      */
-    public static int lligOpcio(String... opcions) {
-        System.out.println();
-        System.out.println("------------- MENÚ -------------");
+    public static int lligOpcio(String titol, String... opcions) {
+        // Càlcul amplària del menú (per a les ratlletes)
+        int lonMax = titol.length();
+        for (String opcio : opcions) {
+            if (opcio.length() > lonMax) {
+                lonMax = opcio.length();
+            }
+        }
+        lonMax += 5;
+
+        // Títol del menú
+        String trosset = repetix('=', (lonMax - (titol.length() + 2)) / 2);
+        System.out.println(trosset + " " + titol + " " + trosset);
+
+        // Mostrem les opcions
         for (int i = 0; i < opcions.length; i++) {
             System.out.println(" " + (i + 1) + ". " + opcions[i]);
         }
+        System.out.println(repetix('-', lonMax));
+
         System.out.println(" 0. Eixir");
-        System.out.println("--------------------------------\n");
+        System.out.println(repetix('=', lonMax));
+
+        // Demanem opció correcta per Teclat i la retornem
         int opcio = funIO.lligInt("Opció", 0, opcions.length);
         System.out.println();
         return opcio;
