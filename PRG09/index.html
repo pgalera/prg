@@ -3192,12 +3192,12 @@
 </details>
 <h2 id="polimorfisme">Polimorfisme</h2>
 <p>Acabem de vore que pot haver diferents mètodes amb el mateix nom però que fan coses diferents. Això és el <strong>polimorfisme</strong>.</p>
-<p>Una paraula polisèmica és aquella que té distints significats, segons el context. Igual passa amb el polimorfisme en la POO: un nom de mètode pot tindre distintes implementacions, i s'invocarà a un o altre segons el context.</p>
+<p>Una paraula polisèmica és aquella que té distints significats, segons el context. Igual passa amb el polimorfisme en la POO: un nom de mètode pot tindre distintes implementacions i s'invocarà a un o altre segons el context.</p>
 <p><strong>Tipus de polimorfisme</strong>:</p>
 <ul>
 <li><strong>Sobrecàrrega basada en els paràmetres</strong>: mètodes amb el mateix nom en una mateixa classe però amb diferents paràmetres. S'executarà un mètode o altre depenent dels paràmetres.</li>
 <li><strong>Sobreescriptura</strong>: mètodes amb el mateix nom i mateixos paràmetres en classes distintes però amb relacions d'herència entre ells. S'executarà un mètode o altre depenent de la classe de l'objecte que fa la crida.</li>
-<li><strong>Sobrecàrrega basada en l'àmbit</strong>:mètodes amb el mateix nom en diferents classes sense relacions d'herència entre ells. S'executarà un mètode o altre depenent de la classe de l'objecte que fa la crida.</li>
+<li><strong>Sobrecàrrega basada en l'àmbit</strong>: mètodes amb el mateix nom en diferents classes sense relacions d'herència entre ells. S'executarà un mètode o altre depenent de la classe de l'objecte que fa la crida.</li>
 <li><strong>Variables polimòrfiques</strong>: És el prolimorfisme pròpiament dit. Ens permet que un objecte definit sobre una <em>superclasse</em> puga ser instanciat en qualsevol de les seues subclasses.</li>
 </ul>
 <div class="admonition note">
@@ -3206,7 +3206,7 @@
 </div>
 <p>Veiem detalladament els 4 tipus de polimorfisme amb l'ajuda d'exemples.</p>
 <h3 id="sobrecarrega-basada-en-els-parametres">Sobrecàrrega basada en els paràmetres</h3>
-<p>En una classe poden haver distints mètodes amb el mateix nom, sempre que tinguen distints paràetres d'entrada (no importa el paràmetre d'eixida).</p>
+<p>En una classe poden haver distints mètodes amb el mateix nom, sempre que tinguen distints paràmetres d'entrada (no importa el paràmetre d'eixida).</p>
 <p>En temps de compilació ja se sap el mètode que s'invocarà en cada crida: segons els paràmetres.</p>
 <div class="admonition example">
 <p class="admonition-title">Exemples</p>
@@ -3282,11 +3282,11 @@
 </div>
 </div>
 <h3 id="sobreescriptura">Sobreescriptura</h3>
-<p>És el tipus de polimorfisme que hem vist en l'herència: mètodes amb el mateix nom i mateixos paràmetres en classes distintes però amb relacions d'herència entre ells. Se sol dir que la sobreescritura és el polimorfisme pròpiament dit.</p>
+<p>És el tipus de polimorfisme que hem vist en l'herència: mètodes amb el mateix nom i mateixos paràmetres en classes distintes però amb relacions d'herència entre elles. Se sol dir que la <em>sobreescritura</em> és el polimorfisme pròpiament dit.</p>
 <p><center><img alt="Sobreescriptura" src="../img/ud9/sobreescriptura.png" /></center></p>
 <p>Quan s'invoque un mètode sobreescrit s'executarà el de la casse de l'objecte que ha fet la crida:</p>
 <p><center><img alt="Sobreescriptura, crides" src="../img/ud9/sobreescriptura2.png" /></center></p>
-<p>Recordem que, si una subclasse sobreescriu un mètode però en eixa subclasse volem invocar la implementació de la superclasse, ho farem amb <strong>super</strong>.</p>
+<p>Recordem que, si una subclasse sobreescriu un mètode però en eixa subclasse volem invocar la implementació de la superclasse, ho farem amb <strong><em>super</em></strong>.</p>
 <h3 id="sobrecarrega-basada-en-lambit">Sobrecàrrega basada en l'àmbit</h3>
 <p>Mètodes amb el mateix nom en diferents classes sense relacions d'herència entre ells.</p>
 <p><center><img alt="Sobrecàrrega basada en l'ambit" src="../img/ud9/sobrecarregaAmbit.png" /></center></p>
@@ -3331,7 +3331,7 @@
 <li>En un alumne no té sentit posar un professor.</li>
 <li>En un alumne no podem posar una persona (ja que podria ser un professor).</li>
 </ol>
-<p>És a dir: una variable polimòrfica és un objecte que està <strong>definit</strong> sobre una classe però <strong>instanciat</strong> a una classe descendent:</p>
+<p>És a dir: una variable polimòrfica és un objecte que està <strong>definit</strong> sobre una classe però <strong>instanciat a una classe descendent</strong>:</p>
 <p><center><code>ClasseMare obj = new ClasseDescendent();</code></center></p>
 <h4 id="algunes-utilitats">Algunes utilitats</h4>
 <p><strong>Tindre una llista d'objectes descendents d'una mateixa classe</strong>. Per exemple, puc voler guardar en una mateixa lista tant alumnes com professors (persones en general).</p>
@@ -3389,7 +3389,7 @@
 </ul>
 <p>Però veiem què passa en estos casos:</p>
 <p><center><img alt="Exemple cas 1" src="../img/ud9/exemple1.png" /></center></p>
-<p>Però cal anar en compte, ja que el càstig pot donar error d'execució:</p>
+<p>Però cal anar en compte, ja que el càsting pot donar error d'execució:</p>
 <p><center><img alt="Exemple cas 2" src="../img/ud9/exemple2.png" /></center></p>
 <div class="admonition warning">
 <p class="admonition-title">Solució a l'error del càsting</p>
@@ -3619,7 +3619,7 @@ Persona &lt;|-- Alumne</code></pre>
 </details>
 <details class="question">
 <summary>Exercici 26</summary>
-<p>Fes prove creant diversos cotxes, també de segona mà. Posteriorment mostra el valor de l'atribut <em>quantitat</em> per comprovar que funciona correctament.</p>
+<p>Fes proves creant diversos cotxes, també de segona mà. Posteriorment mostra el valor de l'atribut <em>quantitat</em> per comprovar que funciona correctament.</p>
 </details>
 <h3 id="metodes-estatics">Mètodes estàtics</h3>
 <p>Son les funcions i procediments que usàvem abans de vore la POO (recorda que els posàvem <em>static</em> davant).</p>
