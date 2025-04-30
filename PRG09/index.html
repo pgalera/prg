@@ -3667,7 +3667,7 @@ Persona &lt;|-- Alumne</code></pre>
 <p><center><img alt="Jerarquia Object" src="../img/ud9/jerarquiaObject.png" /></center></p>
 <p>Algunes classes que hem vist també estan en eixa jerarquia: <em>String</em>, <em>Integer</em>, <em>Float</em>, <em>ArrayList</em>, <em>Exception</em>, <em>ArrayIndexOutOfBoundsException</em>, <em>NullPointerException</em>...</p>
 <p>I les classes que defineix el programador també són filles d'<em>Object</em> (encara que no posem l'<em>extends</em>).</p>
-<p>La classe <em>Object</em> té diversos mètodes. En vorem dos que són molt importants ja que ens serviran de moda ajuda en les nostres classes:</p>
+<p>La classe <em>Object</em> té diversos mètodes. En vorem dos que són molt importants ja que ens serviran de molta ajuda en les nostres classes:</p>
 <ul>
 <li>El mètode <strong>toString()</strong>: retornarà l'estat de l'objecte en forma de String.</li>
 <li>El mètode <strong>equals(...)</strong>: retornarà un booleà per vore si 2 objectes són iguals.</li>
@@ -3747,8 +3747,8 @@ Persona &lt;|-- Alumne</code></pre>
 </ol>
 </div>
 <p>Ara bé: el mètode equals de la classe <em>Object</em> no pot saber quan 2 alumnes són iguals, i per això només diu que 2 objectes són iguals si són el mateix objecte (mateixa adreça de memòria).</p>
-<p>Per tant, en la nostra classe <em>Alumne</em> hem de sobreescriure el mètode <em>equals</em> per a que compare els atributs de 2 objectes i ens diga si són iguals o no. Haurem de definir les condicions de quan 2 objectes són iguals (per exemple, si tenen el mateix nom i edat).</p>
-<p>I no podríem dir-li d'una forma (en compte d'<em>equals</em>)? La resposta és no. És important que reimplemente el mètode <em>equals()</em> de la classe <em>Object</em>, ja que eixe mètode és invocat per certs mètodes d'altes classes de Java (com <em>contains()</em> de <em>ArrayList</em> o <em>containsKey()</em> de <em>HashMap</em>).</p>
+<p>Per tant, en la nostra classe <em>Alumne</em> hem de sobreescriure el mètode <em>equals</em> per a que compare els atributs de 2 objectes i ens diga si són iguals o no. <strong>Haurem de definir les condicions de quan 2 objectes són iguals</strong> (per exemple, si tenen el mateix nom i edat).</p>
+<p>I no podríem dir-li d'una altra forma (en compte d'<em>equals</em>)? La resposta és <strong>no</strong>. És important que reimplemente el mètode <em>equals()</em> de la classe <em>Object</em>, ja que eixe mètode és invocat per certs mètodes d'altes classes de Java (com <em>contains()</em> de <em>ArrayList</em> o <em>containsKey()</em> de <em>HashMap</em>).</p>
 <div class="admonition example">
 <p class="admonition-title">Exemple</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
@@ -3774,12 +3774,12 @@ Persona &lt;|-- Alumne</code></pre>
 <ul>
 <li>a. Fes el mètode <em>equals()</em> de la classe <em>Cotxe</em> tenint en compte que 2 cotxes són iguals si tenen la mateixa matrícula o si tenen el mateix número de bastidor.</li>
 <li>b. Crea 2 cotxes amb les mateixes dades i comprova si són iguals.</li>
-<li>c. Posa un d'eixos cotxes en l'ArrayList <em><em>llistaCotxes</em> i comprova (amb el </em>contains*) si eixe cotxe està o no en la llisa.</li>
+<li>c. Posa un d'eixos cotxes en l'ArrayList <em>llistaCotxes</em> i comprova (amb el <em>contains</em>) si eixe cotxe està o no en la llisa.</li>
 </ul>
 </details>
 <details class="question">
 <summary>Exercici 31</summary>
-<p>Fes l'<em>equals()</em> de <em>Cotxe2aMa</em> de forma que 2 cotxes de 2a mà són igual si, a més de tindre el mateix bastidro o matrícula, tenen els mateixos kms. L'<em>equals</em> de <em>Cotxe2aMa</em> haurà d'invocar l'equals de <em>Cotxe</em>. Comprova des del <em>main</em> que 2 cotxes de 2a mà són iguals.</p>
+<p>Fes l'<em>equals()</em> de <em>Cotxe2aMa</em> de forma que 2 cotxes de 2a mà són igual si, a més de tindre el mateix bastidor o matrícula, tenen els mateixos kms. L'<em>equals</em> de <em>Cotxe2aMa</em> haurà d'invocar l'equals de <em>Cotxe</em>. Comprova des del <em>main</em> que 2 cotxes de 2a mà són iguals.</p>
 </details>
 <h4 id="el-metode-hashcode">El mètode <em>hashCode()</em></h4>
 <p>Este mètode complementa l'<em>equals(...)</em>, i serveix per a buscar elements iguals en estructures tipus <em>HashSet</em> o <em>HashMap</em> de forma més eficient. Per tant, només caldrà sobreescriure'l si volem usar eixes estructures (i estaríem obligats a fer-ho).</p>
@@ -3811,7 +3811,7 @@ Persona &lt;|-- Alumne</code></pre>
 </li>
 </ol>
 <p>No passa res si hi ha col·lisions, (que els objectes diferents tinguen el mateix número de <em>hashCode()</em>), ja que , per a saber si un objecte és igual a un altre, primer es mira si els dos tenen el mateix número de <em>hashCode()</em>. Si és diferent, els objectes són diferents. Si és el mateix, llavors es mira si són iguals amb el mètode <em>equals()</em>.</p>
-<p>Si no sobreescrivim el <em>hashCode()</em> d'<em>Object</em>, no funcionaries els mètodes <em>add</em>, <em>remove</em> i <em>contains</em> del <em>HashSet</em> i <em>HashMap</em>, ja que el <em>hashCode()</em> de la classe <em>Object</em> retorna la posició de memòria (en sistema decimal) de l'objcete. Per tant, encara que els objectes tinguen les mateixes dades, sempre consideraria que són diferents (si no tenen la mateixa adreça de memòria).</p>
+<p>Si no sobreescrivim el <em>hashCode()</em> d'<em>Object</em>, no funcionarien els mètodes <em>add</em>, <em>remove</em> i <em>contains</em> del <em>HashSet</em> i <em>HashMap</em>, ja que el <em>hashCode()</em> de la classe <em>Object</em> retorna la posició de memòria (en sistema decimal) de l'objcete. Per tant, encara que els objectes tinguen les mateixes dades, sempre consideraria que són diferents (si no tenen la mateixa adreça de memòria).</p>
 <h2 id="la-classe-arraylist">La classe <em>ArrayList</em></h2>
 <p>Al llarg del curs ja hem usat els <em>ArrayList</em> però els hem vist un poc per damunt. Ara els vorem més detalladament ja que, a més, ara tindrem <em>ArrayList</em> d'objectes, no només de tipus bàsics.</p>
 <p>Com ja sabem, la classe <em>ArrayList</em> permet guardar dades en memòria de manera similar als arrays convencionals, però amb avantatges com:</p>
@@ -3893,7 +3893,7 @@ Persona &lt;|-- Alumne</code></pre>
 <details class="question">
 <summary>Exercici 32. ArrayList de Strings</summary>
 <ul>
-<li>Crea un <em>ArrayList</em> de <em>Strings</em> anomenat pobles.</li>
+<li>Crea un <em>ArrayList</em> de <em>Strings</em> anomenat <em>pobles</em>.</li>
 <li>Afig a la llista 4 pobles: Tavernes, Sueca, Sollana i Cullera.</li>
 <li>Afig en la primera posició: Gandia.</li>
 <li>Canvia el poble de la posició número 2 per Cullera (un altre Cullera la que ja hi havia) i guarda el poble que s'ha canviat en la variable PobleCanviat.</li>
