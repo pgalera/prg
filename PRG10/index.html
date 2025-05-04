@@ -790,6 +790,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Les interfícies Comparable i Comparator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducció
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-interficie-comparable" class="md-nav__link">
+    <span class="md-ellipsis">
+      La interfície Comparable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-interficie-comparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      La interfície Comparator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -900,6 +933,39 @@
       Les interfícies Comparable i Comparator
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Les interfícies Comparable i Comparator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducció
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-interficie-comparable" class="md-nav__link">
+    <span class="md-ellipsis">
+      La interfície Comparable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-interficie-comparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      La interfície Comparator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1209,10 +1275,146 @@
 <ul>
 <li>En el projecte <em>provesInterficies</em> construeix la interfície <strong><em>EsComparable</em></strong> amb els mètodes <strong><em>esMajor</em></strong>, <strong><em>esMenor</em></strong> i <strong><em>esIgual</em></strong>, als quals se’ls passa com a paràmetre un objecte i retornaran un <strong>booleà</strong> (<em>true</em> si this és major/menor/igual que l’objecte del paràmetre). Com sabràs, en la interfície no s’implementen, sinó que només es posa la capçalera dels mètodes. Posa també un comentari en <a href="https://www.oracle.com/es/technical-resources/articles/java/javadoc-tool.html">Javadoc</a> de què fa cada mètode.</li>
 <li>Crea la classe <strong><em>Cotxe</em></strong> (amb matrícula i preu) i que implemente la interfície <em>EsComparable</em>. Un cotxe serà menor que un altre si el preu és menor.</li>
-<li>En el <em>main</em> mostra el més gran de 2 cotxes qualssevol.</li>
+<li>En el <em>main</em> mostra el més gran de 2 cotxes qualsevol.</li>
 </ul>
 </details>
 <h2 id="les-interficies-comparable-i-comparator">Les interfícies <em>Comparable</em> i <em>Comparator</em></h2>
+<h3 id="introduccio">Introducció</h3>
+<p>Per a ordenar un un array d'enters, podem usar el mètode <em>sort</em> de la classe <em>Arrays</em> (caldrà importar <em>java.util.Arrays</em>):</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">edats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">67</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">};</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">edats</span><span class="p">);</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">edats</span><span class="p">){</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Si el que volem és ordenar un <em>ArrayList</em> d'enters podem usar el mètode <em>sort</em> de la classe <em>Collections</em> (caldrà importar <em>java.util.Collections</em>):</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span>
+<span class="normal"><a href="#__codelineno-9-7">7</a></span>
+<span class="normal"><a href="#__codelineno-9-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">edats2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">edats2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">23</span><span class="p">);</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="n">edats2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">45</span><span class="p">);</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">edats2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">12</span><span class="p">);</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="p">...</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">edats2</span><span class="p">);</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">edats2</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<p>D'igual forma podríem ordenar una llista (<em>array</em>, <em>ArrayList...</em>) de <em>String</em>, de <em>float</em>, etc. Però què passa si volem ordenar una llista d'elements que no són directament ordenables (comparables), com pot ser una llista de cotxes, alumnes...? Si li aplicàrem el mètode <em>sort</em>, ens donaria error, ja que la màquina virtual "no sap" com comparar eixos objectes.</p>
+<p>Per a fer que els objectes d'una classe puguen ser comparats, hem d'indicar un criteri de comparació. És a dir, cal definir quan un objecte de la classe que volem és menor que un altre, quan és major i quan és igual. La interfície <em>EsComparable</em> que hem fet en l'exercici de l'apartat anterior no calia perquè <strong>Java ja té unes interfícies semblants</strong>, que són les que cal usar, ja que el <em>sort</em> (entre altres) usa els mètodes d'eixes interfícies.</p>
+<p>Si volem establir un únic criteri d'ordenació, usarem la <strong>interfície <em>Comparable</em></strong> però si volem establir diferents criteris d'ordenació usarem la <strong>interfície <em>Comparator</em></strong>.</p>
+<h3 id="la-interficie-comparable">La interfície <em>Comparable</em></h3>
+<p>L'han d'implementar les classes que vulguen establir un criteri de comparació dels seus objectes (i només un). Esta classe no té mètodes com <em>esMajor</em>, <em>esMenor</em>, <em>esIgual</em>, sinó que l'únic mètode que cal implementar és el mètode <em>compareTo</em>.</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Comparable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">{</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">compareTo</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>No hem de crear la interfície, ja que ja està inclosa en Java. Vorem que la <em><T></em> indica que podrem usar el que s'anomen <strong><em>tipus genèrics</em></strong>.</li>
+</ol>
+<p>Este mètode haurà de retornar un <strong>número negatiu</strong> si <em>this</em> és menor que <em>obj</em>, un <strong>número positiu</strong> si <em>this</em> és major que <em>obj</em> i <strong>0</strong> si són iguals. Per tant, el mètode ha de retornar un enter. Ens servirà per a comparar dos objectes pel criteri que volem.</p>
+<div class="admonition example">
+<p class="admonition-title">Exemple</p>
+<p>Suposem que volem comparar (o ordenar) alumnes. Si volem que l'ordre natural dels alumnes és per la seua edat, farem:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumne</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Comparable</span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">codi</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="p">;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">curs</span><span class="p">;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compareTo</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">){</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">edat</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="p">((</span><span class="n">Alumne</span><span class="p">)</span><span class="n">obj</span><span class="p">).</span><span class="na">edat</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">edat</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">((</span><span class="n">Alumne</span><span class="p">)</span><span class="n">obj</span><span class="p">).</span><span class="na">edat</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>O bé, per a no fer el càsting en el <em>compareTo</em>, podem implementar la interfície <em>Comparable</em> indicant que el seu tipus genèric serà <em><Alumne></em>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumne</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Comparable</span><span class="o">&lt;</span><span class="n">Alumne</span><span class="o">&gt;</span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">codi</span><span class="p">;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">edat</span><span class="p">;</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">curs</span><span class="p">;</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compareTo</span><span class="p">(</span><span class="n">Alumne</span><span class="w"> </span><span class="n">alu</span><span class="p">){</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">edat</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">alu</span><span class="p">.</span><span class="na">edat</span><span class="p">;</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li><strong>Un truquet</strong>: si el criteri per a comparar és un enter (<em>edat</em> en este cas), el número que retorna <em>compareTo</em> es pot calcular com eixa resta, ja que estarem retornant un número negatiu si <em>this &lt; alu</em>, un número positiu si <em>this &gt; alu</em> i 0 si són iguals. A banda, podem veure com ara ja no cal fer el càsting, ja que el paràmetre del mètode <em>compareTo</em> és de tipus <em>Alumne</em>.</li>
+</ol>
+<p>Ara podrem comparar dos objectes de la classe <em>Alumne</em>:</p>
+<p><center><code>if (alu1.compareTo(alu2) &lt; 0) System.out.println("L'alumne 1 és menor que l'alumne 2");</code></center></p>
+<p>O bé, ordenar una llista d'alumnes (<em>array</em> o <em>ArrayList</em>) amb el <strong><em>sort</em></strong>, com abans:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span>
+<span class="normal"><a href="#__codelineno-13-4">4</a></span>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Alumne</span><span class="o">&gt;</span><span class="w"> </span><span class="n">llistaAlumnes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">Alumne</span><span class="o">[]</span><span class="w"> </span><span class="n">vectorAlumnes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumne</span><span class="o">[</span><span class="mi">10</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="p">...</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">llistaAlumnes</span><span class="p">);</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="n">Arrays</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">vectorAlumnes</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Ara el <em>sort</em> (tan de <em>Collections</em> com d'<em>Arrays</em>) sí que saben com ordenar alumnes, ja que la classe <em>Alumne</em> implementa la interfície <em>Comparable</em>.</li>
+</ol>
+</div>
+<p>És un altre motiu de l'ús d'interfícies: mitjançant la implementació d'interfícies tots els programadors fan servir el mateix nom de mètode (<em>compareTo, sort...</em>) per a fer una mateixa acció (com comparar objectes).</p>
+<p>Imagina't que estàs treballant en un equip de programadors i has d'utilitzar una classe que ha codificat un altre programador. Si vols comparar dos objectes d'eixa classe, només veient que implementa la interfície <em>Comparable</em>, ja saps quins mètodes pots usar sense saber com està implementat.</p>
+<p>Això facilita el desenvolupament de programes i ajuda a comprendre'ls, sobretot quan intervenen centenars de classe diferents.</p>
+<details class="question">
+<summary>Exercici 3. Interfície Comparable</summary>
+<p>Abans has creat la interfície <em>EsComparable</em> amb 3 mètodes però, com acabem de vore, ja existeix una interfície pareguda a l'API de Java: <em>Comparable</em>.</p>
+<ul>
+<li>Fes que la classe <em>Cotxe</em> implemente la interfície <em>Comparable</em>. Implementa el mètode <em>compareTo</em> fent que un <em>Cotxe</em> siga més xicotet que altre si la matrícula és menor alfabèticament (caldrà criar al <em>compareTo</em> de la classe <em>String</em>).En cas d'igualtat, serà més xicotet el de menor preu.</li>
+<li>Modificia els mètodes de <em>Cotxe</em> que implementen la interfície <em>EsComparable</em> per a que ara es basen en invocacions al mètode <em>compareTo</em>.</li>
+</ul>
+</details>
+<details class="question">
+<summary>Exercici 4</summary>
+<p>En el <em>main</em> mostra una llista de cotxes. Per a això, crea el <em>toString</em> de <em>Cotxe</em>, i així serà suficient amb <em>System.out.println(llistaCotxes)</em>. Ordena la llista i torna-la a mostrar. Comprova que s'ha ordenat bé.</p>
+</details>
+<h3 id="la-interficie-comparator">La interfície <em>Comparator</em></h3>
 <p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
