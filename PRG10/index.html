@@ -944,10 +944,43 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Formes de fer la còpia profunda (deep copy)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-copy-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep copy "manual"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-copy-automatic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep copy "automàtic"
+    </span>
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-interficies-iterator-i-iterable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les interfícies Iterator i Iterable
+    </span>
+  </a>
   
 </li>
       
@@ -1214,10 +1247,43 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Formes de fer la còpia profunda (deep copy)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-copy-manual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep copy "manual"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-copy-automatic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deep copy "automàtic"
+    </span>
+  </a>
+  
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-interficies-iterator-i-iterable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les interfícies Iterator i Iterable
+    </span>
+  </a>
   
 </li>
       
@@ -2052,11 +2118,152 @@
 </ul>
 </li>
 <li>Com hem vist, si volem usar el <em>super.clone()</em> cal implementar <em>Cloneable</em>. Ara bé: <strong>la interfície <em>Cloneable</em> no té cap mètode</strong>.<ul>
-<li>Si no té cap mètode, per a què serveix? Només serveix per a que el programador siga conscient que amb la crida al <em>super.cone()</em> s'està fent una còpia superficial, no profunda. I que, per tant, si el programador vol fer-la profunda, caldrà clonar també els atributs referenciats que crega convenients (arrays i/o objectes dins de l'objecte).</li>
+<li>Si no té cap mètode, per a què serveix? Només serveix per a que el programador siga conscient que amb la crida al <em>super.clone()</em> s'està fent una còpia superficial, no profunda. I que, per tant, si el programador vol fer-la profunda, caldrà clonar també els atributs referenciats que crega convenients (arrays i/o objectes dins de l'objecte).</li>
 </ul>
 </li>
 </ol>
 <h3 id="formes-de-fer-la-copia-profunda-deep-copy">Formes de fer la còpia profunda (<em>deep copy</em>)</h3>
+<p>Depenent dels casos, a vegades caldrà fer còpia superficial, a vegades profunda i a vegades alguns atributs en superficial i altres en profunda. Veiem 2 formes de fer la <em>deep copy</em>, amb este exemple de la classe <em>Alumne</em>:</p>
+<h4 id="deep-copy-manual"><em>Deep copy</em> "manual"</h4>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-31-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-31-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-31-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-31-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-31-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-31-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-31-10">10</a></span>
+<span class="normal"><a href="#__codelineno-31-11">11</a></span>
+<span class="normal"><a href="#__codelineno-31-12">12</a></span>
+<span class="normal"><a href="#__codelineno-31-13">13</a></span>
+<span class="normal"><a href="#__codelineno-31-14">14</a></span>
+<span class="normal"><a href="#__codelineno-31-15">15</a></span>
+<span class="normal"><a href="#__codelineno-31-16">16</a></span>
+<span class="normal"><a href="#__codelineno-31-17">17</a></span>
+<span class="normal"><a href="#__codelineno-31-18">18</a></span>
+<span class="normal"><a href="#__codelineno-31-19">19</a></span>
+<span class="normal"><a href="#__codelineno-31-20">20</a></span>
+<span class="normal"><a href="#__codelineno-31-21">21</a></span>
+<span class="normal"><a href="#__codelineno-31-22">22</a></span>
+<span class="normal"><a href="#__codelineno-31-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumne</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Cloneable</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Alumne</span><span class="w"> </span><span class="nf">clone</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="w">        </span><span class="n">Alumne</span><span class="w"> </span><span class="n">aluClonat</span><span class="p">;</span>
+<a id="__codelineno-31-6" name="__codelineno-31-6"></a><span class="w">        </span><span class="c1">// Còpia superficial:</span>
+<a id="__codelineno-31-7" name="__codelineno-31-7"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-8" name="__codelineno-31-8"></a><span class="w">            </span><span class="n">aluClonat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Alumne</span><span class="p">)</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">clone</span><span class="p">();</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-31-9" name="__codelineno-31-9"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">CloneNotSupportedException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-10" name="__codelineno-31-10"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No implementa Cloneable&quot;</span><span class="p">);</span>
+<a id="__codelineno-31-11" name="__codelineno-31-11"></a><span class="w">            </span><span class="n">aluClonat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-31-12" name="__codelineno-31-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-31-13" name="__codelineno-31-13"></a>
+<a id="__codelineno-31-14" name="__codelineno-31-14"></a><span class="w">        </span><span class="c1">// Còpia profunda de l&#39;array &quot;notes&quot;:</span>
+<a id="__codelineno-31-15" name="__codelineno-31-15"></a><span class="w">        </span><span class="n">aluClonat</span><span class="p">.</span><span class="na">notes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">notes</span><span class="p">.</span><span class="na">clone</span><span class="p">();</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-31-16" name="__codelineno-31-16"></a>
+<a id="__codelineno-31-17" name="__codelineno-31-17"></a><span class="w">        </span><span class="c1">// Còpia profunda de l&#39;objecte &quot;pc&quot;:</span>
+<a id="__codelineno-31-18" name="__codelineno-31-18"></a><span class="w">        </span><span class="n">aluClonat</span><span class="p">.</span><span class="na">pc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">pc</span><span class="p">.</span><span class="na">clone</span><span class="p">();</span><span class="w"> </span><span class="c1">//(3)!</span>
+<a id="__codelineno-31-19" name="__codelineno-31-19"></a>
+<a id="__codelineno-31-20" name="__codelineno-31-20"></a><span class="w">        </span><span class="c1">// Retornem el clon:</span>
+<a id="__codelineno-31-21" name="__codelineno-31-21"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">aluClonat</span><span class="p">;</span>
+<a id="__codelineno-31-22" name="__codelineno-31-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-31-23" name="__codelineno-31-23"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>El <em>super.clone()</em> d'abans copia atribut a atribut.</li>
+<li>Els arrays (i els <em>ArrayList</em>) tenen un mètode <em>clone()</em>.</li>
+<li>Si la classe <em>PC</em> no tinguera el <em>clone()</em>, faríem: aluClonat.pc = new PC(); aluCLonat.pc.nSerie = this.pc.nSerie; aluClonat.pc.carac = this.pc.carac;</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Compte!</p>
+<p><strong>El <em>clone()</em> de l'array (i el de l'<em>ArrayList</em>) és superficial</strong>. És a dir, si en compte de tindre un array d'enters tinguérem un array d'objectes, els components dels 2 arrays estarien apuntant als mateixos objectes.</p>
+</div>
+<h4 id="deep-copy-automatic"><em>Deep copy</em> "automàtic"</h4>
+<p>Amb esta forma, "serialitzarem" l'objecte a clonar. És a dir: el convertirem a <em>bytes</em> i després tornarem a posar eixos <em>bytes</em> en l'altre objecte. Ara bé:</p>
+<ul>
+<li>Es farà un <em>deep copy</em> total: de tots els camps i a tots els subnivells. Si volguérem que d'algum atribut es fera còpia superficial, esta no serviria.</li>
+<li>Esta forma no és molt recomanable perquè és molt més lenta que la "manual".</li>
+</ul>
+<p>Veiem com seria:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-32-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-32-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-32-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-32-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-32-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-32-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-32-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-32-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-32-10">10</a></span>
+<span class="normal"><a href="#__codelineno-32-11">11</a></span>
+<span class="normal"><a href="#__codelineno-32-12">12</a></span>
+<span class="normal"><a href="#__codelineno-32-13">13</a></span>
+<span class="normal"><a href="#__codelineno-32-14">14</a></span>
+<span class="normal"><a href="#__codelineno-32-15">15</a></span>
+<span class="normal"><a href="#__codelineno-32-16">16</a></span>
+<span class="normal"><a href="#__codelineno-32-17">17</a></span>
+<span class="normal"><a href="#__codelineno-32-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Alumne</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="nf">deepClone</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4"></a><span class="w">        </span><span class="n">ObjectOutputStream</span><span class="w"> </span><span class="n">oos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-6" name="__codelineno-32-6"></a><span class="w">            </span><span class="n">ByteArrayOutputStream</span><span class="w"> </span><span class="n">bos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ByteArrayOutputStream</span><span class="p">();</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="w">            </span><span class="n">oos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectOutputStream</span><span class="p">(</span><span class="n">bos</span><span class="p">);</span>
+<a id="__codelineno-32-8" name="__codelineno-32-8"></a><span class="w">            </span><span class="n">oos</span><span class="p">.</span><span class="na">writeObject</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-32-9" name="__codelineno-32-9"></a>
+<a id="__codelineno-32-10" name="__codelineno-32-10"></a><span class="w">            </span><span class="n">ByteArrayInputStream</span><span class="w"> </span><span class="n">bis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ByteArrayInputStream</span><span class="p">(</span><span class="n">bos</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">());</span>
+<a id="__codelineno-32-11" name="__codelineno-32-11"></a><span class="w">            </span><span class="n">ObjectInputStream</span><span class="w"> </span><span class="n">ois</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectInputStream</span><span class="p">(</span><span class="n">bis</span><span class="p">);</span>
+<a id="__codelineno-32-12" name="__codelineno-32-12"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ois</span><span class="p">.</span><span class="na">readObject</span><span class="p">();</span>
+<a id="__codelineno-32-13" name="__codelineno-32-13"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ClassNotFoundException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-14" name="__codelineno-32-14"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error&quot;</span><span class="p">);</span>
+<a id="__codelineno-32-15" name="__codelineno-32-15"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-32-16" name="__codelineno-32-16"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-32-17" name="__codelineno-32-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-32-18" name="__codelineno-32-18"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Cal implementar la interfície <em>Serializable</em> (tampoc té cap mètode) tant en <em>Alumne</em> com en <em>PC</em>.</li>
+<li>S'entendrà millor quan vejam el tema dels fitxers. De moment, només dir que amb eixe codi podríem clonar en profunditat qualsevol objecte.</li>
+</ol>
+<p>I clonaríem així:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span>
+<span class="normal"><a href="#__codelineno-33-3">3</a></span>
+<span class="normal"><a href="#__codelineno-33-4">4</a></span>
+<span class="normal"><a href="#__codelineno-33-5">5</a></span>
+<span class="normal"><a href="#__codelineno-33-6">6</a></span>
+<span class="normal"><a href="#__codelineno-33-7">7</a></span>
+<span class="normal"><a href="#__codelineno-33-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ProvesClons</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="w">        </span><span class="n">Alumne</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumne</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Pep&quot;</span><span class="p">);</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="w">        </span><span class="n">Alumne</span><span class="w"> </span><span class="n">a2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Alumne</span><span class="p">(</span><span class="n">a1</span><span class="p">);</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a><span class="w">        </span><span class="n">Alumne</span><span class="w"> </span><span class="n">a3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a1</span><span class="p">.</span><span class="na">clone</span><span class="p">();</span>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="w">        </span><span class="n">Alumne</span><span class="w"> </span><span class="n">a4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Alumne</span><span class="p">)(</span><span class="n">a1</span><span class="p">.</span><span class="na">deepClone</span><span class="p">());</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<details class="question">
+<summary>Exercici 6</summary>
+<p>Volem clonar cotxes en el nostre projecte.</p>
+<ul>
+<li>Afig a la classe <em>Cotxe</em> l'array <em>revisions</em>, de 5 booleans. Modifica el <em>toString()</em> per a que també mostre les revisions.</li>
+<li>Crea el mètode <em>clone()</em> en la classe <em>Cotxe</em> per a copiar en profunditat (de forma manual).</li>
+<li>En el <em>main</em> crea un <em>cotxe1</em> i clona'l a un <em>cotxe2</em>. Mostra el <em>cotxe2</em>.</li>
+<li>Per vore que s'ha fet bé la <em>deep copy</em>: després de clonar, modifica una revisió del <em>cotxe1</em> i torna a mostrar el <em>cotxe2</em> per vore que no ha canviat.</li>
+</ul>
+</details>
+<details class="question">
+<summary>Exercici 7</summary>
+<p>Crea la classe <em>Propietari</em> amb un <em>nom</em> i un <em>ArrayList</em> de cotxes. Fes el <em>toString()</em>.</p>
+<ul>
+<li>Crea el <em>clone()</em> de <em>Propietari</em> per a còpia en profunditat (de forma manual).</li>
+<li>En el <em>main</em> crea l'objecte <em>propietari1</em> (amb un nom i alguns cotxes) i clona'l a un <em>propietari2</em>. Mostra les dades del <em>propietari2</em>.</li>
+<li>Comprova que s'ha fet bé la còpia en profunditat: modifica el preu d'un dels cotxes del <em>propietari1</em> i mostra les dades del <em>propietari2</em>. No hauria d'haver canviat el preu d'eixe cotxe en el <em>propietari2</em>.</li>
+</ul>
+</details>
+<h2 id="les-interficies-iterator-i-iterable">Les interfícies <em>Iterator</em> i <em>Iterable</em></h2>
 <p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
