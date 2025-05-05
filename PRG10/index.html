@@ -843,6 +843,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#la-interficie-cloneable" class="md-nav__link">
+    <span class="md-ellipsis">
+      La interfície Cloneable
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1002,6 +1011,15 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-interficie-cloneable" class="md-nav__link">
+    <span class="md-ellipsis">
+      La interfície Cloneable
+    </span>
+  </a>
   
 </li>
       
@@ -1617,6 +1635,50 @@
 <li>Ordenem la llista pel criteri per defecte.</li>
 <li>Ordenem la llista pel criteri que indiquem.</li>
 </ol>
+<details class="question">
+<summary>Exercici 5</summary>
+<p>Volem tindre una llista de factures i poder-les ordenar per diferents criteris.</p>
+<ul>
+<li>
+<p>Crea la class <em>Factura</em> amb els següents atributs, constructor i <em>toString</em>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span>
+<span class="normal"><a href="#__codelineno-24-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Factura</span><span class="p">{</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">numero</span><span class="p">;</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">    </span><span class="n">LocalDate</span><span class="w"> </span><span class="n">data</span><span class="p">;</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">importTotal</span><span class="p">;</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Cal importar <em>java.time.LocalDate</em>. No té constructor. Exemple d'ús: data = LocalDade.of(2024, 12, 31);</li>
+</ol>
+</li>
+<li>
+<p>Fes que el criteri d'ordenació per defecte siga pel número de factura. És a dir, fes que a classe <em>Factura</em> implemente la interfície <em>Comparable</em>.</p>
+</li>
+<li>Fes altres 2 criteris d'ordenació. És a dir, crea 2 classes que implementen la interfície <em>Comparator</em>:<ul>
+<li>Per l'import i, en cas d'igualtat, pel número de la factura.</li>
+<li>Per la data i, en cas d'igualtat, per l'import.</li>
+</ul>
+</li>
+<li>Crea dos factures i mostra la major segons els 3 criteris.</li>
+<li>crea un <em>ArrayList</em> de factures, posa-li'n unes quantes i mostra la llista.</li>
+<li>Ordena la llista (i mostra-la) per estos criteris:<ul>
+<li>Ordre invers a l'actual.</li>
+<li>Per número de factura ascendent.</li>
+<li>Per número de factura descendent.</li>
+<li>Per import i número de factura, ascendent.</li>
+<li>Per import i número de factura, descendent.</li>
+<li>Per data i import, ascendent.</li>
+<li>Per data i import, descendent.</li>
+</ul>
+</li>
+</ul>
+</details>
+<h2 id="la-interficie-cloneable">La interfície <em>Cloneable</em></h2>
+<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
 
