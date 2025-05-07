@@ -1003,6 +1003,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#la-interficie-iterable" class="md-nav__link">
+    <span class="md-ellipsis">
+      La interfície Iterable
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1325,6 +1334,15 @@
   <a href="#la-interficie-iterator" class="md-nav__link">
     <span class="md-ellipsis">
       La interfície Iterator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-interficie-iterable" class="md-nav__link">
+    <span class="md-ellipsis">
+      La interfície Iterable
     </span>
   </a>
   
@@ -2344,6 +2362,113 @@
 <summary>Exercici 8</summary>
 <p>Crea un <em>ArrayList</em> de cotxes i posa'n alguns. Després, recorre la llista de forma que, en cada cotxe, després de mostrar les dades, es preguntarà per teclat si volem esborrar eixe cotxe. En cas afirmatiu, l'esborrarem. Caldria fer-ho amb un iterador (si no, hauria de donar error).</p>
 </details>
+<p>Hem vist que, amb la interfície <em>Iterator</em>, podem recórrer els elements d'un <em>ArrayList</em> (o d'un <em>HashSet</em>...) ja que estes classes ens proporcionen un iterador:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
+<span class="normal"><a href="#__codelineno-35-2">2</a></span>
+<span class="normal"><a href="#__codelineno-35-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Empleat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">empleats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Empleat</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2"></a><span class="p">...</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3"></a><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Empleat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">empleats</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p>És a dir: la classe <em>ArrayList</em> "es pot iterar": ens proporciona un iterador. Però també voldríem fer que una classe nostra, que incloga una llista d'elements (independentment de si està implementada amb un <em>ArrayList</em>, un <em>array</em>, etc), també "puga ser iterada": que també ens proporcione un iterador. Per exemple, una classe <em>Departament</em> pot tindre dins una llista d'empleats, i voldríem fer:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
+<span class="normal"><a href="#__codelineno-36-2">2</a></span>
+<span class="normal"><a href="#__codelineno-36-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="n">Departament</span><span class="w"> </span><span class="n">dep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Departament</span><span class="p">();</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a><span class="p">...</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Empleat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dep</span><span class="p">.</span><span class="na">iteradorEmpleats</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<p>I després treballar amb eixe <em>it</em> com ho hem fet abans (amb <em>hasNext()</em> i <em>next()</em>).</p>
+<p>Per a poder fer això caldrà fer el següent:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1">1</a></span>
+<span class="normal"><a href="#__codelineno-37-2">2</a></span>
+<span class="normal"><a href="#__codelineno-37-3">3</a></span>
+<span class="normal"><a href="#__codelineno-37-4">4</a></span>
+<span class="normal"><a href="#__codelineno-37-5">5</a></span>
+<span class="normal"><a href="#__codelineno-37-6">6</a></span>
+<span class="normal"><a href="#__codelineno-37-7">7</a></span>
+<span class="normal"><a href="#__codelineno-37-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="kd">class</span> <span class="nc">Departament</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Empleat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">empleats</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Empleat</span><span class="o">&gt;</span><span class="p">();</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Empleat</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">iteradorEmpleats</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">empleats</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-37-8" name="__codelineno-37-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>La classe <em>Departament</em> tindrà una llista d'empleats.</li>
+<li>La classe <em>Departament</em> proporcionarà l'iterador per a poder recórrer la llista dels seus empleats.</li>
+</ol>
+<p>Ara podem recórrer la llista dels empleats d'un departament amb eixe iterador, de la mateixa forma que abans (amb <em>hasNext()</em> i <em>next()</em>).</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<span class="normal"><a href="#__codelineno-38-2">2</a></span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span>
+<span class="normal"><a href="#__codelineno-38-4">4</a></span>
+<span class="normal"><a href="#__codelineno-38-5">5</a></span>
+<span class="normal"><a href="#__codelineno-38-6">6</a></span>
+<span class="normal"><a href="#__codelineno-38-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a><span class="w">    </span><span class="n">Departament</span><span class="w"> </span><span class="n">dep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Departament</span><span class="p">();</span>
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a><span class="w">    </span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Empleat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dep</span><span class="p">.</span><span class="na">iteradorEmpleats</span><span class="p">();</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-38-4" name="__codelineno-38-4"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">()){</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-38-5" name="__codelineno-38-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<a id="__codelineno-38-6" name="__codelineno-38-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-38-7" name="__codelineno-38-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>El departament ens proporciona l'iterador per a poder recórrer la llista dels seus empleats.</li>
+<li>Recorrem els empleats amb els mètodes d'<em>Iterator</em>, sense saber com està implementada la llista d'empleats.</li>
+</ol>
+<p>Als exemples anteriors, la llista d'empleats del departament és un <em>ArrayList</em> i, per tant, el <em>Departament</em> podia proporcionar l'iterador d'eixe <em>ArrayList</em>. Però <strong>si la llista d'empleats és un <em>array</em></strong>, este no disposa d'iteradors. Per tant, l'agurem de fer nosaltres. Així:</p>
+<p><center><img alt="Iterador d'empleats" src="../img/ud10/iteradorEmpleats.png" /></center></p>
+<p>I ara vorem que per a recórrer els empleats del Departament implementats amb un <em>array</em> és exactament igual que recórrer els empleats implementats amb <em>ArrayList</em>:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
+<span class="normal"><a href="#__codelineno-39-2">2</a></span>
+<span class="normal"><a href="#__codelineno-39-3">3</a></span>
+<span class="normal"><a href="#__codelineno-39-4">4</a></span>
+<span class="normal"><a href="#__codelineno-39-5">5</a></span>
+<span class="normal"><a href="#__codelineno-39-6">6</a></span>
+<span class="normal"><a href="#__codelineno-39-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2"></a><span class="w">    </span><span class="n">Departament</span><span class="w"> </span><span class="n">dep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Departament</span><span class="p">();</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3"></a><span class="w">    </span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Empleat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dep</span><span class="p">.</span><span class="na">iteradorEmpleats</span><span class="p">();</span><span class="w"> </span><span class="c1">//(1)!</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">()){</span><span class="w"> </span><span class="c1">//(2)!</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<a id="__codelineno-39-6" name="__codelineno-39-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Veiem altre exemple. Ara suposem que un Departament només puga tindre 3 empleats i que <strong>la llista està implementada amb 3 variables</strong>. Ara la classe que implemente l'iterador d'empleats hhaurà de ser diferent:</p>
+<p><center><img alt="Altre iterador d'empleats" src="../img/ud10/iteradorEmpleats2.png" /></center></p>
+<p>I, des de fora, la forma de recórrer els empleats del departament, seria exactament igual que abans: fent ús de <em>hasNext()</em>, <em>next()</em> i, si cal, <em>remove()</em>.</p>
+<p>Si volguérem recórrer els empleats de la classe Departament <strong>de 2 formes distintes</strong> (ascendent i descendent, per exemple), haurem d'implementar eixos 2 criteris:</p>
+<p><center><img alt="Doble iterador" src="../img/ud10/dobleIterador.png" /></center></p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-40-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-40-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-40-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-40-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-40-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-40-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-40-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-40-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-40-10">10</a></span>
+<span class="normal"><a href="#__codelineno-40-11">11</a></span>
+<span class="normal"><a href="#__codelineno-40-12">12</a></span>
+<span class="normal"><a href="#__codelineno-40-13">13</a></span>
+<span class="normal"><a href="#__codelineno-40-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">){</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="w">    </span><span class="n">Departament</span><span class="w"> </span><span class="n">dep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Departament</span><span class="p">();</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3"></a><span class="w">    </span><span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Empleat</span><span class="o">&gt;</span><span class="w"> </span><span class="n">it</span><span class="p">;</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4"></a>
+<a id="__codelineno-40-5" name="__codelineno-40-5"></a><span class="w">    </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dep</span><span class="p">.</span><span class="na">iteradorEmpleatsAsc</span><span class="p">();</span>
+<a id="__codelineno-40-6" name="__codelineno-40-6"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">()){</span>
+<a id="__codelineno-40-7" name="__codelineno-40-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<a id="__codelineno-40-8" name="__codelineno-40-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-40-9" name="__codelineno-40-9"></a>
+<a id="__codelineno-40-10" name="__codelineno-40-10"></a><span class="w">    </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dep</span><span class="p">.</span><span class="na">iteradorEmpleatsDesc</span><span class="p">();</span>
+<a id="__codelineno-40-11" name="__codelineno-40-11"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">()){</span>
+<a id="__codelineno-40-12" name="__codelineno-40-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">next</span><span class="p">());</span>
+<a id="__codelineno-40-13" name="__codelineno-40-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-40-14" name="__codelineno-40-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="la-interficie-iterable">La interfície <em>Iterable</em></h3>
+<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
 
 
