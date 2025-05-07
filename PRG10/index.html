@@ -2468,7 +2468,46 @@
 <a id="__codelineno-40-14" name="__codelineno-40-14"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="la-interficie-iterable">La interfície <em>Iterable</em></h3>
-<p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
+<p>Als exemples anteriors hem fet que eixa classe <em>Departament</em> siga "iterable": que proporcione un iterador per a recórrer els seus elements. Però és més coherent si eixa classe <em>Departament</em> implementa la interfície <em>Iterable</em> (no s'ha de cofondre amb <em>Iterator</em>), que només té un mètode (<em>iterator()</em>) que retorna l'iterador:</p>
+<p><center><img alt="Interfície Iterable" src="../img/ud10/iterable.png" /></center></p>
+<p>Fent que <em>Departament</em> implemente <em>Iterable</em>, estem dient que, des de fora, podrem obtindre un iterador de la classe invocant el mètode <em>iterator()</em>, i que podrem usar els mètodes <em>hasNext()</em>, <em>next()</em> i <em>remove()</em>, sense la necessitat de saber si la llista d'empleats està implementada com un <em>ArrayList</em>, un <em>array</em> o d'alguna altra forma.</p>
+<p><center><img alt="Departament Iterable" src="../img/ud10/departamentIterable.png" /></center></p>
+<div class="admonition info">
+<p class="admonition-title">Resumint:</p>
+<p>Si volem poder recórrer els elements d'una classe, farem que eixa classe implemente la interfície <strong><em>Iterable</em></strong>. Això ens obligarà a implementar el mètode <strong><em>iterator()</em></strong>. Este retornarà l'iterador d'un <em>ArrayList</em>, etc, o bé haurem de crear una classe que implemente la interfície <em>Iterator</em>.</p>
+</div>
+<details class="question">
+<summary>Exercici 9. Llista d'alumnes</summary>
+<ul>
+<li>
+<p>Crea la classe <strong><em>Alumne</em></strong> amb estos atributs i mètodes:</p>
+<ul>
+<li>Atribut <strong><em>nom</em></strong>: nom de l'alumne.</li>
+<li>Constant <strong><em>QAVA</em></strong> (quantitat avaluacions): 3</li>
+<li>Constant <strong><em>QEXER</em></strong> (quantitat d'exercicis per avaluació): 5</li>
+<li>Matriu <strong><em>notes</em></strong>: de <em>QAVA</em> avaluacions per <em>QEXER</em> exercicis.</li>
+<li>Constructor: se li passa el nom de l'alumne i ha d'inicialitzar cada nota a <strong><em>-1</em></strong> (significa que no estan posades les notes).</li>
+<li>Mètode <strong><em>posaNota</em></strong>, per a posar una nota a l'alumne (paràmetres: núm. avaluació, núm. exercici i la nota).</li>
+</ul>
+</li>
+<li>
+<p>Volem poder recórrer la matriu per avaluacions (per a treure mitjanes, màxim...). Per a això contruirem un iterador de les notes de l'alumne:</p>
+<ul>
+<li>Fes que la classe <strong><em>Alumne</em></strong> implemente la interfície <strong><em>Iterable</em></strong>.</li>
+<li>Implementa el mètode <strong><em>iterator()</em></strong>, que retornarà un objecte iterador a partir d'una classe que t'hauràs de crear dins d'<em>Alumne</em>.</li>
+<li>Crea la classe <strong><em>IteradorNotes</em></strong> que implemente <strong><em>Iterator</em></strong>. Caldrà implementar el <strong><em>hasNext()</em></strong> i <strong><em>next()</em></strong> tenint en compte que el recorregut el volem per files (avaluacions).</li>
+</ul>
+</li>
+<li>
+<p>En el <strong><em>main</em></strong> fes el següent:</p>
+<ul>
+<li>Crea un alumne.</li>
+<li>Posa-li algunes notes.</li>
+<li>Recorre les notes de l'alumne amb un iterador per a obtindre a seua nota mitja, quantes notes té aproevades i quantes suspeses. Mostra-ho per pantalla.</li>
+</ul>
+</li>
+</ul>
+</details>
 
 
 
