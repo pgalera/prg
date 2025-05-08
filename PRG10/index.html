@@ -1799,7 +1799,7 @@
 </details>
 <h3 id="la-interficie-comparator">La interfície <em>Comparator</em></h3>
 <p>Amb la interfície <em>Comparable</em> podíem comparar (ordenar) alumnes per un criteri establert: el codi de l'alumne. Però de vegades, en un mateix programa, voldrem establir diferents criteris  d'ordenació: ara pel nom, ara pel curs...</p>
-<p>Per a fer que els objectes d'una classe puguen ser comparats per diversos criteris, per cada criteri caldrà crear una classe especial que implemente una interfície anomenada <em>Comparator</em>, on definirem el mètode <em>compare</em> (no <em>compareTo</em>), al qual se li passen com a paràmetre els dos objectes a comparar i retornarà un valor negatiu, zero o positiu, igual que el <em>compareTo</em> de la interfície <em>Comparable</em>.</p>
+<p>Per a fer que els objectes d'una classe puguen ser comparats per diversos criteris, per cada criteri caldrà crear una classe especial que implemente una interfície anomenada <em>Comparator</em>, on definirem el mètode <strong><em>compare</em></strong> (no <em>compareTo</em>), al qual se li passen com a paràmetre els <strong>dos objectes</strong> a comparar i retornarà un valor <strong>negatiu</strong>, <strong>zero</strong> o <strong>positiu</strong>, <strong>igual que el <em>compareTo</em></strong> de la interfície <em>Comparable</em>.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">interface</span> <span class="nc">Comparator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">{</span><span class="w"> </span><span class="c1">//(1)!</span>
@@ -1993,7 +1993,7 @@
 </ul>
 </li>
 <li>Crea dos factures i mostra la major segons els 3 criteris.</li>
-<li>crea un <em>ArrayList</em> de factures, posa-li'n unes quantes i mostra la llista.</li>
+<li>Crea un <em>ArrayList</em> de factures, posa-li'n unes quantes i mostra la llista.</li>
 <li>Ordena la llista (i mostra-la) per estos criteris:<ul>
 <li>Ordre invers a l'actual.</li>
 <li>Per número de factura ascendent.</li>
