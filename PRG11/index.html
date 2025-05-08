@@ -967,6 +967,22 @@
 </code></pre></div></td></tr></table></div>
 <p>Amb <strong><em>list()</em></strong> obtenim un array dels noms de fitxers que estan dins del directori. Però si volem accedir a les propietats de cadascun d'eixos fitxers, seria millor <strong><em>listFiles()</em></strong>, ja que ens retorna un array d'objectes de la classe <em>File</em> que estaran apuntant a cadascun d'eixos fitxers. Veiem-ho gràficament:</p>
 <p><center><img alt="list i listFile" src="../img/ud11/listFile.png" /></center></p>
+<details class="question">
+<summary>Exercici 1. Consultar les característiques de fitxers</summary>
+<p>Fes la funció <strong><em>lligFitxer()</em></strong> que demane per teclat un nom de fitxer (o directori). Si existeix, retornarà el <em>File</em> que apunta al fitxer. Si no existeix, retornarà <em>null</em>.</p>
+</details>
+<details class="question">
+<summary>Exercici 2</summary>
+<p>Fes la funció <em>mostraAtributsFitxer()</em>, a la qual se li passa com a paràmetre un fitxer (no nom de fitxer sinó objecte <em>File</em>). La funció mostrarà informació del fitxer com en l'exemple. Si el fitxer no existeix retornarà <em>false</em> (<em>true</em> en cas contrari).</p>
+<p><center><img alt="Exemple exercici 2" src="../img/ud11/exempleEx2.png" /></center></p>
+<p>La data la tindrem com un número <em>long</em>. Per a obtindre la data en format <em>String</em> podeu fer servir aquesta funció:</p>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">dataString</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SimpleDateFormat</span><span class="p">(</span><span class="s">&quot;yyyy-MM-dd hh:mm:ss&quot;</span><span class="p">).</span><span class="na">format</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Date</span><span class="p">(</span><span class="n">data</span><span class="p">));</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <h2 id="fitxers-de-text-streams-dentrada">Fitxers de text. <em>Streams</em> d'entrada</h2>
 <p><center><a class="md-button" href="../img/altres/homer.gif"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2h12v6l-4 4 4 4v6H6v-6l4-4-4-4zm10 14.5-4-4-4 4V20h8zm-4-5 4-4V4H8v3.5zM10 6h4v.75l-2 2-2-2z"/></svg></span> <em>Pròximament...</em></a></center></p>
 
