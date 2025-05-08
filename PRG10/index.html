@@ -1707,7 +1707,7 @@
 <a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ol>
-<li>No hem de crear la interfície, ja que ja està inclosa en Java. Vorem que la <em><T></em> indica que podrem usar el que s'anomen <strong><em>tipus genèrics</em></strong>.</li>
+<li>No hem de crear la interfície, ja que ja està inclosa en Java. Vorem que la &lt; T &gt; indica que podrem usar el que s'anomen <strong><em>tipus genèrics</em></strong>.</li>
 </ol>
 <p>Este mètode haurà de retornar un <strong>número negatiu</strong> si <em>this</em> és menor que <em>obj</em>, un <strong>número positiu</strong> si <em>this</em> és major que <em>obj</em> i <strong>0</strong> si són iguals. Per tant, el mètode ha de retornar un enter. Ens servirà per a comparar dos objectes pel criteri que volem.</p>
 <div class="admonition example">
@@ -1798,8 +1798,8 @@
 <p>En el <em>main</em> mostra una llista de cotxes. Per a això, crea el <em>toString</em> de <em>Cotxe</em>, i així serà suficient amb <em>System.out.println(llistaCotxes)</em>. Ordena la llista i torna-la a mostrar. Comprova que s'ha ordenat bé.</p>
 </details>
 <h3 id="la-interficie-comparator">La interfície <em>Comparator</em></h3>
-<p>Amb la interfície <em>Comparable</em> podíem comparar (ordenar) alumnes per un criteri establert: el codi de l'alumne. Però a vegades, en un mateix programa, voldrem establir diferents criteris  d'ordenació: ara pel nom, ara pel curs...</p>
-<p>Per a fer que els objectes d'una classe puguen ser comparats per diversos criteris, per cada criteri caldrà crear una classe especial que implemente una interfície anomenada <em>Comparator</em>, on definirem el mètode <em>compare</em> (no <em>compareTo</em>), al qual se li passen com a paràmetre els dos objectes a omparar i retornarà un valor negatiu, zero o positiu, igual que el <em>compareTo</em> de la interfície <em>Comparable</em>.</p>
+<p>Amb la interfície <em>Comparable</em> podíem comparar (ordenar) alumnes per un criteri establert: el codi de l'alumne. Però de vegades, en un mateix programa, voldrem establir diferents criteris  d'ordenació: ara pel nom, ara pel curs...</p>
+<p>Per a fer que els objectes d'una classe puguen ser comparats per diversos criteris, per cada criteri caldrà crear una classe especial que implemente una interfície anomenada <em>Comparator</em>, on definirem el mètode <em>compare</em> (no <em>compareTo</em>), al qual se li passen com a paràmetre els dos objectes a comparar i retornarà un valor negatiu, zero o positiu, igual que el <em>compareTo</em> de la interfície <em>Comparable</em>.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Java</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">interface</span> <span class="nc">Comparator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">{</span><span class="w"> </span><span class="c1">//(1)!</span>
