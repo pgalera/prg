@@ -1532,13 +1532,13 @@
 <span class="normal"><a href="#__codelineno-2-30">30</a></span>
 <span class="normal"><a href="#__codelineno-2-31">31</a></span>
 <span class="normal"><a href="#__codelineno-2-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Nau</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Personatge</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Volador</span><span class="p">,</span><span class="w"> </span><span class="n">Disparador</span><span class="p">{</span><span class="w"> </span><span class="c1">//(1)!</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">veocitat</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">velocitat</span><span class="p">;</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="c1">// ...</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="c1">// Implementació dels mètodes de Volador</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pijar</span><span class="p">(){</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">pujar</span><span class="p">(){</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">posY</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">posY</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">Volador</span><span class="p">.</span><span class="na">alturaMax</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">posY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Volador</span><span class="p">.</span><span class="na">alturaMax</span><span class="p">;</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">velocitat</span><span class="o">++</span><span class="p">;</span>
@@ -1720,10 +1720,10 @@
 </code></pre></div></td></tr></table></div>
 </li>
 <li>
-<p>Crea la classe <strong><em>ArrayListEstad</em></strong> que tinga un ArrayList de <em>doubles</em> (nomenat <em>numeros</em>) i que implemente la interfície <em>Estaistiques</em>. <strong>NOTA</strong>: quan escrigues l'<em>implements</em>, voràs que dona error. És degut a que encara no has implementat els mètodes de la interfície. Implementa'ls.</p>
+<p>Crea la classe <strong><em>ArrayListEstad</em></strong> que tinga un ArrayList de <em>doubles</em> (nomenat <em>numeros</em>) i que implemente la interfície <em>Estadistiques</em>. <strong>NOTA</strong>: quan escrigues l'<em>implements</em>, voràs que dona error. És degut a que encara no has implementat els mètodes de la interfície. Implementa'ls.</p>
 </li>
 <li>
-<p>Crea la classe <strong><em>ArrayEstad</em></strong>, amb un array (un vector, no ArrayList) de doubles (anomenat <em>numeros</em>), que implemente la interfície <em>Estadístiques</em>. <strong>NOTA</strong>: Quan poses l'<em>implements</em>, clica en la icona de l'error i fes que l'IDE t'implemente els mètodes de la interfície. Després posa el cos dels mètodes.</p>
+<p>Crea la classe <strong><em>ArrayEstad</em></strong>, amb un array (un vector, no ArrayList) de doubles (anomenat <em>numeros</em>), que implemente la interfície <em>Estadistiques</em>. <strong>NOTA</strong>: Quan poses l'<em>implements</em>, clica en la icona de l'error i fes que l'IDE t'implemente els mètodes de la interfície. Després posa el cos dels mètodes.</p>
 </li>
 <li>
 <p>En el <em>main</em> defineix un objecte de cadascuna de les classes anteriors, afegeix valors a les seues llistes i usa els mètodes de la interfície per a mostrar els respectius mínims, màxims i sumes dels seus elements.</p>
